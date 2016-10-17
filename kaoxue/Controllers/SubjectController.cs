@@ -25,7 +25,7 @@ namespace kaoxue.Controllers
         {
             string condition = Make_Conditions(Request["subjectname"]) + " and isjing=1";
             string json = string.Empty;
-            DataSet ds = beike_bll.GetList(5, condition, " pubdate desc");
+            DataSet ds = beike_bll.GetList(6, condition, " pubdate desc");
             if (ds != null)
             {
                 if (ds.Tables.Count > 0)
@@ -44,7 +44,7 @@ namespace kaoxue.Controllers
         {
             string condition = Make_Conditions(Request["subjectname"]) + " and isjingpin=1";
             string json = string.Empty;
-            string sql = string.Format(@"SELECT TOP 5 [id]
+            string sql = string.Format(@"SELECT TOP 6 [id]
                                                       ,[testname]
                                                       ,[uploadtime]
                                                   FROM [tbltest]
@@ -70,7 +70,7 @@ namespace kaoxue.Controllers
             string condition = Make_Conditions(Request["subjectname"]) + string.Format( " and level={0}",Request["level"]);
             condition = condition.Replace("subjectid","subject");
             string json = string.Empty;
-            string sql = string.Format(@"SELECT TOP 5 [id]
+            string sql = string.Format(@"SELECT TOP 6 [id]
                                                       ,[name]
                                                       ,[updatetime]
                                                   FROM [tblzhuanti]
@@ -99,7 +99,7 @@ namespace kaoxue.Controllers
             if(!string.IsNullOrEmpty(level))
                 condition+=string.Format(" and level {0}", level);
             string json = string.Empty;
-            string sql = string.Format(@"SELECT TOP 5 [id]
+            string sql = string.Format(@"SELECT TOP 6 [id]
                                                       ,[testname]
                                                       ,[uploadtime]
                                                   FROM [tbltest]
@@ -127,7 +127,7 @@ namespace kaoxue.Controllers
             string condition = Make_Conditions(subjectname);
             if (!string.IsNullOrEmpty(wheel))
                 condition += string.Format(" and name like '%{0}%'",wheel);
-            string sql = @"SELECT  top 5        [category]
+            string sql = @"SELECT  top 6        [category]
                                           ,[id]
                                           ,[name]
                                           ,[uploadtime]
@@ -154,7 +154,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string Moni_junior(string subjectname) 
         {
-            string sql = "select top 5 * from select_test_all where";
+            string sql = "select top 6 * from select_test_all where";
             string condition = Make_Conditions(subjectname);
             sql += condition;
             sql += " and category=1 and testcategory=22 order by uploadtime desc";
@@ -231,7 +231,7 @@ namespace kaoxue.Controllers
             if (!string.IsNullOrEmpty(level))
                 condition += string.Format(" and level {0}", level);
             string json = string.Empty;
-            DataSet ds = tongbu_bll.GetList(5, condition, " uploadtime desc");
+            DataSet ds = tongbu_bll.GetList(6, condition, " uploadtime desc");
             if (ds != null)
             {
                 if (ds.Tables.Count > 0)
@@ -254,7 +254,7 @@ namespace kaoxue.Controllers
             if (!string.IsNullOrEmpty(level))
                 condition += string.Format(" and level {0}", level);
             string json = string.Empty;
-            DataSet ds = jiaoan_bll.GetList(5, condition, " uploadtime desc");
+            DataSet ds = jiaoan_bll.GetList(6, condition, " uploadtime desc");
             if (ds != null)
             {
                 if (ds.Tables.Count > 0)
@@ -277,7 +277,7 @@ namespace kaoxue.Controllers
             if (!string.IsNullOrEmpty(level))
                 condition += string.Format(" and level {0}", level);
             string json = string.Empty;
-            DataSet ds = xuean_bll.GetList(5, condition, " uploadtime desc");
+            DataSet ds = xuean_bll.GetList(6, condition, " uploadtime desc");
             if (ds != null)
             {
                 if (ds.Tables.Count > 0)

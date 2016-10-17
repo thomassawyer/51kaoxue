@@ -22,14 +22,14 @@
     <div class="navinput">
         <div class="navinput_div">
             <div class="fl logo">
-                <a href="../Home"><img src="../../img/logo.png" class="logo1"></a>
+                <a href="../Home"><img src="../../img/logo.png" class="logo1"/></a>
             </div>
             <div id="ztc" class="fl">
                 <img src="../../img/ztc.png" />
             </div>
             <div id="ztc_bottom" class="fl">
                 <form action="#" method="get">
-                    <input type="text" name="lname" class="fl" id="shousuo" placeholder="&nbsp&nbsp请输入搜索内容" /><a id="tijiao" class="fl"></a><img src="../../img/sousuo.png" id="soussuo">
+                    <input type="text" name="lname" class="fl" id="shousuo" placeholder="&nbsp&nbsp请输入搜索内容" /><a id="tijiao" class="fl"></a><img src="../../img/sousuo.png" id="soussuo"/>
                 </form>
             </div>
             <div class="fl xbs">
@@ -44,7 +44,7 @@
     <div class="daohanglan">
         <div class="daohanglan_ul">
             <ul class="dhul">
-                <li class="fl bk fb1" id="pad"><a>语文</a><img src="../../img/tc-93.png" class="maozi1" alt="" /></li>
+                <li class="fl bk fb1" id="pad"><a href="../Subject?subjectname=语文">语文</a><img src="../../img/tc-93.png" class="maozi1" alt="" /></li>
                 <li class="fl pad bk"><a>数学</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk"><a>英语</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk"><a>物理</a><img src="../../img/tc-93.png" alt="" /></li>
