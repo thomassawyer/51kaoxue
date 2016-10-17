@@ -1,0 +1,76 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 校长介绍</title>
+    <link href="~/CSS/Province.css" rel="stylesheet" />
+
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link href="~/CSS/SchoolDetail.css" rel="stylesheet" />
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+
+    <script src="~/CustomScripts/SchoolDetail.js"></script>
+    <link href="~/CSS/President_Special_Column.css" rel="stylesheet" />
+    <script src="~/CustomScripts/President_Special_Column.js"></script>
+</head>
+<body>
+    <div id="Main" class="Main">
+        @Html.Partial("~/Common/top4.ascx")
+        <div id="middle">
+            <div id="middle_content">
+                <div id="middle_content_top">
+                    <div id="middle_content_top_left_img">
+                        <img src="~/Images/%e6%a0%a1%e9%95%bf%e4%b8%93%e6%a0%8f/%e5%9b%be%e5%b1%82%2016.png" id="president_headimg" width="400" height="300" />
+                    </div>
+                    <div id="middle_content_top_right_text">
+                        <div class="president_introduce_title">
+                            校长简介
+                        </div>
+                        <div class="president_introduce_content">
+                            <div id="president_introduce">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="middle_content_bottom">
+                    <div id="middle_content_bottom_left">
+                        <div class="middle_content_bottom_left_title">
+                            | 校长专栏
+                        </div>
+                        <div class="middle_content_bottom_left_cotent" id="president_special_columns">
+                            
+                        </div>
+                    </div>
+                    <div id="middle_content_bottom_right">
+                        <div class="middle_content_bottom_right_title" id="news_title">
+                            
+                        </div>
+                        <div class="middle_content_bottom_left_cotent">
+                            <p id="news_content"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.Partial("~/Common/bottom.ascx")
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                //获取左边距
+                var left = $("#middle_content_top").offset().left;
+                //动态调整左右空白处距离
+                $("#top_content_nav_left").width(left - 20);
+                $("#top_content_nav_right").width(left - 10);
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>年级首页 </title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="~/CSS/default.css" rel="stylesheet" />
+    <link href="~/engine1/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/Junior_high_school.css" />
+    <script src="~/js/jquery-1.8.2.min.js"></script>
+    <script src="~/CustomScripts/Grade.js"></script>
+</head>
+<body>
+    @Html.Partial("~/Common/top1.ascx")
+
+    <div class="ce_nva">
+        <div class="celan fl">
+
+            <div class="celan50 dkcelan50">
+                <ul>
+                    <li class="lan_ce sfhv">
+                        <span><b>更多省份导航</b></span><img src="img/zu-1.png" class="zu1">
+                        <div class="shenfenhover">
+                            <div class="cebianlan_xia1" id="province_more">
+                               
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lan_ce sfhv dksfhv"><span><b>全部资料分类</b></span><img src="img/tubiaozu1.png" class="zu1">
+                    <li class="ce_z ce_xh"><a class="ce_x fl"><span class="ce_sp ceh">高中备课</span></a><a class="sppd fl">></a></li>
+                    <li class="ce_z ce_xh"><a class="ce_x fl"><span class="ce_sp ceh">高中试题</span></a><a class="sppd fl">></a></li>
+                    <li class="ce_z ce_xh"><a class="ce_x fl"><span class="ce_sp ceh">高中复习</span></a><a class="sppd fl">></a></li>
+                    <li class="ce_z ce_xh"><a class="ce_x fl"><span class="ce_sp ceh">初中备课</span></a><a class="sppd fl">></a></li>
+                    <li class="ce_z ce_xh"><a class="ce_x ce_xx fl flag"><span class="ce_sp ceh">初中试题</span></a><a class="sppd fl">></a></li>
+                    <li class="lan_ce h_ce dkh_ce"><span><b>历年高考试卷</b></span><img src="img/hsanjiao.png" class="zu1"></li>
+                    <li class="ce_z"><a class="ce_x fl"><span class="ce_sp ceh dkceh">2016年</span></a><a class="sppd fl">></a></li>
+                    <li class="ce_z"><a class="ce_x fl"><span class="ce_sp ceh dkceh">2015年</span></a><a class="sppd fl">></a></li>
+                    <li class="ce_z"><a class="ce_x fl"><span class="ce_sp ceh dkceh">2014年</span></a><a class="sppd fl">></a></li>
+                    <li class="ce_z"><a class="ce_x ce_xx fl"><span class="ce_sp ceh dkceh">2013年</span></a><a class="sppd fl">></a></li>
+                </ul>
+            </div>
+        </div><!-- 地址侧栏块 -->
+
+        <div class="lb9 fl">
+            <div id="wowslider-container1">
+                <div class="ws_images">
+                    <ul id="banner_images">
+                        <li>
+                            <div style="height:125px">
+
+                            </div>
+                            <div class="loader1">
+                                <i></i><i></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="height:125px">
+
+                            </div>
+                            <div class="loader1">
+                                <i></i><i></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="height:125px">
+
+                            </div>
+                            <div class="loader1">
+                                <i></i><i></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="height:125px">
+
+                            </div>
+                            <div class="loader1">
+                                <i></i><i></i>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="ws_bullets">
+                    <div id="banner_buttons">
+                    </div>
+                </div><div class="ws_script" style="position:absolute;left:-99%"></div>
+                <div class="ws_shadow"></div>
+            </div>
+        </div>
+        <div class="fl dakuai4">
+            <div class="dk4 dkdk4">
+                <img src="img/9da_1.png" width="125px;">
+            </div>
+            <div class="dk4 ">
+                <img src="img/lsgzcz.png" width="125px;">
+            </div>
+            <div class="dk4 ">
+                <img src="img/hsgzcz.png" width="125px;">
+            </div>
+            <div class="dk4 ">
+                <img src="img/llgzcz.png" width="125px;">
+            </div>
+        </div><!-- 四大模块 -->
+    </div>
+
+
+    <div class="gzjpst ma20">
+        <div class="zuixintaoti">
+            <div class="zuixintaoti390 fl ">
+                <div class="zuixintaoti160">
+                    <img src="img/fj.png" /><span class="zuixintaotspan"><b>专题推荐<br>Special recommendation</b></span>
+
+                </div>
+                <div class="zuixintaotilj">
+                    <ul id="zhuanti_tuijian">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="zuixintaoti390 fl zxstts">
+                <div class="zuixintaoti160">
+                    <img src="img/xinxin.png" /><span class="zuixintaotspan"><b>精品备课<br>High-quality Prepares</b></span>
+
+                </div>
+                <div class="zuixintaotilj">
+                    <ul id="beike_jingpin">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="zuixintaoti390 fl zxstts">
+                <div class="zuixintaoti160">
+                    <img src="img/ksquan.png" /><span class="zuixintaotspan"><b>最新套题<br>NEW PROBLEM SET</b></span>
+
+                </div>
+                <div class="zuixintaotilj">
+                    <ul id="taoti_jingpin">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- 高中精品试题 -->
+
+    <div class="gkdt gkdtdk">
+        <div class="gkdtdiv">
+            <div class="gkd_3 fl">
+                <div class="gdk3_1">
+                    <div class="gdk3_1_1">
+                    </div>
+                    <div class="gdk3_1_2">
+                        <div class="gkdt_tb">
+                            <img src="img/gaokaotbh.png" class="gkdt_img" />
+                            <span class="gkdt_span">
+                                <b class="gkdttime">备战高考</b>
+                            </span>
+                        </div>
+                        <a class="more6"><img src="img/more1.png" /></a>
+                    </div>
+                </div>
+                <div class="gdk3_2 ie8">
+                    <ul id="beizhangaokao">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gkd_3 fl gkdt_lianjiedk">
+                <div class="gdk3_1">
+                    <div class="gdk3_1_1">
+                    </div>
+                    <div class="gdk3_1_2">
+                        <div class="gkdt_tb">
+                            <img src="img/taochanh.png" class="gkdt_img" />
+                            <span class="gkdt_span">
+                                <b class="gkdttime">名校套题</b>
+                            </span>
+                        </div>
+                        <a class="more6"><img src="img/more1.png" /></a>
+                    </div>
+                </div>
+                <div class="gdk3_2 ie8">
+                    <ul id="taoti_mingxiao">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gkd_3 fl gkdt_lianjiedk">
+                <div class="gdk3_1">
+                    <div class="gdk3_1_1">
+                    </div>
+                    <div class="gdk3_1_2">
+                        <div class="gkdt_tb">
+                            <img src="img/molikaoshih.png" class="gkdt_img" />
+                            <span class="gkdt_span">
+                                <b class="gkdttime" id="moni_title"></b>
+                            </span>
+                        </div>
+                        <a class="more6"><img src="img/more1.png" /></a>
+                    </div>
+                </div>
+                <div class="gdk3_2 ie8">
+                    <ul id="monikao"></ul>
+                </div>
+            </div>
+        </div>
+
+    </div><!--高考试题动态-->
+
+
+    <div class="zhentiku dkzhentiku">
+        <div class="ztk_div ztkyanse sttjyanse yanse">
+            <div class="zhange">
+            </div>
+            <div class="daimg9">
+                <span class="xueansp">51考学网第一时间发布</span>
+                <b class="xuekeb">2017年最新高中试题要点</b>
+            </div>
+            <div class="ywfyxi">
+                <div class="ywfyxi2 fl">
+                    <a><img src="img/tubiaostk.png" class="imgywfy" /><b style="color:#fff;" class="bdk">精品课件</b></a>
+                    <a class="dkmrb"><img src="img/morebai.png" /></a>
+                </div>
+                <div class="ywfyxi2 fl dkmg10">
+                    <a><img src="img/cekbei.png" class="fy" /><b style="color:#fff;" class="bdk">精品学案</b></a>
+                    <a class="dkmrb"><img src="img/morebai.png" /></a>
+                </div>
+            </div>
+
+            <div class="jpshijuan jsppd">
+                <div class="jpst_lianjie fl">
+                    <ul id="kejian_jingpin"></ul>
+                </div>
+
+                <div class="jpst_lianjie fl mgjpst">
+                    <ul id="xuean_jingpin">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!--高考要点-->
+
+    <div class="gkdt gkdtdk">
+        <div class="gkdtdiv">
+            <div class="gkd_3 fl">
+                <div class="gdk3_1">
+                    <div class="gdk3_1_1">
+                    </div>
+                    <div class="gdk3_1_2 dkgdk3_1_2">
+                        <div class="gkdt_tb">
+                            <img src="img/czgzwb.png" class="gkdt_img" />
+                            <span class="gkdt_span">
+                                <b class="gkdttime gdysk">精品教案</b>
+                            </span>
+                        </div>
+                        <a class="more6"><img src="img/more2.png" /></a>
+                    </div>
+                </div>
+                <div class="gdk3_2 ie8">
+                    <ul id="jiaoan_jingpin">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gkd_3 fl gkdt_lianjiedk">
+                <div class="gdk3_1">
+                    <div class="gdk3_1_1">
+                    </div>
+                    <div class="gdk3_1_2 dkgdk3_1_2">
+                        <div class="gkdt_tb">
+                            <img src="img/gkzkjiaocai.png" class="gkdt_img" />
+                            <span class="gkdt_span">
+                                <b class="gkdttime gdysk">精品素材</b>
+                            </span>
+                        </div>
+                        <a class="more6"><img src="img/more2.png" /></a>
+                    </div>
+                </div>
+                <div class="gdk3_2 ie8">
+                    <ul id="sucai_jingpin">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gkd_3 fl gkdt_lianjiedk">
+                <div class="gdk3_1">
+                    <div class="gdk3_1_1">
+                    </div>
+                    <div class="gdk3_1_2 dkgdk3_1_2">
+                        <div class="gkdt_tb">
+                            <img src="img/gkzkkytb.png" class="gkdt_img" />
+                            <span class="gkdt_span">
+                                <b class="gkdttime kylv">精品练习</b>
+                            </span>
+                        </div>
+                        <a class="more6"><img src="img/more2.png" /></a>
+                    </div>
+                </div>
+                <div class="gdk3_2 ie8">
+                    <ul id="lianxi_jingpin">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div><!--高考试题动态-->
+
+
+
+    <div class="gzjpst gzdkjpst">
+        <div class="zhange">
+        </div>
+        <div class="daimg9 dkh5hong">
+            <span class="xueansp dkxsp">51考学网第一时间发布</span>
+            <b class="xuekeb dkxsp">2017年最新初中备课要点</b>
+        </div>
+
+        <div class="ywfyxi">
+            <div class="ywfyxi2 fl">
+                <a><img src="img/qzqm.png" class="imgywfy" /><b style="color:#fff;" class="bdk">期末/期中</b></a>
+                <a class="dkmrb"><img src="img/more3.png" /></a>
+            </div>
+            <div class="ywfyxi2 fl dkmg10">
+                <a><img src="img/gkzkcs.png" class="fy" /><b style="color:#fff;" class="bdk">摸底/测试</b></a>
+                <a class="dkmrb"><img src="img/more3.png" /></a>
+            </div>
+        </div>
+
+        <div class="jpshijuan jsppd">
+            <div class="jpst_lianjie fl">
+                <ul id="qizhong_qimo">
+                </ul>
+            </div>
+
+            <div class="jpst_lianjie fl mgjpst">
+                <ul id="modi_ceshi">
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div><!-- 高中精品试题 -->
+
+    <div class="gkdt gkdtdk">
+        <div class="gkdtdiv">
+            <div class="gkd_3 fl">
+                <div class="gdk3_1">
+                    <div class="gdk3_1_1">
+                    </div>
+                    <div class="gdk3_1_2 hdk312">
+                        <div class="gkdt_tb">
+                            <img src="img/hyeu.png" class="gkdt_img" />
+                            <span class="gkdt_span">
+                                <b class="gkdttime ykjds">月考/阶段</b>
+                            </span>
+                        </div>
+                        <a class="more6"><img src="img/moreh.png" /></a>
+                    </div>
+                </div>
+                <div class="gdk3_2 ie8">
+                    <ul id="yuekao_jieduan">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gkd_3 fl gkdt_lianjiedk">
+                <div class="gdk3_1">
+                    <div class="gdk3_1_1">
+                    </div>
+                    <div class="gdk3_1_2 hdk312">
+                        <div class="gkdt_tb">
+                            <img src="img/hkaoshi.png" class="gkdt_img" />
+                            <span class="gkdt_span">
+                                <b class="gkdttime ykjds">地区联考</b>
+                            </span>
+                        </div>
+                        <a class="more6"><img src="img/moreh.png" /></a>
+                    </div>
+                </div>
+                <div class="gdk3_2 ie8">
+                    <ul id="diquliankao">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gkd_3 fl gkdt_lianjiedk">
+                <div class="gdk3_1">
+                    <div class="gdk3_1_1">
+                    </div>
+                    <div class="gdk3_1_2 hdk312">
+                        <div class="gkdt_tb">
+                            <img src="img/hshu.png" class="gkdt_img" />
+                            <span class="gkdt_span">
+                                <b class="gkdttime ykjds">竞赛试题</b>
+                            </span>
+                        </div>
+                        <a class="more6"><img src="img/moreh.png" /></a>
+                    </div>
+                </div>
+                <div class="gdk3_2 ie8">
+                    <ul id="jingsai_test">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div><!--高考试题动态-->
+
+
+    <div class="beikeyaodian">
+        <div class="bkyddiv">
+            <div class="bkyd30">
+                <div class="beijinbai">
+                    <span onclick="News(1, '#gaokaodongtai')">高考动态</span>
+                    <span onclick="News(2, '#gaokaodongtai')">教学研究</span>
+                    <span onclick="News(3, '#gaokaodongtai')">科研论文</span>
+                    <span onclick="News(4, '#gaokaodongtai')">学习方法</span>
+                    <span onclick="News(5, '#gaokaodongtai')">经验交流</span>
+                    <span onclick="News(6, '#gaokaodongtai')">教材教法</span>
+                    
+                    <a class="zkmore"><img src="img/morell.png" /></a>
+                </div>
+
+            </div>
+            <div class="beijinglan" id="gaokaodongtai">
+            </div>
+        </div>
+    </div><!--中考动态-->
+
+    <div class="mstj">
+        <div class="mstj_1189">
+            <div class="ztk_div zxztyanse mstjyanse">
+                <b><h3 style="color:#07c7bc;">名校资源 SCHOOL RESOURCE</h3></b>
+                <div class="ztk_div_div ">
+                    <div class="xian1 fl yansemstj"></div>
+                    <div class="quanquan fl">
+                        <div class="qq1 fl qdankong qq2"><a class="yansemstjcolor">备课中心</a></div>
+                        <div class="qq1 fl qqq1 qq2"><a class="yansemstjcolor">每日专题</a></div>
+                        <div class="qq1 fl qqq1 qq2"><a class="yansemstjcolor">历年考题</a></div>
+                        <div class="qq1 fl qqq1 qq2"><a class="yansemstjcolor">名校测题</a></div>
+                    </div>
+                    <div class="xian2 fl yansemstj"><a class="genduo"><img src="img/genduomixiao.png"></a></div>
+                </div>
+
+                <div class="xuxiaozhanshi" id="elite_school_show">
+                    <div class="hs1 fl">
+                        <div class="hsimg1">
+                            <img src="img/hs-107.png" class="img190" />
+                        </div>
+                        <div class="wzhs">
+                            <a>衡水中学</a>
+                        </div>
+                    </div>
+                    <div class="hs1 fl">
+                        <div class="hsimg1">
+                            <img src="img/hs-107.png" class="img190" />
+                        </div>
+                        <div class="wzhs">
+                            <a>衡水中学</a>
+                        </div>
+                    </div>
+                    <div class="hs1 fl">
+                        <div class="hsimg1">
+                            <img src="img/hs-107.png" class="img190" />
+                        </div>
+                        <div class="wzhs">
+                            <a>衡水中学</a>
+                        </div>
+                    </div>
+                    <div class="hs1 fl">
+                        <div class="hsimg1">
+                            <img src="img/hs-107.png" class="img190" />
+                        </div>
+                        <div class="wzhs">
+                            <a>衡水中学</a>
+                        </div>
+                    </div>
+                    <div class="hs1 fl">
+                        <div class="hsimg1">
+                            <img src="img/hs-107.png" class="img190" />
+                        </div>
+                        <div class="wzhs">
+                            <a>衡水中学</a>
+                        </div>
+                    </div>
+                    <div class="hs1 fl">
+                        <div class="hsimg1">
+                            <img src="img/hs-107.png" class="img190" />
+                        </div>
+                        <div class="wzhs">
+                            <a>衡水中学</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div><!--名师推荐-->
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

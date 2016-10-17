@@ -1,0 +1,850 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 学科</title>
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link href="~/CSS/subject.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/subject.js"></script>
+</head>
+<body>
+    <div id="Main">
+        @Html.Partial("~/Common/top.ascx")
+        <div id="middle">
+            @* 中部内容区域 *@
+            <div id="middle_content">
+                <div id="middle_content_top">
+                    <div id="middle_content_top_left">
+                        <div id="middle_content_top_left_top">
+                            <div id="middle_content_top_left_top_img">
+                                <a href="Home"><img src="~/Images/%e9%a6%96%e9%a1%b5/%e9%a6%96%e9%a1%b5-%e5%b7%a6%e4%be%a7%e8%8f%9c%e5%8d%95%e6%a0%8f/%e5%a5%bd%e8%b5%84%e6%ba%90%e5%9b%be%e6%a0%87.png" /></a>
+                                <br />
+                                <br />
+                                @Html.Partial("~/Common/Search.ascx")
+                                <div id="middle_content_top_left_top_smalllogo">
+                                    金品组卷网
+                                </div>
+                            </div>
+                        </div>
+                        <div id="middle_content_top_left_bottom">
+                            <br />
+                            <div class="nav_background" onclick="showorhidediv_province('province_more')">
+                                <a class="sign_add"></a>
+                                <a id="middle_content_top_left_bottom_nav" href="javascript:void(0)">
+
+                                </a>
+                            </div>
+                            <div class="nav_background_container" id="province_more">
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(1,'北京')">北京</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(2,'上海')">上海</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(3,'天津')">天津</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(4,'重庆')">重庆</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(5,'山东')">山东</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(6,'江苏')">江苏</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(7,'湖南')">湖南</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(8,'福建')">福建</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(9,'四川')">四川</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(10,'江西')">江西</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(11,'安徽')">安徽</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(12,'浙江')">浙江</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(13, '陕西')">陕西</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(14, '宁夏')">宁夏</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(15, '辽宁')">辽宁</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(16, '湖北')">湖北</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(17, '广东')">广东</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(18, '海南')">海南</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(19, '河北')">河北</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(20, '河南')">河南</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(21, '山西')">山西</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(22, '广西')">广西</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(23, '云南')">云南</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(24 , '贵州')">贵州</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(25, '甘肃')">甘肃</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(27, '吉林')">吉林</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(29, '青海')">青海</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(30, '西藏')">西藏</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(31, '新疆')">新疆</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(26, '黑龙江')">黑龙江</span>
+                                    <a></a>
+                                </div>
+                                <div class="nav_background_container_child">
+                                    <span onclick="provinceurl(28, '内蒙古')">内蒙古</span>
+                                    <a></a>
+                                </div>
+                            </div>
+                            <div class="clear">
+                                <div class="nav_background" onclick="showorhidediv_province('all_resource')">
+                                    <a class="sign_reduce"></a>
+                                    <span>全部资料分类</span>
+                                </div>
+                                <div class="nav_background_container" id="all_resource" style="display:block; width:274px;">
+                                    <div class="nav_background_container_child">
+                                        <span onclick="javascript:location.href='../Beike_Center?level=3'">高中备课</span>
+                                        <a></a>
+                                    </div>
+                                    <div class="nav_background_container_child">
+                                        <span onclick="javascript:location.href='../Test_Center?level=3'">高中试题</span>
+                                        <a></a>
+                                    </div>
+                                    <div class="nav_background_container_child">
+                                        <span onclick="javascript: location.href = '../Gaokao_Beikao'">高考复习</span>
+                                        <a></a>
+                                    </div>
+                                    <div class="nav_background_container_child">
+                                        <span onclick="javascript:location.href='../Beike_Center?level=2'">初中备课</span>
+                                        <a></a>
+                                    </div>
+                                    <div class="nav_background_container_child">
+                                        <span onclick="javascript:location.href='../Test_Center?level=2'">初中试题</span>
+                                        <a></a>
+                                    </div>
+                                </div>
+                                <div class="nav_background" style="height:25px">
+                                    <br />
+                                </div>
+
+                                <br />
+                                <div id="logo">5IHZY.COM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="middle_content_top_right">
+                        <div id="banner">
+                            <div id="banner_left">
+                                <div id="banner_img">
+                                    <div id="wowslider-container1">
+                                        <div class="ws_images">
+                                            <ul id="banner_images">
+                                                <li>
+                                                    <div style="height:125px">
+
+                                                    </div>
+                                                    <div class="loader1">
+                                                        <i></i><i></i>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div style="height:125px">
+
+                                                    </div>
+                                                    <div class="loader1">
+                                                        <i></i><i></i>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div style="height:125px">
+
+                                                    </div>
+                                                    <div class="loader1">
+                                                        <i></i><i></i>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div style="height:125px">
+
+                                                    </div>
+                                                    <div class="loader1">
+                                                        <i></i><i></i>
+                                                    </div>
+                                                </li>
+                                                @*<li><img src="../data1/images/1.jpg" alt="1" title="1" id="wows1_0"></li>
+                                                    <li><img src="../data1/images/2.jpg" alt="2" title="2" id="wows1_1"></li>
+                                                    <li><a href="http://wowslider.com/vi"><img src="../data1/images/3.jpg" alt="bootstrap carousel" title="3" id="wows1_2"></a></li>
+                                                    <li><img src="../data1/images/4.jpg" alt="4" title="4" id="wows1_3"></li>*@
+                                            </ul>
+                                        </div>
+                                        <div class="ws_bullets">
+                                            <div id="banner_buttons">
+                                                @*<a href="#" title="1"><span><img src="../data1/tooltips/1.jpg" alt="1">1</span></a>
+                                                    <a href="#" title="2"><span><img src="../data1/tooltips/2.jpg" alt="2">2</span></a>
+                                                    <a href="#" title="3"><span><img src="../data1/tooltips/3.jpg" alt="3">3</span></a>
+                                                    <a href="#" title="4"><span><img src="../data1/tooltips/4.jpg" alt="4">4</span></a>*@
+                                            </div>
+                                        </div><div class="ws_script" style="position:absolute;left:-99%"></div>
+                                        <div class="ws_shadow"></div>
+                                    </div>
+                                </div>
+                                <div id="banner_nav">
+                                    <a href="http://www.jinpinzujuan.com/login.aspx"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/banner/%e6%99%ba%e8%83%bd%e7%bb%84%e5%8d%b7.png" /></a>
+                                    <a href="../Past_Exam">
+                                        <img src="~/Images/%e9%a6%96%e9%a1%b5/%e9%a6%96%e9%a1%b5-banner/%e9%ab%98%e8%80%83%e7%9c%9f%e5%8d%b7.png" />
+                                    </a>
+                                    <a href="../Elite_School"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/banner/%e7%99%be%e5%bc%ba%e5%90%8d%e6%a0%a1.png" /></a>
+                                    <a href="../Gaokao_Beikao">
+                                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/banner/%e9%ab%98%e8%80%83%e5%a4%87%e8%80%83.png" style="margin:0px;" />
+                                    </a>
+                                </div>
+                                <div class="banner_text_container">
+                                    <span class="banner_text_red_left">历年高考试卷</span>
+                                    <span class="banner_text_red_right" onclick="javascript: location.href = '/Past_Exam?year=5&year_text=2015'">2015年</span>
+                                    <span class="banner_text_red_right" onclick="javascript: location.href = '/Past_Exam?year=4&year_text=2014'">2014年</span>
+                                    <span class="banner_text_red_right" onclick="javascript: location.href = '/Past_Exam?year=3&year_text=2013'">2013年</span>
+                                    <span class="banner_text_red_right" onclick="javascript: location.href = '/Past_Exam?year=2&year_text=2012'">2012年</span>
+                                    <span class="banner_text_red_right" onclick="javascript: location.href = '/Past_Exam?year=1&year_text=2011'">2011年</span>
+                                    <span class="banner_text_red_right" onclick="javascript: location.href = '/Past_Exam?year=6&year_text=2010'">2010年</span>
+                                </div>
+                                <div class="banner_text_container">
+                                    <span class="banner_text_yellow_left">历年中考试卷</span>
+                                    <span class="banner_text_yellow_right">2015年</span>
+                                    <span class="banner_text_yellow_right">2014年</span>
+                                    <span class="banner_text_yellow_right">2013年</span>
+                                    <span class="banner_text_yellow_right">2012年</span>
+                                    <span class="banner_text_yellow_right">2011年</span>
+                                    <span class="banner_text_yellow_right">2010年</span>
+                                </div>
+                            </div>
+                            <div id="banner_right">
+                                <div class="banner_right_text">
+                                    <div class="banner_right_text_title">
+                                        <span class="banner_right_text_title_span">
+                                            ·精品备课 /Lesson
+                                        </span>
+                                        <ul id="beike_jingpin">
+                                            <li></li>
+                                            <li>
+                                                <div class="loader1">
+                                                    <i></i><i></i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="banner_right_text">
+                                    <div class="banner_right_text_title">
+                                        <span class="banner_right_text_title_span">
+                                            ·精品试题 /Questions
+                                        </span>
+                                        <ul id="test_jingpin">
+                                            <li></li>
+                                            <li>
+                                                <div class="loader1">
+                                                    <i></i><i></i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="middle_content_bottom">
+                    <div id="middle_content_bottom_text">
+                        <div class="middle_content_bottom_text_left">
+                            <div class="middle_content_bottom_text_left_title">
+                                <span class="title_left">·最新专题推荐</span>
+                                <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e9%ab%98%e4%b8%ad%e6%8c%87%e7%a4%ba%e6%a0%87.png" />
+                                <span class="title_right"><a href="../Guide"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                            </div>
+                            <div class="middle_content_bottom_text_left_ul">
+                                <ul id="zhuanti_new_recommend_senior">
+                                    <li></li>
+                                    <li>
+                                        <div class="loader1">
+                                            <i></i><i></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br />
+                            <div class="middle_content_bottom_text_left_title">
+                                <span class="title_left">·最新专题推荐</span>
+                                <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e5%88%9d%e4%b8%ad.png" />
+                                <span class="title_right"><a href="../Guide"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                            </div>
+                            <div class="middle_content_bottom_text_left_ul">
+                                <ul id="zhuanti_new_recommend_junior">
+                                    <li></li>
+                                    <li>
+                                        <div class="loader1">
+                                            <i></i><i></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="middle_content_bottom_text_middle">
+                            <div class="middle_content_bottom_text_left_title">
+                                <span class="title_left">·最新试题</span>
+                                <span class="title_right"><a href="../Test_Center?level=3&type=1"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                <div class="title_middle_nav">
+                                    <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), test_new_senior(" between 10 and 12")'>
+                                        全部
+                                    </span>
+                                    <span class="title_middle_nav_span" onclick='change_css_span(this),test_new_senior(" =10")'>
+                                        高一
+                                    </span>
+                                    <span class="title_middle_nav_span" onclick='change_css_span(this), test_new_senior(" =11")'>
+                                        高二
+                                    </span>
+                                    <span class="title_middle_nav_span" onclick='change_css_span(this), test_new_senior(" =12")'>
+                                        高三
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="middle_content_bottom_text_left_ul">
+                                <ul id="test_new_senior">
+                                    <li></li>
+                                    <li>
+                                        <div class="loader1">
+                                            <i></i><i></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br />
+                            <div class="middle_content_bottom_text_left_title">
+                                <span class="title_left">·最新试题</span>
+                                <span class="title_right"><a href="../Test_Center?level=2&type=1"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                <div class="title_middle_nav">
+                                    <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), test_new_junior(" between 7 and 9")'>
+                                        全部
+                                    </span>
+                                    <span class="title_middle_nav_span" onclick='change_css_span(this), test_new_junior(" =9")'>
+                                        九年级
+                                    </span>
+                                    <span class="title_middle_nav_span" onclick='change_css_span(this), test_new_junior(" =8")'>
+                                        八年级
+                                    </span>
+                                    <span class="title_middle_nav_span" onclick='change_css_span(this), test_new_junior(" =7")'>
+                                        七年级
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="middle_content_bottom_text_left_ul">
+                                <ul id="test_new_junior">
+                                    <li></li>
+                                    <li>
+                                        <div class="loader1">
+                                            <i></i><i></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="middle_content_bottom_text_right">
+                            <div class="middle_content_bottom_text_left_title">
+                                <span class="title_left">·最新备考</span>
+                                <img src="/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e9%ab%98%e4%b8%ad%e6%8c%87%e7%a4%ba%e6%a0%87.png">
+                                <span class="title_right"><a href="../Gaokao_Beikao"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                <div class="title_middle_nav">
+                                    <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), beikao_new("")'>
+                                        全部
+                                    </span>
+                                    <span class="title_middle_nav_span" onclick='change_css_span(this), beikao_new("三轮")'>
+                                        三轮
+                                    </span>
+                                    <span class="title_middle_nav_span" onclick='change_css_span(this), beikao_new("二轮")'>
+                                        二轮
+                                    </span>
+                                    <span class="title_middle_nav_span" onclick='change_css_span(this), beikao_new("一轮")'>
+                                        一轮
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="middle_content_bottom_text_left_ul">
+                                <ul id="beikao_new">
+                                    <li></li>
+                                    <li>
+                                        <div class="loader1">
+                                            <i></i><i></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br />
+                            <div class="middle_content_bottom_text_left_title">
+                                <span class="title_left">·中考模拟</span>
+                                <span class="title_right"><a href="../Test_Center?level=2&testcategory=22"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                            </div>
+                            <div class="middle_content_bottom_text_left_ul">
+                                <ul id="moni_junior">
+                                    <li></li>
+                                    <li>
+                                        <div class="loader1">
+                                            <i></i><i></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="middle_content_bottom_text_seniorhighschool">
+                        <div class="middle_content_bottom_text_seniorhighschool_title">
+
+                            <span class="title_right title_right1"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></span>
+                            <ul>
+                                <li>人教版</li>
+                                <li><span>|</span></li>
+                                <li>苏教版</li>
+                                <li><span>|</span></li>
+                                <li>语文版</li>
+                                <li><span>|</span></li>
+                                <li>粤教版</li>
+                                <li><span>|</span></li>
+                                <li>鲁人版</li>
+                                <li><span>|</span></li>
+                                <li>沪教版</li>
+                                <li><span>|</span></li>
+                                <li>北京版</li>
+                                <li><span>|</span></li>
+                                <li>北师大版</li>
+                            </ul>
+                        </div>
+                        <div class="middle_content_bottom_text_highschool_top">
+                            <div class="middle_content_bottom_text_highschool_top_left">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·名校试题</span>
+                                    <span class="title_right"><a href="../Test_Center?level=3&type=1"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), test_mingxiao_senior(" between 10 and 12")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), test_mingxiao_senior("=10")'>
+                                            高一
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), test_mingxiao_senior("=11")'>
+                                            高二
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), test_mingxiao_senior("=12")'>
+                                            高三
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul" id="test_mingxiao_senior">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div class="loader1">
+                                        <i></i><i></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="middle_content_bottom_text_highschool_top_left">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·课件</span>
+                                    <span class="title_right"><a href="../Test_Center?level=3&type=2"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), kejian_senior(" between 10 and 12")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), kejian_senior("=10")'>
+                                            高一
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), kejian_senior("=11")'>
+                                            高二
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), kejian_senior("=12")'>
+                                            高三
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul" id="kejian_senior">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div class="loader1">
+                                        <i></i><i></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="middle_content_bottom_text_highschool_top">
+                            <div class="text_container_div">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·同步练习</span>
+                                    <span class="title_right"><a href="../Beike_Center?level=3&type=6"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), tongbu_senior(" between 10 and 12")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), tongbu_senior("=10")'>
+                                            高一
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), tongbu_senior("=11")'>
+                                            高二
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), tongbu_senior("=12")'>
+                                            高三
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul">
+                                    <ul id="tongbu_senior">
+                                        <li></li>
+                                        <li>
+                                            <div class="loader1">
+                                                <i></i><i></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text_container_div">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·教案</span>
+                                    <span class="title_right"><a href="../Test_Center?level=3&type=3"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), jiaoan_senior(" between 10 and 12")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), jiaoan_senior("=10")'>
+                                            高一
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), jiaoan_senior("=11")'>
+                                            高二
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), jiaoan_senior("=12")'>
+                                            高三
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul">
+                                    <ul id="jiaoan_senior">
+                                        <li></li>
+                                        <li>
+                                            <div class="loader1">
+                                                <i></i><i></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text_container_div">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·学案</span>
+                                    <span class="title_right"><a href="../Test_Center?level=3&type=4"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), xuean_senior(" between 10 and 12")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), xuean_senior("=10")'>
+                                            高一
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), xuean_senior("=11")'>
+                                            高二
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), xuean_senior("=12")'>
+                                            高三
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul">
+                                    <ul id="xuean_senior">
+                                        <li></li>
+                                        <li>
+                                            <div class="loader1">
+                                                <i></i><i></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="middle_content_bottom_text_seniorhighschool">
+                        <div class="middle_content_bottom_text_seniorhighschool_title middle_content_bottom_text_seniorhighschool_title1">
+
+                            <span class="title_right title_right1"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></span>
+                            <ul>
+                                <li>人教版</li>
+                                <li><span>|</span></li>
+                                <li>苏教版</li>
+                                <li><span>|</span></li>
+                                <li>语文版</li>
+                                <li><span>|</span></li>
+                                <li>粤教版</li>
+                                <li><span>|</span></li>
+                                <li>鲁人版</li>
+                                <li><span>|</span></li>
+                                <li>沪教版</li>
+                                <li><span>|</span></li>
+                                <li>北京版</li>
+                                <li><span>|</span></li>
+                                <li>北师大版</li>
+                            </ul>
+                        </div>
+                        <div class="middle_content_bottom_text_highschool_top">
+                            <div class="middle_content_bottom_text_highschool_top_left">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·名校试题</span>
+                                    <span class="title_right"><a href="../Test_Center?level=2&type=1"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), test_mingxiao_junior(" between 7 and 9")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), test_mingxiao_junior("=9")'>
+                                            九年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), test_mingxiao_junior("=8")'>
+                                            八年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), test_mingxiao_junior("=7")'>
+                                            七年级
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul" id="test_mingxiao_junior">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div class="loader1">
+                                        <i></i><i></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="middle_content_bottom_text_highschool_top_left">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·课件</span>
+                                    <span class="title_right"><a href="../Test_Center?level=2&type=2"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), kejian_junior(" between 7 and 9")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), kejian_junior("=9")'>
+                                            九年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), kejian_junior("=8")'>
+                                            八年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), kejian_junior("=7")'>
+                                            七年级
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul" id="kejian_junior">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div class="loader1">
+                                        <i></i><i></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="middle_content_bottom_text_highschool_top">
+                            <div class="text_container_div">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·同步练习</span>
+                                    <span class="title_right"><a href="../Beike_Center?level=2&type=6"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), tongbu_junior(" between 7 and 9")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), tongbu_junior("=9")'>
+                                            九年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), tongbu_junior("=8")'>
+                                            八年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), tongbu_junior("=7")'>
+                                            七年级
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul">
+                                    <ul id="tongbu_junior">
+                                        <li></li>
+                                        <li>
+                                            <div class="loader1">
+                                                <i></i><i></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text_container_div">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·教案</span>
+                                    <span class="title_right"><a href="../Test_Center?level=2&type=3"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), jiaoan_junior(" between 7 and 9")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), jiaoan_junior("=9")'>
+                                            九年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), jiaoan_junior("=8")'>
+                                            八年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), jiaoan_junior("=7")'>
+                                            七年级
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul">
+                                    <ul id="jiaoan_junior">
+                                        <li></li>
+                                        <li>
+                                            <div class="loader1">
+                                                <i></i><i></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text_container_div">
+                                <div class="middle_content_bottom_text_left_title">
+                                    <span class="title_left">·学案</span>
+                                    <span class="title_right"><a href="../Test_Center?level=2&type=4"><img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e6%9b%b4%e5%a4%9a.png" /></a></span>
+                                    <div class="title_middle_nav">
+                                        <span class="title_middle_nav_span title_middle_nav_span_select" onclick='change_css_span(this), xuean_junior(" between 7 and 9")'>
+                                            全部
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), xuean_junior("=9")'>
+                                            九年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), xuean_junior("=8")'>
+                                            八年级
+                                        </span>
+                                        <span class="title_middle_nav_span" onclick='change_css_span(this), xuean_junior("=7")'>
+                                            七年级
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="middle_content_bottom_text_left_ul">
+                                    <ul id="xuean_junior">
+                                        <li></li>
+                                        <li>
+                                            <div class="loader1">
+                                                <i></i><i></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="text_bottom">
+                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/%e9%ab%98%e8%80%83%e8%af%ad%e6%96%87.png" />
+                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/2%e6%95%b0%e5%ad%a6.png" />
+                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/3%e8%8b%b1%e8%af%ad.png" />
+                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/8%e6%94%bf%e6%b2%bb.png" />
+                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/7%e5%8e%86%e5%8f%b2.png" />
+                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/9%e5%9c%b0%e7%90%86.png" />
+                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/4%e7%89%a9%e7%90%86.png" />
+                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/5%e5%8c%96%e5%ad%a6.png" />
+                        <img src="~/Images/%e5%ad%a6%e7%a7%91%e9%a6%96%e9%a1%b5/%e6%96%87%e5%ad%97%e9%83%a8%e5%88%86/6%e7%94%9f%e7%89%a9.png" style="margin:0px" />
+                    </div>
+                </div>
+            </div>
+            @* 中部内容区域结束 *@
+        </div>
+        @Html.Partial("~/Common/bottom.ascx")
+    </div>
+    @Html.Partial("~/Common/bottom_script.ascx")
+</body>
+</html>

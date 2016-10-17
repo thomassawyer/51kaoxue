@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53995DBB-9836-4647-AD22-865884FDEB9E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Maticsoft.Model</AssemblyName>
+    <RootNamespace>Maticsoft.Model</RootNamespace>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ancient_category_first.cs" />
+    <Compile Include="ancient_category_second.cs" />
+    <Compile Include="ancient_category_third.cs" />
+    <Compile Include="group_page_dict.cs" />
+    <Compile Include="page_dict.cs" />
+    <Compile Include="tblabout.cs" />
+    <Compile Include="tblancient.cs" />
+    <Compile Include="tblarea.cs" />
+    <Compile Include="tblassign.cs" />
+    <Compile Include="tblBanner.cs" />
+    <Compile Include="tblBeike.cs" />
+    <Compile Include="tblbookversion.cs" />
+    <Compile Include="tblcollect.cs" />
+    <Compile Include="tbldaohang.cs" />
+    <Compile Include="tbldlrecord.cs" />
+    <Compile Include="tblfinance.cs" />
+    <Compile Include="tblfinancerecord.cs" />
+    <Compile Include="tblgrade.cs" />
+    <Compile Include="tblJiaoan.cs" />
+    <Compile Include="tblKejian.cs" />
+    <Compile Include="tblLink.cs" />
+    <Compile Include="tblLunwen.cs" />
+    <Compile Include="tblMessage.cs" />
+    <Compile Include="tblNews.cs" />
+    <Compile Include="tblNewstype.cs" />
+    <Compile Include="tblOperation.cs" />
+    <Compile Include="tblschool.cs" />
+    <Compile Include="tblsubject.cs" />
+    <Compile Include="tblSucai.cs" />
+    <Compile Include="tblTaoti.cs" />
+    <Compile Include="tblteacher.cs" />
+    <Compile Include="tbltest.cs" />
+    <Compile Include="tblTestCategory.cs" />
+    <Compile Include="tblTongbu.cs" />
+    <Compile Include="tbluplog.cs" />
+    <Compile Include="tbluprecord.cs" />
+    <Compile Include="tblWebinfo.cs" />
+    <Compile Include="tblXuean.cs" />
+    <Compile Include="tblyear.cs" />
+    <Compile Include="tblzhenti.cs" />
+    <Compile Include="tblzhuanti.cs" />
+    <Compile Include="tblztsubject.cs" />
+    <Compile Include="tblzttype.cs" />
+    <Compile Include="webusers.cs" />
+    <Compile Include="ztpage_dict.cs" />
+    <Compile Include="ztposition.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

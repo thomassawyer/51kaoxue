@@ -1,0 +1,80 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 历史下载记录</title>
+    <link href="~/CSS/Member_Center.css" rel="stylesheet" />
+    @* 弹窗样式表 *@
+    <link rel="stylesheet" href="../css/reveal.css">
+    @* 弹窗演示表结束 *@
+    <link href="~/CSS/Download_Record.css" rel="stylesheet" />
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    @* 弹窗脚本 *@
+    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
+    @* 弹窗脚本结束 *@
+    <script src="~/CustomScripts/Download_Record.js"></script>
+</head>
+<body>
+    <div id="Main">
+        @Html.Partial("~/Common/Member_Center_Top.ascx")
+        <div id="content">
+            <div id="content_left">
+                @Html.Partial("~/Common/Member_Center_Menu.ascx")
+            </div>
+            <div id="content_right">
+                <div id="content_title"><p>会员中心——<span style="color:red">历史下载记录</span></p></div>
+                <div id="forms">
+                    <div id="welcome">欢迎您，您已经下载了<span id="resource_count"></span>套资料</div>
+                    <div id="table_div">
+                        <table id="data_table" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th>下载资源名称</th>
+                                    <th>下载时间</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data_table_td"></tbody>
+                        </table>
+
+                    </div>
+                    
+                    <div id="pager">
+                        <div id="pager_buttons">
+                            <div id="prev">
+                                <a onclick="anchor(this),pre_page() ">上一页</a>
+                            </div>
+                            <div id="pages">
+                                @*<span>…</span>
+                    <a class="pages_href_selected">1</a>
+                    <a class="pages_href_normal">2</a>
+                    <a class="pages_href_normal">3</a>
+                    <a class="pages_href_normal">4</a>
+                    <a class="pages_href_normal">5</a>
+                    <span>…</span>*@
+                            </div>
+                            <div id="next"><a onclick="anchor(this),next_page() ">下一页</a></div>
+                            <div id="turn"><span>跳转到</span><input type="text" id="page_size" /><span>页</span><a class="pages_href_selected" onclick="anchor(this),Go() ">GO</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" id="message_start" class="big-link" data-reveal-id="myModal" style="display:none;">
+        jquery1
+    </a>
+
+    <div id="myModal" class="reveal-modal" style="border: 1px solid #3b4f7c; ">
+        <h1 style="font-family:'幼圆'" id="message_content">系统提示:</h1>
+        <p id="message_text" style="font-family:'微软雅黑'">Attention please.</p>
+        <a class="close-reveal-modal" id="message_close">&#215;</a>
+    </div>
+</body>
+</html>

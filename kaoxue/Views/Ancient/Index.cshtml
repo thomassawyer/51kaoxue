@@ -1,0 +1,100 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 文学国学分类</title>
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
+    <link href="~/CSS/Ancient.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    @* 弹窗样式表 *@
+    <link rel="stylesheet" href="../css/reveal.css">
+    @* 弹窗演示表结束 *@
+    @* 弹窗脚本 *@
+    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
+    @* 弹窗脚本结束 *@
+    <script src="~/CustomScripts/Ancient.js"></script>
+</head>
+<body>
+    <div id="Main">
+        @Html.Partial("~/Common/top3.ascx")
+        <div id="container">
+            <div id="content">
+                <div id="nav_tree">
+                    <span id="tree_left">
+                        首页 > 文学国学
+                    </span>
+                    <span id="tree_right">
+                        @Html.Partial("~/Common/Search2.ascx")
+                    </span>
+                </div>
+            </div>
+            <div id="condition">
+                <div class="condition_contrainer">
+                    <div class="condition_contrainer_title">分类：</div>
+                    <div class="condition_contrainer_content" id="categories">
+                        <a class="condition_selected" onclick="type_selected(''), a_selected(this)">国学</a>
+                        <a id="type1" onclick="type_selected(1), a_selected(this)">诗词鉴赏</a>
+                    </div>
+                </div>
+            </div>
+            <div id="category_content">
+                <div id="category_content_left">
+                </div>
+                <div id="category_content_right">
+                    @* 阅读排行榜 *@
+                    <div id="Reading_Lists">
+                        <div class="lists_title">
+                            <span class="title_left">| 阅读排行榜</span>
+                        </div>
+                        <div id="Reading_List">
+                        </div>
+                    </div>
+
+                    @* 相关推荐 *@
+                    <div id="relative_recommends">
+                        <div class="lists_title">
+                            <span class="title_left">| 相关推荐</span>
+                            <span class="title_right">More</span>
+                        </div>
+                        <div id="relative_recommend">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @* 预览 *@
+    <a href="#" id="message_preview" class="big-link" data-reveal-id="myModal_preview" style="display:none;">
+        jquery1
+    </a>
+
+    <div id="myModal_preview" class="reveal-modal" style="border: 1px solid #3b4f7c;width:900px; margin-left:-440px; padding:0px; ">
+        <iframe id="download_preview" width="895" height="500"></iframe>
+        <a class="close-reveal-modal" id="message_close">&#215;</a>
+    </div>
+
+
+    @* 消息提示 *@
+    <a href="#" id="message_download" class="big-link" data-reveal-id="myModal_download" style="display:none;">
+        jquery1
+    </a>
+    <div id="myModal_download" class="reveal-modal" style="border: 1px solid #3b4f7c; ">
+        <h1 style="font-family:'幼圆'" id="message_content">系统提示:</h1>
+        <p id="message_text" style="font-family:'微软雅黑'">Attention please.</p>
+        <a class="close-reveal-modal" id="message_close">&#215;</a>
+    </div>
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

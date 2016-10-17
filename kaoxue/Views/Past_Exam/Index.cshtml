@@ -1,0 +1,84 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 高考真卷</title>
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    @* 弹窗样式表 *@
+    <link rel="stylesheet" href="../css/reveal.css">
+    @* 弹窗演示表结束 *@
+    
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="~/CSS/Past_Exam.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+
+    <script src="~/CustomScripts/Past_Exam.js"></script>
+
+    @* 弹窗脚本 *@
+    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
+    @* 弹窗脚本结束 *@
+</head>
+<body>
+    <div id="Main">
+        @Html.Partial("~/Common/top3.ascx")
+        <div id="content">
+            <div id="nav_tree">
+                <span id="tree_left">
+                    首页 > 高考真卷
+                </span>
+                <span id="tree_right">
+                    @Html.Partial("~/Common/Search2.ascx")
+                </span>
+            </div>
+            <div id="condition" style="min-height:172px;">
+                @*<div class="condition_contrainer">
+                    <div class="condition_contrainer_title">学段：</div>
+                    <div class="condition_contrainer_content">
+                        <a class="condition_selected" id="level_senior" onclick="a_selected(this),level_selected(3)">高中</a>
+                        <a onclick="a_selected(this),level_selected(2) ">初中</a>
+                    </div>
+                </div>*@
+
+                <div class="condition_contrainer">
+                    <div class="condition_contrainer_title">年份：</div>
+                    <div class="condition_contrainer_content" id="years">
+
+                    </div>
+                </div>
+
+                <div class="condition_contrainer">
+                    <div class="condition_contrainer_title">省份：</div>
+                    <div class="condition_contrainer_content" id="province">
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="list">
+                
+            </div>
+        </div>
+    </div>
+    @* 弹窗html *@
+    <a href="#" id="message_start" class="big-link" data-reveal-id="myModal" style="display:none;">
+        jquery1
+    </a>
+
+    <div id="myModal" class="reveal-modal" style="border: 1px solid #3b4f7c; ">
+        <h1 style="font-family:'幼圆'">数据正在加载...</h1>
+        <p id="message_text" style="font-family:'微软雅黑'">Data being loaded, please wait a minute.</p>
+        <a class="close-reveal-modal" id="message_close" style="display:none">&#215;</a>
+    </div>
+    @* 弹窗html结束 *@
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

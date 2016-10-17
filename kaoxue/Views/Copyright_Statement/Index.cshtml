@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 版权声明</title>
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
+    <link href="~/CSS/Copyright_Statement.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/Test_Center.js"></script>
+    @* 弹窗样式表 *@
+    <link rel="stylesheet" href="../css/reveal.css">
+    @* 弹窗演示表结束 *@
+    @* 弹窗脚本 *@
+    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
+    @* 弹窗脚本结束 *@
+</head>
+<body>
+    <div id="Main">
+        @Html.Partial("~/Common/top3.ascx")
+        <div id="content">
+            <div id="nav_tree">
+                <span id="tree_left">
+                    首页 > 版权声明
+                </span>
+                <span id="tree_right">
+                    @Html.Partial("~/Common/Search2.ascx")
+                </span>
+            </div>
+            <div id="content">
+                @Html.Partial("~/Common/about_me_top.ascx")
+                <div id="content_right">
+                    <p>金品好资源网对其发行的内容或与合作公司共同发行的包括但不限于产品或服务的全部内容及网站上的资料拥有版权等知识产权，受法
+律保护。</p>
+                    <p>未经本公司书面许可，任何单位及个人不得以任何方式或理由对上述产品、服务、信息、材料的任何部分进行使用、复制、修改、抄录、
+传播或与其它产品捆绑使用、销售。</p>
+                    <p>凡侵犯本公司版权等知识产权的，本公司必依法追究其法律责任。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

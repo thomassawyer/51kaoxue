@@ -1,0 +1,284 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 专题汇总</title>
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
+    <link href="~/CSS/Guide.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/Guide.js"></script>
+    @* 弹窗样式表 *@
+    <link rel="stylesheet" href="../css/reveal.css">
+    @* 弹窗演示表结束 *@
+    @* 弹窗脚本 *@
+    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
+    @* 弹窗脚本结束 *@
+</head>
+<body>
+    <div id="Main">
+        @Html.Partial("~/Common/top3.ascx")
+        <div id="content" style="width:1276px;">
+            <div id="content_nav">
+                <div id="content_nav_container">
+                    <ul>
+                        <li class="nav_normal" onclick="changesubject(this,'')">全部</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this,'')">综合</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this, '语文')">语文</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this, '数学')">数学</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this, '英语')">英语</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this, '物理')">物理</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this, '化学')">化学</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this,'生物')">生物</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this,'政治')">政治</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this, '历史')">历史</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this,'地理')">地理</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this,'理综')">理综</li>
+                        <li class="nav_normal_seprate">|</li>
+                        <li class="nav_normal" onclick="changesubject(this,'文综')">文综</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content_container">
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #ea4343;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #e2a54e;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #5deeb9;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #58acc7;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #ea4343;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #e2a54e;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #5deeb9;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #58acc7;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #ea4343;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #e2a54e;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #5deeb9;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #58acc7;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #ea4343;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #e2a54e;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #5deeb9;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #58acc7;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #ea4343;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #e2a54e;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #5deeb9;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_container_child">
+                    <div class="content_container_child_top" style="background-color: #58acc7;">
+                        <div class="content_container_child_top_text">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text2">浙江省2016年高考语文总复习文化根脉的坚守</div>
+                        <div class="content_container_child_top_text3">
+                            <span class="content_container_child_top_text3_left">2016-04-08</span>
+                            <span class="content_container_child_top_text3_right">学科:语文</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pager">
+                <div id="pager_buttons">
+                    <div id="prev">
+                        <a onclick="anchor(this),pre_page() ">上一页</a>
+                    </div>
+                    <div id="pages">
+
+                    </div>
+                    <div id="next"><a onclick="anchor(this),next_page() ">下一页</a></div>
+                    <div id="turn"><span>跳转到</span><input type="text" id="page_size" /><span>页</span><a class="pages_href_selected" onclick="anchor(this),Go() ">GO</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

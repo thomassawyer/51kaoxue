@@ -1,0 +1,199 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 校长</title>
+    <link href="~/CSS/Province.css" rel="stylesheet" />
+
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link href="~/CSS/SchoolDetail.css" rel="stylesheet" />
+    <link href="~/CSS/School.css" rel="stylesheet" />
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/President.js"></script>
+</head>
+<body>
+    <div id="Main" class="Main">
+        @Html.Partial("~/Common/top4.ascx")
+        <div id="middle">
+            <div id="middle_content">
+                <div id="middle_content_top1">
+                    <div id="middle_content_top_left">
+                        <div id="middle_content_top_left_top" style="height:130px;">
+                            <div id="middle_content_top_left_top_img">
+                                <a href="Home"><img src="~/Images/%e9%a6%96%e9%a1%b5/%e9%a6%96%e9%a1%b5-%e5%b7%a6%e4%be%a7%e8%8f%9c%e5%8d%95%e6%a0%8f/%e5%a5%bd%e8%b5%84%e6%ba%90%e5%9b%be%e6%a0%87.png" /></a>
+                                <br />
+                                <br />
+                                @Html.Partial("~/Common/Search.ascx")
+                            </div>
+                        </div>
+                        <div id="middle_content_top_left_bottom" style=" overflow:hidden">
+                            <br />
+                            <div>
+                                <div class="nav_background">
+                                    <a class="youyuan">·</a>
+                                    <span>学科</span>
+                                </div>
+                                <div id="nav_background_container1">
+                                    <div id="nav_background_container_child">
+                                        <a class="xueji" href="../Subject?subjectname=语文">语文</a>
+                                        <a class="xueji" href="../Subject?subjectname=数学">数学</a>
+                                        <a class="xueji1" href="../Subject?subjectname=英语">英语</a>
+                                    </div>
+                                    <div id="nav_background_container_child">
+                                        <a class="xueji" href="../Subject?subjectname=政治">政治</a>
+                                        <a class="xueji" href="../Subject?subjectname=地理">地理</a>
+                                        <a class="xueji1" href="../Subject?subjectname=历史">历史</a>
+                                    </div>
+                                    <div id="nav_background_container_child">
+                                        <a class="xueji" href="../Subject?subjectname=化学">化学</a>
+                                        <a class="xueji" href="../Subject?subjectname=物理">物理</a>
+                                        <a class="xueji1" href="../Subject?subjectname=生物">生物</a>
+                                    </div>
+                                    <div id="nav_background_container_child">
+                                        <a class="xueji" href="../Subject?subjectname=科学">科学</a>
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+
+                        @* 名校推荐 *@
+                        <div id="elite_school_recommend">
+                            <div class="directory_container_title">
+                                <span class="directory_container_title_left">| 名校推荐</span>
+                                <a>
+                                    <span class="directory_container_title_right">More</span>
+                                </a>
+                            </div>
+                            <div id="elite_school_recommends">
+                            </div>
+                        </div>
+
+                        @* 教育部领导介绍 *@
+                        <div id="leader">
+                            <div class="directory_container_title">
+                                <span class="directory_container_title_left">| 教育部领导介绍</span>
+                                <a>
+                                    <span class="directory_container_title_right">More</span>
+                                </a>
+                            </div>
+                            <div id="leaders">
+                                <div class="leaders_container">
+                                    <div class="elite_school_recommends_container_top">
+                                        <span class="sign_red">·</span>
+                                        <div class="school_name"><a href="http://www.moe.edu.cn/business/htmlfiles/moe/s81/index.html" target="_blank">袁贵仁：教育部部长...</a></div>
+                                    </div>
+                                    <div class="elite_school_recommends_container_top">
+                                        <span class="sign_red">·</span>
+                                        <div class="school_name"><a href="http://www.moe.edu.cn/business/htmlfiles/moe/s4941/index.html" target="_blank">杜玉波：教育部副部长...</a></div>
+                                    </div>
+                                    <div class="elite_school_recommends_container_top">
+                                        <span class="sign_red">·</span>
+                                        <div class="school_name"><a href="http://www.moe.edu.cn/business/htmlfiles/moe/s95/index.html" target="_blank">鲁　昕：教育部副部长...</a></div>
+                                    </div>
+                                    <div class="elite_school_recommends_container_top">
+                                        <span class="sign_red">·</span>
+                                        <div class="school_name"><a href="http://www.moe.edu.cn/business/htmlfiles/moe/s107/index.html" target="_blank">王立英：中纪委驻教育...</a></div>
+                                    </div>
+                                    <div class="elite_school_recommends_container_top">
+                                        <span class="sign_red">·</span>
+                                        <div class="school_name"><a href="http://www.moe.edu.cn/business/htmlfiles/moe/s103/index.html" target="_blank">李卫红：教育部副部长...</a></div>
+                                    </div>
+                                    <div class="elite_school_recommends_container_top">
+                                        <span class="sign_red">·</span>
+                                        <div class="school_name"><a href="http://www.moe.edu.cn/business/htmlfiles/moe/s4946/index.html" target="_blank">杜占元：教育部副部长...</a></div>
+                                    </div>
+                                    <div class="elite_school_recommends_container_top">
+                                        <span class="sign_red">·</span>
+                                        <div class="school_name"><a href="http://www.moe.edu.cn/business/htmlfiles/moe/s86/index.html" target="_blank">郝　平：教育部副部长...</a></div>
+                                    </div>
+                                    <div class="elite_school_recommends_container_top">
+                                        <span class="sign_red">·</span>
+                                        <div class="school_name"><a href="http://www.moe.edu.cn/business/htmlfiles/moe/s4951/index.html" target="_blank">刘利民：教育部副部长...</a></div>
+                                    </div>
+                                    <div class="elite_school_recommends_container_top">
+                                        <span class="sign_red">·</span>
+                                        <div class="school_name"><a href="http://www.moe.edu.cn/business/htmlfiles/moe/s4974/index.html" target="_blank">顾海良：教育部党组成员...</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        @* 试题推荐 *@
+
+                        <div id="leader">
+                            <div class="directory_container_title">
+                                <span class="directory_container_title_left">| 试题推荐</span>
+                                <a>
+                                    <span class="directory_container_title_right">More</span>
+                                </a>
+                            </div>
+                            <div>
+                                <div class="leaders_container" id="test_recommend">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @* 学校信息 *@
+                    <div id="middle_content_top_right">
+                        <div id="condition">
+                            <div class="condition_contrainer">
+                                <div class="condition_contrainer_title">学段：</div>
+                                <div class="condition_contrainer_content">
+                                    <a class="condition_selected" id="level3" onclick="a_selected(this),level_selected(3)">高中</a>
+                                    <a id="level2" onclick="a_selected(this),level_selected(2) ">初中</a>
+                                </div>
+                            </div>
+                            <div class="condition_contrainer">
+                                <div class="condition_contrainer_title">地区：</div>
+                                <div class="condition_contrainer_content" id="district">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div id="list">
+                            <div id="list_title">
+                                <span class="list_title_left">
+                                    校长列表
+                                </span>
+                            </div>
+                            <div id="data_list">
+                            </div>
+                            <div id="pager">
+                                <div id="pager_buttons">
+                                    <div id="prev">
+                                        <a onclick="anchor(this),pre_page() ">上一页</a>
+                                    </div>
+                                    <div id="pages">
+
+                                    </div>
+                                    <div id="next"><a onclick="anchor(this),next_page() ">下一页</a></div>
+                                    <div id="turn"><span>跳转到</span><input type="text" id="page_size" /><span>页</span><a class="pages_href_selected" onclick="anchor(this),Go() ">GO</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="middle_content_bottom">
+
+                </div>
+            </div>
+        </div>
+        @Html.Partial("~/Common/bottom.ascx")
+    </div>
+    @Html.Partial("~/Common/bottom_script.ascx")
+</body>
+</html>

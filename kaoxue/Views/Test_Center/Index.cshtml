@@ -1,0 +1,198 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>试题中心</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/test_questions.css" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/Test_Center.js"></script>
+    <script src="~/CustomScripts/jquery.reveal.js"></script>
+</head>
+<body>
+
+    @Html.Partial("~/Common/top1.ascx")
+    <div class="xueduan">
+        <div class="xd5">
+            <div class="beijing">
+                <div class="xd5_div1 fl"><img src="img/duanluo.png" class="xdtb5"><a class="xd5a"><b>学 段</b></a></div>
+                <div class="xd5_hover fl xd5_hover_selected" id="level3" onclick="a_selected(this, 'xd5_hover_selected'), level_selected(3)">
+                    <a>高中</a>
+                </div>
+                <div class="xd5_hover fl" id="level2" onclick="a_selected(this, 'xd5_hover_selected'), level_selected(2) ">
+                    <a>初中</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="xd52">
+            <div class="xd521 fl">
+                <a class="stzxxueke"><img src="img/xueke.png" class="xdtb521"><b>学 科</b></a>
+            </div>
+            <div class="xd522 fl" style="height:100%;">
+                <div class="xdl1039 fl" id="subject">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="xd52">
+            <div class="xd521 x521 fl">
+                <a class="stzxxueke"><img src="img/xueke.png" class="xdtb521"><b>试 题</b></a>
+            </div>
+            <div class="xd522 fl">
+                <div class="xdl1039 fl" id="testcategory">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="xd5">
+            <div class="beijing" id="grade">
+
+            </div>
+        </div>
+
+        <div class="xd5 xd5mg">
+            <div class="beijing">
+                <div class="xd5_div1 fl xd51k1"><img src="img/leixin.png" class="xdtb5"><a class="xd5a"><b>类 型</b></a></div>
+                <div class="xd5_hover xdh15 fl xdh15_selected" onclick="type_selected(''), a_selected(this, 'xdh15_selected')">
+                    <a>全部</a>
+                </div>
+                <div class="xd5_hover xdh15 fl" onclick="type_selected(1), a_selected(this, 'xdh15_selected')">
+                    <a>试题</a>
+                </div>
+                <div class="xd5_hover xdh15 fl" onclick="type_selected(2), a_selected(this, 'xdh15_selected')">
+                    <a>课件</a>
+                </div>
+                <div class="xd5_hover xdh15 fl" onclick="type_selected(3), a_selected(this, 'xdh15_selected')">
+                    <a>教案</a>
+                </div>
+                <div class="xd5_hover xdh15 fl" onclick="type_selected(4), a_selected(this, 'xdh15_selected')">
+                    <a>学案</a>
+                </div>
+                <div class="xd5_hover xdh15 fl" onclick="type_selected(6), a_selected(this, 'xdh15_selected')">
+                    <a>同步</a>
+                </div>
+                <div class="xd5_hover xdh15 fl" onclick="type_selected(5), a_selected(this, 'xdh15_selected')">
+                    <a>素材</a>
+                </div>
+                <div class="xd5_hover xdh15 fl" onclick="type_selected(7), a_selected(this, 'xdh15_selected')">
+                    <a>论文</a>
+                </div>
+                <div class="xd5_hover xdh15 fl" onclick="type_selected(8), a_selected(this, 'xdh15_selected')">
+                    <a>套题</a>
+                </div>
+                <div class="xd5_hover xdh15 fl" onclick="type_selected(9), a_selected(this, 'xdh15_selected')">
+                    <a>备课</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="xueduan150">
+            <div class="xd150 fl">
+                <a class="mxdq"><b>地 区</b></a>
+                <img src="img/leixin.png" class="img150xd">
+            </div>
+            <div class="xuduan33" style="height:100%;">
+                <div class="xdl1039 fl" id="district">
+                </div>
+            </div>
+        </div>
+    </div><!-- 学段 -->
+
+    <div class="lianxi">
+        <div class="lianxice210 fl">
+            <div class="lianxice33 ">
+                <a class="xzgd1">更多》</a>
+                <img src="img/xiazaitubiao.png" class="xztubiao">
+                <b>热门下载</b>
+            </div>
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="hot_download"></ul>
+            </div>
+            <div class="lianxice33 rmxz333">
+                <a class="xzgd1">更多》</a>
+                <img src="img/tuijianxg.png" class="xztubiao">
+                <b>相关推荐</b>
+            </div>
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="recommend"></ul>
+            </div>
+        </div>
+
+        <div class="lianxice fl" id="data_list_td">
+        </div>
+    </div>
+    <div class="anniu" id="pages">
+    </div> <!-- 跳转部分 -->
+    <script>
+        var shuzhi1 = $(".ysp1").html();
+        var zs1 = Number(shuzhi1);
+
+        var shuzhi2 = $(".ysp2").html();
+        var zs2 = Number(shuzhi2);
+
+        var shuzhi3 = $(".ysp3").html();
+        var zs3 = Number(shuzhi3);
+
+        var shuzhi4 = $(".ysp4").html();
+        var zs4 = Number(shuzhi4);
+
+        var shuzhi5 = $(".ysp5").html();
+        var zs5 = Number(shuzhi5);
+
+        $(".xyy1").click(function () {
+            var jd1 = zs1 += 1;
+            var jd2 = zs2 += 1;
+            var jd3 = zs3 += 1;
+            var jd4 = zs4 += 1;
+            var jd5 = zs5 += 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+        });
+
+        $(".syy1").click(function () {
+            var jd1 = zs1 - 1;
+            var jd2 = zs2 - 1;
+            var jd3 = zs3 - 1;
+            var jd4 = zs4 - 1;
+            var jd5 = zs5 - 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+
+
+        });
+        //页面分页加载
+
+        function go() {
+            var zansan = $("#lll").val()
+            var goyemian = Number(zansan);
+            $(".ysp1").html(goyemian);
+            $(".ysp2").html(goyemian + 1);
+            $(".ysp3").html(goyemian + 2);
+            $(".ysp4").html(goyemian + 3);
+            $(".ysp5").html(goyemian + 4);
+        }
+        //go改变页码
+    </script>
+
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

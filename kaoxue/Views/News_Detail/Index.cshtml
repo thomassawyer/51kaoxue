@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 新闻资讯</title>
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
+    <link href="~/CSS/News_Detail.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/News_Detail.js"></script>
+    @* 弹窗样式表 *@
+    <link rel="stylesheet" href="../css/reveal.css">
+    @* 弹窗演示表结束 *@
+    @* 弹窗脚本 *@
+    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
+    @* 弹窗脚本结束 *@
+</head>
+<body>
+    <div id="Main">
+        @Html.Partial("~/Common/top3.ascx")
+        <div id="content">
+            <div id="nav_tree">
+                <span id="tree_left">
+                    首页 > 新闻资讯
+                </span>
+                <span id="tree_right">
+                    @Html.Partial("~/Common/Search2.ascx")
+                </span>
+            </div>
+            <div id="list">
+                <div id="directory" style="width:365px; background:none;">
+                    <div class="directory_container" id="hot_download">
+
+                    </div>
+                    <br />
+                    <div class="directory_container" id="recommend">
+
+                    </div>
+                </div>
+                <div id="data_list" style="width:772px; background-color:white; padding:20px;">
+                    <div class="middle_content_bottom_text_left_title">
+                        <span id="title_left" class="title_left">新闻资讯</span>
+
+                    </div>
+                    <div id="data_list_td">
+                        <div id="data_title">
+                            <p id="data_title_title"></p>
+                            <p id="data_date">
+
+                            </p>
+                            <p id="data_content">
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FDA0FA9-5C4D-48E7-88FD-8E491CB9CB47}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kaoxue</RootNamespace>
+    <AssemblyName>kaoxue</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CommonLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="ZEngine">
+      <HintPath>C:\Users\华夏正阳\Desktop\ZEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\About_usController.cs" />
+    <Compile Include="Controllers\AncientController.cs" />
+    <Compile Include="Controllers\Ancient_ArticleController.cs" />
+    <Compile Include="Controllers\Ancient_ListController.cs" />
+    <Compile Include="Controllers\Beike_CenterController.cs" />
+    <Compile Include="Controllers\Contact_usController.cs" />
+    <Compile Include="Controllers\Copyright_StatementController.cs" />
+    <Compile Include="Controllers\DownloadController.cs" />
+    <Compile Include="Controllers\Download_ChildController.cs" />
+    <Compile Include="Controllers\Elite_SchoolController.cs" />
+    <Compile Include="Controllers\Gaokao_BeikaoController.cs" />
+    <Compile Include="Controllers\GradeController.cs" />
+    <Compile Include="Controllers\GuideController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\Member_CenterController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\News_DetailController.cs" />
+    <Compile Include="Controllers\Past_ExamController.cs" />
+    <Compile Include="Controllers\PresidentController.cs" />
+    <Compile Include="Controllers\President_Special_ColumnController.cs" />
+    <Compile Include="Controllers\ProvinceController.cs" />
+    <Compile Include="Controllers\SchoolController.cs" />
+    <Compile Include="Controllers\SchoolDetailController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\SpecialController.cs" />
+    <Compile Include="Controllers\SpecialSubjectController.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
+    <Compile Include="Controllers\Test_CenterController.cs" />
+    <Compile Include="Controllers\The_School_TestController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Common\bottom.ascx" />
+    <Content Include="Common\top1.ascx" />
+    <Content Include="Common\top2.ascx" />
+    <Content Include="CSS\chushihua.css" />
+    <Content Include="CSS\College_entrance_examination.css" />
+    <Content Include="CSS\default.css" />
+    <Content Include="CSS\famousschool.css" />
+    <Content Include="CSS\index.css" />
+    <Content Include="CSS\Junior_high_school.css" />
+    <Content Include="CSS\lesson.css" />
+    <Content Include="CSS\list_of_principals.css" />
+    <Content Include="CSS\Literature_culture.css" />
+    <Content Include="CSS\proforma.css" />
+    <Content Include="CSS\Province_page.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\Summary_page.css" />
+    <Content Include="CSS\test_questions.css" />
+    <Content Include="CSS\xueke9da.css" />
+    <Content Include="CSS\xueke9da1.css" />
+    <Content Include="CustomScripts\Ancient.js" />
+    <Content Include="CustomScripts\Ancient_Article.js" />
+    <Content Include="CustomScripts\Ancient_List.js" />
+    <Content Include="CustomScripts\Beike_Center.js" />
+    <Content Include="CustomScripts\Common.js" />
+    <Content Include="CustomScripts\Copyright_Statement.js" />
+    <Content Include="CustomScripts\Download.js" />
+    <Content Include="CustomScripts\Download_Record.js" />
+    <Content Include="CustomScripts\Elite_School.js" />
+    <Content Include="CustomScripts\Gaokao_Beikao.js" />
+    <Content Include="CustomScripts\Grade.js" />
+    <Content Include="CustomScripts\Guide.js" />
+    <Content Include="CustomScripts\index.js" />
+    <Content Include="CustomScripts\jquery-1.4.4.min.js" />
+    <Content Include="CustomScripts\jquery.reveal.js" />
+    <Content Include="CustomScripts\Login.js" />
+    <Content Include="CustomScripts\Member_Center.js" />
+    <Content Include="CustomScripts\Modify_Password.js" />
+    <Content Include="CustomScripts\News.js" />
+    <Content Include="CustomScripts\News_Detail.js" />
+    <Content Include="CustomScripts\Past_Exam.js" />
+    <Content Include="CustomScripts\President.js" />
+    <Content Include="CustomScripts\President_Special_Column.js" />
+    <Content Include="CustomScripts\Province.js" />
+    <Content Include="CustomScripts\School.js" />
+    <Content Include="CustomScripts\SchoolDetail.js" />
+    <Content Include="CustomScripts\Search.js" />
+    <Content Include="CustomScripts\Special.js" />
+    <Content Include="CustomScripts\SpecialSubject.js" />
+    <Content Include="CustomScripts\subject.js" />
+    <Content Include="CustomScripts\Test_Center.js" />
+    <Content Include="CustomScripts\The_School_Test.js" />
+    <Content Include="data1\images\1.jpg" />
+    <Content Include="data1\images\2.jpg" />
+    <Content Include="data1\images\3.jpg" />
+    <Content Include="data1\images\4.jpg" />
+    <Content Include="data1\tooltips\1.jpg" />
+    <Content Include="data1\tooltips\2.jpg" />
+    <Content Include="data1\tooltips\3.jpg" />
+    <Content Include="data1\tooltips\4.jpg" />
+    <Content Include="engine1\jquery.js" />
+    <Content Include="engine1\script.js" />
+    <Content Include="engine1\style.css" />
+    <Content Include="engine1\wowslider.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\专题\banner.png" />
+    <Content Include="Images\专题汇总\导航背景图.png" />
+    <Content Include="Images\会员中心\LOGO.png" />
+    <Content Include="Images\会员中心\组 2.png" />
+    <Content Include="Images\关于我们\多边形 5.png" />
+    <Content Include="Images\古文\书籍.png" />
+    <Content Include="Images\学校\多边形 5.png" />
+    <Content Include="Images\学校\学校主图.png" />
+    <Content Include="Images\学校\学校图片.png" />
+    <Content Include="Images\学校\校长头像.png" />
+    <Content Include="Images\学校汇总\学校_数据图.png" />
+    <Content Include="Images\校长专栏\图层 16.png" />
+    <Content Include="Images\登录\三角形.png" />
+    <Content Include="Images\历年高考真卷\组 49.png" />
+    <Content Include="Images\备课中心\logo.png" />
+    <Content Include="Images\备课中心\三角.png" />
+    <Content Include="Images\备课中心\搜索 副本.png" />
+    <Content Include="Images\备课中心\搜索.png" />
+    <Content Include="Images\备课中心\文档.png" />
+    <Content Include="Images\学科首页\banner\智能组卷.png" />
+    <Content Include="Images\学科首页\banner\百强名校.png" />
+    <Content Include="Images\学科首页\banner\轮播背景图.png" />
+    <Content Include="Images\学科首页\banner\高考备考.png" />
+    <Content Include="Images\学科首页\banner\高考真卷.png" />
+    <Content Include="Images\学科首页\左侧菜单栏\金品组卷网背景.png" />
+    <Content Include="Images\学科首页\文字部分\2数学.png" />
+    <Content Include="Images\学科首页\文字部分\3英语.png" />
+    <Content Include="Images\学科首页\文字部分\4物理.png" />
+    <Content Include="Images\学科首页\文字部分\5化学.png" />
+    <Content Include="Images\学科首页\文字部分\6生物.png" />
+    <Content Include="Images\学科首页\文字部分\7历史.png" />
+    <Content Include="Images\学科首页\文字部分\8政治.png" />
+    <Content Include="Images\学科首页\文字部分\9地理.png" />
+    <Content Include="Images\学科首页\文字部分\全部.png" />
+    <Content Include="Images\学科首页\文字部分\初中.png" />
+    <Content Include="Images\学科首页\文字部分\初中资源.png" />
+    <Content Include="Images\学科首页\文字部分\更多.png" />
+    <Content Include="Images\学科首页\文字部分\高中指示标.png" />
+    <Content Include="Images\学科首页\文字部分\高中资源.png" />
+    <Content Include="Images\学科首页\文字部分\高考语文.png" />
+    <Content Include="Images\登录\logo.png" />
+    <Content Include="Images\登录\密码框.png" />
+    <Content Include="Images\登录\登录框.png" />
+    <Content Include="Images\登录\组 44.png" />
+    <Content Include="Images\登录\背景.png" />
+    <Content Include="Images\省份首页面\上海交通大学.png" />
+    <Content Include="Images\省份首页面\上海师范大学.png" />
+    <Content Include="Images\省份首页面\华东.png" />
+    <Content Include="Images\省份首页面\延安中学.png" />
+    <Content Include="Images\省份首页面\箭头.png" />
+    <Content Include="Images\网站直通车\10独家视频.png" />
+    <Content Include="Images\网站直通车\1常用工具.png" />
+    <Content Include="Images\网站直通车\2天天阅读.png" />
+    <Content Include="Images\网站直通车\3教育文库.png" />
+    <Content Include="Images\网站直通车\4学科.png" />
+    <Content Include="Images\网站直通车\5高考备考.png" />
+    <Content Include="Images\网站直通车\6作文.png" />
+    <Content Include="Images\网站直通车\7学段.png" />
+    <Content Include="Images\网站直通车\8频道.png" />
+    <Content Include="Images\网站直通车\9文学国学.png" />
+    <Content Include="Images\首页\首页-顶部\顶部图片.png" />
+    <Content Include="Images\首页\可信网站.png" />
+    <Content Include="Images\首页\首页-banner\2017一轮复习.png" />
+    <Content Include="Images\首页\首页-banner\作文大全.png" />
+    <Content Include="Images\首页\首页-banner\名校资源.png" />
+    <Content Include="Images\首页\首页-banner\文学国学.png" />
+    <Content Include="Images\首页\首页-banner\智能组卷.png" />
+    <Content Include="Images\首页\首页-banner\智能组卷1.png" />
+    <Content Include="Images\首页\首页-banner\百强名校.png" />
+    <Content Include="Images\首页\首页-banner\百强名校1.png" />
+    <Content Include="Images\首页\首页-banner\菜单.png" />
+    <Content Include="Images\首页\首页-banner\轮播图.png" />
+    <Content Include="Images\首页\首页-banner\高考备考.png" />
+    <Content Include="Images\首页\首页-banner\高考备考1.png" />
+    <Content Include="Images\首页\首页-banner\高考真卷.png" />
+    <Content Include="Images\首页\首页-banner\高考真卷1.png" />
+    <Content Include="Images\首页\首页-导航\导航-右.png" />
+    <Content Include="Images\首页\首页-导航\导航-左.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\初中学科导航.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\好资源图标.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\导航三角号.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\导航减号.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\导航加号.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\导航子项背景图.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\导航指示标记.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\导航背景图.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\搜索框背景.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\放大镜.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\日历背景图.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\查找按钮背景图.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\组 16 副本 3.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\菜单栏背景图-上.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\菜单栏背景图-下.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\透明导航背景.png" />
+    <Content Include="Images\首页\首页-左侧菜单栏\高考历年真题背景图.png" />
+    <Content Include="Images\首页\首页-顶部\备课资源.png" />
+    <Content Include="Images\首页\首页-顶部\教师.png" />
+    <Content Include="Images\首页\首页-顶部\登录按钮.png" />
+    <Content Include="Images\首页\首页-顶部\网站直通车背景.png" />
+    <Content Include="Images\首页\首页-顶部\试题.png" />
+    <Content Include="Images\首页\首页中间文字部分\5.jpg" />
+    <Content Include="Images\首页\首页中间文字部分\初中-更多.png" />
+    <Content Include="Images\首页\首页中间文字部分\名师展示.png" />
+    <Content Include="Images\首页\首页中间文字部分\名校合作.png" />
+    <Content Include="Images\首页\首页中间文字部分\名校图片.png" />
+    <Content Include="Images\首页\首页中间文字部分\名校展示.png" />
+    <Content Include="Images\首页\首页中间文字部分\学习方法.png" />
+    <Content Include="Images\首页\首页中间文字部分\教学研究.png" />
+    <Content Include="Images\首页\首页中间文字部分\教师照片.png" />
+    <Content Include="Images\首页\首页中间文字部分\教材教法.png" />
+    <Content Include="Images\首页\首页中间文字部分\照片列表右箭头.png" />
+    <Content Include="Images\首页\首页中间文字部分\照片列表左箭头.png" />
+    <Content Include="Images\首页\首页中间文字部分\科研论文.png" />
+    <Content Include="Images\首页\首页中间文字部分\经验交流.png" />
+    <Content Include="Images\首页\首页中间文字部分\试题展示.png" />
+    <Content Include="Images\首页\首页中间文字部分\高考动态-更多.png" />
+    <Content Include="Images\首页\首页中间文字部分\高考动态.png" />
+    <Content Include="img\100fen.png" />
+    <Content Include="img\10tbbiao.png" />
+    <Content Include="img\111.png" />
+    <Content Include="img\1111.png" />
+    <Content Include="img\11tbbiao.png" />
+    <Content Include="img\12.png" />
+    <Content Include="img\12tbbiao.png" />
+    <Content Include="img\13tbbiao.png" />
+    <Content Include="img\14tbbiao.png" />
+    <Content Include="img\15tbtiao.png" />
+    <Content Include="img\16tbtiao.png" />
+    <Content Include="img\17tbtiao.png" />
+    <Content Include="img\18tbtiao.png" />
+    <Content Include="img\19tbtiao.png" />
+    <Content Include="img\1tubiao.png" />
+    <Content Include="img\20tbtiao.png" />
+    <Content Include="img\2tubiao.png" />
+    <Content Include="img\3tubiao.png" />
+    <Content Include="img\4tbbiao.png" />
+    <Content Include="img\5tbbiao.png" />
+    <Content Include="img\6tbbiao.png" />
+    <Content Include="img\7tbbiao.png" />
+    <Content Include="img\8tbbiao.png" />
+    <Content Include="img\9dalunbo.png" />
+    <Content Include="img\9da_1.png" />
+    <Content Include="img\9tbbiao.png" />
+    <Content Include="img\anniuhui.png" />
+    <Content Include="img\anniulan.png" />
+    <Content Include="img\baijiamingxiao.png" />
+    <Content Include="img\baiseyuanxing-12.png" />
+    <Content Include="img\beijing8.png" />
+    <Content Include="img\beike01.png" />
+    <Content Include="img\boshimao.png" />
+    <Content Include="img\cekbei.png" />
+    <Content Include="img\chuchi1.png" />
+    <Content Include="img\chuchihui1.png" />
+    <Content Include="img\chuchilan.png" />
+    <Content Include="img\chuchilv.png" />
+    <Content Include="img\czgzshit2.png" />
+    <Content Include="img\czgzwb.png" />
+    <Content Include="img\czgzy.png" />
+    <Content Include="img\czgzye1.png" />
+    <Content Include="img\dandan.png" />
+    <Content Include="img\denglubg.png" />
+    <Content Include="img\dlbjk.png" />
+    <Content Include="img\dlbjk1.png" />
+    <Content Include="img\dlylog.png" />
+    <Content Include="img\duanluo.png" />
+    <Content Include="img\fj.png" />
+    <Content Include="img\fonz1.jpg" />
+    <Content Include="img\fonz2.jpg" />
+    <Content Include="img\fonz3.jpg" />
+    <Content Include="img\gaokao.png" />
+    <Content Include="img\gaokaotbh.png" />
+    <Content Include="img\gaokaozhenjuan.png" />
+    <Content Include="img\gdlan.png" />
+    <Content Include="img\gedigaokao.jpg" />
+    <Content Include="img\genduomixiao.png" />
+    <Content Include="img\genduoz1-9.png" />
+    <Content Include="img\gengduo.png" />
+    <Content Include="img\gkdtmao.png" />
+    <Content Include="img\gkzkcs.png" />
+    <Content Include="img\gkzkjiaocai.png" />
+    <Content Include="img\gkzkkytb.png" />
+    <Content Include="img\gongju.png" />
+    <Content Include="img\gotb.png" />
+    <Content Include="img\guoxuetb.png" />
+    <Content Include="img\gzyuanxing.png" />
+    <Content Include="img\hkaoshi.png" />
+    <Content Include="img\hmore.png" />
+    <Content Include="img\hover-10.png" />
+    <Content Include="img\hover-31.png" />
+    <Content Include="img\hover-57.png" />
+    <Content Include="img\hs-107.png" />
+    <Content Include="img\hsanjiao.png" />
+    <Content Include="img\hsgzcz.png" />
+    <Content Include="img\hshu.png" />
+    <Content Include="img\hyeu.png" />
+    <Content Include="img\jianzhubai.png" />
+    <Content Include="img\jiaodian.png" />
+    <Content Include="img\juxin5chang.png" />
+    <Content Include="img\kaobeizu8.png" />
+    <Content Include="img\kaojuankb.png" />
+    <Content Include="img\kaoshijuan.png" />
+    <Content Include="img\kcbaise.png" />
+    <Content Include="img\kshg.png" />
+    <Content Include="img\ksquan.png" />
+    <Content Include="img\lanlan1.png" />
+    <Content Include="img\lantb.png" />
+    <Content Include="img\laoshi.png" />
+    <Content Include="img\lazyfonz1.png" />
+    <Content Include="img\lazyfonz2.png" />
+    <Content Include="img\lazyfonz3.png" />
+    <Content Include="img\lazyfonz4.png" />
+    <Content Include="img\lazyfonz5.png" />
+    <Content Include="img\lazyfonz6.png" />
+    <Content Include="img\leixin.png" />
+    <Content Include="img\llgzcz.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\lsgzcz.png" />
+    <Content Include="img\lunwenbai.png" />
+    <Content Include="img\lvlvtb.png" />
+    <Content Include="img\mingxiaotaoti.png" />
+    <Content Include="img\molikaoshih.png" />
+    <Content Include="img\more.png" />
+    <Content Include="img\more1.png" />
+    <Content Include="img\more2.png" />
+    <Content Include="img\more3.png" />
+    <Content Include="img\morebai.png" />
+    <Content Include="img\moreh.png" />
+    <Content Include="img\morelan.png" />
+    <Content Include="img\morell.png" />
+    <Content Include="img\mxtubiao.png" />
+    <Content Include="img\mxzy1.png" />
+    <Content Include="img\nianfen.png" />
+    <Content Include="img\pclunbo.png" />
+    <Content Include="img\qiuda1.png" />
+    <Content Include="img\qq.png" />
+    <Content Include="img\qzqm.png" />
+    <Content Include="img\redkj.png" />
+    <Content Include="img\renwu.png" />
+    <Content Include="img\scyuanxing.png" />
+    <Content Include="img\sfbeike.png" />
+    <Content Include="img\sfyuanxing.png" />
+    <Content Include="img\shenfenbsm.png" />
+    <Content Include="img\shenfenkb.png" />
+    <Content Include="img\shijuan.png" />
+    <Content Include="img\shijuantubiao.png" />
+    <Content Include="img\shushuxian.png" />
+    <Content Include="img\shutubiao.png" />
+    <Content Include="img\shutubiao1.png" />
+    <Content Include="img\sjtubiao.png" />
+    <Content Include="img\slick.gif" />
+    <Content Include="img\souhu.png" />
+    <Content Include="img\sousuo.png" />
+    <Content Include="img\stk.jpg" />
+    <Content Include="img\stk1.jpg" />
+    <Content Include="img\stxkfx.png" />
+    <Content Include="img\syy.png" />
+    <Content Include="img\taochanh.png" />
+    <Content Include="img\tb1.png" />
+    <Content Include="img\tc-104.png" />
+    <Content Include="img\tc-93.png" />
+    <Content Include="img\tlbeijin.png" />
+    <Content Include="img\tubiaostk.png" />
+    <Content Include="img\tubiaozu1.png" />
+    <Content Include="img\tuijianxg.png" />
+    <Content Include="img\tushu3tb.png" />
+    <Content Include="img\tushu4tb.png" />
+    <Content Include="img\ty-10-kb-2.png" />
+    <Content Include="img\ty-10-kb.png" />
+    <Content Include="img\wd110.png" />
+    <Content Include="img\wendang.png" />
+    <Content Include="img\wenjianltb.png" />
+    <Content Include="img\wenjuan.png" />
+    <Content Include="img\wj.png" />
+    <Content Include="img\woedlan.png" />
+    <Content Include="img\xiamgmu.png" />
+    <Content Include="img\xiazaitb.png" />
+    <Content Include="img\xiazaitubiao.png" />
+    <Content Include="img\xintb.png" />
+    <Content Include="img\xintbh.png" />
+    <Content Include="img\xinxin.png" />
+    <Content Include="img\xueke.png" />
+    <Content Include="img\xzuizz.png" />
+    <Content Include="img\xzxueke.png" />
+    <Content Include="img\yellowtb.png" />
+    <Content Include="img\yeshu.png" />
+    <Content Include="img\yll.png" />
+    <Content Include="img\yuanbjj.png" />
+    <Content Include="img\yuanxing1.png" />
+    <Content Include="img\yulan.png" />
+    <Content Include="img\yw.png" />
+    <Content Include="img\z-11.png" />
+    <Content Include="img\z-22.png" />
+    <Content Include="img\z-33.png" />
+    <Content Include="img\z-44.png" />
+    <Content Include="img\z01.png" />
+    <Content Include="img\z02.png" />
+    <Content Include="img\z03.png" />
+    <Content Include="img\z04.png" />
+    <Content Include="img\zhongkao.png" />
+    <Content Include="img\zhuanyuan.png" />
+    <Content Include="img\ziyuan.png" />
+    <Content Include="img\ztc.png" />
+    <Content Include="img\zthzjd.png" />
+    <Content Include="img\zu-1.png" />
+    <Content Include="img\zui-25.png" />
+    <Content Include="img\zxlansebj.png" />
+    <Content Include="indeximages\changdeshi.jpg" />
+    <Content Include="indeximages\guangdong.jpg" />
+    <Content Include="indeximages\hainansheng.jpg" />
+    <Content Include="indeximages\hainanwenchang.jpg" />
+    <Content Include="indeximages\hengyang.jpg" />
+    <Content Include="indeximages\hunanshifan.jpg" />
+    <Content Include="indeximages\jinshan.jpg" />
+    <Content Include="indeximages\sanyashi.jpg" />
+    <Content Include="indeximages\shantou.jpg" />
+    <Content Include="indeximages\zhongshan.jpg" />
+    <Content Include="indeximages\zhuzhou.jpg" />
+    <None Include="Properties\PublishProfiles\FaBu.pubxml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="js\highlight.pack.js" />
+    <Content Include="js\jPages.js" />
+    <Content Include="js\jPages.min.js" />
+    <Content Include="js\jquery-1.8.2.min.js" />
+    <Content Include="js\jquery.lazyload.js" />
+    <Content Include="js\js.js" />
+    <Content Include="js\tabifier.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Subject\Index.cshtml" />
+    <Content Include="Views\Province\Index.cshtml" />
+    <Content Include="Views\Grade\Index.cshtml" />
+    <Content Include="Views\Beike_Center\Index.cshtml" />
+    <Content Include="Views\Test_Center\Index.cshtml" />
+    <Content Include="Views\Elite_School\Index.cshtml" />
+    <Content Include="Views\Gaokao_Beikao\Index.cshtml" />
+    <Content Include="Views\Past_Exam\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Download\Index.cshtml" />
+    <Content Include="Views\Special\Index.cshtml" />
+    <Content Include="Views\Special\Beike.cshtml" />
+    <Content Include="Views\SpecialSubject\Index.cshtml" />
+    <Content Include="Views\Guide\Index.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\News_Detail\Index.cshtml" />
+    <Content Include="Views\SchoolDetail\Index.cshtml" />
+    <Content Include="Views\School\Index.cshtml" />
+    <Content Include="Views\Member_Center\Index.cshtml" />
+    <Content Include="Views\Member_Center\Download_Record.cshtml" />
+    <Content Include="Views\Member_Center\Modify_Password.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\President_Special_Column\Index.cshtml" />
+    <Content Include="Views\The_School_Test\Index.cshtml" />
+    <Content Include="Views\President\Index.cshtml" />
+    <Content Include="Views\Copyright_Statement\Index.cshtml" />
+    <Content Include="Views\About_us\Index.cshtml" />
+    <Content Include="Views\Contact_us\Index.cshtml" />
+    <Content Include="Views\Download_Child\Index.cshtml" />
+    <Content Include="Views\Ancient\Index.cshtml" />
+    <Content Include="Views\Ancient_List\Index.cshtml" />
+    <Content Include="Views\Ancient_Article\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Code\CodematicDemo\BLL\BLL.csproj">
+      <Project>{38d7aa58-c95b-449b-86c6-a8073a56e11f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code\CodematicDemo\DBUtility\DBUtility.csproj">
+      <Project>{0988c62e-247f-471f-a183-db509c7a3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code\CodematicDemo\Model\Model.csproj">
+      <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50773</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49691/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

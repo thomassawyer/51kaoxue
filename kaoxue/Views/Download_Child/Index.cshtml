@@ -1,0 +1,111 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 下载</title>
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    @* 弹窗样式表 *@
+    <link rel="stylesheet" href="../css/reveal.css">
+    @* 弹窗演示表结束 *@
+
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
+    <link href="~/CSS/Download.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/Download.js"></script>
+    @* 弹窗脚本 *@
+    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
+    @* 弹窗脚本结束 *@
+</head>
+<body>
+    <div id="Main">
+        <div id="content">
+            <div id="list">
+                <div id="data_list" style="width:812px;">
+                    <div id="info">
+                        <div id="info_title"></div>
+                        <div id="info_description">
+                            <span class="info_properties">资料类型:</span>
+                            <span class="info_values" id="datatype"></span>
+                            <span class="info_properties">学科名称:</span>
+                            <span class="info_values" id="subjectname"></span>
+                            <span class="info_properties">地区名称:</span>
+                            <span class="info_values" id="district">暂无</span>
+                            <span class="info_properties">具体类型:</span>
+                            <span class="info_values" id="testcategory">同步检测</span>
+                            <span class="info_properties">文件格式:</span>
+                            <span class="info_values" id="filetype"></span>
+                            <span class="info_properties">下载扣点:</span>
+                            <span class="info_values_red" id="neednum"></span>
+                            <span class="info_properties">上传时间:</span>
+                            <span class="info_values" id="uploadtime"></span>
+                        </div>
+                        <div id="download_buttons">
+                            <div id="download_buttons_left">
+                                <a id="download_resource" style="display:none;" onclick="DownLoad()">下载资源</a>
+                                <a id="collect" onclick="AddFavorite();">点击收藏</a>
+                            </div>
+                            <div id="share_buttons">
+                                <div style="float:left;">分享到：</div>
+                                <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                                    <a class="bds_qzone"></a>
+                                    <a class="bds_tsina"></a>
+                                    <a class="bds_tqq"></a>
+                                    <a class="bds_renren"></a>
+                                    <span class="bds_more"></span>
+                                    <!--<a class="shareCount"></a>-->
+                                </div>
+
+                                <script type="text/javascript" id="bdshare_js" data="type=tools&uid=2733582"></script>
+                                <script type="text/javascript" id="bdshell_js"></script>
+                                <script type="text/javascript">
+                                    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000)
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <iframe id="preview" width="852" height="800" frameborder="0" src=""></iframe>
+                    @*<div id="pager">
+                            <div id="pager_buttons">
+                                <div id="prev">
+                                    <a onclick="anchor(this),pre_page() ">上一页</a>
+                                </div>
+                                <div id="pages">
+
+                                </div>
+                                <div id="next"><a onclick="anchor(this),next_page() ">下一页</a></div>
+                                <div id="turn"><span>跳转到</span><input type="text" id="page_size" /><span>页</span><a class="pages_href_selected" onclick="anchor(this),Go() ">GO</a></div>
+                            </div>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" id="message_start" class="big-link" data-reveal-id="myModal" style="display:none;">
+        jquery1
+    </a>
+
+    <a href="#" id="message_start1" class="big-link" data-reveal-id="myModal1" style="display:none;">
+        jquery1
+    </a>
+
+    <div id="myModal" class="reveal-modal" style="border: 1px solid #3b4f7c; ">
+        <h1 style="font-family:'幼圆'" id="message_content">系统提示:</h1>
+        <p id="message_text" style="font-family:'微软雅黑'">Attention please.</p>
+        <a class="close-reveal-modal" id="message_close">&#215;</a>
+    </div>
+
+    <div id="myModal1" class="reveal-modal" style="border: 1px solid #3b4f7c; ">
+        <h1 style="font-family:'幼圆'">数据正在加载...</h1>
+        <p id="" style="font-family:'微软雅黑'">Data being loaded, please wait a minute.</p>
+        <a class="close-reveal-modal" id="message_close1" style="display:none">&#215;</a>
+    </div>
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

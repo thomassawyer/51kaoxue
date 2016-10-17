@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - @ViewBag.title</title>
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/Special.js"></script>
+    @* 弹窗样式表 *@
+    <link rel="stylesheet" href="../css/reveal.css">
+    @* 弹窗演示表结束 *@
+    @* 弹窗脚本 *@
+    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
+    @* 弹窗脚本结束 *@
+</head>
+<body>
+    <div id="Main">
+        @Html.Partial("~/Common/top3.ascx")
+        <div id="content">
+            <div id="nav_tree">
+                <span id="tree_left">
+                    首页 > @ViewBag.title
+                </span>
+                <span id="tree_right">
+                    @Html.Partial("~/Common/Search2.ascx")
+                </span>
+            </div>
+            <div id="list">
+                <div id="directory" style="width:365px; background:none;">
+                    <div class="directory_container" id="hot_download">
+
+                    </div>
+                    <br />
+                    <div class="directory_container" id="recommend">
+
+                    </div>
+                </div>
+                <div id="data_list" style="width:812px;">
+                    <div class="middle_content_bottom_text_left_title">
+                        <span class="title_left" id="title_left"></span>
+                        
+                    </div>
+                    <div id="data_list_td">
+                    </div>
+                    <div id="pager">
+                        <div id="pager_buttons">
+                            <div id="prev">
+                                <a onclick="anchor(this),pre_page() ">上一页</a>
+                            </div>
+                            <div id="pages">
+
+                            </div>
+                            <div id="next"><a onclick="anchor(this),next_page() ">下一页</a></div>
+                            <div id="turn"><span>跳转到</span><input type="text" id="page_size" /><span>页</span><a class="pages_href_selected" onclick="anchor(this),Go() ">GO</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

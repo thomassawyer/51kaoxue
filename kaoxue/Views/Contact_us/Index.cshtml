@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 联系我们</title>
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
+    <link href="~/CSS/Copyright_Statement.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/Test_Center.js"></script>
+    @* 弹窗样式表 *@
+    <link rel="stylesheet" href="../css/reveal.css">
+    @* 弹窗演示表结束 *@
+    @* 弹窗脚本 *@
+    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
+    @* 弹窗脚本结束 *@
+    <link href="~/CSS/Contact_us.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="Main">
+        @Html.Partial("~/Common/top3.ascx")
+        <div id="content">
+            <div id="nav_tree">
+                <span id="tree_left">
+                    首页 > 联系我们
+                </span>
+                <span id="tree_right">
+                    @Html.Partial("~/Common/Search2.ascx")
+                </span>
+            </div>
+            <div id="content">
+                @Html.Partial("~/Common/about_me_top.ascx")
+                <div id="content_right">
+                    <div class="content_right_container">
+                        <span class="content_right_properties">联系电话：</span>
+                        <span class="content_right_values">15010885222 010——56292460</span>
+                        <span class="content_right_properties">我要应聘：</span>
+                        <span class="content_right_values">zhaopin@hzy.com</span>
+                        <br />
+                        <span class="content_right_properties">媒体报道：</span>
+                        <span class="content_right_values">pr@hzy.com</span>
+                        <span class="content_right_properties">市场合作：</span>
+                        <span class="content_right_values">market@hzy.com</span>
+                        <br />
+                        <span class="content_right_properties">其他合作：</span>
+                        <span class="content_right_values">info@hzy.com</span>
+                        <span class="content_right_properties">我要建议：</span>
+                        <span class="content_right_values">jianyi@hzy.com</span>
+                        <br />
+                        <span class="content_right_properties">学校集体账号申请：</span>
+                        <span class="content_right_values">school@hzy.com</span>
+                        <br />
+                        <span class="content_right_properties">渠道合作：</span>
+                        <span class="content_right_values">qudao@hzy.com 中小学渠道资源合作通道</span>
+                        <br />
+                        <span class="content_right_properties">教育产品合作：</span>
+                        <span class="content_right_values">product@hzy.com 线上、线下各种教育产品和笔、纸等中小学生工具类合作通道</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

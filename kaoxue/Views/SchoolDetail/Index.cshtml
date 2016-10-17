@@ -1,0 +1,166 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>好资源 - 学校详细</title>
+    <link href="~/CSS/Province.css" rel="stylesheet" />
+
+    <link href="~/CSS/common.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link href="~/CSS/SchoolDetail.css" rel="stylesheet" />
+    <!-- Edit Below -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+
+    <script src="~/CustomScripts/SchoolDetail.js"></script>
+
+</head>
+<body>
+    <div id="Main" class="Main">
+        @Html.Partial("~/Common/top4.ascx")
+        <div id="middle">
+            <div id="middle_content">
+                <div id="middle_content_top1">
+                    <div id="middle_content_top_left">
+                        <div id="middle_content_top_left_top" style="height:130px;">
+                            <div id="middle_content_top_left_top_img">
+                                <a href="Home"><img src="~/Images/%e9%a6%96%e9%a1%b5/%e9%a6%96%e9%a1%b5-%e5%b7%a6%e4%be%a7%e8%8f%9c%e5%8d%95%e6%a0%8f/%e5%a5%bd%e8%b5%84%e6%ba%90%e5%9b%be%e6%a0%87.png" /></a>
+                                <br />
+                                <br />
+                                @Html.Partial("~/Common/Search.ascx")
+                            </div>
+                        </div>
+                        <div id="middle_content_top_left_bottom" style=" overflow:hidden">
+                            <br />
+                            <div>
+                                <div class="nav_background">
+                                    <a class="youyuan">·</a>
+                                    <span>学科</span>
+                                </div>
+                                <div id="nav_background_container1">
+                                    <div id="nav_background_container_child">
+                                        <a class="xueji" href="../Subject?subjectname=语文">语文</a>
+                                        <a class="xueji" href="../Subject?subjectname=数学">数学</a>
+                                        <a class="xueji1" href="../Subject?subjectname=英语">英语</a>
+                                    </div>
+                                    <div id="nav_background_container_child">
+                                        <a class="xueji" href="../Subject?subjectname=政治">政治</a>
+                                        <a class="xueji" href="../Subject?subjectname=地理">地理</a>
+                                        <a class="xueji1" href="../Subject?subjectname=历史">历史</a>
+                                    </div>
+                                    <div id="nav_background_container_child">
+                                        <a class="xueji" href="../Subject?subjectname=化学">化学</a>
+                                        <a class="xueji" href="../Subject?subjectname=物理">物理</a>
+                                        <a class="xueji1" href="../Subject?subjectname=生物">生物</a>
+                                    </div>
+                                    <div id="nav_background_container_child">
+                                        <a class="xueji" href="../Subject?subjectname=科学">科学</a>
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+
+                        @* 校长介绍 *@
+                        <div id="president_introduce">
+                            <div class="directory_container_title">
+                                <span class="directory_container_title_left">| 校长介绍</span>
+                                <a id="president_more">
+                                    <span class="directory_container_title_right">More</span>
+                                </a>
+                            </div>
+
+                            <div id="president_head_img">
+                               
+                            </div>
+                            <div id="president_name"></div>
+                            <div id="president_description">
+                                <p id="president_description_text">
+                                    
+                                </p>
+                            </div>
+                        </div>
+
+                        @* 校长专栏 *@
+                        <div id="president_special_column">
+                            <div class="directory_container_title">
+                                <span class="directory_container_title_left">| 校长专栏</span>
+                                <a>
+                                    <span class="directory_container_title_right">More</span>
+                                </a>
+                            </div>
+                            <div id="president_special_columns">
+                                
+                            </div>
+                        </div>
+
+                        @* 相关名校 *@
+                        <div id="correlation_elite_school">
+                            <div class="directory_container_title">
+                                <span class="directory_container_title_left">| 相关名校</span>
+                                <a>
+                                    <span class="directory_container_title_right">More</span>
+                                </a>
+                            </div>
+                            <div id="correlation_elite_schools">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    @* 学校信息 *@
+                    <div id="middle_content_top_right">
+                        <div id="school_introduce">
+                            <p>
+                                <img id="imgurl" src="" style="float:left;" width="398" height="295" />
+                                <span id="school_name"></span>
+                                <br />
+                                <br />
+                                <span id="school_star">
+                                    
+                                </span>
+                                <br />
+                                <br />
+                                <p id="content"></p>
+                                
+                            </p>
+                        </div>
+
+                        @* 本校试题 *@
+                        <div id="school_test">
+                            <div class="test_title">
+                                <span class="test_title_left">本校试题</span>
+                                <a id="the_school_test_more"><span class="test_title_right">More</span></a>
+                            </div>
+                            <div id="school_tests">
+                               
+                            </div>
+                        </div>
+
+                        @* 本省试题 *@
+                        <div id="province_test">
+                            <div class="test_title">
+                                <span class="test_title_left">本省试题</span>
+                                <span class="test_title_right">More</span>
+                            </div>
+                            <div id="province_tests">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="middle_content_bottom">
+                    
+                </div>
+            </div>
+        </div>
+        @Html.Partial("~/Common/bottom.ascx")
+    </div>
+    @Html.Partial("~/Common/bottom_script.ascx")
+</body>
+</html>
