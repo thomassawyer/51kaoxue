@@ -3,97 +3,141 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 百强名校</title>
-    <link href="~/CSS/common.css" rel="stylesheet" />
-    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-
-    <!-- Edit Below -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>百强名校</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/test_questions.css" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
     <script src="~/CustomScripts/Elite_School.js"></script>
-    @* 弹窗样式表 *@
-    <link rel="stylesheet" href="../css/reveal.css">
-    @* 弹窗演示表结束 *@
-    @* 弹窗脚本 *@
-    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
-    @* 弹窗脚本结束 *@
+    <script src="~/CustomScripts/jquery.reveal.js"></script>
 </head>
 <body>
-    <div id="Main">
-        @Html.Partial("~/Common/top3.ascx")
-        <div id="content">
-            <div id="nav_tree">
-                <span id="tree_left">
-                    首页 > 百强名校
-                </span>
-                <span id="tree_right">
-                    @Html.Partial("~/Common/Search2.ascx")
-                </span>
-            </div>
-            <div id="condition">
-                <div class="condition_contrainer">
-                    <div class="condition_contrainer_title">学段：</div>
-                    <div class="condition_contrainer_content">
-                        <a class="condition_selected" id="level_senior" onclick="a_selected(this),level_selected(3)">高中</a>
-                        <a onclick="a_selected(this),level_selected(2) ">初中</a>
-                    </div>
+
+    @Html.Partial("~/Common/top1.ascx")
+    <div class="xueduan">
+        <div class="xd5">
+            <div class="beijing">
+                <div class="xd5_div1 fl"><img src="img/duanluo.png" class="xdtb5"><a class="xd5a"><b>学 段</b></a></div>
+                <div class="xd5_hover fl xd5_hover_selected" id="level3" onclick="a_selected(this, 'xd5_hover_selected'), level_selected(3)">
+                    <a>高中</a>
                 </div>
-
-                <div class="condition_contrainer">
-                    <div class="condition_contrainer_title">年级：</div>
-                    <div class="condition_contrainer_content" id="grade">
-
-                    </div>
+                <div class="xd5_hover fl" id="level2" onclick="a_selected(this, 'xd5_hover_selected'), level_selected(2) ">
+                    <a>初中</a>
                 </div>
-
-                <div class="condition_contrainer">
-                    <div class="condition_contrainer_title">地区：</div>
-                    <div class="condition_contrainer_content" id="district">
-
-                    </div>
-                </div>
-
 
             </div>
-            <div id="list">
-                <div id="directory" style="width:365px; background:none;">
-                    <div class="directory_container" id="hot_download">
+        </div>
+        <div class="xd52">
+            <div class="xd521 fl">
+                <a class="stzxxueke"><img src="img/xueke.png" class="xdtb521"><b>学 科</b></a>
+            </div>
+            <div class="xd522 fl" style="height:100%;">
+                <div class="xdl1039 fl" id="subject">
 
-                    </div>
-                    <br />
-                    <div class="directory_container" id="recommend">
-
-                    </div>
                 </div>
-                <div id="data_list" style="width:812px;">
-                    <div class="middle_content_bottom_text_left_title">
-                        <span class="title_left">共享文件</span>
-                        <a class="download_button">上传文件积分</a>
-                    </div>
-                    <div id="data_list_td">
-                    </div>
-                    <div id="pager">
-                        <div id="pager_buttons">
-                            <div id="prev">
-                                <a onclick="anchor(this),pre_page() ">上一页</a>
-                            </div>
-                            <div id="pages">
+            </div>
 
-                            </div>
-                            <div id="next"><a onclick="anchor(this),next_page() ">下一页</a></div>
-                            <div id="turn"><span>跳转到</span><input type="text" id="page_size" /><span>页</span><a class="pages_href_selected" onclick="anchor(this),Go() ">GO</a></div>
-                        </div>
-                    </div>
+        </div>
+        <div class="xueduan150">
+            <div class="xd150 fl">
+                <a class="mxdq"><b>地 区</b></a>
+                <img src="img/leixin.png" class="img150xd">
+            </div>
+            <div class="xuduan33" style="height:100%;">
+                <div class="xdl1039 fl" id="district">
                 </div>
             </div>
         </div>
+    </div><!-- 学段 -->
+
+    <div class="lianxi">
+        <div class="lianxice210 fl">
+            <div class="lianxice33 ">
+                <a class="xzgd1">更多》</a>
+                <img src="img/xiazaitubiao.png" class="xztubiao">
+                <b>热门下载</b>
+            </div>
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="hot_download"></ul>
+            </div>
+            <div class="lianxice33 rmxz333">
+                <a class="xzgd1">更多》</a>
+                <img src="img/tuijianxg.png" class="xztubiao">
+                <b>相关推荐</b>
+            </div>
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="recommend"></ul>
+            </div>
+        </div>
+
+        <div class="lianxice fl" id="data_list_td">
+        </div>
     </div>
+    <div class="anniu" id="pages">
+    </div> <!-- 跳转部分 -->
+    <script>
+        var shuzhi1 = $(".ysp1").html();
+        var zs1 = Number(shuzhi1);
+
+        var shuzhi2 = $(".ysp2").html();
+        var zs2 = Number(shuzhi2);
+
+        var shuzhi3 = $(".ysp3").html();
+        var zs3 = Number(shuzhi3);
+
+        var shuzhi4 = $(".ysp4").html();
+        var zs4 = Number(shuzhi4);
+
+        var shuzhi5 = $(".ysp5").html();
+        var zs5 = Number(shuzhi5);
+
+        $(".xyy1").click(function () {
+            var jd1 = zs1 += 1;
+            var jd2 = zs2 += 1;
+            var jd3 = zs3 += 1;
+            var jd4 = zs4 += 1;
+            var jd5 = zs5 += 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+        });
+
+        $(".syy1").click(function () {
+            var jd1 = zs1 - 1;
+            var jd2 = zs2 - 1;
+            var jd3 = zs3 - 1;
+            var jd4 = zs4 - 1;
+            var jd5 = zs5 - 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+
+
+        });
+        //页面分页加载
+
+        function go() {
+            var zansan = $("#lll").val()
+            var goyemian = Number(zansan);
+            $(".ysp1").html(goyemian);
+            $(".ysp2").html(goyemian + 1);
+            $(".ysp3").html(goyemian + 2);
+            $(".ysp4").html(goyemian + 3);
+            $(".ysp5").html(goyemian + 4);
+        }
+        //go改变页码
+    </script>
+
     @Html.Partial("~/Common/bottom.ascx")
 </body>
 </html>
