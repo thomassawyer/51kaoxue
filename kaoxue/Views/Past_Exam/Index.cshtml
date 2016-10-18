@@ -3,82 +3,103 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 高考真卷</title>
-    <link href="~/CSS/common.css" rel="stylesheet" />
-    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    @* 弹窗样式表 *@
-    <link rel="stylesheet" href="../css/reveal.css">
-    @* 弹窗演示表结束 *@
-    
-    <!-- Edit Below -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="~/CSS/Past_Exam.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>高考真卷页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/proforma.css">
+    <link rel="stylesheet" type="text/css" href="css/College_entrance_examination.css">
     <script src="~/Scripts/jquery-1.8.2.js"></script>
-
     <script src="~/CustomScripts/Past_Exam.js"></script>
-
-    @* 弹窗脚本 *@
-    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
-    @* 弹窗脚本结束 *@
 </head>
 <body>
-    <div id="Main">
-        @Html.Partial("~/Common/top3.ascx")
-        <div id="content">
-            <div id="nav_tree">
-                <span id="tree_left">
-                    首页 > 高考真卷
-                </span>
-                <span id="tree_right">
-                    @Html.Partial("~/Common/Search2.ascx")
-                </span>
-            </div>
-            <div id="condition" style="min-height:172px;">
-                @*<div class="condition_contrainer">
-                    <div class="condition_contrainer_title">学段：</div>
-                    <div class="condition_contrainer_content">
-                        <a class="condition_selected" id="level_senior" onclick="a_selected(this),level_selected(3)">高中</a>
-                        <a onclick="a_selected(this),level_selected(2) ">初中</a>
-                    </div>
-                </div>*@
+    @Html.Partial("~/Common/top1.ascx")
 
-                <div class="condition_contrainer">
-                    <div class="condition_contrainer_title">年份：</div>
-                    <div class="condition_contrainer_content" id="years">
-
-                    </div>
-                </div>
-
-                <div class="condition_contrainer">
-                    <div class="condition_contrainer_title">省份：</div>
-                    <div class="condition_contrainer_content" id="province">
-
-                    </div>
-                </div>
-
-
-            </div>
-            <div id="list">
-                
-            </div>
+    <div class="jiaodain">
+        <div class="jd1195">
+            <img src="img/gaokaozhenjuan.png">
         </div>
     </div>
-    @* 弹窗html *@
-    <a href="#" id="message_start" class="big-link" data-reveal-id="myModal" style="display:none;">
-        jquery1
-    </a>
 
-    <div id="myModal" class="reveal-modal" style="border: 1px solid #3b4f7c; ">
-        <h1 style="font-family:'幼圆'">数据正在加载...</h1>
-        <p id="message_text" style="font-family:'微软雅黑'">Data being loaded, please wait a minute.</p>
-        <a class="close-reveal-modal" id="message_close" style="display:none">&#215;</a>
-    </div>
-    @* 弹窗html结束 *@
+    <div class="xueduan">
+        <div class="xd5">
+            <div class="beijing" id="years">
+            </div>
+        </div>
+
+        <div class="xd5 fl" style="height:auto;">
+            <div class="beijing fl" id="province" style="height:auto; margin-bottom:20px;">
+            </div>
+        </div>
+
+
+    </div><!-- 学段 -->
+    <div style="font-size: 30px; color: #5a5a5a; text-align: center; width: 1200px; margin: 0px auto; margin-bottom: 20px;" id="loading"></div>
+    <div class="gkzhenjuandk" style="clear:both;" id="list">
+    </div><!-- 高考真卷大块 -->
+
+    <script>
+        var shuzhi1 = $(".ysp1").html();
+        var zs1 = Number(shuzhi1);
+
+        var shuzhi2 = $(".ysp2").html();
+        var zs2 = Number(shuzhi2);
+
+        var shuzhi3 = $(".ysp3").html();
+        var zs3 = Number(shuzhi3);
+
+        var shuzhi4 = $(".ysp4").html();
+        var zs4 = Number(shuzhi4);
+
+        var shuzhi5 = $(".ysp5").html();
+        var zs5 = Number(shuzhi5);
+
+        $(".xyy1").click(function () {
+            var jd1 = zs1 += 1;
+            var jd2 = zs2 += 1;
+            var jd3 = zs3 += 1;
+            var jd4 = zs4 += 1;
+            var jd5 = zs5 += 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+        });
+
+        $(".syy1").click(function () {
+            var jd1 = zs1 - 1;
+            var jd2 = zs2 - 1;
+            var jd3 = zs3 - 1;
+            var jd4 = zs4 - 1;
+            var jd5 = zs5 - 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+
+
+        });
+        //页面分页加载
+
+        function go() {
+            var zansan = $("#lll").val()
+            var goyemian = Number(zansan);
+            $(".ysp1").html(goyemian);
+            $(".ysp2").html(goyemian + 1);
+            $(".ysp3").html(goyemian + 2);
+            $(".ysp4").html(goyemian + 3);
+            $(".ysp5").html(goyemian + 4);
+        }
+        //go改变页码
+    </script>
+
     @Html.Partial("~/Common/bottom.ascx")
 </body>
 </html>

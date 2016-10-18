@@ -1,6 +1,6 @@
 .gkzhenjuandk{width:1189px;height:100%;margin:0 auto;}
-.gkzj101{width:100%;height:269px;background:url(../img/beijing8.png);}
-.gkzj21{width:100%;height:80px;position:relative;}
+.gkzj101{width:100%;height:auto;background:url(../img/beijing8.png);float:left;margin-bottom:20px; border-radius:10px; }
+.gkzj21{width:100%;height:80px;float:left;position:relative;}
 .lan44{width:160px;height:44px;background:url(../img/yuanxing1.png);position:absolute;top:18px;left:740px;}
 .bai630{width:630px;height:44px;background:url(../img/baiseyuanxing-12.png);position:absolute;top:18px;left:150px;}
 .wenjianl{position:absolute;left:20px;top:12px;}
@@ -8,8 +8,8 @@
 .sp11{display:block;padding-left:150px;padding-top:12px;color:#bebebe;}
 .zjshijian{display: block;padding-left:70px;padding-top:10px;}
 .zjshijian>b{font-size:20px;color:#fff;}
-.wdtb{width:100%;height:137px;background:#2ea7f8;}
-.wrd1{display:block;width:129px;height:116px;background: url(../img/wd110.png);margin-top:20px;margin-left:59px;position:relative;}
+.wdtb{width:100%;height:auto;float:left;background:#2ea7f8; padding-bottom:40px; border-radius:5px;  }
+.wrd1{display:block;width:129px;height:116px; margin-bottom:20px;background: url(../img/wd110.png);margin-top:20px;margin-left:59px;position:relative;}
 .wdsp{display:block;color:#fff;padding-left:17px;padding-top:3px;}
 .lishu{display:block;color:#fff;padding-left:27px;padding-top:3px;}
 .wrd1:hover{background: url(../img/woedlan.png);}
@@ -26,7 +26,14 @@
 .kzgkzj101{height:446px;background: url(../img/zxlansebj.png);}
 .dkwdtb{margin-top:40px;}
 .xd5_div1{background:#ffb727;}
-.xdh5:hover{background:#fbc964;}
+/*.xdh5:hover{background:#fbc964;}*/
+
+.years_selected {
+    background:#fbc964;
+}
 .xd5_div1dk{background:#ff4a52;}
-.dkhh5:hover{background:#fb7c82;}
+.dkhh5_selected{background:#fb7c82;}
 .jiaodain{background:#91a0ff;}
+a {
+    cursor:pointer;
+}
