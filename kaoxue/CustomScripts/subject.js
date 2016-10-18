@@ -259,23 +259,23 @@ function test_mingxiao_senior(level) {
     $.post("../Subject/Test_mingxiao", { subjectname: subjectname, level: level }, function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<ul style='width:50%; float:left;'>";
+            var html = "";
             var date;
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].testname.length > 15 ? temp[i].testname.substr(0, 15) : temp[i].testname;
-                if (i == 0) {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><li><span style='color:red' class='li_left li_left_3'>" + text + "</span><span style='color:red' class='li_right'>" + time + "</span></li></a>";
-                } else {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><li><span class='li_left li_left_3'>" + text + "</span><span class='li_right'>" + time + "</span></li></a>";
-                }
-                if (i == 4) {
-                    html += "</ul>";
-                    html += "<ul style='width:50%; float:left;'>";
-                }
+                var text = temp[i].testname.length > 13 ? temp[i].testname.substr(0, 13) : temp[i].testname;
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li>\
+                                <div class=\"jpstli zxzhutiys\">\
+                                    <a class=\"fl btnjps btnjspt kaz\">" + number + "</a><div class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\">[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                        <a class=\"ayblue rqys\">[" + time + "]</a>\
+                                    </div>\
+                                </div>\
+                            </li>";
             }
-            html += "</ul>";
+            html += "";
             $("#test_mingxiao_senior").html(html);
         }
     });
@@ -288,23 +288,22 @@ function test_mingxiao_junior(level) {
     $.post("../Subject/Test_mingxiao", { subjectname: subjectname, level: level }, function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<ul style='width:50%; float:left;'>";
+            var html = "";
             var date;
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var text = temp[i].testname.length > 15 ? temp[i].testname.substr(0, 15) : temp[i].testname;
-                if (i == 0) {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><li><span style='color:red' class='li_left li_left_3'>" + text + "</span><span style='color:red' class='li_right'>" + time + "</span></li></a>";
-                } else {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><li><span class='li_left li_left_3'>" + text + "</span><span class='li_right'>" + time + "</span></li></a>";
-                }
-                if (i == 4) {
-                    html += "</ul>";
-                    html += "<ul style='width:50%; float:left;'>";
-                }
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li>\
+                                <div class=\"jpstli zxzhutiys\">\
+                                    <a class=\"fl btnjps btnjspt kaz1\">" + number + "</a><div class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\">[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                        <a class=\"ayblue rqys1\">[" + time + "]</a>\
+                                    </div>\
+                                </div>\
+                            </li>";
             }
-            html += "</ul>";
             $("#test_mingxiao_junior").html(html);
         }
     });
@@ -318,23 +317,23 @@ function kejian_senior(level) {
     $.post("../Subject/Kejian", { subjectname: subjectname, level: level }, function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<ul style='width:50%; float:left;'>";
+            var html = "";
             var date;
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
-                if (i == 0) {
-                    html += "<a href='../Download?cid=2&id=" + temp[i].id + "'><li><span style='color:red' class='li_left li_left_3'>" + text + "</span><span style='color:red' class='li_right'>" + time + "</span></li></a>";
-                } else {
-                    html += "<a href='../Download?cid=2&id=" + temp[i].id + "'><li><span class='li_left li_left_3'>" + text + "</span><span class='li_right'>" + time + "</span></li></a>";
-                }
-                if (i == 4) {
-                    html += "</ul>";
-                    html += "<ul style='width:50%; float:left;'>";
-                }
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li>\
+                                <div class=\"jpstli zxzhutiys\">\
+                                    <a class=\"fl btnjps btnjspt kaz\">" + number + "</a><div class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\">[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                        <a class=\"ayblue rqys\">[" + time + "]</a>\
+                                    </div>\
+                                </div>\
+                            </li>";
             }
-            html += "</ul>";
+            html += "";
             $("#kejian_senior").html(html);
         }
     });
@@ -347,23 +346,23 @@ function kejian_junior(level) {
     $.post("../Subject/Kejian", { subjectname: subjectname, level: level }, function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<ul style='width:50%; float:left;'>";
+            var html = "";
             var date;
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
-                if (i == 0) {
-                    html += "<a href='../Download?cid=2&id=" + temp[i].id + "'><li><span style='color:red' class='li_left li_left_3'>" + text + "</span><span style='color:red' class='li_right'>" + time + "</span></li></a>";
-                } else {
-                    html += "<a href='../Download?cid=2&id=" + temp[i].id + "'><li><span class='li_left li_left_3'>" + text + "</span><span class='li_right'>" + time + "</span></li></a>";
-                }
-                if (i == 4) {
-                    html += "</ul>";
-                    html += "<ul style='width:50%; float:left;'>";
-                }
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li>\
+                                <div class=\"jpstli zxzhutiys\">\
+                                    <a class=\"fl btnjps btnjspt kaz1\">" + number + "</a><div class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\">[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                        <a class=\"ayblue rqys1\">[" + time + "]</a>\
+                                    </div>\
+                                </div>\
+                            </li>";
             }
-            html += "</ul>";
+            html += "";
             $("#kejian_junior").html(html);
         }
     });
@@ -403,12 +402,10 @@ function tongbu_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 23 ? temp[i].name.substr(0, 23) : temp[i].name;
-                if (i == 0) {
-                    html += "<a href='../Download?cid=6&id=" + temp[i].id + "'><li><span style='color:red' class='li_left li_left_4'>" + text + "</span><span style='color:red' class='li_right'>" + time + "</span></li></a>";
-                } else {
-                    html += "<a href='../Download?cid=6&id=" + temp[i].id + "'><li><span class='li_left li_left_4'>" + text + "</span><span class='li_right'>" + time + "</span></li></a>";
-                }
+                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a>" + text + "</a></div><div class=\"fl zuixinzt\"><a>[" + time + "]</a></div></li>";
             }
             $("#tongbu_junior").html(html);
         }
@@ -449,12 +446,10 @@ function jiaoan_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 23 ? temp[i].name.substr(0, 23) : temp[i].name;
-                if (i == 0) {
-                    html += "<a href='../Download?cid=3&id=" + temp[i].id + "'><li><span style='color:red' class='li_left li_left_4'>" + text + "</span><span style='color:red' class='li_right'>" + time + "</span></li></a>";
-                } else {
-                    html += "<a href='../Download?cid=3&id=" + temp[i].id + "'><li><span class='li_left li_left_4'>" + text + "</span><span class='li_right'>" + time + "</span></li></a>";
-                }
+                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a >" + text + "</a></div><div class=\"fl zuixinzt\"><a >[" + time + "]</a></div></li>";
             }
             $("#jiaoan_junior").html(html);
         }
@@ -496,12 +491,10 @@ function xuean_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 23 ? temp[i].name.substr(0, 23) : temp[i].name;
-                if (i == 0) {
-                    html += "<a href='../Download?cid=4&id=" + temp[i].id + "'><li><span style='color:red' class='li_left li_left_4'>" + text + "</span><span style='color:red' class='li_right'>" + time + "</span></li></a>";
-                } else {
-                    html += "<a href='../Download?cid=4&id=" + temp[i].id + "'><li><span class='li_left li_left_4'>" + text + "</span><span class='li_right'>" + time + "</span></li></a>";
-                }
+                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a >" + text + "</a></div><div class=\"fl zuixinzt\"><a >[" + time + "]</a></div></li>";
             }
             $("#xuean_junior").html(html);
         }
