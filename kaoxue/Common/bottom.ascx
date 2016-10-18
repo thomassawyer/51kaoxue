@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-<div class="youqinlianjie">
+<div class="youqinlianjie" style="clear:both;">
         <div class="yqlj1189">
             <div class="yqljimg">
                 <div>
@@ -19,7 +19,7 @@
         </div>
 
     </div>
-    <div class="yqlj2">
+    <div class="yqlj2" style="clear:both;">
         <div class="yqlj2auot">
             <span class="yqljyou">
                 主办单位：北京利德智达科技有限公司     客服热线：13888888888     客服邮箱：kaoxue51@163.com
