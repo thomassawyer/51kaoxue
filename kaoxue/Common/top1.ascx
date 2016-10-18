@@ -45,14 +45,14 @@
         <div class="daohanglan_ul">
             <ul class="dhul">
                 <li class="fl bk fb1" id="pad"><a href="../Subject?subjectname=语文">语文</a><img src="../../img/tc-93.png" class="maozi1" alt="" /></li>
-                <li class="fl pad bk"><a>数学</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a>英语</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a>物理</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a>化学</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a>生物</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a>历史</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a>政治</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a>地理</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk"><a href="../Subject?subjectname=数学">数学</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk"><a href="../Subject?subjectname=英语">英语</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk"><a href="../Subject?subjectname=物理">物理</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk"><a href="../Subject?subjectname=化学">化学</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk"><a href="../Subject?subjectname=生物">生物</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk"><a href="../Subject?subjectname=历史">历史</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk"><a href="../Subject?subjectname=政治">政治</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk"><a href="../Subject?subjectname=地理">地理</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk1" id="bk"><a>备课中心</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk1"><a href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk"><a href="../Grade?level=2">初中</a><img src="../../img/tc-93.png" alt="" /></li>

@@ -184,7 +184,7 @@ namespace kaoxue.Controllers
                 condition += string.Format(" and level {0}",level);
             condition += " and ismingxiao=1";
             string json = string.Empty;
-            DataSet ds = test_bll.GetList(10, condition, " uploadtime desc");
+            DataSet ds = test_bll.GetList(6, condition, " uploadtime desc");
             if (ds != null)
             {
                 if (ds.Tables.Count > 0)
@@ -208,7 +208,7 @@ namespace kaoxue.Controllers
             if (!string.IsNullOrEmpty(level))
                 condition += string.Format(" and level {0}", level);
             string json = string.Empty;
-            DataSet ds = kejian_bll.GetList(10, condition, " uploadtime desc");
+            DataSet ds = kejian_bll.GetList(6, condition, " uploadtime desc");
             if (ds != null)
             {
                 if (ds.Tables.Count > 0)
