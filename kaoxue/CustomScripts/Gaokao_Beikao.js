@@ -1,5 +1,11 @@
 ﻿/// <reference path="../Scripts/jquery-1.8.2.js" />
 
+//url参数集合
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = decodeURI(window.location.search).substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
 
 var level; //学段
 var level_num;
@@ -7,22 +13,23 @@ var subject; //学科
 var pageindex = 1;  //当前页数
 var pagecount = 0; //总页数
 var category = ""; //类型名称
-var category_control = false;
-
-//url参数集合
-function GetQueryString(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    var r = decodeURI(window.location.search).substr(1).match(reg);
-    if (r != null) return unescape(r[2]); return null;
-}
+var testcategory = ""; //试题类型
+var grade = ""; // 年级
+var district = ""; //地区
+var para_subjectid;// 参数-学科
+var para_type; //类型
+var para_testcategory; // 试题类型
+var para_testcategory_control = false;
+var para_control = false; // 带参加载,控制变量
+var para_type_control = false;
 //
 //点击A标签时,改变A标签背景
 //
-function a_selected(obj) {
+function a_selected(obj, css) {
     $(obj).parent().children().each(function () {
-        $(this).removeClass("condition_selected");
+        $(this).removeClass(css);
     });
-    $(obj).addClass("condition_selected");
+    $(obj).addClass(css);
 }
 
 //
@@ -46,18 +53,34 @@ function level_selected(num) {
             break;
     }
     pageindex = 1;
-    subject; //学科
+    subject = ""; //学科
     category = ""; //类型名称
-    category = GetQueryString("category");
     testcategory = ""; //试题类型
+    grade = ""; // 年级
+    district = ""; //地区
+
     GetSubject();
+    GetTestCategory();
+    GetGrade();
     GetDataCount();
     StartReading("data_list_td");
     GetList();
-    if (category != null && category != undefined && category != "" && category_control == false) {
-        $("#category" + category).click();
-        category_control = true;
+    if (para_subjectid != undefined && para_subjectid != null && para_control == true) {
+        setTimeout(function () {
+            $("#subject" + para_subjectid).click();
+            para_control = false;
+        }, 1000);
     }
+    if (para_type != undefined && para_type != null && para_type_control == true) {
+        setTimeout(function () {
+            $("#type" + para_type).click();
+            para_type_control = false;
+        }, 1000);
+    }
+
+
+
+
 }
 
 //
@@ -66,13 +89,21 @@ function level_selected(num) {
 function GetSubject() {
     $.post("../Beike_Center/GetSubject", { level: level_num }, function (data) {
         if (data) {
-            var html = "<a class='condition_selected' onclick=' a_selected(this),subject_selected(0)'>全部</a>";
+
+            var html = "<div class=\"xd5_div1 fl\"><img src=\"img/duanluo.png\" class=\"xdtb5\" ><a class=\"xd5a\"><b>学 科</b></a></div>";
+            html += "<div class=\"xd5_hover xdh5 fl xdh15_selected\"  onclick=\"a_selected(this, 'xdh15_selected'),subject_selected(0)\">\
+                    <a>全部</a>\
+                </div>";
+            // html += "<a class='condition_selected' onclick=' a_selected(this),subject_selected(0)'>全部</a>";
             var temp;
             if (data != "]") {
                 temp = eval(data);
 
                 for (var i = 0; i < temp.length; i++) {
-                    html += "<a id=subject" + (i + 1) + " onclick=a_selected(this),subject_selected('" + temp[i].id + "')>" + temp[i].name + "</a>";
+                    //html += "<a id=subject" + (i + 1) + " onclick=a_selected(this),subject_selected('" + temp[i].id + "')>" + temp[i].name + "</a>";
+                    html += "<div class=\"xd5_hover xdh5 fl\" onclick=\"a_selected(this, 'xdh15_selected'),subject_selected('" + temp[i].id + "')\">\
+                    <a>" + temp[i].name + "</a>\
+                </div>";
                 }
             }
             $("#subject").html(html);
@@ -80,16 +111,44 @@ function GetSubject() {
         }
     });
 }
-
 //
 //点击学科A标签,为学科变量赋值
 //
 function subject_selected(subjectid) {
     pageindex = 1;
     subject = subjectid;
+
     GetDataCount();
     StartReading("data_list_td");
     GetList();
+}
+
+//
+//获取试题类型
+//
+function GetTestCategory() {
+    $.post("../Test_Center/GetTestCategory", { level: level_num }, function (data) {
+        if (data) {
+            var html = "<div class=\"stzx115 fl stzx115_selected\" onclick='a_selected(this, \"stzx115_selected\"), testcategory_selected(0) '><a>全部</a></div>";
+            var temp;
+            if (data != "]") {
+                temp = eval(data);
+
+                for (var i = 0; i < temp.length; i++) {
+                    html += "<div id=testcategory" + temp[i].id + " class=\"stzx115 fl\" onclick='a_selected(this, \"stzx115_selected\"), testcategory_selected(" + temp[i].id + ") '><a>" + temp[i].name + "</a></div>";
+                }
+            }
+            $("#testcategory").html(html);
+
+            if (para_testcategory != undefined && para_testcategory != null && para_testcategory_control == true) {
+                setTimeout(function () {
+                    $("#testcategory" + para_testcategory).click();
+                    para_testcategory_control = false;
+                }, 1000);
+            }
+            //$("#subject1").click();
+        }
+    });
 }
 
 //
@@ -98,6 +157,42 @@ function subject_selected(subjectid) {
 function testcategory_selected(num) {
     pageindex = 1;
     testcategory = num;
+
+    GetDataCount();
+    StartReading("data_list_td");
+    GetList();
+}
+
+//
+//获取年级
+//
+function GetGrade() {
+    $.post("../Test_Center/GetGrade", { level: level_num }, function (data) {
+        if (data) {
+            var html = "<div class=\"xd5_div1 fl xd5k1\"><img src=\"img/gongju.png\" class=\"xdtb5\"><a class=\"xd5a\"><b>年 级</b></a></div><div class=\"xd5_hover xdh5 fl xdh5_selected\" onclick='a_selected(this, \"xdh5_selected\"), grade_selected(0)'>\
+                    <a>全部</a>\
+                </div>";
+            var temp;
+            if (data != "]") {
+                temp = eval(data);
+                for (var i = 0; i < temp.length; i++) {
+                    html += "<div id=subject" + (i + 1) + " class=\"xd5_hover xdh5 fl\" onclick='a_selected(this, \"xdh5_selected\"), grade_selected(" + temp[i].id + ")'>\
+                    <a>" + temp[i].name + "</a>\
+                </div>";
+
+                }
+            }
+            $("#grade").html(html);
+            //$("#subject1").click();
+        }
+    });
+}
+//
+//点击年级A标签,为年级变量赋值
+//
+function grade_selected(num) {
+    pageindex = 1;
+    grade = num;
     GetDataCount();
     StartReading("data_list_td");
     GetList();
@@ -110,15 +205,10 @@ function GetTest_Hot_Download() {
     $.post("../Gaokao_Beikao/GetTest_Hot_Download", function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<div class='directory_container_title'><span class='directory_container_title_left'>| 热门下载</span><a href='../Test_Center?type=1&level=3'><span class='directory_container_title_right'>More</span></a></div>";
+            var html = "";
             for (var i = 0; i < temp.length; i++) {
-                var text = temp[i].testname.length > 18 ? temp[i].testname.substr(0, 18) + "..." : temp[i].testname;
-                if (i <= 2) {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left_red'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                } else {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                }
-
+                var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\">" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -132,14 +222,11 @@ function GetTest_Recommend() {
     $.post("../Gaokao_Beikao/GetTest_Recommend", function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<div class='directory_container_title'><span class='directory_container_title_left'>| 相关推荐</span><a href='../Test_Center?type=1&level=3'><span class='directory_container_title_right'>More</span></a></div>";
+            var html = "";
             for (var i = 0; i < temp.length; i++) {
-                var text = temp[i].testname.length > 18 ? temp[i].testname.substr(0, 18) + "..." : temp[i].testname;
-                if (i <= 2) {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left_red'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                } else {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                }
+                var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
+               
             }
             $("#recommend").html(html);
         }
@@ -147,21 +234,62 @@ function GetTest_Recommend() {
 }
 
 //
+//获取地区
+//
+function GetArea() {
+    $.post("../Test_Center/GetArea", function (data) {
+        if (data) {
+            var html = "<div class=\"xd5_hover xdh33 fl district_selected\" onclick='a_selected(this, \"district_selected\"), district_selected(0)'>\
+                        <a>全部</a>\
+                    </div>";
+            var temp;
+            if (data != "]") {
+                temp = eval(data);
+
+                for (var i = 0; i < temp.length; i++) {
+
+                    html += "<div id=area" + (i + 1) + " class=\"xd5_hover xdh33 fl \" onclick='a_selected(this, \"district_selected\"), district_selected(" + temp[i].id + ")'>\
+                        <a>" + temp[i].areaname + "</a>\
+                    </div>";
+                }
+            }
+            $("#district").html(html);
+            //$("#subject1").click();
+        }
+    });
+}
+
+//
+//点击地区A标签,为地区变量赋值
+//
+function district_selected(num) {
+    pageindex = 1;
+    district = num;
+
+    GetDataCount();
+    StartReading("data_list_td");
+    GetList();
+}
+
+//
 //数据列表锚点
 //
 function anchor(obj) {
     if ($(obj).offset().top > 1400)
-        $("html,body").animate({ scrollTop: $("#data_list").offset().top }, 500);
+        $("html,body").animate({ scrollTop: $("#data_list_td").offset().top }, 500);
 }
 
 //
 //获取试题数据
 //
 function GetList() {
-    $.post("../Gaokao_Beikao/GetList", { subject: subject, level: level_num, pageindex: pageindex, category: category }, function (data) {
+    $.post("../Gaokao_Beikao/GetList", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
         if (data) {
 
-            var html = "";
+            var html = "<div class=\"lxclan\">\
+                <img src=\"img/wendang.png\" class=\"wdtubiao\" >\
+                <b class=\"bix\">文件</b>\
+            </div>";
             if (data != "]") {
                 var temp = eval(data);
                 var date;
@@ -169,7 +297,18 @@ function GetList() {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     var text = temp[i].name.length > 40 ? temp[i].name.substr(0, 40) : temp[i].name;
-                    html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style='width:500px'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span></span></div></div><div class='data_list_td_container_right'><a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";
+                    html += "<div class=\"lxc_320\">\
+                                <div class=\"wdk fl\"></div>\
+                                <div class=\"wenbenkui fl\">\
+                                    <a><b class=\"b320\">"+ text + "</b></a><br>\
+                                    <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
+                                </div>\
+                                <div class=\"xiazai fl\">\
+                                    <a class=\"xztb1 fl\"  onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' ><img src=\"img/yulan.png\"><img src=\"img/hover-31.png\" class=\"dpnone\"></a>\
+                                    <a class=\"xztb2 fl\"  onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\")><img src=\"img/xiazaitb.png\"><img src=\"img/yll.png\" class=\"yll\"></a>\
+                                </div>\
+                            </div>";
+                    //html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style='width:500px'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span>类型：<span id='text_type'>" + Produce_TypeName(temp[i].category) + "</span></span></span></div></div><div class='data_list_td_container_right'><a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";
                 }
             }
             $("#data_list_td").html(html);
@@ -209,7 +348,7 @@ function GetDataCount() {
     $.ajaxSetup({
         async: false
     });
-    $.post("../Gaokao_Beikao/GetDataCount", { subject: subject, level: level_num, pageindex: pageindex, category: category }, function (data) {
+    $.post("../Test_Center/GetDataCount", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
         if (data) {
             $("#all_data_count").html("该章节（" + data + "份）");
 
@@ -218,10 +357,10 @@ function GetDataCount() {
             } else {
                 pagecount = Math.floor((data / 10)) + 1;
             }
+            $.ajaxSetup({
+                async: true
+            });
         }
-    });
-    $.ajaxSetup({
-        async: true
     });
 }
 
@@ -229,7 +368,7 @@ function GetDataCount() {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "";
+    var html = "<a  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
     var signs_length;
     if (pageindex >= pagecount - 3) {
         signs_length = (pagecount - pageindex) + 1;
@@ -237,19 +376,65 @@ function Produce_A_Signs() {
         signs_length = 5;
     }
     if (pageindex >= 2) {
-        html += "<span>…</span>";
+        html += "<span class=\"anniusp1\">...</span>";
     }
     for (var i = 0; i < signs_length; i++) {
-        if (i == 0) {
-            html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        } else {
-            html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        }
+        flag = (i + 1);
+        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+
+        //if (i == 0) {
+        //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //} else {
+        //    html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //}
     }
     if (pageindex <= pagecount - 5) {
-        html += "<span>…</span>";
+        html += "<span class=\"anniusp\">...</span>";
     }
+    html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
+        <span class=\"anniusp2\">跳转到</span>\
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
+        <span class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</span>";
     $("#pages").html(html);
+}
+
+//
+//解析类型名称
+//
+function Produce_TypeName(category) {
+    var name = "";
+    switch (category) {
+        case "1":
+            name = "试题";
+            break;
+        case "2":
+            name = "课件";
+            break;
+        case "3":
+            name = "教案";
+            break;
+        case "4":
+            name = "学案";
+            break;
+        case "6":
+            name = "同步";
+            break;
+        case "5":
+            name = "素材";
+            break;
+        case "7":
+            name = "论文";
+            break;
+        case "8":
+            name = "套题";
+            break;
+        case "9":
+            name = "备课";
+            break;
+        default:
+            break;
+    }
+    return name;
 }
 
 //
@@ -290,10 +475,21 @@ function StartReading(controlid) {
 }
 
 $(document).ready(function () {
-    
-    level_selected(3);
+    para_control = true;
+    para_type_control = true;
+    para_testcategory_control = true;
+    para_subjectid = GetQueryString("subjectid");
+    para_type = GetQueryString("type");
+    para_testcategory = GetQueryString("testcategory");
+    var para_level = GetQueryString("level");
+    if (para_level != undefined && para_level != null) {
+        $("#level" + para_level).click();
+    } else {
+        level_selected(3);
+    }
     GetTest_Hot_Download();
     GetTest_Recommend();
+    GetArea();
 });
 
 //

@@ -123,7 +123,7 @@ function subject_selected(subjectid) {
 //获取试题类型
 //
 function GetTestCategory() {
-    $.post("../Test_Center/GetTestCategory", { level: level_num }, function (data) {
+    $.post("../Elite_School/GetTestCategory", { level: level_num }, function (data) {
         if (data) {
             var html = "<div class=\"stzx115 fl stzx115_selected\" onclick='a_selected(this, \"stzx115_selected\"), testcategory_selected(0) '><a>全部</a></div>";
             var temp;
@@ -163,7 +163,7 @@ function testcategory_selected(num) {
 //获取年级
 //
 function GetGrade() {
-    $.post("../Test_Center/GetGrade", { level: level_num }, function (data) {
+    $.post("../Elite_School/GetGrade", { level: level_num }, function (data) {
         if (data) {
             var html = "<div class=\"xd5_div1 fl xd5k1\"><img src=\"img/gongju.png\" class=\"xdtb5\"><a class=\"xd5a\"><b>年 级</b></a></div><div class=\"xd5_hover xdh5 fl xdh5_selected\" onclick='a_selected(this, \"xdh5_selected\"), grade_selected(0)'>\
                     <a>全部</a>\
@@ -198,7 +198,7 @@ function grade_selected(num) {
 //热门下载
 //
 function GetTest_Hot_Download() {
-    $.post("../Test_Center/GetTest_Hot_Download", function (data) {
+    $.post("../Elite_School/GetTest_Hot_Download", function (data) {
         if (data) {
             var temp = eval(data);
             var html = "";
@@ -215,11 +215,11 @@ function GetTest_Hot_Download() {
 //相关推荐
 //
 function GetTest_Recommend() {
-    $.post("../Test_Center/GetTest_Recommend", function (data) {
+    $.post("../Elite_School/GetTest_Recommend", function (data) {
         if (data) {
             var temp = eval(data);
             var html ="";
-            for (var i = 0; i < 11; i++) {
+            for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
                 html+="<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\">"+text+"</a></li>";
             }
@@ -278,7 +278,7 @@ function anchor(obj) {
 //获取试题数据
 //
 function GetList() {
-    $.post("../Test_Center/GetList", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
+    $.post("../Elite_School/GetList", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
         if (data) {
 
             var html = "<div class=\"lxclan\">\
@@ -342,7 +342,7 @@ function GetDataCount() {
     $.ajaxSetup({
         async:false
     });
-    $.post("../Test_Center/GetDataCount", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
+    $.post("../Elite_School/GetDataCount", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
         if (data) {
             $("#all_data_count").html("该章节（" + data + "份）");
 
