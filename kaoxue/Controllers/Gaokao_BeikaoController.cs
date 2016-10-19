@@ -69,7 +69,7 @@ namespace kaoxue.Controllers
         public string GetTest_Recommend()
         {
             string condition = " istuijian=1";
-            DataSet ds = test_bll.GetList(10, condition, " uploadtime desc");
+            DataSet ds = test_bll.GetList(11, condition, " uploadtime desc");
             string json = string.Empty;
             if (ds != null)
             {
