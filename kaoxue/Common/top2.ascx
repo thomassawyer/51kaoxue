@@ -22,7 +22,10 @@
     <div class="navinput">
         <div class="navinput_div">
             <div  class="fl logo">
-                <img src="img/logo.png" class="logo1">
+                <a href="../Home">
+                    <img src="img/logo.png" class="logo1">
+                </a>
+                
             </div>
             <div id="ztc" class="fl">
                 <img src="img/ztc.png" />
