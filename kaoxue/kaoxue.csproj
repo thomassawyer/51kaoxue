@@ -164,6 +164,7 @@
     <Content Include="Common\top2.ascx" />
     <Content Include="CSS\chushihua.css" />
     <Content Include="CSS\College_entrance_examination.css" />
+    <Content Include="CSS\Contact_us.css" />
     <Content Include="CSS\default.css" />
     <Content Include="CSS\famousschool.css" />
     <Content Include="CSS\index.css" />
@@ -171,6 +172,7 @@
     <Content Include="CSS\lesson.css" />
     <Content Include="CSS\list_of_principals.css" />
     <Content Include="CSS\Literature_culture.css" />
+    <Content Include="CSS\News_consulting_industry.css" />
     <Content Include="CSS\proforma.css" />
     <Content Include="CSS\Province_page.css" />
     <Content Include="CSS\style.css" />
