@@ -53,7 +53,7 @@
                 <li class="fl pad bk"><a href="../Subject?subjectname=历史">历史</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk"><a href="../Subject?subjectname=政治">政治</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk"><a href="../Subject?subjectname=地理">地理</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk1" id="bk"><a>备课中心</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk1" id="bk"><a href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk1"><a href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk"><a href="../Grade?level=2">初中</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk"><a href="../Grade?level=3">高中</a><img src="../../img/tc-93.png" alt="" /></li>
