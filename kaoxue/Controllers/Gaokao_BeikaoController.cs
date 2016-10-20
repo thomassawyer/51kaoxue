@@ -50,7 +50,7 @@ namespace kaoxue.Controllers
         public string GetTest_Hot_Download()
         {
             ProduceParameters();
-            DataSet ds = test_bll.GetList(10, string.Empty, " neednum desc");
+            DataSet ds = test_bll.GetList(12, string.Empty, " neednum desc");
             string json = string.Empty;
             if (ds != null)
             {
