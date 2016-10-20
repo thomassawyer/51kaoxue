@@ -166,7 +166,7 @@ function Beike() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps btnjspt\">"+ number + "</a><div class=\"fl jpstys jpys\"><a href=\"\">[试题试卷] 黑龙江省哈尔滨市第六中学2017届高三上学期开学考试语文</a></div><div class=\"fl\" id=\"\">\
+                            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a href=\"../Special/Beike?id="+temp[i].id+"&way=2&name="+temp[i].name+"\">[试题试卷] "+temp[i].name+"</a></div><div class=\"fl\" id=\"\">\
                                 <a class=\"ayblue\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\

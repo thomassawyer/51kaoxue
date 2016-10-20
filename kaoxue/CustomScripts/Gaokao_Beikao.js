@@ -382,11 +382,6 @@ function Produce_A_Signs() {
         flag = (i + 1);
         html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
 
-        //if (i == 0) {
-        //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        //} else {
-        //    html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        //}
     }
     if (pageindex <= pagecount - 5) {
         html += "<span class=\"anniusp\">...</span>";
