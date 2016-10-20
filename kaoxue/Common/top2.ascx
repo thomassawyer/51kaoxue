@@ -23,23 +23,23 @@
         <div class="navinput_div">
             <div  class="fl logo">
                 <a href="../Home">
-                    <img src="img/logo.png" class="logo1">
+                    <img src="../../img/logo.png" class="logo1">
                 </a>
                 
             </div>
             <div id="ztc" class="fl">
-                <img src="img/ztc.png" />
+                <img src="../../img/ztc.png" />
             </div>
             <div id="ztc_bottom" class="fl">
                 <form action="#" method="get">
-                    <input type="text" name="lname" class="fl" id="shousuo" placeholder="&nbsp&nbsp请输入搜索内容" /><a  id="tijiao" class="fl"></a><img src="img/sousuo.png" id="soussuo">
+                    <input type="text" name="lname" class="fl" id="shousuo" placeholder="&nbsp&nbsp请输入搜索内容" /><a  id="tijiao" class="fl"></a><img src="../../img/sousuo.png" id="soussuo">
                 </form>
             </div>
             <div class="fl xbs">
-                <img src="img/boshimao.png"  class="fl" /><h3 class="fl h3gaokao"><a >高考试题</a></h3>
+                <img src="../../img/boshimao.png"  class="fl" /><h3 class="fl h3gaokao"><a >高考试题</a></h3>
             </div>
             <div class="fl xbss">
-                <img src="img/shutubiao1.png"  class="fl" /><h3 class="fl h3gaokao"><a >天天新闻</a></h3>
+                <img src="../../img/shutubiao1.png"  class="fl" /><h3 class="fl h3gaokao"><a >天天新闻</a></h3>
             </div>
         </div>
     </div><!--这是搜索框部分-->
@@ -48,11 +48,11 @@
         <div  class="daohanglan_ul">
             <ul class="uuu">
                 <li class="fl"><a href="../Home"><span>首页</span></a></li>
-                <li class="fl pad bk1"><a href="../Beike_Center">备课中心</a><img src="img/tc-93.png"  class="bkimg2" /></li>
-                <li class="fl pad bk1"><a href="../Test_Center">试题中心</a><img src="img/tc-93.png"  class="bkimg3" /></li>
-                <li class="fl pad bk1"><a href="../Past_Exam">高考真题</a><img src="img/tc-93.png"  class="bkimg4" /></li>
-                <li class="fl pad bk1"><a href="../Elite_School">百强名校</a><img src="img/tc-93.png"  class="bkimg5" /></li>
-                <li class="fl pad bk1"><a href="../Gaokao_Beikao">高考备考</a><img src="img/tc-93.png"  class="bkimg6" /></li>
+                <li class="fl pad bk1"><a href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png"  class="bkimg2" /></li>
+                <li class="fl pad bk1"><a href="../Test_Center">试题中心</a><img src="../../img/tc-93.png"  class="bkimg3" /></li>
+                <li class="fl pad bk1"><a href="../Past_Exam">高考真题</a><img src="../../img/tc-93.png"  class="bkimg4" /></li>
+                <li class="fl pad bk1"><a href="../Elite_School">百强名校</a><img src="../../img/tc-93.png"  class="bkimg5" /></li>
+                <li class="fl pad bk1"><a href="../Gaokao_Beikao">高考备考</a><img src="../../img/tc-93.png"  class="bkimg6" /></li>
             </ul>
 
         </div>
