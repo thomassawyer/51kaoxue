@@ -26,7 +26,7 @@ function a_selected(obj) {
 //
 function anchor(obj) {
     if ($(obj).offset().top > 1400)
-        $("html,body").animate({ scrollTop: $("#content_container").offset().top }, 500);
+        $("html,body").animate({ scrollTop: $("#content_container_anchor").offset().top }, 500);
 }
 
 //
@@ -46,17 +46,14 @@ function GetList() {
                         date = new Date(temp[i - 1].updatetime);
                         time = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
                     }
-                    var text = temp[i - 1].name.length > 40 ? temp[i - 1].name.substr(0, 40) : temp[i - 1].name;
-                    if (i % 4 == 0) {
-                        html += "<div class='content_container_child'><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'><div class='content_container_child_top' style='background-color: #58acc7;'><div class='content_container_child_top_text'>" + temp[i - 1].name + "</div></a><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'><div class='content_container_child_top_text2'>" + temp[i - 1].name + "</div></a><div class='content_container_child_top_text3'><span class='content_container_child_top_text3_left'>" + time + "</span><span class='content_container_child_top_text3_right'></span></div></div></div>";
-                    } else if (i % 3 == 0) {
-                        html += "<div class='content_container_child'><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'><div class='content_container_child_top' style='background-color: #5deeb9;'><div class='content_container_child_top_text'>" + temp[i - 1].name + "</div></a><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'><div class='content_container_child_top_text2'>" + temp[i - 1].name + "</div></a><div class='content_container_child_top_text3'><span class='content_container_child_top_text3_left'>" + time + "</span><span class='content_container_child_top_text3_right'></span></div></div></div>";
-                    } else if (i % 2 == 0) {
-                        html += "<div class='content_container_child'><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'><div class='content_container_child_top' style='background-color: #e2a54e;'><div class='content_container_child_top_text'>" + temp[i - 1].name + "</div></a><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'><div class='content_container_child_top_text2'>" + temp[i - 1].name + "</div></a><div class='content_container_child_top_text3'><span class='content_container_child_top_text3_left'>" + time + "</span><span class='content_container_child_top_text3_right'></span></div></div></div>";
-                    } else {
-                        html += "<div class='content_container_child'><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'><div class='content_container_child_top' style='background-color: #ea4343;'><div class='content_container_child_top_text'>" + temp[i - 1].name + "</div></a><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'><div class='content_container_child_top_text2'>" + temp[i - 1].name + "</div></a><div class='content_container_child_top_text3'><span class='content_container_child_top_text3_left'>" + time + "</span><span class='content_container_child_top_text3_right'></span></div></div></div>";
-                    }
-                    
+                    var text = temp[i - 1].name.length > 100 ? temp[i - 1].name.substr(0, 100) : temp[i - 1].name;
+                    html += "<div class=\"pxx114\">\
+                                <img src=\"img/xintb.png\" class=\"img11\">\
+                                <div class=\"div_a\"><a>" + temp[i - 1].name + "</a></div>\
+                                <div class=\"div_a2\"><a>显示更多>></a></div>\
+                                <div class=\"spgxshijian\"><span>更新时间：" + time + "</span></div>\
+                                <img src=\"img/xintbh.png\" class=\"img22\">\
+                            </div>";
                 }
             }
             $("#content_container").html(html);
@@ -100,10 +97,10 @@ function GetDataCount() {
         if (data) {
             $("#all_data_count").html("该章节（" + data + "份）");
 
-            if (Number(data) % 20 == 0) {
-                pagecount = data / 20;
+            if (Number(data) % 8 == 0) {
+                pagecount = data / 8;
             } else {
-                pagecount = Math.floor((data / 20)) + 1;
+                pagecount = Math.floor((data / 8)) + 1;
             }
             $.ajaxSetup({
                 async: true
@@ -116,7 +113,7 @@ function GetDataCount() {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "";
+    var html = "<a  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
     var signs_length;
     if (pageindex >= pagecount - 3) {
         signs_length = (pagecount - pageindex) + 1;
@@ -124,18 +121,25 @@ function Produce_A_Signs() {
         signs_length = 5;
     }
     if (pageindex >= 2) {
-        html += "<span>…</span>";
+        html += "<span class=\"anniusp1\">...</span>";
     }
     for (var i = 0; i < signs_length; i++) {
-        if (i == 0) {
-            html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        } else {
-            html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        }
+        flag = (i + 1);
+        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+
+        //if (i == 0) {
+        //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //} else {
+        //    html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //}
     }
     if (pageindex <= pagecount - 5) {
-        html += "<span>…</span>";
+        html += "<span class=\"anniusp\">...</span>";
     }
+    html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
+        <span class=\"anniusp2\">跳转到</span>\
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
+        <span class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</span>";
     $("#pages").html(html);
 }
 

@@ -47,13 +47,12 @@
     <div  class="daohanglan">
         <div  class="daohanglan_ul">
             <ul class="uuu">
-                <li class="fl"><a ><span>首页>备课中心</span></a></li>
-                <li class="fl pad bk1 ppdd1"><a >网站首页</a><img src="img/tc-93.png"  class="bkimg1" /></li>
-                <li class="fl pad bk1"><a >备课中心</a><img src="img/tc-93.png"  class="bkimg2" /></li>
-                <li class="fl pad bk1"><a >试题中心</a><img src="img/tc-93.png"  class="bkimg3" /></li>
-                <li class="fl pad bk1"><a >高考真题</a><img src="img/tc-93.png"  class="bkimg4" /></li>
-                <li class="fl pad bk1"><a >百强名校</a><img src="img/tc-93.png"  class="bkimg5" /></li>
-                <li class="fl pad bk1"><a >高考备考</a><img src="img/tc-93.png"  class="bkimg6" /></li>
+                <li class="fl"><a href="../Home"><span>首页</span></a></li>
+                <li class="fl pad bk1"><a href="../Beike_Center">备课中心</a><img src="img/tc-93.png"  class="bkimg2" /></li>
+                <li class="fl pad bk1"><a href="../Test_Center">试题中心</a><img src="img/tc-93.png"  class="bkimg3" /></li>
+                <li class="fl pad bk1"><a href="../Past_Exam">高考真题</a><img src="img/tc-93.png"  class="bkimg4" /></li>
+                <li class="fl pad bk1"><a href="../Elite_School">百强名校</a><img src="img/tc-93.png"  class="bkimg5" /></li>
+                <li class="fl pad bk1"><a href="../Gaokao_Beikao">高考备考</a><img src="img/tc-93.png"  class="bkimg6" /></li>
             </ul>
 
         </div>

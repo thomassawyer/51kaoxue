@@ -219,7 +219,7 @@ function GetTest_Recommend() {
         if (data) {
             var temp = eval(data);
             var html ="";
-            for (var i = 0; i < temp.length; i++) {
+            for (var i = 0; i < 11; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
                 html+="<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\">"+text+"</a></li>";
             }

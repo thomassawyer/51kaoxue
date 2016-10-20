@@ -15,6 +15,7 @@ namespace kaoxue.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.title = "专题汇总";
             return View();
         }
 
@@ -31,13 +32,13 @@ namespace kaoxue.Controllers
             int endindex = 0;
             if (pageindex > 1)
             {
-                startindex = (pageindex - 1) * 20 + 1;
-                endindex = pageindex * 20;
+                startindex = (pageindex - 1) * 8 + 1;
+                endindex = pageindex * 8;
             }
             else 
             {
-                 startindex = (pageindex - 1) * 20;
-                 endindex = pageindex * 20;
+                 startindex = (pageindex - 1) * 8;
+                 endindex = pageindex * 8;
             }
             string condition = ProduceCondition();
 
