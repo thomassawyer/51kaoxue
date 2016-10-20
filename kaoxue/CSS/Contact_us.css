@@ -1,0 +1,12 @@
+.gywomentb{width:208px;height:53px;background: url(../img/lianxiwomen.png);opacity:0.7;position: relative;}
+.gywomentb:hover{opacity:1;}
+.lxwomenll:hover{opacity:1;}
+.banquan:hover{opacity:1;}
+.gywomen{position:absolute;left:80px;top: 20px;color:#FFFFFF;}
+.lxwomenll{width:208px;height:53px;background: url(../img/lianxiwomencc.png);opacity:0.7;position: relative;margin-top:20px;margin-bottom: 20px;}
+.lxwomen{position:absolute;left:80px;top: 20px;color:#FFFFFF;}
+.banquan{width:208px;height:53px;background: url(../img/guanyubq.png);opacity:0.7;position: relative;}
+.bqwomen{position:absolute;left:80px;top: 20px;color:#FFFFFF;}
+.lianxice210{border: 0;}
+.lianxi{height:100%;margin-bottom:40px;}
+.lianxice210{height:400px;}

@@ -3,73 +3,134 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 联系我们</title>
-    <link href="~/CSS/common.css" rel="stylesheet" />
-    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-
-    <!-- Edit Below -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
-    <link href="~/CSS/Copyright_Statement.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>关于51</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/proforma.css">
+    <link rel="stylesheet" href="css/Literature_culture.css">
+    <link rel="stylesheet" type="text/css" href="css/News_consulting_industry.css" />
+    <link rel="stylesheet" href="css/Contact_us.css" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
-    <script src="~/CustomScripts/Test_Center.js"></script>
-    @* 弹窗样式表 *@
-    <link rel="stylesheet" href="../css/reveal.css">
-    @* 弹窗演示表结束 *@
-    @* 弹窗脚本 *@
-    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
-    @* 弹窗脚本结束 *@
-    <link href="~/CSS/Contact_us.css" rel="stylesheet" />
+    <style>
+        .lxclan {
+            background: #7bbd26;
+        }
+
+        .fenlei11 {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #f2f2f2;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .shushu {
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        .fla {
+            position: absolute;
+            top: 45px;
+            left: 150px;
+        }
+
+        .fenlei11:hover {
+            border: 1px solid #7bbd26;
+        }
+
+            .fenlei11:hover .fla {
+                color: #7bbd26;
+            }
+
+        .remenxiazai1 > li {
+            margin-top: 8px;
+            position: relative;
+        }
+
+        .rmxzdk {
+            position: absolute;
+            left: 5px;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .dkbeijin {
+            width: 17px;
+            height: 17px;
+            background: url(../img/dandan.png);
+            z-index: 999;
+        }
+
+        .rm1 {
+            color: #ff4a52;
+        }
+
+        .rm2 {
+            color: #808ffb;
+        }
+
+        .rm3 {
+            color: #aad380;
+        }
+
+        .lianxice33 {
+            background: #ff4a52;
+        }
+
+        .lianxice33 {
+            background: #ff4a52;
+        }
+
+        .ppdd1 {
+            margin-left: 85px;
+        }
+
+        .ys9 {
+            background: #7bbd27;
+        }
+    </style>
 </head>
 <body>
-    <div id="Main">
-        @Html.Partial("~/Common/top3.ascx")
-        <div id="content">
-            <div id="nav_tree">
-                <span id="tree_left">
-                    首页 > 联系我们
-                </span>
-                <span id="tree_right">
-                    @Html.Partial("~/Common/Search2.ascx")
-                </span>
+    @Html.Partial("~/Common/top2.ascx")
+    <div class="lianxi">
+        <div class="lianxice210 fl">
+            <div class="gywomentb">
+                <a href="" class="gywomen">关于我们</a>
             </div>
-            <div id="content">
-                @Html.Partial("~/Common/about_me_top.ascx")
-                <div id="content_right">
-                    <div class="content_right_container">
-                        <span class="content_right_properties">联系电话：</span>
-                        <span class="content_right_values">15010885222 010——56292460</span>
-                        <span class="content_right_properties">我要应聘：</span>
-                        <span class="content_right_values">zhaopin@hzy.com</span>
-                        <br />
-                        <span class="content_right_properties">媒体报道：</span>
-                        <span class="content_right_values">pr@hzy.com</span>
-                        <span class="content_right_properties">市场合作：</span>
-                        <span class="content_right_values">market@hzy.com</span>
-                        <br />
-                        <span class="content_right_properties">其他合作：</span>
-                        <span class="content_right_values">info@hzy.com</span>
-                        <span class="content_right_properties">我要建议：</span>
-                        <span class="content_right_values">jianyi@hzy.com</span>
-                        <br />
-                        <span class="content_right_properties">学校集体账号申请：</span>
-                        <span class="content_right_values">school@hzy.com</span>
-                        <br />
-                        <span class="content_right_properties">渠道合作：</span>
-                        <span class="content_right_values">qudao@hzy.com 中小学渠道资源合作通道</span>
-                        <br />
-                        <span class="content_right_properties">教育产品合作：</span>
-                        <span class="content_right_values">product@hzy.com 线上、线下各种教育产品和笔、纸等中小学生工具类合作通道</span>
-                    </div>
-                </div>
+            <div class="lxwomenll">
+                <a href="" class="lxwomen">联系我们</a>
+            </div>
+            <div class="banquan">
+                <a href="" class="bqwomen">版权声明</a>
             </div>
         </div>
-    </div>
+
+        <div class="lianxice fl">
+            <div class="wenbentop">
+                <b class="wbbt">走近51考学网</b>
+                <img src="img/wenhao.png" alt="" class="wenhao" />
+                <span class="wbbtsp">更新时间：2016-09-09</span>
+            </div>
+            <div id="" class="pweben">
+                <p class="ftsz">北京华夏正阳科技有限公司， 总部位于中国北京，正式成立于2008年，依托领先的技术优势和持续的创新精神，为客户提供教育公共 服务平台、教学资源库（高中、初中、小学）、数字校园、电子备课等教育云解决方案，引领中国教育信息化的发展。</p>
+                <p class="ftsz">好资源网面向全国的教师新课程网络研修平台，也是中国教育课程改革推进的网络支持平台和教育部面向新课改推广的推荐平台。已经 开通下属60多个频道，其中包括高中、初中、小学，学校教育科研、教育安全、自主招生、课堂教学等20多个学科及专题网站， 均由全国 知名专家负责主持; 同时一线师生互动平台，培训平台。成为教师，学生学习交流中重要的网络支持平台。</p>
+                <p class="ftsz">好资源网每天更新数千精品教学资源。已成为中国教育网站中拥有丰富的新课程教育资源，先进的流媒体制作技术和设备并为全国中小 学教师和学生提供个性化工作和学习的一面旗帜。</p>
+                <p class="ftsz">好资源网，整合了上千万单题及近千万份的课件资源，通过技术手段和大量的人工处理，使得每一份课件资源都精确到了课本章节定位， 每一道题目都拥有数十个相关数据属性，方便科学地管理教学与学习过程。在成立之初我们便与北京教育出版社达成战略合作伙伴关系,充分 发挥传统行业的资源优势以及网络教育先进的技术优势，进行了大量有意义的互联网教育领域的探索。</p>
+
+            </div>
+
+        </div>
+    </div><!--文本主题内容-->
     @Html.Partial("~/Common/bottom.ascx")
+
 </body>
 </html>
