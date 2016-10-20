@@ -23,15 +23,10 @@ function GetTest_Hot_Download() {
     $.post("../Elite_School/GetTest_Hot_Download", function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<div class='directory_container_title'><span class='directory_container_title_left'>| 热门下载</span><a href='../Test_Center?level=3&type=1'><span class='directory_container_title_right'>More</span></a></div>";
+            var html = "";
             for (var i = 0; i < temp.length; i++) {
-                var text = temp[i].testname.length > 18 ? temp[i].testname.substr(0, 18) + "..." : temp[i].testname;
-                if (i <= 2) {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left_red'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                } else {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                }
-
+                var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a class=\"rmxzaa\">"+text+"</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -45,14 +40,10 @@ function GetTest_Recommend() {
     $.post("../Elite_School/GetTest_Recommend", function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<div class='directory_container_title'><span class='directory_container_title_left'>| 相关推荐</span><a href='../Test_Center?level=3&type=1'><span class='directory_container_title_right'>More</span></a></div>";
-            for (var i = 0; i < temp.length; i++) {
-                var text = temp[i].testname.length > 18 ? temp[i].testname.substr(0, 18) + "..." : temp[i].testname;
-                if (i <= 2) {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left_red'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                } else {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                }
+            var html = "";
+            for (var i = 0; i < 11; i++) {
+                var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -80,7 +71,17 @@ function GetList() {
                     } else if (way == 2) {
                         cid = 2;
                     }
-                    html += "<a href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'><div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style=' width:500px;'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span><span id='download_point'></span></span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span><span id='text_type'></span></span></span></div></div><div class='data_list_td_container_right'><a  href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "' class='download_button download_button1'>下载</a></div></div>";
+                    html += "<div class=\"lxc_320\">\
+                                <div class=\"wdk fl\"></div>\
+                                <div class=\"wenbenkui fl\">\
+                                    <a ><b class=\"b320\">"+text+"</b></a><br>\
+                                    <span class=\"lxcsp320\">" + temp[i].uploadtime + "</span>\
+                                </div>\
+                                <div class=\"xiazai fl\">\
+                                    <a  class=\"xztb1 fl\"><img src=\"img/yulan.png\" ><img src=\"img/hover-31.png\"  class=\"dpnone\"></a>\
+                                    <a  class=\"xztb2 fl\"><img src=\"img/xiazaitb.png\" ><img src=\"img/yll.png\"  class=\"yll\"></a>\
+                                </div>\
+                            </div>";
                 }
             }
             $("#data_list_td").html(html);
