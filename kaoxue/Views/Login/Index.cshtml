@@ -1,93 +1,195 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 登录</title>
-    <link href="~/CSS/Login.css" rel="stylesheet" />
-    @* 弹窗样式表 *@
-    <link rel="stylesheet" href="../css/reveal.css">
-    @* 弹窗演示表结束 *@
-    <script src="~/js/jquery-1.8.2.min.js"></script>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <style>
+        .bj {
+            width: 100%;
+            height: 100%;
+        }
+
+        .shouye {
+            width: 100%;
+            height: 200px;
+            background: #fff;
+            position: absolute;
+            display: none;
+        }
+
+        .syz {
+            width: 1189px;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .dlylog {
+            padding-top: 50px;
+        }
+
+        .dlsp {
+            position: absolute;
+            top: 80px;
+            font-size: 22px;
+            left: 980px;
+        }
+
+            .dlsp > a:hover {
+                color: #64d200;
+            }
+
+        .zhmm {
+            width: 472px;
+            height: 529px;
+            position: fixed;
+            top: 25%;
+        }
+
+        .zhmm {
+            width: 472px;
+            height: 529px;
+            background: url(img/dlbjk.png);
+            position: absolute;
+        }
+
+        .dlyhhh {
+            width: 430px;
+            height: 490px;
+            background: #e7e1ba;
+            border-radius: 5px;
+            margin: 0 auto;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        .shuidenglu {
+            color: #80d339;
+            font-size: 30px;
+            position: absolute;
+            top: 80px;
+            left: 150px;
+        }
+
+        .zhmingzi {
+            width: 363px;
+            height: 57px;
+            background: url(img/yonghuming.png);
+            position: absolute;
+            top: 140px;
+            left: 35px;
+        }
+
+        .rwmctb {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+        }
+
+        .yhminzi {
+            position: absolute;
+            top: 18px;
+            left: 60px;
+            border: none;
+        }
+
+        .topzhi {
+            top: 220px;
+        }
+
+        .gxk {
+            position: absolute;
+            top: 320px;
+            left: 70px;
+        }
+
+        .jzyhm {
+            position: absolute;
+            top: 318px;
+            left: 85px;
+        }
+
+        .wjmm {
+            position: absolute;
+            top: 318px;
+            left: 260px;
+        }
+
+        .wjmima {
+            position: absolute;
+            top: 320px;
+            left: 295px;
+        }
+
+        .denglulu {
+            display: block;
+            width: 160px;
+            height: 57px;
+            background: url(img/denglu.png);
+            position: absolute;
+            top: 400px;
+            left: 130px;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .sp11 {
+            line-height: 57px;
+        }
+        a {
+            cursor:pointer;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
     <script src="~/CustomScripts/Login.js"></script>
-    @* 弹窗脚本 *@
-    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
-    @* 弹窗脚本结束 *@
 </head>
-<body onkeydown="loginEnterCheck()">
-    <div id="container">
-        <div id="login_top">
-            <div id="login_top_right">
-                <a href="../Home">网站首页</a>
-                <span>|</span>
-                <a>名校资源库<img src="~/Images/%e7%99%bb%e5%bd%95/%e4%b8%89%e8%a7%92%e5%bd%a2.png" /></a>
+<body>
+    <div class="bj">
+        <div class="shouye">
+            <div class="syz">
+                <img src="img/dlylog.png" alt="" class="dlylog">
+                <span class="dlsp"><a href="">网站首页</a>|<a href="">网站直通<span id="car">车</span></a></span>
             </div>
-            <div id="login_logo">
-                <img src="~/Images/%e7%99%bb%e5%bd%95/logo.png" />
-            </div>
-            <div id="login_logo_title">
-                金品好资源用户管理中心
-            </div>
-            <div id="login_border">
-                <div id="border_left">
-                    <div id="border_left_title">
-                        用户登录
-                    </div>
-                    <div id="border_login">
-                        <input id="username" placeholder="请输入您的用户名" />
-                    </div>
-                    <div id="border_password">
-                        <input id="password" type="password" placeholder="请输入您的密码" />
-                    </div>
-                    <div id="login_register">
-                        <div id="register">
-                            没有账号?<span class="register"><a>注册</a></span>
-                        </div>
-                        <div id="forget_pass"><a>忘记密码</a></div>
-                    </div>
-                    <div id="login_button" onclick="Login()">登录</div>
-                </div>
-                <div id="border_right">
-                    <img src="~/Images/%e7%99%bb%e5%bd%95/%e7%bb%84%2044.png"/>
-                </div>
-            </div>
-            <div id="login_bottom">
-                <div class="text_container">
+        </div><!-- top -->
 
-                        <a>关于我们</a>
-                        <span class="seprate">|</span>
-                        <a>联系我们</a>
-                        <span class="seprate">|</span>
-                        <a>意见反馈</a>
-                        <span class="seprate">|</span>
-                        <a>版权声明</a>
-                        <span class="seprate">|</span>
-                        <a>加入我们</a>
-                        <span class="seprate">|</span>
-                        <a>公司资源</a>
-                        <span class="seprate">|</span>
-                        <a>备课地图</a>
-
+        <div class="zhmm">
+            <div class="dlyhhh">
+                <b class="shuidenglu">会员登录</b>
+                <div id="" class="zhmingzi">
+                    <img src="img/rwmctb.png" class="rwmctb" />
+                    <input type="text" name="" id="username" value="" placeholder="用户名" class="yhminzi" />
                 </div>
-                Copyright © 5ihzy.com All rights reserved.京ICP备15008398号-2
+                <div id="" class="zhmingzi topzhi">
+                    <img src="img/mima.png" class="rwmctb" />
+                    <input type="password" name="" id="password" value="" placeholder="登陆密码" class="yhminzi" />
+                </div>
+                <input type="radio" name="field＿name" value="记住用户名" class="gxk" />
+                <span class="jzyhm">记住用户名</span>
+                <img src="img/wjmima.png" class="wjmm" alt="" />
+                <a href="" class="wjmima">忘记密码</a>
+                <span class="sp11">
+                    <a class="denglulu" onclick="Login()">
+                        登 陆
+                    </a>
+                </span>
             </div>
         </div>
+        <img src="img/denglubg.png" alt="" class="bj">
     </div>
-    <div id="Main">
-        <img src="~/Images/%e7%99%bb%e5%bd%95/%e8%83%8c%e6%99%af.png" style=" width:100%; height:100%;" />
-    </div>
-    <a href="#" id="message_start" class="big-link" data-reveal-id="myModal" style="display:none;">
-        jquery1
-    </a>
+    <script>
+        $(function () {
+            $(".bj").height($(window).height());
+            $(".shouye").slideDown(2000);
+            $(".zhmm").animate({ left:  $("#car").offset().left-455 +"px" }, 2000);
 
-    <div id="myModal" class="reveal-modal" style="border: 1px solid #3b4f7c; ">
-        <h1 style="font-family:'幼圆'" id="message_content">系统提示:</h1>
-        <p id="message_text" style="font-family:'微软雅黑'">Attention please.</p>
-        <a class="close-reveal-modal" id="message_close">&#215;</a>
-    </div>
+        })
+    </script>
 </body>
 </html>

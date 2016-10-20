@@ -25,11 +25,11 @@ function getpara() {
 function validate() {
     getpara();
     if (username == "" || username == undefined || username == null) {
-        message("请输入用户名");
+        alert("请输入用户名");
         return false;
     }
     if (password == "" || password == undefined || password == null) {
-        message("请输入密码");
+        alert("请输入密码");
         return false;
     }
     return true;
@@ -44,7 +44,7 @@ function Login() {
         username:username
     }, function (data) {
         if (data == "0") {
-            message("用户名不存在");
+            alert("用户名不存在");
         } else if(data=="1") {
             $.post("../Login/ValidateUsernameAndPassword", {
                 username: username,
@@ -60,7 +60,7 @@ function Login() {
                         location.href = return_url;
                     }
                 } else {
-                    message("密码错误");
+                    alert("密码错误");
                 }
             });
         }
