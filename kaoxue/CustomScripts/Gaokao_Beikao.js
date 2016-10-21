@@ -389,7 +389,7 @@ function Produce_A_Signs() {
     html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
         <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
-        <span class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</span>";
+        <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }
 

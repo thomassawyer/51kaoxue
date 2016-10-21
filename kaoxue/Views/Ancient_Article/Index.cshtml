@@ -3,100 +3,102 @@
 }
 
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 文章</title>
-    <link href="~/CSS/common.css" rel="stylesheet" />
-    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-
-    <!-- Edit Below -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
-    <link href="~/CSS/Ancient.css" rel="stylesheet" />
-    <link href="~/CSS/Ancient_List.css" rel="stylesheet" />
-    <link href="~/CSS/Ancient_Article.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>文学国学阅读页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" type="text/css" href="css/Download_page.css" />
+    <link rel="stylesheet" href="css/Literature_reading_page.css" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
-    @* 弹窗样式表 *@
-    <link rel="stylesheet" href="../css/reveal.css">
-    @* 弹窗演示表结束 *@
-    @* 弹窗脚本 *@
-    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
-    @* 弹窗脚本结束 *@
     <script src="~/CustomScripts/Ancient_Article.js"></script>
+    <style>
+        a {
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
-    <div id="Main">
-        @Html.Partial("~/Common/top3.ascx")
-        <div id="container">
-            <div id="content">
-                <div id="nav_tree">
-                    <span id="tree_left">
-                        首页 > <a href="../Ancient">文学国学</a>
-                    </span>
-                    <span id="tree_right">
-                        @Html.Partial("~/Common/Search2.ascx")
-                    </span>
-                </div>
+    @Html.Partial("~/Common/top2.ascx")
+    <div class="lianxi">
+        <div class="lianxice210 fl">
+            <div class="lianxice33 ">
+                <a  class="xzgd1">更多》</a>
+                <img src="img/xiazaitubiao.png" class="xztubiao" >
+                <b>阅读排行榜</b>
             </div>
-            <div id="category_content">
+            <div class="lxgao521">
+                <ul class="remenxiazai11" id="Reading_List">
+                </ul>
+            </div>
+            <div class="lianxice33 rmxz333">
+                <a  class="xzgd1">更多》</a>
+                <img src="img/tuijianxg.png" class="xztubiao" >
+                <b>相关推荐</b>
+            </div>
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="relative_recommend">
+                    <li class="rmxzli1"><span class="rmxzsp rmxz2hv">●</span>&nbsp;<a class="rmxzaa rmxz2hv">2015高考真题英语（四...</a></li>
+                    <li class="rmxzli"><span class="rmxzsp rmxz2hv">●</span>&nbsp;<a class="rmxzaa rmxz2hv">2015高考真题英语（四...</a></li>
+                    <li class="rmxzli"><span class="rmxzsp rmxz2hv">●</span>&nbsp;<a class="rmxzaa rmxz2hv">2015高考真题英语（四...</a></li>
+                    <li class="rmxzli"><span class="rmxzsp">●</span>&nbsp;<a class="rmxzaa rmxz2hv">2015高考真题英语（四...</a></li>
+                    <li class="rmxzli"><span class="rmxzsp rmxz2hv">●</span>&nbsp;<a class="rmxzaa rmxz2hv">2015高考真题英语（四...</a></li>
+                    <li class="rmxzli"><span class="rmxzsp rmxz2hv">●</span>&nbsp;<a class="rmxzaa rmxz2hv">2015高考真题英语（四...</a></li>
+                    <li class="rmxzli"><span class="rmxzsp rmxz2hv">●</span>&nbsp;<a class="rmxzaa rmxz2hv">2015高考真题英语（四...</a></li>
+                    <li class="rmxzli"><span class="rmxzsp rmxz2hv">●</span>&nbsp;<a class="rmxzaa rmxz2hv">2015高考真题英语（四...</a></li>
+                </ul>
+            </div>
+        </div>
 
-                <div id="category_content_left">
-                    <div class="page_title" id="page_title">
+        <div class="lianxice fl">
+            <div class="xzkxianshi">
+                <div class="imgxztb"><img src="img/shijuantubiao1.png" class="sbtkz" /></div>
+                <b class="xznldd" id="page_title">《乐府诗集》卷九十一 新乐府辞二</b>
+            </div>
+            <div  class="xzpwenben">
+                <div class="bgwbk" id="lists" style="padding-bottom:20px;">
+                    <p class="topp">乐府杂题二</p>
+                    <p>
+                        【祖龙行】常楚老
+                        《汉书·五行志》曰：“秦始皇三十六年，郑客从关东来，至华阴，望见素车白马从华山上下，知其非人，道住，止而待之。遂至，持璧与客曰：‘为我遗镐池君。’因言‘今年祖龙死’，忽不见。郑客奉璧，即始皇二十八年过江所湛璧也。是岁始皇死，后三年而秦灭。”颜师古曰：“此直江神告镐池之神，以始皇将死尔。”苏林曰：“祖，始也。龙，人君象，谓始皇也。”应劭曰：“祖，人之先。龙，君之象。”《祖龙行》盖出於此。知
+                    </p>
+                    <p class="mmpp">黑云兵气射天裂，壮士朝眠梦冤结。祖龙一夜死沙丘，胡亥空随鲍鱼辙。腐肉偷生二千里，伪书先赐扶苏死。墓接骊山土未乾，瑞光已向芒砀起。陈胜城中鼓三下，秦家天地如崩瓦。龙蛇撩乱入咸阳，少帝空随汉家马。主</p>
 
-                    </div>
-                    @* 数据列表开始 *@
-                    <div class="data_list" id="lists" style="min-height:1100px;">
-                        
-                    </div>
-                    @* 数据列表结束 *@
-                </div>
-                <div id="category_content_right">
-                    @* 阅读排行榜 *@
-                    <div id="Reading_Lists">
-                        <div class="lists_title">
-                            <span class="title_left">| 阅读排行榜</span>
-                        </div>
-                        <div id="Reading_List">
-                        </div>
-                    </div>
+                    <p class="ppdp">【鄴都引】张说</p>
+                    <p>君不见魏武草创争天禄，群雄睚眦相驰逐。昼携壮士破坚阵，夜接词人赋华屋。都邑缭绕西山阳，桑榆漫漫漳河曲。城郭为墟人改代，但有西园明月在。鄴傍高冢多贵臣，蛾眉曼睩共灰尘。试上铜台歌舞处，唯有秋风愁杀人。主</p>
 
-                    @* 相关推荐 *@
-                    <div id="relative_recommends">
-                        <div class="lists_title">
-                            <span class="title_left">| 相关推荐</span>
-                            <span class="title_right"></span>
-                        </div>
-                        <div id="relative_recommend">
-                        </div>
-                    </div>
+                    <p class="ppdp">【孟门行】崔颢</p>
+                    <p>黄雀衔黄花，翩翩傍檐隙。本拟报君恩，如何反弹射。金罍美酒满座春，平原爱才多众宾。满堂尽是忠义士，何意得有谗谀人。谀人翻覆那可道，能令君心不自保。北园新栽桃李枝，根株未固何转移。成阴结子君自取，若问傍人那得知。主</p>
+
+                    <p class="ppdp">【邯郸宫人怨】崔颢</p>
+                    <p>邯郸陌上三月春，暮行逢见一妇人。自言乡里本燕、赵，少小随家西入秦。母兄怜爱无俦侣，五岁名为阿娇女。七岁丰茸好颜色，八岁黠惠能言语。十三兄弟教诗书，十五青楼学歌舞。我家青楼临道傍，纱窗绮幔暗闻香。日暮笙歌君驻马，春日妆梳妾断肠。不同城南使君婿，本求三十侍中郎。何知汉帝好容色，玉辇携归登建章。建章宫殿不知数，万户千门深且长。百堵椒涂接青琐，九华阁道连洞房。水精帘箔云母扇，琉璃窗牖玳瑁床。岁岁年年奉欢宴，娇贵荣华谁不羡。恩情莫比陈皇后，宠爱全胜赵飞燕。瑶房侍寝世莫知，金屋更衣人不见。谁言一朝复一日，君王弃世市朝变。宫车出葬茂陵田，贱妾独留长信殿。一朝太子升至尊，两宫人事如掌翻。同时侍女见谗毁，后来新人莫敢言。兄弟印绶皆被夺，昔年赏赐不复存。一旦放归旧乡里，乘车垂泪还入门。父母愍我曾富贵，嫁与西舍金王孙。念此翻覆复何道，百年盛衰谁能保。忆昨尚如春日花，悲今已作秋时草。少年去去莫停鞭，人生万事由上天。非我今日独如此，古今歇薄皆共然。知</p>
+
+                    <p class="ppdp">【吴宫怨】卫万</p>
+                    <p>君不见吴王宫阁临江起，不卷珠帘见江水。晓气晴来双阙间，潮声夜落千门里。勾践城中非旧春，姑苏台下起黄尘。只今唯有西江月.</p>
+
+                    <p class="ppdp">【同前】张籍</p>
+                    <p>吴宫四面秋江水，江清露白芙蓉死。吴王醉后欲更衣，座上美人娇不起。宫中千门复万户，君恩反覆谁能数。君心与妾既不同，徒向君前作歌舞。茱萸满宫红实垂，秋风袅袅生繁枝。姑苏台上夕燕罢，他人侍寝还独归。白日在天光在地，君今讵得长相弃。知</p>
+
+                    <p class="ppdp">【青楼曲二首】王昌龄</p>
+                    <p>
+                        白马金鞍从武皇，旌旗十万宿长杨。楼头小妇鸣筝坐，遥见飞尘入建章。斋
+                        驰道杨花满御沟，红妆缦绾上青楼。金章紫绶千馀骑，夫婿朝回初拜侯。主
+                    </p>
+
+                    <p class="ppdp">【同前】于濆</p>
+                    <p>青楼临大道，一上一回老。所思终不来，极目伤春草。古</p>
                 </div>
             </div>
         </div>
 
-    </div>
-    @* 预览 *@
-    <a href="#" id="message_preview" class="big-link" data-reveal-id="myModal_preview" style="display:none;">
-        jquery1
-    </a>
-
-    <div id="myModal_preview" class="reveal-modal" style="border: 1px solid #3b4f7c;width:900px; margin-left:-440px; padding:0px; ">
-        <iframe id="download_preview" width="895" height="500"></iframe>
-        <a class="close-reveal-modal" id="message_close">&#215;</a>
+        <div style="clear: both;"></div>
     </div>
 
-
-    @* 消息提示 *@
-    <a href="#" id="message_download" class="big-link" data-reveal-id="myModal_download" style="display:none;">
-        jquery1
-    </a>
-    <div id="myModal_download" class="reveal-modal" style="border: 1px solid #3b4f7c; ">
-        <h1 style="font-family:'幼圆'" id="message_content">系统提示:</h1>
-        <p id="message_text" style="font-family:'微软雅黑'">Attention please.</p>
-        <a class="close-reveal-modal" id="message_close">&#215;</a>
-    </div>
     @Html.Partial("~/Common/bottom.ascx")
+
 </body>
 </html>

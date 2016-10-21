@@ -1,4 +1,4 @@
-.wxfl210{width:960px;height:210px;border:1px solid #ffb726;position:relative;}
+.wxfl210{width:960px;height:auto; padding-bottom:20px;border:1px solid #ffb726;position:relative;}
 .wxmg{margin-top:30px;}
 .dkwxmg{margin-top:20px;}
 .genduoa{display:block;background:#ffb726;height:20px;}
@@ -17,7 +17,7 @@
 .gdlan{background:#808ffb;}
 .gdalv1{background:#8cc407;}
 .wx203{border:1px solid #8cc407;}
-.gdlan{background:#00b2c2;}
+.gdlan1{background:#00b2c2;}
 .wx204{border:1px solid #00b2c2;}
 .fenlietb{position:absolute;top:7px;left:5px;}
 .guoxue{position:absolute;left:840px;top:10px;}
