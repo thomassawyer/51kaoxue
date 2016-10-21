@@ -16,11 +16,11 @@ function Get_First_Category() {
                 } else {
                     html += "<a onclick=\"a_selected(this),type_selected(" + temp[i].id + ") \">" + temp[i].title + "</a>";
                 }
-                
+
             }
             $("#categories").html(html);
             type_selected(temp[0].id);
-           
+
         }
     });
 }
@@ -38,13 +38,12 @@ function type_selected(id) {
 //
 //点击A标签时,改变A标签背景
 //
-function a_selected(obj) {
+function a_selected(obj, css) {
     $(obj).parent().children().each(function () {
-        $(this).removeClass("condition_selected");
+        $(this).removeClass(css);
     });
-    $(obj).addClass("condition_selected");
+    $(obj).addClass(css);
 }
-
 //
 //获取二级古文分类
 //
@@ -55,34 +54,89 @@ function Get_Second_Category(first_ids) {
     $.post("../Ancient/Get_Second_Category", { first_id: first_ids }, function (data) {
         if (data) {
             if (data != "]") {
-                var html = "";
+                var html = "<div class=\"wxfl210 dkwxmg\">";
                 var temp;
                 if (data != "]") {
                     temp = eval(data);
                     for (var i = 0; i < temp.length; i++) {
-                        html += "<div class=\"category_content_left_container\">\
-                        <div class=\"book\">\
-                            <div class=\"book_title\">";
-
-                        html += "<span>" + temp[i].title + "</span>";
-                        html += "</div>\
-                        </div>\
-                        <div class=\"book_categories\">\
-                            <div class=\"book_categories_container\">";
+                        var title_css = "";
+                        if (i == 0) {
+                            title_css = "genduoa";
+                        } else if (i == 1) {
+                            title_css = "genduoa gdlv";
+                        } else if (i == 2) {
+                            title_css = "genduoa gdlan";
+                        } else if (i == 3) {
+                            title_css = "genduoa gdalv1";
+                        } else if (i == 4) {
+                            title_css = "genduoa gdlan1";
+                        } else {
+                            title_css = "genduoa gdlan";
+                        }
+                        html += "<div class=\"gda1\"><a  class=\"" + title_css + "\" style=\"padding:0px 20px;\">" + temp[i].title + "</a></div>";
                         //获取三级分类
                         $.post("../Ancient/Get_Third_Category", { second_id: temp[i].id }, function (data1) {
                             if (data1) {
                                 if (data1 != "]") {
                                     var flag = eval(data1);
+                                    html += "<div class=\"chuchi1\">";
                                     for (var j = 0; j < flag.length; j++) {
-                                        html += "<a href=\"../Ancient_List?title="+flag[j].title+"&first_id="+first_id+"&third_id="+flag[j].id+"\">"+flag[j].title+"</a><span class=\"book_seprate\">|</span>";
+
+                                        var bg = "";
+                                        if (i == 0) {
+                                            bg = "bg_yellow";
+                                        } else if (i == 1) {
+                                            bg = "bg_green";
+                                        } else if (i == 2) {
+                                            bg = "bg_blue";
+                                        } else if (i == 3) {
+                                            bg = "bg_lightgreen";
+                                        } else if (i == 4) {
+                                            bg = "bg_cyan";
+                                        } else {
+                                            bg = "bg_blue";
+                                        }
+                                        html += "<div class=\"ccimg1 cc2k fl\">\
+                                                    <a  href=\"../Ancient_List?title=" + flag[j].title + "&first_id=" + first_id + "&third_id=" + flag[j].id + "\" class=\"bg " + bg + "\">" + flag[j].title + "</a>\
+                                                </div>";
+                                        if ((j + 1) % 9 == 0 && i != 0) {
+                                            if ((j + 1) % 9 == 0 && j != 0 && j < flag.length) {
+                                                html += "</div><div class=\"chuchi2\">";
+                                            }
+                                        }
                                     }
+                                    html += "</div>";
                                 }
                             }
                         });
-                        html += "</div>\
-                        </div>\
-                    </div>";
+                        if (temp[i].id == undefined || temp[i].id == "" || temp[i].id == null) {
+                            continue;
+                        }
+                        if (i == 0) {
+                            html += "</div>\
+                                        <div class=\"wxfl210 wx201 wxmg\">";
+                        } else if (i == 1) {
+                            html += "</div>\
+                                        <div class=\"wxfl210 wx202 wxmg\">";
+                        } else if (i == 2) {
+                            html += "</div>\
+                                        <div class=\"wxfl210 wx203 wxmg\">";
+                        } else if (i == 3) {
+                            html += "</div>\
+                                <div class=\"wxfl210 wx204 wxmg\">";
+                        } else {
+                            if (i == temp.length - 1) {
+                                html += "</div>";
+                            } else {
+                                if (temp[i].id == undefined || temp[i].id == "" || temp[i].id == null) {
+                                    continue;
+                                } else {
+                                    html += "</div>\
+                                        <div class=\"wxfl210 wx202 wxmg\">";
+                                }
+
+                            }
+                        }
                     }
                 }
                 //学校试题ID, 填充代码
@@ -93,7 +147,7 @@ function Get_Second_Category(first_ids) {
             }
         }
     });
-    
+
 }
 
 //
@@ -106,26 +160,15 @@ function Reading_Lists() {
             var temp;
             temp = eval(data);
             for (var i = 0; i < temp.length; i++) {
+                var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
                 if (i == 0) {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign1\">"+(i+1)+"</span>\
-                                <div class=\"text_content\">"+temp[i].title+"</div>\
-                            </div></a>";
-                } else if(i==1) {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign2\">" + (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + "> " + text + "</a></li>";
+                } else if (i == 1) {
+                    html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm2\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else if (i == 2) {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign3\">" + (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm3\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign_normal\">" + (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 }
 
             }
@@ -138,7 +181,7 @@ function Reading_Lists() {
 //相关推荐
 //
 function Relative_Recommend() {
-    $.post("../Ancient/Relative_Recommend",{first_id:first_id}, function (data) {
+    $.post("../Ancient/Relative_Recommend", { first_id: first_id }, function (data) {
         if (data) {
             var html = "";
             if (data != "]") {
@@ -146,26 +189,16 @@ function Relative_Recommend() {
                 temp = eval(data);
                 var date;
                 for (var i = 0; i < temp.length; i++) {
-                    date = new Date(temp[i].pubdate);
-                    date = date.getFullYear() + "-" + Number(date.getMonth() + 1) + "-" + date.getDate();
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"relative_recommend_container\">\
-                                <div class=\"relative_recommend_container_top\">\
-                                    <span class=\"relative_recommend_container_top_left\">\
-                                        ·\
-                                    </span>\
-                                    <span class=\"relative_recommend_container_top_right\">\
-                                        "+ temp[i].title + "\
-                                    </span>\
-                                </div>\
-                                <div class=\"relative_recommend_container_bottom\">\
-                                    <span class=\"relative_recommend_container_bottom_left\">\
-                                        浏览：" + temp[i].viewcounts + "\
-                                    </span>\
-                                    <span class=\"relative_recommend_container_bottom_right\">\
-                                        "+ date + "\
-                                    </span>\
-                                </div>\
-                            </div></a>";
+                    var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
+                    if (i == 0) {
+                        html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + "> " + text + "</a></li>";
+                    } else if (i == 1) {
+                        html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm2\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
+                    } else if (i == 2) {
+                        html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm3\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
+                    } else {
+                        html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
+                    }
 
                 }
             }

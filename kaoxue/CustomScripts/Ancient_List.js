@@ -24,26 +24,15 @@ function Reading_Lists() {
             var temp;
             temp = eval(data);
             for (var i = 0; i < temp.length; i++) {
+                var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
                 if (i == 0) {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign1\">"+ (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + "> " + text + "</a></li>";
                 } else if (i == 1) {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign2\">" + (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm2\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else if (i == 2) {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign3\">" + (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm3\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign_normal\">" + (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 }
 
             }
@@ -64,26 +53,16 @@ function Relative_Recommend() {
                 temp = eval(data);
                 var date;
                 for (var i = 0; i < temp.length; i++) {
-                    date = new Date(temp[i].pubdate);
-                    date = date.getFullYear() + "-" + Number(date.getMonth() + 1) + "-" + date.getDate();
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"relative_recommend_container\">\
-                                <div class=\"relative_recommend_container_top\">\
-                                    <span class=\"relative_recommend_container_top_left\">\
-                                        ·\
-                                    </span>\
-                                    <span class=\"relative_recommend_container_top_right\">\
-                                        "+ temp[i].title + "\
-                                    </span>\
-                                </div>\
-                                <div class=\"relative_recommend_container_bottom\">\
-                                    <span class=\"relative_recommend_container_bottom_left\">\
-                                        浏览：" + temp[i].viewcounts + "\
-                                    </span>\
-                                    <span class=\"relative_recommend_container_bottom_right\">\
-                                        "+ date + "\
-                                    </span>\
-                                </div>\
-                            </div></a>";
+                    var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
+                    if (i == 0) {
+                        html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + "> " + text + "</a></li>";
+                    } else if (i == 1) {
+                        html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm2\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
+                    } else if (i == 2) {
+                        html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm3\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
+                    } else {
+                        html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
+                    }
 
                 }
             }
@@ -114,16 +93,10 @@ function GetList() {
             if (data != "]") {
                 var temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
-                    html += "<a onclick='update_viewcount("+temp[i].id+")' style='cursor:pointer;'><div class=\"data_list_td_container\">\
-                            <div class=\"data_list_td_container_left\">\
-                                <img src=\"../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png\">\
-                            </div>\
-                            <div class=\"data_list_td_container_middle\" style=\"width:500px\">\
-                                <div>\
-                                    <span id=\"text_title\">"+temp[i].title+"</span>\
-                                </div>\
-                            </div>\
-                        </div></a>";
+                    html += "<div class=\"fenlei11\">\
+                                <img src=\"img/shushuxian.png\"  class=\"shushu\">\
+                                <a  class=\"fla\" onclick='update_viewcount(" + temp[i].id + ")'>" + temp[i].title + "</a>\
+                            </div>";
                 }
             }
             $("#lists").html(html);
@@ -148,7 +121,7 @@ function update_viewcount(id) {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "";
+    var html = "<a  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
     var signs_length;
     if (pageindex >= pagecount - 3) {
         signs_length = (pagecount - pageindex) + 1;
@@ -156,18 +129,25 @@ function Produce_A_Signs() {
         signs_length = 5;
     }
     if (pageindex >= 2) {
-        html += "<span>…</span>";
+        html += "<span class=\"anniusp1\">...</span>";
     }
     for (var i = 0; i < signs_length; i++) {
-        if (i == 0) {
-            html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        } else {
-            html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        }
+        flag = (i + 1);
+        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+
+        //if (i == 0) {
+        //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //} else {
+        //    html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //}
     }
     if (pageindex <= pagecount - 5) {
-        html += "<span>…</span>";
+        html += "<span class=\"anniusp\">...</span>";
     }
+    html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
+        <span class=\"anniusp2\">跳转到</span>\
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
+        <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }
 
@@ -216,7 +196,7 @@ function Go() {
 //
 function anchor(obj) {
     if ($(obj).offset().top > 1400)
-        $("html,body").animate({ scrollTop: $("#lists").offset().top }, 500)
+        $("html,body").animate({ scrollTop: $("#page_title").offset().top }, 500)
 }
 
 //

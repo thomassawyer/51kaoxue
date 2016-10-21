@@ -3,98 +3,530 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 文学国学分类</title>
-    <link href="~/CSS/common.css" rel="stylesheet" />
-    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-
-    <!-- Edit Below -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
-    <link href="~/CSS/Ancient.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>文学国学页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/proforma.css">
+    <link rel="stylesheet" href="css/Literature_culture.css">
     <script src="~/Scripts/jquery-1.8.2.js"></script>
-    @* 弹窗样式表 *@
-    <link rel="stylesheet" href="../css/reveal.css">
-    @* 弹窗演示表结束 *@
-    @* 弹窗脚本 *@
-    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
-    @* 弹窗脚本结束 *@
     <script src="~/CustomScripts/Ancient.js"></script>
+    <style>
+        .lxclan {
+            background: #7bbd26;
+        }
+
+        .fenlei11 {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #f2f2f2;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .shushu {
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        .fla {
+            position: absolute;
+            top: 45px;
+            left: 150px;
+        }
+
+        .fenlei11:hover {
+            border: 1px solid #7bbd26;
+        }
+
+            .fenlei11:hover .fla {
+                color: #7bbd26;
+            }
+
+        .remenxiazai1 > li > a {
+            display: block;
+            padding-left: 25px;
+        }
+
+        .remenxiazai1 > li {
+            margin-top: 8px;
+            position: relative;
+        }
+
+        .rmxzdk {
+            position: absolute;
+            left: 5px;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .dkbeijin {
+            width: 17px;
+            height: 17px;
+            background: url(../img/dandan.png);
+            z-index: 999;
+        }
+        a {
+            cursor:pointer;
+        }
+
+        .rm1 {
+            color: #ff4a52;
+        }
+
+        .rm2 {
+            color: #808ffb;
+        }
+
+        .rm3 {
+            color: #aad380;
+        }
+
+        .lianxice33 {
+            background: #ff4a52;
+        }
+
+        .lianxice33 {
+            background: #ff4a52;
+        }
+    </style>
 </head>
 <body>
-    <div id="Main">
-        @Html.Partial("~/Common/top3.ascx")
-        <div id="container">
-            <div id="content">
-                <div id="nav_tree">
-                    <span id="tree_left">
-                        首页 > 文学国学
-                    </span>
-                    <span id="tree_right">
-                        @Html.Partial("~/Common/Search2.ascx")
-                    </span>
-                </div>
-            </div>
-            <div id="condition">
-                <div class="condition_contrainer">
-                    <div class="condition_contrainer_title">分类：</div>
-                    <div class="condition_contrainer_content" id="categories">
-                        <a class="condition_selected" onclick="type_selected(''), a_selected(this)">国学</a>
-                        <a id="type1" onclick="type_selected(1), a_selected(this)">诗词鉴赏</a>
-                    </div>
-                </div>
-            </div>
-            <div id="category_content">
-                <div id="category_content_left">
-                </div>
-                <div id="category_content_right">
-                    @* 阅读排行榜 *@
-                    <div id="Reading_Lists">
-                        <div class="lists_title">
-                            <span class="title_left">| 阅读排行榜</span>
-                        </div>
-                        <div id="Reading_List">
-                        </div>
-                    </div>
+    @Html.Partial("~/Common/top2.ascx")
 
-                    @* 相关推荐 *@
-                    <div id="relative_recommends">
-                        <div class="lists_title">
-                            <span class="title_left">| 相关推荐</span>
-                            <span class="title_right">More</span>
-                        </div>
-                        <div id="relative_recommend">
-                        </div>
-                    </div>
-                </div>
+
+    <div class="lianxi" style="min-height:1300px">
+        <div class="lianxice210 fl">
+            <div class="lianxice33 ">
+                <a  class="xzgd1">更多》</a>
+                <img src="img/xzuizz.png" class="xztubiao" >
+                <b>阅读排行版</b>
+            </div>
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="Reading_List">
+                </ul>
+            </div>
+            <div class="lianxice33 rmxz333">
+                <a  class="xzgd1">更多》</a>
+                <img src="img/tuijianxg.png" class="xztubiao" >
+                <b>相关推荐</b>
+            </div>
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="relative_recommend">
+                </ul>
             </div>
         </div>
 
-    </div>
-    @* 预览 *@
-    <a href="#" id="message_preview" class="big-link" data-reveal-id="myModal_preview" style="display:none;">
-        jquery1
-    </a>
+        <div class="lianxice fl">
+            <div class="lxclan">
+                <img src="img/zui-25.png"  class="fenlietb">
+                <b class="bix">
+                    分类
+                </b>
+                <span class="spwenben" style="left:850px;cursor:pointer;" onclick="type_selected(1)">国学</span>
+                <span class="spwenben" style="cursor:pointer;" onclick="type_selected(2)">诗词鉴赏</span>
+            </div>
+            <style>
+                .bg {
+                    width: 41px;
+                    height: 70px;
+                    float: right;
+                    color:white;
+                    padding-left:15px;
+                    font-size:12px;
+                }
+                .bg_yellow {
+                    background: url('../../img/book_yellow.png') no-repeat;
+                }
+                .bg_green {
+                    background: url('../../img/book_green.png') no-repeat;
+                }
+                .bg_blue {
+                    background: url('../../img/book_blue.png') no-repeat;
+                }
+                .bg_lightgreen {
+                    background: url('../../img/book_lightgreen.png') no-repeat;
+                }
 
-    <div id="myModal_preview" class="reveal-modal" style="border: 1px solid #3b4f7c;width:900px; margin-left:-440px; padding:0px; ">
-        <iframe id="download_preview" width="895" height="500"></iframe>
-        <a class="close-reveal-modal" id="message_close">&#215;</a>
+                .bg_cyan {
+                    background: url('../../img/bg_cyan.png') no-repeat;
+                }
+            </style>
+            <div id="category_content_left">
+                <div class="wxfl210 dkwxmg">
+                    <div class="gda1"><a class="genduoa" style="padding:0px 20px;">集部</a></div>
+                    <div class="chuchi1">
+                        <div class="ccimg1 cc2k fl">
+                            <a class="bg bg_yellow">楚辞不住</a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a class=".bg_yellow"><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                    <div class="chuchi2">
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wxfl210 wx201 wxmg">
+                    <div class="gda1"><a class="genduoa gdlv">&nbsp;集 &nbsp;&nbsp;&nbsp;部&nbsp;</a></div>
+                    <div class="chuchi1">
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                    <div class="chuchi2">
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilv.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wxfl210 wx202 wxmg">
+                    <div class="gda1"><a class="genduoa gdlan">&nbsp;更 &nbsp;&nbsp;&nbsp;多&nbsp;</a></div>
+                    <div class="chuchi1">
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                    <div class="chuchi2">
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchilan.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wxfl210 wx203 wxmg">
+                    <div class="gda1"><a class="genduoa gdalv1">&nbsp;更 &nbsp;&nbsp;&nbsp;多&nbsp;</a></div>
+                    <div class="chuchi1">
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/chuchi1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                    <div class="chuchi2">
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lvlvtb.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wxfl210 wx204 wxmg">
+                    <div class="gda1"><a class="genduoa gdlan">&nbsp;更 &nbsp;&nbsp;&nbsp;多&nbsp;</a></div>
+                    <div class="chuchi1">
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                    <div class="chuchi2">
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                        <div class="ccimg1 cc2k fl">
+                            <a><img src="img/chuchihui1.png" height="80px"><img src="img/lanlan1.png" height="80px" class="caise"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+    <script>
+        var shuzhi1 = $(".ysp1").html();
+        var zs1 = Number(shuzhi1);
+
+        var shuzhi2 = $(".ysp2").html();
+        var zs2 = Number(shuzhi2);
+
+        var shuzhi3 = $(".ysp3").html();
+        var zs3 = Number(shuzhi3);
+
+        var shuzhi4 = $(".ysp4").html();
+        var zs4 = Number(shuzhi4);
+
+        var shuzhi5 = $(".ysp5").html();
+        var zs5 = Number(shuzhi5);
+
+        $(".xyy1").click(function () {
+            var jd1 = zs1 += 1;
+            var jd2 = zs2 += 1;
+            var jd3 = zs3 += 1;
+            var jd4 = zs4 += 1;
+            var jd5 = zs5 += 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+        });
+
+        $(".syy1").click(function () {
+            var jd1 = zs1 - 1;
+            var jd2 = zs2 - 1;
+            var jd3 = zs3 - 1;
+            var jd4 = zs4 - 1;
+            var jd5 = zs5 - 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
 
 
-    @* 消息提示 *@
-    <a href="#" id="message_download" class="big-link" data-reveal-id="myModal_download" style="display:none;">
-        jquery1
-    </a>
-    <div id="myModal_download" class="reveal-modal" style="border: 1px solid #3b4f7c; ">
-        <h1 style="font-family:'幼圆'" id="message_content">系统提示:</h1>
-        <p id="message_text" style="font-family:'微软雅黑'">Attention please.</p>
-        <a class="close-reveal-modal" id="message_close">&#215;</a>
-    </div>
+        });
+        //页面分页加载
+
+        function go() {
+            var zansan = $("#lll").val()
+            var goyemian = Number(zansan);
+            $(".ysp1").html(goyemian);
+            $(".ysp2").html(goyemian + 1);
+            $(".ysp3").html(goyemian + 2);
+            $(".ysp4").html(goyemian + 3);
+            $(".ysp5").html(goyemian + 4);
+        }
+        //go改变页码
+    </script>
+
     @Html.Partial("~/Common/bottom.ascx")
 </body>
 </html>

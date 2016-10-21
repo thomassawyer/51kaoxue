@@ -93,7 +93,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string Reading_Lists()
         {
-            string sql = string.Format(@"SELECT TOP 10 [id]
+            string sql = string.Format(@"SELECT TOP 19 [id]
                                                       ,[title]
                                                   FROM [tblancient]
                                                   order by viewcounts desc");
@@ -116,7 +116,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string Relative_Recommend(string first_id)
         {
-            string sql = string.Format(@"SELECT TOP 5 [id]
+            string sql = string.Format(@"SELECT TOP 18 [id]
                                                       ,[title]
                                                       ,[pubdate]
                                                       ,[viewcounts]
