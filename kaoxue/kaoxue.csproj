@@ -173,6 +173,7 @@
     <Content Include="CSS\lesson.css" />
     <Content Include="CSS\list_of_principals.css" />
     <Content Include="CSS\Literature_culture.css" />
+    <Content Include="CSS\Literature_reading_page.css" />
     <Content Include="CSS\News_consulting_industry.css" />
     <Content Include="CSS\proforma.css" />
     <Content Include="CSS\Province_page.css" />

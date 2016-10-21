@@ -142,7 +142,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string Relative_Recommend_By_Keywords(string keyword)
         {
-            string sql = string.Format(@"SELECT TOP 5 [id]
+            string sql = string.Format(@"SELECT TOP 8 [id]
                                                       ,[title]
                                                       ,[pubdate]
                                                       ,[viewcounts]

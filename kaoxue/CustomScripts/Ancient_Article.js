@@ -23,26 +23,15 @@ function Reading_Lists() {
             var temp;
             temp = eval(data);
             for (var i = 0; i < temp.length; i++) {
+                var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
                 if (i == 0) {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign1\">"+ (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li class=\"lidanmg\"><a class=\"ahong fl\">1</a><a class=\"wenbena wbyan1 fl\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + " title=" + temp[i].title + ">" + text + "</a></li>";
                 } else if (i == 1) {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign2\">" + (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><a class=\"ahong lsssl fl\">2</a><a class=\"wenbena wbyan2 fl\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else if (i == 2) {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign3\">" + (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><a class=\"ahong  lvssl fl\">3</a><a class=\"wenbena wbyan3 fl\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else {
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"text_container\">\
-                                <span class=\"sign_normal\">" + (i + 1) + "</span>\
-                                <div class=\"text_content\">"+ temp[i].title + "</div>\
-                            </div></a>";
+                    html += "<li><a class=\"ahong sphz fl\">"+(i+1)+"</a><a class=\"wenbena fl\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 }
 
             }
@@ -63,27 +52,8 @@ function Relative_Recommend() {
                 temp = eval(data);
                 var date;
                 for (var i = 0; i < temp.length; i++) {
-                    date = new Date(temp[i].pubdate);
-                    date = date.getFullYear() + "-" + Number(date.getMonth() + 1) + "-" + date.getDate();
-                    html += "<a onclick='update_viewcount(" + temp[i].id + ")' style='cursor:pointer;'><div class=\"relative_recommend_container\">\
-                                <div class=\"relative_recommend_container_top\">\
-                                    <span class=\"relative_recommend_container_top_left\">\
-                                        ·\
-                                    </span>\
-                                    <span class=\"relative_recommend_container_top_right\">\
-                                        "+ temp[i].title + "\
-                                    </span>\
-                                </div>\
-                                <div class=\"relative_recommend_container_bottom\">\
-                                    <span class=\"relative_recommend_container_bottom_left\">\
-                                        浏览：" + temp[i].viewcounts + "\
-                                    </span>\
-                                    <span class=\"relative_recommend_container_bottom_right\">\
-                                        "+ date + "\
-                                    </span>\
-                                </div>\
-                            </div></a>";
-
+                    var text = temp[i].title.length > 10? temp[i].title.substr(0, 10) + "..." : temp[i].title;
+                    html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a  class=\"rmxzaa rmxz2hv\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">"+ text + "</a></li>";
                 }
             }
             $("#relative_recommend").html(html);
