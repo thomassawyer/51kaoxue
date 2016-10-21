@@ -16,18 +16,13 @@ function GetQueryString(name) {
 //热门下载
 //
 function GetTest_Hot_Download() {
-    $.post("../Test_Center/GetTest_Hot_Download", function (data) {
+    $.post("../Elite_School/GetTest_Hot_Download", function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<div class='directory_container_title'><span class='directory_container_title_left'>| 热门下载</span><a href='../Test_Center?type=1&level=3'><span class='directory_container_title_right'>More</span></a></div>";
+            var html = "";
             for (var i = 0; i < temp.length; i++) {
-                var text = temp[i].testname.length > 15 ? temp[i].testname.substr(0, 15) + "..." : temp[i].testname;
-                if (i <= 2) {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left_red'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                } else {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                }
-
+                var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\">" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -38,32 +33,29 @@ function GetTest_Hot_Download() {
 //相关推荐
 //
 function GetTest_Recommend() {
-    $.post("../Test_Center/GetTest_Recommend", function (data) {
+    $.post("../Elite_School/GetTest_Recommend", function (data) {
         if (data) {
             var temp = eval(data);
-            var html = "<div class='directory_container_title'><span class='directory_container_title_left'>| 相关推荐</span><a href='../Test_Center?type=1&level=3'><span class='directory_container_title_right'>More</span></div></a>";
-            for (var i = 0; i < temp.length; i++) {
-                var text = temp[i].testname.length > 15 ? temp[i].testname.substr(0, 15) + "..." : temp[i].testname;
-                if (i <= 2) {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left_red'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                } else {
-                    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='directory_container_text'><span class='directory_container_text_left'>·</span><span class='directory_container_text_right'>" + text + "</span></div></a>";
-                }
+            var html = "";
+            for (var i = 0; i < 11; i++) {
+                var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
     });
 }
 
+
 //文件预览
 
 function Preview() {
-    $.post('http://www.5ihzy.com:81/Office.ashx', { temp: filepath }, function (data) {
+    $.post('http://admin.51kaoxue.com/Office.ashx', { temp: filepath }, function (data) {
         if (data != 'no') {
-            var root = "http://www.5ihzy.com:81/Upload/template.aspx?url=";
+            var root = "http://admin.51kaoxue.com/Upload/template.aspx?url=";
             var url = root + data;
             document.getElementById('preview').src = url;
-            $("#preview").attr("src", 'http://www.5ihzy.com:81/Upload/template.aspx?url=' + data);
+            $("#preview").attr("src", 'http://admin.51kaoxue.com/Upload/template.aspx?url=' + data);
         }
     });
 }
@@ -177,7 +169,7 @@ function DownLoad() {
                 break;
             case "1":
                 //下载
-                location.href = "http://www.5ihzy.com:82" + filepath;
+                location.href = "http://source.51kaoxue.com" + filepath;
                 break;
             case "2":
                 message("与绑定IP不符, 不能下载");

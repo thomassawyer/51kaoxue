@@ -166,6 +166,7 @@
     <Content Include="CSS\College_entrance_examination.css" />
     <Content Include="CSS\Contact_us.css" />
     <Content Include="CSS\default.css" />
+    <Content Include="CSS\Download_page.css" />
     <Content Include="CSS\famousschool.css" />
     <Content Include="CSS\index.css" />
     <Content Include="CSS\Junior_high_school.css" />
