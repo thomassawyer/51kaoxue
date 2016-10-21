@@ -15,23 +15,23 @@ function New_Zhuanti() {
                 <ul>";
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].updatetime);
-                    var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
+                    var text = temp[i].name.length > 20 ? temp[i].name.substr(0, 20) : temp[i].name;
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate()); //构造特定的日期格式
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     if (i < 6) {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps\">"+number+"</a><div class=\"fl jpstys\"><a href=\"\">[试题试卷] 黑龙江省哈尔滨市第六中学2017届高三上学期开学考试语文</a></div><div class=\"fl\" id=\"\">\
-                                <a class=\"ayblue1\" href=\"\">[09-02]</a>\
+                            <a class=\"fl btnjps\">" + number + "</a><div class=\"fl jpstys\" style='width:390px;'><a href=\"../SpecialSubject?id="+temp[i].id+"&name="+temp[i].name+"\">[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
+                                <a class=\"ayblue1\" href=\"\" style='color:#f5bc2b;'>[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
                     } else {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys pps\">\
-                            <a class=\"fl btnjps\">"+number+"</a><div class=\"fl jpstys\"><a href=\"\">[试题试卷] 黑龙江省哈尔滨市第六中学2017届高三上学期开学考试语文</a></div><div class=\"fl\" id=\"\">\
-                                <a class=\"ayblue1\" href=\"\">[09-02]</a>\
+                            <a class=\"fl btnjps\">" + number + "</a><div class=\"fl jpstys\" style='width:390px;'><a href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
+                                <a class=\"ayblue1\" href=\"\" style='color:#f5bc2b;'>[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
