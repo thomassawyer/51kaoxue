@@ -240,7 +240,7 @@ function district_selected(num) {
 //
 function anchor(obj) {
     if ($(obj).offset().top > 1400)
-        $("html,body").animate({ scrollTop: $("#data_list_td").offset().top }, 500);
+        $("html,body").animate({ scrollTop: $("#data_list").offset().top }, 500);
 }
 
 //
@@ -264,17 +264,17 @@ function GetList() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].intime);
                     var time = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
-                    html += "<div class=\"xz360\" style=\"width:100%;\">\
-                <div class=\"fl\"><img src=\"img/jiaoshi.png\" class=\"lsimg\" /></div>\
+                    html += "<div class=\"xz360\" style=\"width:100%;overflow:auto;\">\
+                <div class=\"fl\"><img src=\""+ temp[i].headimgsrc + "\" class=\"lsimg\" style=\"min-width:200px;\" /></div>\
                 <div class=\"fl neirong620\">\
                     <b class=\"fz25\">" + temp[i].headname + "</b>\
                     <span id=\"\" class=\"lssp\">\
                        " + temp[i].memo + "\
                     </span>\
                     <span class=\"lsmssp\">\
-                        \
+                        "+ temp[i].content + "\
                     </span>\
-                    <span class=\"gxsjsp\">更新时间：<span>2016/9/7 14:40:33</span>   |   类型：高中   |   学校校长：代用名   |   地区：江苏</span>\
+                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   学校校长：代用名   |   地区："+temp[i].areaname+"</span>\
                     <a href=\"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
                 </div>\
             </div>\
