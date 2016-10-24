@@ -48,7 +48,6 @@ function President_Special_Columns() {
                     html += "<li><a onclick=\"GetNewsDetail(" + temp[i].id + ")\">●" + text + "</a></li>";
                 }
                 $("#president_special_columns").html(html);
-                alert(temp[0].id);
                 GetNewsDetail(temp[0].id);
             }
         }
