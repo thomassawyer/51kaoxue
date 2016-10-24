@@ -124,7 +124,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string Correlation_Elite_School(int areaid)
         {
-            string sql = string.Format(@"SELECT  top 3 [id]
+            string sql = string.Format(@"SELECT  top 8 [id]
                                                   ,[name]
                                                   ,[imgsrc]
                                                     ,areaid

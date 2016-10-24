@@ -3,164 +3,171 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 学校详细</title>
-    <link href="~/CSS/Province.css" rel="stylesheet" />
-
-    <link href="~/CSS/common.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../engine1/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link href="~/CSS/SchoolDetail.css" rel="stylesheet" />
-    <!-- Edit Below -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta charset="UTF-8">
+    <title>学校详细页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/test_questions.css" />
+    <link rel="stylesheet" href="css/list_of_principals.css" />
+    <link rel="stylesheet" type="text/css" href="css/School_detail_page.css" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
-
     <script src="~/CustomScripts/SchoolDetail.js"></script>
+    <style>
+        .dkwidth {
+            width: 150px;
+        }
 
+            .dkwidth:hover {
+                font-size: 21px;
+            }
+    </style>
 </head>
 <body>
-    <div id="Main" class="Main">
-        @Html.Partial("~/Common/top4.ascx")
-        <div id="middle">
-            <div id="middle_content">
-                <div id="middle_content_top1">
-                    <div id="middle_content_top_left">
-                        <div id="middle_content_top_left_top" style="height:130px;">
-                            <div id="middle_content_top_left_top_img">
-                                <a href="Home"><img src="~/Images/%e9%a6%96%e9%a1%b5/%e9%a6%96%e9%a1%b5-%e5%b7%a6%e4%be%a7%e8%8f%9c%e5%8d%95%e6%a0%8f/%e5%a5%bd%e8%b5%84%e6%ba%90%e5%9b%be%e6%a0%87.png" /></a>
-                                <br />
-                                <br />
-                                @Html.Partial("~/Common/Search.ascx")
-                            </div>
-                        </div>
-                        <div id="middle_content_top_left_bottom" style=" overflow:hidden">
-                            <br />
-                            <div>
-                                <div class="nav_background">
-                                    <a class="youyuan">·</a>
-                                    <span>学科</span>
-                                </div>
-                                <div id="nav_background_container1">
-                                    <div id="nav_background_container_child">
-                                        <a class="xueji" href="../Subject?subjectname=语文">语文</a>
-                                        <a class="xueji" href="../Subject?subjectname=数学">数学</a>
-                                        <a class="xueji1" href="../Subject?subjectname=英语">英语</a>
-                                    </div>
-                                    <div id="nav_background_container_child">
-                                        <a class="xueji" href="../Subject?subjectname=政治">政治</a>
-                                        <a class="xueji" href="../Subject?subjectname=地理">地理</a>
-                                        <a class="xueji1" href="../Subject?subjectname=历史">历史</a>
-                                    </div>
-                                    <div id="nav_background_container_child">
-                                        <a class="xueji" href="../Subject?subjectname=化学">化学</a>
-                                        <a class="xueji" href="../Subject?subjectname=物理">物理</a>
-                                        <a class="xueji1" href="../Subject?subjectname=生物">生物</a>
-                                    </div>
-                                    <div id="nav_background_container_child">
-                                        <a class="xueji" href="../Subject?subjectname=科学">科学</a>
-                                    </div>
-                                </div>
-                                <br />
-                            </div>
-                        </div>
-
-                        @* 校长介绍 *@
-                        <div id="president_introduce">
-                            <div class="directory_container_title">
-                                <span class="directory_container_title_left">| 校长介绍</span>
-                                <a id="president_more">
-                                    <span class="directory_container_title_right">More</span>
-                                </a>
-                            </div>
-
-                            <div id="president_head_img">
-                               
-                            </div>
-                            <div id="president_name"></div>
-                            <div id="president_description">
-                                <p id="president_description_text">
-                                    
-                                </p>
-                            </div>
-                        </div>
-
-                        @* 校长专栏 *@
-                        <div id="president_special_column">
-                            <div class="directory_container_title">
-                                <span class="directory_container_title_left">| 校长专栏</span>
-                                <a>
-                                    <span class="directory_container_title_right">More</span>
-                                </a>
-                            </div>
-                            <div id="president_special_columns">
-                                
-                            </div>
-                        </div>
-
-                        @* 相关名校 *@
-                        <div id="correlation_elite_school">
-                            <div class="directory_container_title">
-                                <span class="directory_container_title_left">| 相关名校</span>
-                                <a>
-                                    <span class="directory_container_title_right">More</span>
-                                </a>
-                            </div>
-                            <div id="correlation_elite_schools">
-                               
-                            </div>
-                        </div>
-                    </div>
-                    @* 学校信息 *@
-                    <div id="middle_content_top_right">
-                        <div id="school_introduce">
-                            <p>
-                                <img id="imgurl" src="" style="float:left;" width="398" height="295" />
-                                <span id="school_name"></span>
-                                <br />
-                                <br />
-                                <span id="school_star">
-                                    
-                                </span>
-                                <br />
-                                <br />
-                                <p id="content"></p>
-                                
-                            </p>
-                        </div>
-
-                        @* 本校试题 *@
-                        <div id="school_test">
-                            <div class="test_title">
-                                <span class="test_title_left">本校试题</span>
-                                <a id="the_school_test_more"><span class="test_title_right">More</span></a>
-                            </div>
-                            <div id="school_tests">
-                               
-                            </div>
-                        </div>
-
-                        @* 本省试题 *@
-                        <div id="province_test">
-                            <div class="test_title">
-                                <span class="test_title_left">本省试题</span>
-                                <span class="test_title_right">More</span>
-                            </div>
-                            <div id="province_tests">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="middle_content_bottom">
-                    
-                </div>
+    @Html.Partial("~/Common/top3.ascx")
+    <div class="lianxi">
+        <div class="lianxice210 fl">
+            <div class="lianxice33 ">
+                <a href="" class="xzgd1">更多》</a>
+                <img src="img/drw.png" class="xztubiao" alt="">
+                <b class="daxiao">校长介绍</b>
             </div>
+            <div class="jiaoyubu">
+                <img id="president_head_img" alt="" style="width:210px;height:259px;" />
+                <b class="xzmz" id="president_name"></b>
+                <p class="xzzl" id="president_description" style="display:block;height:380px;overflow-y:auto;overflow-x:hidden;"></p>
+            </div>
+            <div class="lianxice33 rmxz333 hsttj gysll">
+                <a href="" class="xzgd1">更多》</a>
+                <img src="img/srenwu.png" class="xztubiao" alt="">
+                <b>校长专栏</b>
+            </div>
+            <div class="jiaoyubu dkjiaoyubu">
+                <ul class="jybul dkjybul" id="president_special_columns">
+                    @*<li><a href="">●论文写作的几点建议...</a></li>
+                        <li><a href="">●教育经验总结与论文的...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>
+                        <li><a href="">●论教育与生活世界的关...</a></li>*@
+                </ul>
+            </div>
+
         </div>
-        @Html.Partial("~/Common/bottom.ascx")
+
+        <div class="lianxice fl">
+            <div class="xuexiaoimg">
+                <div class="fl kuan">
+                    <img id="imgurl" style="width:427px; height:400px;" />
+                </div>
+                <p id="school_name" class="xxm fl" style="margin-top:20px; position:static;">
+
+                </p>
+                <div id="school_star" class=" fl" style="width: 100px; height: 20px; margin-top: 30px; margin-left:20px; margin-bottom:20px; "></div>
+                <p class="xzjieshao fl" id="content" style="display:block; width:500px; height:251px;overflow-y:auto;overflow-x:hidden;"> </p>
+            </div>
+            <div id="" class="bxst">
+                <img src="img/shushufan.png" class="ssf" />
+                <span id="" class="benxiaost">
+                    <b>本校试题</b>
+                </span>
+                <b class="gdb"><a href="">更多》</a></b>
+            </div>
+            <div id="" class="benxiaost300">
+                <ul id="school_tests">
+                    @*<li class="jianju"><a href="" class="stcfh fl">1</a><a href="" class="fl wdwenben">江苏省南京市金陵中学河西分校2016届高三上学期期中模拟数学试题1 Word版含答案</a><a href="" class="fl rqbenxiao">2016/1/19</a></li>
+                        <li class="jianju"><a href="" class="stcfh fl">1</a><a href="" class="fl wdwenben">江苏省南京市金陵中学河西分校2016届高三上学期期中模拟数学试题2 Word版无答案</a><a href="" class="fl rqbenxiao">2016/1/19</a></li>
+                        <li class="jianju"><a href="" class="stcfh fl">1</a><a href="" class="fl wdwenben">江苏省南京市金陵中学河西分校2016届高三上学期期中模拟数学试题3 Word版无答案</a><a href="" class="fl rqbenxiao">2016/1/19</a></li>
+                        <li class="jianju"><a href="" class="stcfh fl">1</a><a href="" class="fl wdwenben">江苏省南京、盐城市2016届高三地理第一次模拟考试试题</a><a href="" class="fl rqbenxiao">2016/1/19</a></li>
+                        <li class="jianju"><a href="" class="stcfh fl">1</a><a href="" class="fl wdwenben">江苏省南京、盐城市2016届高三化学第一次模拟考试试题</a><a href="" class="fl rqbenxiao">2016/1/19</a></li>
+                        <li class="jianju"><a href="" class="stcfh fl">1</a><a href="" class="fl wdwenben">江苏省南京、盐城市2016届高三历史第一次模拟考试试题</a><a href="" class="fl rqbenxiao">2016/1/19</a></li>
+                        <li class="jianju"><a href="" class="stcfh fl">1</a><a href="" class="fl wdwenben">江苏省南京、盐城市2016届高三生物第一次模拟考试试题</a><a href="" class="fl rqbenxiao">2016/1/19</a></li>
+                        <li class="jianju"><a href="" class="stcfh fl">1</a><a href="" class="fl wdwenben">江苏省南京、盐城市2016届高三生物第一次模拟考试试题</a><a href="" class="fl rqbenxiao">2016/1/19</a></li>*@
+                </ul>
+            </div>
+            <div class="benshenst">
+                <img src="img/shushufan.png" class="ssf" />
+                <span id="" class="benxiaost">
+                    <b>本省试题</b>
+                </span>
+                <b class="gdb"><a href="">更多》</a></b>
+            </div>
+            <div id="province_tests" class="benxiaostx300">
+                @*<div class="fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="mgdkwb fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="mgdkwb fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="mgdkwb fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="mgdkwb fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="mgdkwb fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="mgdkwb fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="mgdkwb fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>
+                    <div class="mgdkwb fl hgh"><a href="" class="bxst2f fl">1</a><a href="" class="wenben2 fl">江苏省南京市金陵中学河西分校2016...</a><a href="" class="fl rqbenxiao ys7">2016/1/19</a></div>*@
+            </div>
+
+        </div><!--校长列表-->
+
     </div>
-    @Html.Partial("~/Common/bottom_script.ascx")
+
+    <div class="mxtuijian" style="margin-top:1280px;">
+        <img src="img/mxtubiao.png" class="mxtjzh" />
+        <b class="mxtjtb">名校推荐</b>
+        <a href="" class="mxgd">更多》</a>
+    </div>
+
+    <div class="xxbiao" id="correlation_elite_schools">
+        @*<div class="fl">
+                <img src="img/xuexiaotb.png" width="139" height="110" />
+                <a href="" class="xxmingzi">衡水中学</a>
+            </div>
+            <div class="fl dkmg">
+                <img src="img/xuexiaotb.png" width="139" height="110" />
+                <a href="" class="xxmingzi">衡水中学</a>
+            </div>
+            <div class="fl dkmg">
+                <img src="img/xuexiaotb.png" width="139" height="110" />
+                <a href="" class="xxmingzi">衡水中学</a>
+            </div>
+            <div class="fl dkmg">
+                <img src="img/xuexiaotb.png" width="139" height="110" />
+                <a href="" class="xxmingzi">衡水中学</a>
+            </div>
+            <div class="fl dkmg">
+                <img src="img/xuexiaotb.png" width="139" height="110" />
+                <a href="" class="xxmingzi">衡水中学</a>
+            </div>
+            <div class="fl dkmg">
+                <img src="img/xuexiaotb.png" width="139" height="110" />
+                <a href="" class="xxmingzi">衡水中学</a>
+            </div>
+            <div class="fl dkmg">
+                <img src="img/xuexiaotb.png" width="139" height="110" />
+                <a href="" class="xxmingzi">衡水中学</a>
+            </div>
+            <div class="fl dkmg">
+                <img src="img/xuexiaotb.png" width="139" height="110" />
+                <a href="" class="xxmingzi">衡水中学</a>
+            </div>*@
+    </div>
+    @Html.Partial("~/Common/bottom.ascx")
+
 </body>
 </html>
