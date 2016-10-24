@@ -3,71 +3,141 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 新闻资讯</title>
-    <link href="~/CSS/common.css" rel="stylesheet" />
-    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-
-    <!-- Edit Below -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
-    <link href="~/CSS/News_Detail.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>新闻资讯页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/proforma.css">
+    <link rel="stylesheet" href="css/Literature_culture.css">
+    <link rel="stylesheet" type="text/css" href="css/News_consulting_industry.css" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
     <script src="~/CustomScripts/News_Detail.js"></script>
-    @* 弹窗样式表 *@
-    <link rel="stylesheet" href="../css/reveal.css">
-    @* 弹窗演示表结束 *@
-    @* 弹窗脚本 *@
-    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
-    @* 弹窗脚本结束 *@
+    <style>
+        .lxclan {
+            background: #7bbd26;
+        }
+
+        .fenlei11 {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #f2f2f2;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .shushu {
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        .fla {
+            position: absolute;
+            top: 45px;
+            left: 150px;
+        }
+
+        .fenlei11:hover {
+            border: 1px solid #7bbd26;
+        }
+
+            .fenlei11:hover .fla {
+                color: #7bbd26;
+            }
+
+        .remenxiazai1 > li {
+            margin-top: 8px;
+            position: relative;
+        }
+
+        .rmxzdk {
+            position: absolute;
+            left: 5px;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .dkbeijin {
+            width: 17px;
+            height: 17px;
+            background: url(../img/dandan.png);
+            z-index: 999;
+        }
+
+        .rm1 {
+            color: #ff4a52;
+        }
+
+        .rm2 {
+            color: #808ffb;
+        }
+
+        .rm3 {
+            color: #aad380;
+        }
+
+        .lianxice33 {
+            background: #ff4a52;
+        }
+
+        .lianxice33 {
+            background: #ff4a52;
+        }
+
+        .ppdd1 {
+            margin-left: 85px;
+        }
+
+        .ys9 {
+            background: #7bbd27;
+        }
+    </style>
 </head>
 <body>
-    <div id="Main">
-        @Html.Partial("~/Common/top3.ascx")
-        <div id="content">
-            <div id="nav_tree">
-                <span id="tree_left">
-                    首页 > 新闻资讯
-                </span>
-                <span id="tree_right">
-                    @Html.Partial("~/Common/Search2.ascx")
-                </span>
+    @Html.Partial("~/Common/top2.ascx")
+
+
+    <div class="lianxi">
+        <div class="lianxice210 fl" style="height:1010px;">
+            <div class="lianxice33 ">
+                <a  class="xzgd1">更多》</a>
+                <img src="img/100fen.png" class="xztubiao" >
+                <b>高考动态</b>
             </div>
-            <div id="list">
-                <div id="directory" style="width:365px; background:none;">
-                    <div class="directory_container" id="hot_download">
-
-                    </div>
-                    <br />
-                    <div class="directory_container" id="recommend">
-
-                    </div>
-                </div>
-                <div id="data_list" style="width:772px; background-color:white; padding:20px;">
-                    <div class="middle_content_bottom_text_left_title">
-                        <span id="title_left" class="title_left">新闻资讯</span>
-
-                    </div>
-                    <div id="data_list_td">
-                        <div id="data_title">
-                            <p id="data_title_title"></p>
-                            <p id="data_date">
-
-                            </p>
-                            <p id="data_content">
-
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="lxgao521" style="height:auto;">
+                <ul class="remenxiazai1" id="hot_download">
+                </ul>
+            </div>
+            <div class="lianxice33 rmxz333 ys9">
+                <a  class="xzgd1">更多》</a>
+                <img src="img/dshuben.png" class="xztubiao" >
+                <b>教材教法</b>
+            </div>
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="recommend">
+                </ul>
             </div>
         </div>
-    </div>
+
+        <div class="lianxice fl">
+            <div class="wenbentop">
+                <b class="wbbt" id="data_title_title">高招本科录取是否合并？江苏省正在调研</b>
+                <img src="img/wenhao.png"  class="wenhao" style="left:360px;" />
+                <span class="wbbtsp" id="data_date" style="left:380px;">更新时间：2016-09-09</span>
+            </div>
+            <div class="pweben" id="data_content">
+            </div>
+        </div>
+
+    </div><!--文本主题内容-->
+
     @Html.Partial("~/Common/bottom.ascx")
+
 </body>
 </html>

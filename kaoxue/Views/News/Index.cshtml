@@ -3,72 +3,219 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 新闻资讯</title>
-    <link href="~/CSS/common.css" rel="stylesheet" />
-    <link href="~/CSS/Beike_Center.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-
-    <!-- Edit Below -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="~/CSS/Test_Center.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>新闻资讯列表页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/proforma.css">
+    <link rel="stylesheet" href="css/Literature_culture.css">
+    <link rel="stylesheet" type="text/css" href="css/News_consulting_industry.css" />
+    <link rel="stylesheet" type="text/css" href="css/News_information_list_page.css" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
     <script src="~/CustomScripts/News.js"></script>
-    @* 弹窗样式表 *@
-    <link rel="stylesheet" href="../css/reveal.css">
-    @* 弹窗演示表结束 *@
-    @* 弹窗脚本 *@
-    <script type="text/javascript" src="../CustomScripts/jquery.reveal.js"></script>
-    @* 弹窗脚本结束 *@
 </head>
 <body>
-    <div id="Main">
-        @Html.Partial("~/Common/top3.ascx")
-        <div id="content">
-            <div id="nav_tree">
-                <span id="tree_left">
-                    首页 > 新闻资讯
-                </span>
-                <span id="tree_right">
-                    @Html.Partial("~/Common/Search2.ascx")
-                </span>
+    @Html.Partial("~/Common/top2.ascx")
+    <style>
+        a {
+            cursor:pointer;
+        }
+    </style>
+
+    <div class="lianxi" style="min-height:1950px;">
+        <div class="lianxice210 fl" style="height:1050px;">
+            <div class="lianxice33 ">
+                <a  class="xzgd1">更多》</a>
+                <img src="img/dshuben.png" class="xztubiao" >
+                <b>高考动态</b>
             </div>
-            <div id="list">
-                <div id="directory" style="width:365px; background:none;">
-                    <div class="directory_container" id="hot_download">
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="hot_download">
+                </ul>
+            </div>
+            <div class="lianxice33 rmxz333 ys9">
+                <a  class="xzgd1">更多》</a>
+                <img src="img/100fen.png" class="xztubiao" >
+                <b>教材教法</b>
+            </div>
+            <div class="lxgao521">
+                <ul class="remenxiazai1" id="recommend">
+                </ul>
+            </div>
+        </div>
 
-                    </div>
-                    <br />
-                    <div class="directory_container" id="recommend">
-
-                    </div>
+        <div class="lianxice fl" id="data_list_td">
+            <div class="xwliebiao">
+                <div class="fl xwsc">
+                    <img src="img/xwtpshucai.png" />
                 </div>
-                <div id="data_list" style="width:812px;">
-                    <div class="middle_content_bottom_text_left_title">
-                        <span id="title_left" class="title_left">新闻资讯</span>
-                        
-                    </div>
-                    <div id="data_list_td">
-                    </div>
-                    <div id="pager">
-                        <div id="pager_buttons">
-                            <div id="prev">
-                                <a onclick="anchor(this),pre_page() ">上一页</a>
-                            </div>
-                            <div id="pages">
-
-                            </div>
-                            <div id="next"><a onclick="anchor(this),next_page() ">下一页</a></div>
-                            <div id="turn"><span>跳转到</span><input type="text" id="page_size" /><span>页</span><a class="pages_href_selected" onclick="anchor(this),Go() ">GO</a></div>
-                        </div>
-                    </div>
+                <div class="fl cswx">
+                    <b class="xwlbzt">新闻主题新闻主题新闻主题新闻主题新闻主题</b>
+                    <p class="xwwby">G20峰会结束了，可谓硕果累累!通过了《二十国集团领导人杭州峰会公报》，进一步明确了二十国集团合作的发展方向、目标、举措，就推动世界经济增长达成了杭州共识，为构建创新、活力、联动、</p>
+                    <img src="img/wenhao.png" class="xwimg" />
+                    <span class="xwgxsj">
+                        更新时间	 <span>2016-09-09</span>
+                    </span>
+                    <a class="xqhsankz"><img src="img/xqhsan.png" /></a>
+                </div>
+            </div>
+            <div class="xwliebiao dkmgxz">
+                <div class="fl xwsc">
+                    <img src="img/xwtpshucai.png" />
+                </div>
+                <div class="fl cswx">
+                    <b class="xwlbzt">新闻主题新闻主题新闻主题新闻主题新闻主题</b>
+                    <p class="xwwby">G20峰会结束了，可谓硕果累累!通过了《二十国集团领导人杭州峰会公报》，进一步明确了二十国集团合作的发展方向、目标、举措，就推动世界经济增长达成了杭州共识，为构建创新、活力、联动、</p>
+                    <img src="img/wenhao.png" class="xwimg" />
+                    <span class="xwgxsj">
+                        更新时间	 <span>2016-09-09</span>
+                    </span>
+                    <a class="xqhsankz"><img src="img/xqhsan.png" /></a>
+                </div>
+            </div>
+            <div class="xwliebiao dkmgxz">
+                <div class="fl xwsc">
+                    <img src="img/xwtpshucai.png" />
+                </div>
+                <div class="fl cswx">
+                    <b class="xwlbzt">新闻主题新闻主题新闻主题新闻主题新闻主题</b>
+                    <p class="xwwby">G20峰会结束了，可谓硕果累累!通过了《二十国集团领导人杭州峰会公报》，进一步明确了二十国集团合作的发展方向、目标、举措，就推动世界经济增长达成了杭州共识，为构建创新、活力、联动、</p>
+                    <img src="img/wenhao.png" class="xwimg" />
+                    <span class="xwgxsj">
+                        更新时间	 <span>2016-09-09</span>
+                    </span>
+                    <a class="xqhsankz"><img src="img/xqhsan.png" /></a>
+                </div>
+            </div>
+            <div class="xwliebiao dkmgxz">
+                <div class="fl xwsc">
+                    <img src="img/xwtpshucai.png" />
+                </div>
+                <div class="fl cswx">
+                    <b class="xwlbzt">新闻主题新闻主题新闻主题新闻主题新闻主题</b>
+                    <p class="xwwby">G20峰会结束了，可谓硕果累累!通过了《二十国集团领导人杭州峰会公报》，进一步明确了二十国集团合作的发展方向、目标、举措，就推动世界经济增长达成了杭州共识，为构建创新、活力、联动、</p>
+                    <img src="img/wenhao.png" class="xwimg" />
+                    <span class="xwgxsj">
+                        更新时间	 <span>2016-09-09</span>
+                    </span>
+                    <a class="xqhsankz"><img src="img/xqhsan.png" /></a>
+                </div>
+            </div>
+            <div class="xwliebiao dkmgxz">
+                <div class="fl xwsc">
+                    <img src="img/xwtpshucai.png" />
+                </div>
+                <div class="fl cswx">
+                    <b class="xwlbzt">新闻主题新闻主题新闻主题新闻主题新闻主题</b>
+                    <p class="xwwby">G20峰会结束了，可谓硕果累累!通过了《二十国集团领导人杭州峰会公报》，进一步明确了二十国集团合作的发展方向、目标、举措，就推动世界经济增长达成了杭州共识，为构建创新、活力、联动、</p>
+                    <img src="img/wenhao.png" class="xwimg" />
+                    <span class="xwgxsj">
+                        更新时间	 <span>2016-09-09</span>
+                    </span>
+                    <a class="xqhsankz"><img src="img/xqhsan.png" /></a>
+                </div>
+            </div>
+            <div class="xwliebiao dkmgxz">
+                <div class="fl xwsc">
+                    <img src="img/xwtpshucai.png" />
+                </div>
+                <div class="fl cswx">
+                    <b class="xwlbzt">新闻主题新闻主题新闻主题新闻主题新闻主题</b>
+                    <p class="xwwby">G20峰会结束了，可谓硕果累累!通过了《二十国集团领导人杭州峰会公报》，进一步明确了二十国集团合作的发展方向、目标、举措，就推动世界经济增长达成了杭州共识，为构建创新、活力、联动、</p>
+                    <img src="img/wenhao.png" class="xwimg" />
+                    <span class="xwgxsj">
+                        更新时间	 <span>2016-09-09</span>
+                    </span>
+                    <a class="xqhsankz"><img src="img/xqhsan.png" /></a>
+                </div>
+            </div>
+            <div class="xwliebiao dkmgxz">
+                <div class="fl xwsc">
+                    <img src="img/xwtpshucai.png" />
+                </div>
+                <div class="fl cswx">
+                    <b class="xwlbzt">新闻主题新闻主题新闻主题新闻主题新闻主题</b>
+                    <p class="xwwby">G20峰会结束了，可谓硕果累累!通过了《二十国集团领导人杭州峰会公报》，进一步明确了二十国集团合作的发展方向、目标、举措，就推动世界经济增长达成了杭州共识，为构建创新、活力、联动、</p>
+                    <img src="img/wenhao.png" class="xwimg" />
+                    <span class="xwgxsj">
+                        更新时间	 <span>2016-09-09</span>
+                    </span>
+                    <a class="xqhsankz"><img src="img/xqhsan.png" /></a>
                 </div>
             </div>
         </div>
-    </div>
-    @Html.Partial("~/Common/bottom.ascx")
+
+    </div><!--新闻列表块-->
+
+    <div class="anniu" id="pages">
+        
+    </div> <!-- 跳转部分 -->
+
+    <script>
+        var shuzhi1 = $(".ysp1").html();
+        var zs1 = Number(shuzhi1);
+
+        var shuzhi2 = $(".ysp2").html();
+        var zs2 = Number(shuzhi2);
+
+        var shuzhi3 = $(".ysp3").html();
+        var zs3 = Number(shuzhi3);
+
+        var shuzhi4 = $(".ysp4").html();
+        var zs4 = Number(shuzhi4);
+
+        var shuzhi5 = $(".ysp5").html();
+        var zs5 = Number(shuzhi5);
+
+        $(".xyy1").click(function () {
+            var jd1 = zs1 += 1;
+            var jd2 = zs2 += 1;
+            var jd3 = zs3 += 1;
+            var jd4 = zs4 += 1;
+            var jd5 = zs5 += 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+        });
+
+        $(".syy1").click(function () {
+            var jd1 = zs1 - 1;
+            var jd2 = zs2 - 1;
+            var jd3 = zs3 - 1;
+            var jd4 = zs4 - 1;
+            var jd5 = zs5 - 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+
+
+        });
+        //页面分页加载
+
+        function go() {
+            var zansan = $("#lll").val()
+            var goyemian = Number(zansan);
+            $(".ysp1").html(goyemian);
+            $(".ysp2").html(goyemian + 1);
+            $(".ysp3").html(goyemian + 2);
+            $(".ysp4").html(goyemian + 3);
+            $(".ysp5").html(goyemian + 4);
+        }
+        //go改变页码
+    </script>
+
+
+
+  @Html.Partial("~/Common/bottom.ascx")
+
 </body>
 </html>

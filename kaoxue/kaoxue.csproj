@@ -162,6 +162,7 @@
     <Content Include="Common\bottom.ascx" />
     <Content Include="Common\top1.ascx" />
     <Content Include="Common\top2.ascx" />
+    <Content Include="Common\top3.ascx" />
     <Content Include="CSS\chushihua.css" />
     <Content Include="CSS\College_entrance_examination.css" />
     <Content Include="CSS\Contact_us.css" />
@@ -175,7 +176,7 @@
     <Content Include="CSS\Literature_culture.css" />
     <Content Include="CSS\Literature_reading_page.css" />
     <Content Include="CSS\News_consulting_industry.css" />
-    <Content Include="CSS\Principal_recommendation_page.css" />
+    <Content Include="CSS\News_information_list_page.css" />
     <Content Include="CSS\proforma.css" />
     <Content Include="CSS\Province_page.css" />
     <Content Include="CSS\School_detail_page.css" />
