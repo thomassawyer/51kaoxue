@@ -264,18 +264,15 @@ function GetList() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].intime);
                     var time = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
-                    html += "<div class=\"xz360\" style=\"width:100%;overflow:auto;\">\
-                <div class=\"fl\"><img src=\"http://source.51kaoxue.com/"+ temp[i].headimgsrc + "\" class=\"lsimg\" style=\"min-width:200px; max-width:270px;max-height:200px;\" /></div>\
+                    html += "<div class=\"xz360\" style=\"width:100%;\">\
+                <div class=\"fl\"><img src=\"http://source.51kaoxue.com/"+ temp[i].headimgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></div>\
                 <div class=\"fl neirong620\">\
                     <b class=\"fz25\">" + temp[i].headname + "</b>\
-                    <span id=\"\" class=\"lssp\">\
+                    <div id=\"\" class=\"lssp\" style='display:block;height:51px;overflow-y:auto;overflow-x:hidden;'>\
                        " + temp[i].memo + "\
-                    </span>\
-                    <span class=\"lsmssp\">\
-                        "+ temp[i].content + "\
-                    </span>\
-                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   学校校长：代用名   |   地区："+temp[i].areaname+"</span>\
-                    <a href=\"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
+                    </div>\
+                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   学校校长：" + temp[i].headname + "   |   地区：" + temp[i].areaname + "</span>\
+                    <a href=\"../President_Special_Column?id="+temp[i].id+"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
                 </div>\
             </div>\
                     ";
