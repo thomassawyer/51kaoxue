@@ -184,7 +184,7 @@ function Correlation_Elite_School() {
                 temp = eval(data);
 
                 for (var i = 0; i < temp.length; i++) {
-                    var text = temp[i].name.length > 11 ? temp[i].name.substr(0, 11) + "..." : temp[i].name;
+                    var text = temp[i].name.length > 9 ? temp[i].name.substr(0, 9) : temp[i].name;
                     //相关名校
                     //html += "<a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'><div class=\"correlation_elite_schools_container\"><div><div class=\"school_img\"><img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" width=\"131\" height=\"81\" /></div><div class=\"school_text\">" + text + " </div></div></div></a>";
                     if ((i + 1) != 1) {
