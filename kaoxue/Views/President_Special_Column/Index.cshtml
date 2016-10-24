@@ -3,74 +3,78 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>好资源 - 校长介绍</title>
-    <link href="~/CSS/Province.css" rel="stylesheet" />
-
-    <link href="~/CSS/common.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../engine1/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link href="~/CSS/SchoolDetail.css" rel="stylesheet" />
-    <!-- Edit Below -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta charset="UTF-8">
+    <title>校长推荐页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/test_questions.css" />
+    <link rel="stylesheet" href="css/list_of_principals.css" />
+    <link rel="stylesheet" href="css/Principal_recommendation_page.css" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
-
-    <script src="~/CustomScripts/SchoolDetail.js"></script>
-    <link href="~/CSS/President_Special_Column.css" rel="stylesheet" />
     <script src="~/CustomScripts/President_Special_Column.js"></script>
+    <style>
+        .dkwidth {
+            width: 150px;
+        }
+
+            .dkwidth:hover {
+                font-size: 21px;
+            }
+    </style>
 </head>
 <body>
-    <div id="Main" class="Main">
-        @Html.Partial("~/Common/top4.ascx")
-        <div id="middle">
-            <div id="middle_content">
-                <div id="middle_content_top">
-                    <div id="middle_content_top_left_img">
-                        <img src="~/Images/%e6%a0%a1%e9%95%bf%e4%b8%93%e6%a0%8f/%e5%9b%be%e5%b1%82%2016.png" id="president_headimg" width="400" height="300" />
-                    </div>
-                    <div id="middle_content_top_right_text">
-                        <div class="president_introduce_title">
-                            校长简介
-                        </div>
-                        <div class="president_introduce_content">
-                            <div id="president_introduce">
+    @Html.Partial("~/Common/top2.ascx")
+    <div class="xzgt">
+        <div class="xzimg fl dkxzzl">
+            <img id="president_headimg" alt="" style="width:210px;height:259px;" />
+        </div>
+        <div id="" class="xznrk fl">
+            <b class="xzxm"></b>
+            <img src="img/heshitb.png" alt="" class="heshi" />
+            <b class="xznld" id="schooleName"></b>
+            <p class="xzxxzl" id="president_introduce" style="display:block;height:100px;overflow-y:auto;overflow-x:hidden;"></p>
+        </div>
+    </div>
 
-                            </div>
-                        </div>
-                    </div>
+    <div class="lianxi">
+        <div class="lianxice210 fl">
+            <div class="lianxice33 rmxz333 hsttj">
+                <a href="" class="xzgd1">更多》</a>
+                <img src="img/kaojuankb.png" class="xztubiao" alt="">
+                <b>校长专栏</b>
+            </div>
+            <div class="jiaoyubu dkjiaoyubu">
+                <ul class="jybul dkjybul" id="president_special_columns"></ul>
+            </div>
+
+        </div>
+
+        <div class="lianxice fl">
+            <div id="" class="lansede">
+
+            </div>
+            <div class="lxclan1">
+                <div class="zwjianyi">
+                    <b class="zwjyb" id="news_title"></b>
+                    <img src="img/wenhao.png" alt="" class="whwztj" />
+                    <span id="news_time" class="xzshijian">
+                    </span>
                 </div>
-                <div id="middle_content_bottom">
-                    <div id="middle_content_bottom_left">
-                        <div class="middle_content_bottom_left_title">
-                            | 校长专栏
-                        </div>
-                        <div class="middle_content_bottom_left_cotent" id="president_special_columns">
-                            
-                        </div>
-                    </div>
-                    <div id="middle_content_bottom_right">
-                        <div class="middle_content_bottom_right_title" id="news_title">
-                            
-                        </div>
-                        <div class="middle_content_bottom_left_cotent">
-                            <p id="news_content"></p>
-                        </div>
-                    </div>
+                <div id="news_content">
+
                 </div>
             </div>
-            @Html.Partial("~/Common/bottom.ascx")
-        </div>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                //获取左边距
-                var left = $("#middle_content_top").offset().left;
-                //动态调整左右空白处距离
-                $("#top_content_nav_left").width(left - 20);
-                $("#top_content_nav_right").width(left - 10);
-            });
-        </script>
+
+        </div><!--校长列表-->
+        <div style="clear: both;"></div>
+
+    </div>
+    @Html.Partial("~/Common/bottom.ascx")
+
 </body>
 </html>

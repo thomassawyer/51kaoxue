@@ -19,9 +19,10 @@ function GetPresidentInfo() {
                 var temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
                     //校长头像
-                    $("#president_headimg").attr("src", "http://www.5ihzy.com:82/" + temp[i].imgsrc);
+                    $("#president_headimg").attr("src", "http://source.51kaoxue.com/" + temp[i].imgsrc);
                     //校长简介
                     $("#president_introduce").html(temp[i].memo);
+                    $("#schooleName").html(temp[i].name);
                 }
                 
             }
@@ -40,9 +41,11 @@ function President_Special_Columns() {
                 var temp = eval(data);
                 var html = "";
                 for (var i = 0; i < temp.length; i++) {
-                    html += "<div class=\"middle_content_bottom_left_cotent_column\" onclick=\"GetNewsDetail("+temp[i].id+")\">\
-                                "+temp[i].title+"\
-                            </div>";
+                    //html += "<div class=\"middle_content_bottom_left_cotent_column\" onclick=\"GetNewsDetail("+temp[i].id+")\">\
+                    //            "+temp[i].title+"\
+                    //        </div>";
+                    var text = temp[i].title.length > 11 ? temp[i].title.substr(0, 11) + "..." : temp[i].title;
+                    html += "<li><a href=\"\" onclick=\"GetNewsDetail(" + temp[i].id + ")\">●" + text + "</a></li>";
                 }
                 $("#president_special_columns").html(html);
                 GetNewsDetail(temp[0].id);
@@ -67,6 +70,7 @@ function GetNewsDetail(id) {
                     $("#news_title").html(temp[i].title);
                     //新闻内容
                     $("#news_content").html(temp[i].content);
+                    $("#news_time").html(temp[i].pubdate);
                 }
             }
         }
