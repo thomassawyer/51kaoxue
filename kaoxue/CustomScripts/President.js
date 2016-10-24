@@ -265,7 +265,7 @@ function GetList() {
                     date = new Date(temp[i].intime);
                     var time = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
                     html += "<div class=\"xz360\" style=\"width:100%;overflow:auto;\">\
-                <div class=\"fl\"><img src=\""+ temp[i].headimgsrc + "\" class=\"lsimg\" style=\"min-width:200px;\" /></div>\
+                <div class=\"fl\"><img src=\"http://source.51kaoxue.com/"+ temp[i].headimgsrc + "\" class=\"lsimg\" style=\"min-width:200px; max-width:270px;max-height:200px;\" /></div>\
                 <div class=\"fl neirong620\">\
                     <b class=\"fz25\">" + temp[i].headname + "</b>\
                     <span id=\"\" class=\"lssp\">\
