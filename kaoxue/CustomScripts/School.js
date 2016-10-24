@@ -39,15 +39,18 @@ function level_selected(num) {
 function GetArea() {
     $.post("../Test_Center/GetArea", function (data) {
         if (data) {
-            var html = "<a class='condition_selected' onclick='a_selected(this),district_selected(0)'>全部</a>";
+            var html = "<div class=\"xd5_hover fl district_selected\" onclick='a_selected(this, \"district_selected\"), district_selected(0)'>\
+                        <a>全部</a>\
+                    </div>";
             var temp;
             if (data != "]") {
                 temp = eval(data);
 
                 for (var i = 0; i < temp.length; i++) {
 
-                    html += "<a id=area" + (i + 1) + " onclick=a_selected(this),district_selected('" + temp[i].id + "')>" + temp[i].areaname + "</a>";
-
+                    html += "<div id=area" + (i + 1) + " class=\"xd5_hover fl \" onclick='a_selected(this, \"district_selected\"), district_selected(" + temp[i].id + ")'>\
+                        <a>" + temp[i].areaname + "</a>\
+                    </div>";
                 }
             }
             $("#district").html(html);
@@ -85,7 +88,7 @@ function subject_selected(subjectid) {
 //
 
 function eliteschool_recommend() {
-    $.post("../School/EliteSchool_Recommend", function (data) {
+    $.post("../President/EliteSchool_Recommend", function (data) {
         if (data) {
 
             var html = "";
@@ -93,7 +96,8 @@ function eliteschool_recommend() {
                 var temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
                     var text = temp[i].name.length > 10 ? temp[i].name.substr(0, 10) + "..." : temp[i].name;
-                    html += "<a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'><div class=\"elite_school_recommends_container\"><div class=\"elite_school_recommends_container_top\"><span class=\"sign_red\">·</span><div class=\"school_name\">" + text + "</div></div><div class=\"elite_school_recommends_container_bottom\">共计" + temp[i].testnum + "套题</div></div></a>";
+                    //html += "<a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'><div class=\"elite_school_recommends_container\"><div class=\"elite_school_recommends_container_top\"><span class=\"sign_red\">·</span><div class=\"school_name\">" + text + "</div></div><div class=\"elite_school_recommends_container_bottom\">共计" + temp[i].testnum + "套题</div></div></a>";
+                    html += "<li><a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>●" + text + "<br />共计" + temp[i].testnum + "套题</a></li>";
                 }
             }
             $("#elite_school_recommends").html(html);
@@ -107,7 +111,7 @@ function eliteschool_recommend() {
 //
 
 function test_recommend() {
-    $.post("../School/Test_Recommend", function (data) {
+    $.post("../President/Test_Recommend", function (data) {
         if (data) {
 
             var html = "";
@@ -115,10 +119,11 @@ function test_recommend() {
                 var temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
                     var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                    html += "<div class=\"elite_school_recommends_container_top\">\
-                                        <span class=\"sign_red\">·</span>\
-                                        <div class=\"school_name\"><a href=\"../Download?cid=1&id="+temp[i].id+"\" target=\"_blank\">"+text+"</a></div>\
-                                    </div>";
+                    //html += "<div class=\"elite_school_recommends_container_top\">\
+                    //                    <span class=\"sign_red\">·</span>\
+                    //                    <div class=\"school_name\"><a href=\"../Download?cid=1&id="+ temp[i].id + "\" target=\"_blank\">" + text + "</a></div>\
+                    //                </div>";
+                    html += "<li><a href=\"../Download?cid=1&id=" + temp[i].id + "\" target=\"_blank\">●" + text + "</a></li>";
                 }
             }
             $("#test_recommend").html(html);
@@ -129,12 +134,13 @@ function test_recommend() {
 //
 //点击A标签时,改变A标签背景
 //
-function a_selected(obj) {
+function a_selected(obj, css) {
     $(obj).parent().children().each(function () {
-        $(this).removeClass("condition_selected");
+        $(this).removeClass(css);
     });
-    $(obj).addClass("condition_selected");
+    $(obj).addClass(css);
 }
+
 //
 //获取学校数据
 //
@@ -146,29 +152,25 @@ function GetList() {
             if (data != "]") {
                 var temp = eval(data);
                 var date;
+                html += "<div class=\"lxclan\">\
+                <img src=\"img/renwu.png\" alt=\"\" class=\"rwimg\" />\
+                <b class=\"bix dkbix\">学校列表</b>\
+            </div>";
                 for (var i = 0; i < temp.length; i++) {
-                    date = new Date(temp[i].uploadtime);
-                    var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    html += "<a href='../SchoolDetail?id="+temp[i].id+"&areaid="+temp[i].areaid+"'><div class=\"data_list_container\">\
-                                    <div class=\"data_list_container_left\">\
-                                        <img src=\"http://www.5ihzy.com:82/"+ temp[i].imgsrc + "\" width=\"270\" height=\"200\" />\
-                                    </div>\
-                                    <div class=\"data_list_container_right\">\
-                                        <div class=\"data_list_container_right_title\">"+ temp[i].name + "</div>\
-                                        <div class=\"data_list_container_right_description\">\
-                                            "+ temp[i].content + "\
-                                            </div>\
-                                            <div class=\"data_list_container_right_flag\">\
-                                                <span>"+ temp[i].intime + "</span>\
-                                                <span>|</span>\
-                                                <span>类型：" + produce_type(temp[i].level) + "</span>\
-                                                <span>|</span>\
-                                                <span>学校校长："+temp[i].headname+"</span>\
-                                                <span>|</span>\
-                                                <span>地区："+temp[i].areaname+"</span>\
-                                            </div>\
-                                        </div>\
-                                    </div></a>";
+                    date = new Date(temp[i].intime);
+                    var time = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
+                    html += "<div class=\"xz360\" style=\"width:100%;\">\
+                <div class=\"fl\"><img src=\"http://source.51kaoxue.com/"+ temp[i].imgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></div>\
+                <div class=\"fl neirong620\">\
+                    <b class=\"fz25\">" + temp[i].name + "</b>\
+                    <div id=\"\" class=\"lssp\" style='display:block;height:51px;overflow-y:auto;overflow-x:hidden;'>\
+                       " + temp[i].content + "\
+                    </div>\
+                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   学校校长：" + temp[i].headname + "   |   地区：" + temp[i].areaname + "</span>\
+                    <a href=\"../SchoolDetail?id=" + temp[i].id + "&areaid="+temp[i].areaid+"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
+                </div>\
+            </div>\
+                    ";
                 }
             }
             $("#data_list").html(html);
@@ -230,7 +232,7 @@ function StartReading(controlid) {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "";
+    var html = "<a  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
     var signs_length;
     if (pageindex >= pagecount - 3) {
         signs_length = (pagecount - pageindex) + 1;
@@ -238,18 +240,25 @@ function Produce_A_Signs() {
         signs_length = 5;
     }
     if (pageindex >= 2) {
-        html += "<span>…</span>";
+        html += "<span class=\"anniusp1\">...</span>";
     }
     for (var i = 0; i < signs_length; i++) {
-        if (i == 0) {
-            html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        } else {
-            html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        }
+        flag = (i + 1);
+        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+
+        //if (i == 0) {
+        //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //} else {
+        //    html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //}
     }
     if (pageindex <= pagecount - 5) {
-        html += "<span>…</span>";
+        html += "<span class=\"anniusp\">...</span>";
     }
+    html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
+        <span class=\"anniusp2\">跳转到</span>\
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
+        <span class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</span>";
     $("#pages").html(html);
 }
 

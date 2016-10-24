@@ -274,7 +274,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string GetNews2(int type)
         {
-            string sql = string.Format(@"SELECT TOP 10 [id]
+            string sql = string.Format(@"SELECT TOP 14 [id]
                                                       ,[title]
                                                       ,[pubdate]
                                                   FROM [tblNews]
