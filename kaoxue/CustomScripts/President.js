@@ -272,7 +272,7 @@ function GetList() {
                        " + temp[i].memo + "\
                     </div>\
                     <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   学校校长：" + temp[i].headname + "   |   地区：" + temp[i].areaname + "</span>\
-                    <a href=\"../President_Special_Column?id="+temp[i].id+"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
+                    <a href=\"../President_Special_Column?id="+temp[i].headid+"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
                 </div>\
             </div>\
                     ";
