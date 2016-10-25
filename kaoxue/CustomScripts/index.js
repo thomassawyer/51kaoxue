@@ -23,7 +23,7 @@ function New_Zhuanti() {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
                             <a class=\"fl btnjps\">" + number + "</a><div class=\"fl jpstys\" style='width:390px;'><a href=\"../SpecialSubject?id="+temp[i].id+"&name="+temp[i].name+"\">[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
-                                <a class=\"ayblue1\" href=\"\" style='color:#f5bc2b;'>[" + time + "]</a>\
+                                <a class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' style='color:#f5bc2b;'>[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -68,7 +68,7 @@ function Taoti() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = i + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a href=\"\" class=\"fff\"> " + temp[i - 1].name + "</a></li>";
+                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a  class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i-1].name + "'> " + temp[i - 1].name + "</a></li>";
                 if (i % 6 == 0 && i != 0 && i < temp.length) {
                     html += "</ul>\
                                 </div>\
@@ -103,7 +103,7 @@ function Test() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps btnjspt\">"+ number + "</a><div class=\"fl jpstys jpys\"><a href=\"\">[试题试卷] 黑龙江省哈尔滨市第六中学2017届高三上学期开学考试语文</a></div><div class=\"fl\" id=\"\">\
+                            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].testname + "</a></div><div class=\"fl\" id=\"\">\
                                 <a class=\"ayblue\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
@@ -130,7 +130,7 @@ function School_Test() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i+1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a href=\"\" class=\"fff\"> " + text + "</a></li>";
+                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a href='../Download?cid=1&id=" + temp[i].id + "' class=\"fff\"> " + text + "</a></li>";
                 if ((i + 1) % 6 == 0 && i != 0 && (i + 1) < temp.length) {
                     html += "</ul>\
                                 </div>\
@@ -192,7 +192,7 @@ function Taoti_JuniorMiddleSchool() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href=\"\">" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
             }
             $("#Taoti_JuniorMiddleSchool").html(html);
         }
@@ -236,7 +236,7 @@ function Mid_examination() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href=\"\">" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='../Download?cid=1&id=" + temp[i].id + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
             }
             $("#Mid_examination").html(html);
         }
@@ -261,7 +261,7 @@ function News(type, controlid) {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += "<li>\
                             <div  class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn\">"+number+"</a>&nbsp;<a  class=\"gdkys\">[新闻] "+text+"</a>\
+                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a  class=\"gdkys\" href='../News_Detail?id=" + temp[i].id + "'>[新闻] " + text + "</a>\
                     </div>\
                     <div class=\" fl\">\
                                 <a  class=\"gkdttime\">["+time+"]</a>\
