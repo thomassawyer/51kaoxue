@@ -30,7 +30,6 @@ function GetYear() {
             if (data != "]") {
                 temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
-                   
                     if (i == 0) {
                         html += "<div class=\"xd5_hover xdh5 fl years_selected\" onclick=a_selected(this,\"years_selected\"),year_selected('" + temp[i].id + "','" + temp[i].name + "')>";
                         html += "<a id=year" + temp[i].id + ">" + temp[i].name + "</a>";
@@ -40,7 +39,6 @@ function GetYear() {
                         html += "<a id=year" + temp[i].id + ">" + temp[i].name + "</a>";
                         html += "</div>";
                     }
-                    
                 }
             }
             $("#years").html(html);
@@ -51,8 +49,6 @@ function GetYear() {
             } else {
                 year_selected(temp[0].id, temp[0].name);
             }
-            
-            //$("#subject1").click();
         }
     });
 }
@@ -93,13 +89,9 @@ function GetProvince() {
                     html += "<div id=subject" + (i + 1) + " class=\"fl\" onclick=a_selected(this,\"dkhh5_selected\"),anchor_go('exam" + temp[i].id + "')>\
                                 <a  class=\" xdh51 fl dkhh5\" style=\"margin-left:20px; margin-right:20px;\">" + temp[i].name + "</a>\
                                 </div>";
-                    //html += "<div id=subject" + (i + 1) + " class=\"xdh5 fl dkhh5\" onclick=a_selected(this,\"dkhh5_selected\"),anchor_go('exam" + temp[i].id + "')>\
-                    //            <a  class=\"xdh55a\">" + temp[i].name + "</a>\
-                    //            </div>";
                 }
             }
             $("#province").html(html);
-            //$("#subject1").click();
             
             Loading_start();
             $.ajaxSetup({
@@ -144,11 +136,10 @@ function GetList() {
                                 <div class=\"gkzj21\">\
                                     <div class=\"lan44\">";
                     html += "<span class=\"zjshijian\"><b>" + year_text + "</b></span>";
-
                     html += "</div>\
                                 <div class=\"bai630\">\
                                     <img src=\"img/wenjianltb.png\"  class=\"wenjianl\" />\
-                                    <span class=\"qgjy\">\
+                                    <span class=\"qgjy\" style='height:25px;overflow:hidden;'>\
                                         " + temp[i].name + "\
                                     </span>\
                                 </div>\
@@ -161,18 +152,13 @@ function GetList() {
                             if (json != "]") {
                                 var flag = eval(json);
                                 for (var j = 0; j < flag.length; j++) {
-                                    html += "<a  class=\"wrd1 fl\"><span class=\"wdsp\"><b class=\"wdb\">" + flag[j].subject + "</b></span><b class=\"wdjx\">";
-                                    //if (j % 5 == 0 && j !=0)
-                                    //    html += "<div class='list_content_text list_content_text_clear'><div class='list_content_text_top'>" + flag[j].subject + "</div><div class='list_content_text_bottom'>";
-                                    //else
-                                    //    html += "<div class='list_content_text'><div class='list_content_text_top'>" + flag[j].subject + "</div><div class='list_content_text_bottom'>";
+                                    html += "<a  class=\"wrd1 fl\"><span class=\"wdsp\"><b class=\"wdb\">" + flag[j].subject + "</b></span><b class=\"wdjx\" style='left:10px;'>";
                                     $.post("../Past_Exam/GetList1", { daohangid: daohangid, subjectid: flag[j].subjectid }, function (list) {
                                         if (list) {
-
                                             if (list != "]") {
                                                 var flag2 = eval(list);
                                                 for (var k = 0; k < flag2.length; k++) {
-                                                    html += "<span>" + GetTypeName(flag2[k].type) + "</span>";
+                                                    html += "<span style='cursor:pointer;' onclick=\"javascript:window.open('../Download?cid=1&id=" + flag2[k].testid + "');\" target='_blank'>" + GetTypeName(flag2[k].type) + "</span>";
                                                 }
                                             }
                                         }
@@ -183,7 +169,6 @@ function GetList() {
                         }
                     });
                     html += "</div></div>";
-                    //$("#list").html($("#list").html() + html);
                 }
                 $("#list").html(html);
                 $.ajaxSetup({

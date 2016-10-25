@@ -69,7 +69,7 @@ function zhuanti_tuijian() {
                     var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>"+number+"</span></a>&nbsp;<a href=\"\">"+text+"</a></div><div class=\"fl zuixinzt\"><a href=\"\">["+time+"]</a></div></li>";
+                    html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
                 }
             }
             $("#zhuanti_tuijian").html(html);
