@@ -6,63 +6,17 @@ using System.Web.Mvc;
 using Maticsoft.DBUtility;
 using System.Data;
 
-namespace kaoxue.Controllers
+namespace Good_Resource.Controllers
 {
     public class Elite_SchoolController : Controller
     {
-        //
-        // GET: /Beike_Center/
         private string Level = string.Empty; //学段
-        private string Subject = string.Empty;  //学科
-        private string Versionid = string.Empty; //版本编号
-        private string Category = string.Empty; //类型
-        private string Testcategory = string.Empty; // 试题类型
         private string Grade = string.Empty;//年级
         private string District = string.Empty; // 地区
 
         public ActionResult Index()
         {
             return View();
-        }
-
-        /// <summary>
-        /// 获取学科
-        /// </summary>
-        /// <returns></returns>
-        public string GetSubject()
-        {
-            ProduceParameters();
-            string condition = " level=" + this.Level;
-            DataSet ds = subject_bll.GetList(condition);
-            string json = string.Empty;
-            if (ds != null)
-            {
-                if (ds.Tables.Count > 0)
-                {
-                    json = JsonHelper.ToJson(ds.Tables[0]);
-                }
-            }
-            return json;
-        }
-
-        /// <summary>
-        /// 获取试题类型
-        /// </summary>
-        /// <returns></returns>
-        public string GetTestCategory()
-        {
-            ProduceParameters();
-            string condition = " level=" + this.Level;
-            DataSet ds = testcategory_bll.GetList(condition);
-            string json = string.Empty;
-            if (ds != null)
-            {
-                if (ds.Tables.Count > 0)
-                {
-                    json = JsonHelper.ToJson(ds.Tables[0]);
-                }
-            }
-            return json;
         }
 
         /// <summary>
@@ -130,7 +84,7 @@ namespace kaoxue.Controllers
         public string GetTest_Recommend()
         {
             string condition = " istuijian=1";
-            DataSet ds = test_bll.GetList(12, condition, " uploadtime desc");
+            DataSet ds = test_bll.GetList(11, condition, " uploadtime desc");
             string json = string.Empty;
             if (ds != null)
             {
@@ -143,7 +97,7 @@ namespace kaoxue.Controllers
         }
 
         /// <summary>
-        /// 获取试题数据
+        /// 获取套题数据
         /// </summary>
         /// <returns></returns>
         public string GetList()
@@ -158,7 +112,7 @@ namespace kaoxue.Controllers
                                                 (  
                                                 SELECT ROW_NUMBER() 
                                                 OVER (
-                                                order by T.uploadtime desc)AS Row, T.*  from select_test_all T  
+                                                order by T.pubdate desc)AS Row, T.*  from vw_taoti T  
                                                 WHERE  {0} 
                                                 ) 
                                                 TT WHERE TT.Row between {1} and {2}", condition, startindex, endindex);
@@ -183,25 +137,16 @@ namespace kaoxue.Controllers
         private string ProduceCondition()
         {
             string condition = " id is not null";
-            if (!string.IsNullOrEmpty(this.Subject) && this.Subject != "0")
-                condition += string.Format(" and subjectid={0}", this.Subject);
 
             string level = this.Level;
             if (this.Level != "0")
             {
-                if (level == "3") condition += " and subjectid in (select id from tblsubject where level=3)";
-                else if (level == "2") condition += " and subjectid in (select id from tblsubject where level=2)";
-                else if (level == "1") condition += " and subjectid in (select id from tblsubject where level=1)";
+                if (level == "3") condition += " and [level]=3";
+                else if (level == "2") condition += " and [level]=2";
+                else if (level == "1") condition += " and [level]=1";
             }
-
-            if (!string.IsNullOrEmpty(this.Versionid) && this.Versionid != "0")
-                condition += string.Format(" and versionid ={0}", this.Versionid);
-            if (!string.IsNullOrEmpty(this.Category) && this.Category != "0")
-                condition += string.Format(" and category={0}", this.Category);
-            if (!string.IsNullOrEmpty(this.Testcategory) && this.Testcategory != "0")
-                condition += string.Format(" and testcategory={0}", this.Testcategory);
             if (!string.IsNullOrEmpty(this.Grade) && this.Grade != "0")
-                condition += string.Format(" and grade={0}", this.Grade);
+                condition += string.Format(" and gradeid={0}", this.Grade);
             if (!string.IsNullOrEmpty(this.District) && this.District != "0")
                 condition += string.Format(" and areaid={0}", this.District);
             return condition;
@@ -209,16 +154,12 @@ namespace kaoxue.Controllers
 
         private string Produce_DirectoryCondition()
         {
-            string condition = " id is not null";
-            if (!string.IsNullOrEmpty(this.Subject))
-                condition += string.Format(" and subjectid={0}", this.Subject);
+            string condition = " id in ( select id from tblTaoti where ismingxiao=1)";
 
             string level = this.Level;
             if (level == "3") condition += " and subjectid in (select id from tblsubject where level=3)";
             else if (level == "2") condition += " and subjectid in (select id from tblsubject where level=2)";
             else if (level == "1") condition += " and subjectid in (select id from tblsubject where level=1)";
-            if (!string.IsNullOrEmpty(this.Category))
-                condition += string.Format(" and category={0}", this.Category);
             return condition;
         }
 
@@ -228,11 +169,8 @@ namespace kaoxue.Controllers
         public void ProduceParameters()
         {
             this.Level = Request["level"];
-            this.Subject = Request["subject"];
-            this.Testcategory = Request["testcategory"];
             this.Grade = Request["grade"];
             this.District = Request["district"];
-            this.Category = Request["category"];
         }
 
         private string digui(int pid)
@@ -261,7 +199,7 @@ namespace kaoxue.Controllers
         {
             ProduceParameters();
             string condition = ProduceCondition();
-            string sql = string.Format("select count(1) from select_test_all where {0}", condition);
+            string sql = string.Format("select count(1) from vw_taoti where {0}", condition);
             int temp = Convert.ToInt32(DbHelperSQL.GetSingle(sql));
             return temp.ToString();
         }
@@ -280,6 +218,6 @@ namespace kaoxue.Controllers
         Maticsoft.BLL.tblgrade grade_bll = new Maticsoft.BLL.tblgrade();
         //地区业务
         Maticsoft.BLL.tblarea area_bll = new Maticsoft.BLL.tblarea();
-    }
 
+    }
 }

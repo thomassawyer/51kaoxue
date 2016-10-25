@@ -60,7 +60,6 @@ function level_selected(num) {
     district = ""; //地区
     
     GetSubject();
-    GetTestCategory();
     GetGrade();
     GetDataCount();
     StartReading("data_list_td");
@@ -119,33 +118,6 @@ function subject_selected(subjectid) {
     GetList();
 }
 
-//
-//获取试题类型
-//
-function GetTestCategory() {
-    $.post("../Elite_School/GetTestCategory", { level: level_num }, function (data) {
-        if (data) {
-            var html = "<div class=\"stzx115 fl stzx115_selected\" onclick='a_selected(this, \"stzx115_selected\"), testcategory_selected(0) '><a>全部</a></div>";
-            var temp;
-            if (data != "]") {
-                temp = eval(data);
-
-                for (var i = 0; i < temp.length; i++) {
-                    html += "<div id=testcategory" + temp[i].id + " class=\"stzx115 fl\" onclick='a_selected(this, \"stzx115_selected\"), testcategory_selected(" + temp[i].id + ") '><a>" + temp[i].name + "</a></div>";
-                }
-            }
-            $("#testcategory").html(html);
-
-            if (para_testcategory != undefined && para_testcategory != null && para_testcategory_control == true) {
-                setTimeout(function () {
-                    $("#testcategory" + para_testcategory).click();
-                    para_testcategory_control = false;
-                }, 1000);
-            }
-            //$("#subject1").click();
-        }
-    });
-}
 
 //
 //点击试题类型A标签,为试题类型变量赋值
@@ -165,17 +137,17 @@ function testcategory_selected(num) {
 function GetGrade() {
     $.post("../Elite_School/GetGrade", { level: level_num }, function (data) {
         if (data) {
-            var html = "<div class=\"xd5_div1 fl xd5k1\"><img src=\"img/gongju.png\" class=\"xdtb5\"><a class=\"xd5a\"><b>年 级</b></a></div><div class=\"xd5_hover xdh5 fl xdh5_selected\" onclick='a_selected(this, \"xdh5_selected\"), grade_selected(0)'>\
-                    <a>全部</a>\
-                </div>";
+            var html = "<div class=\"xd5_hover xdh33 fl xdh33_selected\" onclick=' a_selected(this, \"xdh33_selected\"), grade_selected(0)'>\
+                        <a>全部</a>\
+                    </div>";
             var temp;
             if (data != "]") {
                 temp = eval(data);
+
                 for (var i = 0; i < temp.length; i++) {
-                    html += "<div id=subject" + (i + 1) + " class=\"xd5_hover xdh5 fl\" onclick='a_selected(this, \"xdh5_selected\"), grade_selected(" + temp[i].id  +")'>\
-                    <a>" + temp[i].name + "</a>\
-                </div>";
-                    
+                    html += "<div id=subject" + temp[i].id + " class=\"xd5_hover xdh33 fl\" onclick=' a_selected(this, \"xdh33_selected\"), grade_selected(" + temp[i].id + ")'>\
+                        <a>"+ temp[i].name + "</a>\
+                    </div>";
                 }
             }
             $("#grade").html(html);
@@ -278,7 +250,7 @@ function anchor(obj) {
 //获取试题数据
 //
 function GetList() {
-    $.post("../Elite_School/GetList", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
+    $.post("../Elite_School/GetList", { level: level_num, grade: grade, district: district, pageindex: pageindex }, function (data) {
         if (data) {
 
             var html = "<div class=\"lxclan\">\
@@ -295,11 +267,10 @@ function GetList() {
                                 <div class=\"wdk fl\"></div>\
                                 <div class=\"wenbenkui fl\">\
                                     <a><b class=\"b320\">"+text+"</b></a><br>\
-                                    <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
+                                    <span class=\"lxcsp320\">时间：" + temp[i].pubdate + "</span>\
                                 </div>\
-                                <div class=\"xiazai fl\">\
-                                    <a class=\"xztb1 fl\"  onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' ><img src=\"img/yulan.png\"><img src=\"img/hover-31.png\" class=\"dpnone\"></a>\
-                                    <a class=\"xztb2 fl\"  onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\")><img src=\"img/xiazaitb.png\"><img src=\"img/yll.png\" class=\"yll\"></a>\
+                                <div class=\"xiazai fl\" style='position:static;width:45px;height:45px;margin-left:160px;'>\
+                                    <a class=\"xztb2 fl\"  href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' target='_blank')><img src=\"img/xiazaitb.png\"></a>\
                                 </div>\
                             </div>";
                     //html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style='width:500px'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span>类型：<span id='text_type'>" + Produce_TypeName(temp[i].category) + "</span></span></span></div></div><div class='data_list_td_container_right'><a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";
