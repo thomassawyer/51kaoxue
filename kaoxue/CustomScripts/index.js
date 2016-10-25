@@ -352,7 +352,7 @@ function GetSubject(num, controlid, hover, imgsrc, hover2) {
                 html += "<div id=\"\" class=\"fl cebianlan_ul1\">\
                     <ul>";
                 for (var i = 1; i <= temp.length; i++) {
-                    html += "<li><a href=\"\" class=\"hover" + hover2 + "\"><img src=\"../../img/" + imgsrc + "\" alt=\"\" class=\"hover" + hover + "\" />" + temp[i - 1].name + "</a></li>";
+                    html += "<li><a style='cursor:pointer;' onclick= subjecturl(" + num + "," + temp[i - 1].id + ") class=\"hover" + hover2 + "\"><img src=\"../../img/" + imgsrc + "\" alt=\"\" class=\"hover" + hover + "\" />" + temp[i - 1].name + "</a></li>";
                     if (i <= 6) {
                         if (i % 3 == 0 && i != 0 && i < temp.length) {
                             html += "</ul>\
@@ -426,20 +426,20 @@ function GetSchool() {
                         }
                     }
                 }
-                for (var i = 0; i < 16; i++) {
+                for (var i = 0; i < 8; i++) {
                     if (i == 0) {
                         html2 += "<div  class=\"mxzy_8 fl\">\
                         <div class=\"mxzy_border\">\
                             <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" />\
                         </div>\
-                        <a  href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + ">" + temp[i].name + "</a>\
+                        <a  href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";
                     } else {
                         html2 += "<div  class=\"mxzy_8 fl mxzykz6\">\
                         <div class=\"mxzy_border\">\
                             <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" />\
                         </div>\
-                        <a  href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + ">" + temp[i].name + "</a>\
+                        <a  href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";
                     }
 
@@ -451,7 +451,6 @@ function GetSchool() {
         }
     });
 }
-
 //
 //名师推荐
 //
