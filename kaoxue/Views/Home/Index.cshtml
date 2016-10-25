@@ -99,7 +99,7 @@
                     <div class="mk5 fl">
                         <img src="../../img/shijuan.png" />
                         <div class="mk_top">
-                            <a class="mk_a">智能组卷</a>
+                            <a href="http://zujuan.51kaoxue.com" class="mk_a">智能组卷</a>
                         </div>
                     </div><a href="../Past_Exam">
                         <div class="mk5 fl">
@@ -174,7 +174,11 @@
                     <div><span class="gkzhenti">高考历年真题</span></div>
                     <div class="ztsousuo_div2">
                         <form action="#" method="get">
-                            <input type="text" class="zt_sousuo" placeholder="&nbsp&nbsp输入年份" /><a class="tijiao"> 查找&nbsp;</a>
+                            @*<input type="text" class="zt_sousuo" placeholder="&nbsp&nbsp输入年份" />*@
+                            <select id="years" style="width:120px; margin-top:8px; margin-left:10px;">
+                                
+                            </select>
+                            <a style="background-color: red; color: white; padding-left: 4px; cursor: pointer;" onclick="search_years()"> 查找&nbsp;</a>
                         </form>
                     </div>
                 </div>

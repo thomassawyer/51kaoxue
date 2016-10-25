@@ -31,7 +31,7 @@ function test_mingxiao(level) {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += "<li>\
                                     <div id=\"\" class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn bsdkbtn\">"+number+"</a>&nbsp;<a href=\"\" class=\"gdkys gkgdkys\">[试题试卷] "+text+"</a>\
+                                        <a class=\"gkdtbtn bsdkbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys gkgdkys\">[试题试卷] " + text + "</a>\
                                     </div>\
                                     <div class=\" fl\">\
                                         <a href=\"\" class=\"gkdttime gkgdkys\">["+time+"]</a>\
@@ -74,7 +74,7 @@ function test_jingpin() {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += "<li>\
                             <div id=\"\" class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn\">"+number+"</a>&nbsp;<a href=\"\" class=\"gdkys\">[试题试卷] "+text+"</a>\
+                                <a  class=\"gkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "'  href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
                     </div>\
                     <div class=\" fl\">\
                                 <a href=\"\" class=\"gkdttime\">["+time+"]</a>\
@@ -106,7 +106,7 @@ function beike_jingpin() {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += "<li>\
                             <div id=\"\" class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn\">"+ number + "</a>&nbsp;<a href=\"\" class=\"gdkys\">[试题试卷] " + text + "</a>\
+                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].name.replace(" ", "-") + "' href='../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
                     </div>\
                     <div class=\" fl\">\
                                 <a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
@@ -138,7 +138,7 @@ function taoti_tuijian() {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += "<li>\
                             <div id=\"\" class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn\">"+ number + "</a>&nbsp;<a href=\"\" class=\"gdkys\">[试题试卷] " + text + "</a>\
+                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].name.replace(" ", "-") + "' href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
                     </div>\
                     <div class=\" fl\">\
                                 <a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
@@ -170,7 +170,7 @@ function gettest_bucategory(category,controlid,iswhite) {
                     if (iswhite == 0) {
                         html += "<li>\
                                     <div  class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn dkgkdtbtn\">"+ number + "</a>&nbsp;<a  class=\"gdkys kylv\">[试题试卷] " + text + "</a>\
+                                        <a class=\"gkdtbtn dkgkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys kylv\">[试题试卷] " + text + "</a>\
                                     </div>\
                                     <div class=\" fl\">\
                                         <a  class=\"gkdttime dkgkdttime\">["+ time + "]</a>\
@@ -179,7 +179,7 @@ function gettest_bucategory(category,controlid,iswhite) {
                     } else if(iswhite==1) {
                         html += "<li>\
                                     <div  class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn dkgkdtbtn1\">"+ number + "</a>&nbsp;<a  class=\"gdkys kylv1\">[试题试卷] " + text + "</a>\
+                                        <a class=\"gkdtbtn dkgkdtbtn1\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys kylv1\">[试题试卷] " + text + "</a>\
                                     </div>\
                                     <div class=\" fl\">\
                                         <a  class=\"gkdttime dkgkdttime kylv1\">["+ time + "]</a>\
@@ -188,7 +188,7 @@ function gettest_bucategory(category,controlid,iswhite) {
                     } else if (iswhite == 2) {
                         html += "<li>\
                                     <div  class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn dkgkdtbtn2\">"+ number + "</a>&nbsp;<a  class=\"gdkys kylv1\">[试题试卷] " + text + "</a>\
+                                        <a class=\"gkdtbtn dkgkdtbtn2\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys kylv1\">[试题试卷] " + text + "</a>\
                                     </div>\
                                     <div class=\" fl\">\
                                         <a  class=\"gkdttime dkgkdttime kylv1\">["+ time + "]</a>\
@@ -197,7 +197,7 @@ function gettest_bucategory(category,controlid,iswhite) {
                     } else if (iswhite == 3) {
                         html += "<li>\
                                     <div  class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn hhdk\">" + number + "</a>&nbsp;<a  class=\"gdkys hyse\">[试题试卷] " + text + "</a>\
+                                        <a class=\"gkdtbtn hhdk\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys hyse\">[试题试卷] " + text + "</a>\
                                     </div>\
                                     <div class=\" fl\">\
                                         <a  class=\"gkdttime htime\">[" + time + "]</a>\
@@ -234,7 +234,7 @@ function News(type, controlid) {
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     var number_str = (i) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><div class=\"fl ul1div\"><a class=\"abt abtdk\">" + number + "</a>&nbsp;<a class=\"ul1a\">" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
+                    html += "<li><div class=\"fl ul1div\"><a class=\"abt abtdk\">" + number + "</a>&nbsp;<a  title='" + temp[i-1].title.replace(" ", "-") + "' href='../News_Detail?id=" + temp[i - 1].id + "' class=\"ul1a\">" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
                     if (i % 6 == 0 && i != 0 && i < temp.length) {
                         html += "</ul>\
                                 <ul class=\"ul1 fl\">";
@@ -287,7 +287,7 @@ function GetSchool() {
                             <img src=\""+"http://source.51kaoxue.com/" + temp[i].imgsrc+"\" alt=\"\" class=\"img190\" />\
                         </div>\
                         <div class=\"wzhs\">\
-                            <a>" + temp[i].name + "</a>\
+                            <a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                         </div>\
                     </div>";
 
