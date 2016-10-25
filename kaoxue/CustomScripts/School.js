@@ -167,7 +167,7 @@ function GetList() {
                        " + temp[i].content + "\
                     </div>\
                     <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   学校校长：" + temp[i].headname + "   |   地区：" + temp[i].areaname + "</span>\
-                    <a href=\"../SchoolDetail?id=" + temp[i].id + "&areaid="+temp[i].areaid+"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
+                    <a href=\"../SchoolDetail?id=" + temp[i].schoolid + "&areaid="+temp[i].areaid+"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
                 </div>\
             </div>\
                     ";
