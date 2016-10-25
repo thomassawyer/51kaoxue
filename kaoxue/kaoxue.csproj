@@ -150,6 +150,7 @@
     <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Controllers\Test_CenterController.cs" />
     <Compile Include="Controllers\The_School_TestController.cs" />
+    <Compile Include="Controllers\ThroughTrainController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,6 +184,7 @@
     <Content Include="CSS\style.css" />
     <Content Include="CSS\Summary_page.css" />
     <Content Include="CSS\test_questions.css" />
+    <Content Include="CSS\Through_train.css" />
     <Content Include="CSS\xueke9da.css" />
     <Content Include="CSS\xueke9da1.css" />
     <Content Include="CustomScripts\Ancient.js" />
@@ -721,6 +723,7 @@
     <Content Include="Views\Ancient\Index.cshtml" />
     <Content Include="Views\Ancient_List\Index.cshtml" />
     <Content Include="Views\Ancient_Article\Index.cshtml" />
+    <Content Include="Views\ThroughTrain\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
