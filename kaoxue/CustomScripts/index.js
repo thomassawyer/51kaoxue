@@ -17,20 +17,20 @@ function New_Zhuanti() {
                     date = new Date(temp[i].updatetime);
                     var text = temp[i].name.length > 20 ? temp[i].name.substr(0, 20) : temp[i].name;
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate()); //构造特定的日期格式
-                    var number_str = (i+1) + "";
+                    var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     if (i < 6) {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps\">" + number + "</a><div class=\"fl jpstys\" style='width:390px;'><a href=\"../SpecialSubject?id="+temp[i].id+"&name="+temp[i].name+"\">[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
-                                <a class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' style='color:#f5bc2b;'>[" + time + "]</a>\
+                            <a class=\"fl btnjps\">" + number + "</a><div class=\"fl jpstys\" style='width:390px;'><a title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
+                                <a  class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' style='color:#f5bc2b;'>[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
                     } else {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys pps\">\
-                            <a class=\"fl btnjps\">" + number + "</a><div class=\"fl jpstys\" style='width:390px;'><a href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
+                            <a class=\"fl btnjps\">" + number + "</a><div class=\"fl jpstys\" style='width:390px;'><a title='" + temp[i].name.replace(" ", "-") + "' href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
                                 <a class=\"ayblue1\" href=\"\" style='color:#f5bc2b;'>[" + time + "]</a>\
                             </div>\
                         </div>\
@@ -68,7 +68,7 @@ function Taoti() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = i + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a  class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i-1].name + "'> " + temp[i - 1].name + "</a></li>";
+                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a title='" + temp[i - 1].name.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "'> " + temp[i - 1].name + "</a></li>";
                 if (i % 6 == 0 && i != 0 && i < temp.length) {
                     html += "</ul>\
                                 </div>\
@@ -103,7 +103,7 @@ function Test() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].testname + "</a></div><div class=\"fl\" id=\"\">\
+                            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].testname + "</a></div><div class=\"fl\" id=\"\">\
                                 <a class=\"ayblue\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
@@ -128,9 +128,9 @@ function School_Test() {
                 date = new Date(temp[i].uploadtime);
                 var text = temp[i].testname.length > 22 ? temp[i].testname.substr(0, 22) : temp[i].testname;
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var number_str = (i+1) + "";
+                var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a href='../Download?cid=1&id=" + temp[i].id + "' class=\"fff\"> " + text + "</a></li>";
+                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"fff\"> " + text + "</a></li>";
                 if ((i + 1) % 6 == 0 && i != 0 && (i + 1) < temp.length) {
                     html += "</ul>\
                                 </div>\
@@ -166,7 +166,7 @@ function Beike() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a href=\"../Special/Beike?id="+temp[i].id+"&way=2&name="+temp[i].name+"\">[试题试卷] "+temp[i].name+"</a></div><div class=\"fl\" id=\"\">\
+                            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fl\" id=\"\">\
                                 <a class=\"ayblue\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
@@ -192,7 +192,7 @@ function Taoti_JuniorMiddleSchool() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a  title='" + temp[i].name.replace(" ", "-") + "' href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
             }
             $("#Taoti_JuniorMiddleSchool").html(html);
         }
@@ -214,7 +214,7 @@ function Test_JuniorMiddleSchool() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href=\"../Download?id=" + temp[i].id + "&cid=1\">" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a  title='" + temp[i].testname.replace(" ", "-") + "' href=\"../Download?id=" + temp[i].id + "&cid=1\">" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
             }
             $("#Test_JuniorMiddleSchool").html(html);
         }
@@ -236,7 +236,7 @@ function Mid_examination() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='../Download?cid=1&id=" + temp[i].id + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a  title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
             }
             $("#Mid_examination").html(html);
         }
@@ -261,10 +261,10 @@ function News(type, controlid) {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += "<li>\
                             <div  class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a  class=\"gdkys\" href='../News_Detail?id=" + temp[i].id + "'>[新闻] " + text + "</a>\
+                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a  title='" + temp[i].title.replace(" ", "-") + "'  class=\"gdkys\" href='../News_Detail?id=" + temp[i].id + "'>[新闻] " + text + "</a>\
                     </div>\
                     <div class=\" fl\">\
-                                <a  class=\"gkdttime\">["+time+"]</a>\
+                                <a  class=\"gkdttime\">["+ time + "]</a>\
                             </div>\
                         </li>";
                 }
@@ -402,7 +402,7 @@ function GetSchool() {
                         <div class=\"qq1 fl qqq1\"><a  class=\"fff\">历年考题</a></div>\
                         <div class=\"qq1 fl qqq1\"><a  class=\"fff\">名校测题</a></div>\
                     </div>\
-                    <div class=\"xian2 fl\"><a  class=\"genduo\"><img src=\"../../img/lantb.png\" alt=\"\"></a></div>\
+                    <div class=\"xian2 fl\"><a href='../school' class=\"genduo\"><img src=\"../../img/lantb.png\" alt=\"\"></a></div>\
                 </div>";
 
                 html += "<div  class=\"mxhz6 fl\">\
@@ -411,7 +411,7 @@ function GetSchool() {
                 for (var i = 0; i < temp.length; i++) {
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><a>" + number + "</a>&nbsp;<a >" + temp[i].name + "</a></li>";
+                    html += "<li><a>" + number + "</a>&nbsp;<a title='" + temp[i].name.replace(" ", "-") + "' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a></li>";
                     if ((i + 1) % 3 == 0 && i != 0 && (i + 1) < temp.length) {
                         if (i <= 15) {
                             html += "</ul>\
@@ -426,23 +426,23 @@ function GetSchool() {
                         }
                     }
                 }
-                for (var i = 0; i < 8; i++) {
+                for (var i = 0; i < 16; i++) {
                     if (i == 0) {
                         html2 += "<div  class=\"mxzy_8 fl\">\
                         <div class=\"mxzy_border\">\
                             <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" />\
                         </div>\
-                        <a >"+ temp[i].name + "</a>\
+                        <a  href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + ">" + temp[i].name + "</a>\
                     </div>";
                     } else {
                         html2 += "<div  class=\"mxzy_8 fl mxzykz6\">\
                         <div class=\"mxzy_border\">\
                             <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" />\
                         </div>\
-                        <a >"+ temp[i].name + "</a>\
+                        <a  href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + ">" + temp[i].name + "</a>\
                     </div>";
                     }
-                    
+
                 }
 
             }
@@ -471,7 +471,7 @@ function GetTeachers() {
                         <div  class=\"lszp fl\">\
                             <h3><b>" + temp[i].headname + "</b></h3>\
                             <p class=\"dkms\">" + temp[i].name + "</p>\
-                            <a class=\"mstjbtn\">详情</a>\
+                            <a class=\"mstjbtn\"  href='../President_Special_Column?id=" + temp[i].headid + "'>详情</a>\
                         </div>\
                     </div>";
                     } else {
@@ -480,11 +480,11 @@ function GetTeachers() {
                         <div  class=\"lszp fl\">\
                             <h3><b>" + temp[i].headname + "</b></h3>\
                             <p class=\"dkms\">" + temp[i].name + "</p>\
-                            <a class=\"mstjbtn\">详情</a>\
+                            <a class=\"mstjbtn\" href='../President_Special_Column?id=" + temp[i].headid + "'>详情</a>\
                         </div>\
                     </div>";
                     }
-                    
+
                 }
             }
             $("#teachers").html(html);
