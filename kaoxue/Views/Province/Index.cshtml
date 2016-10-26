@@ -17,6 +17,11 @@
 
     <script src="~/js/jquery-1.8.2.min.js"></script>
     <script src="~/CustomScripts/Province.js"></script>
+    <style>
+        a {
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
     @Html.Partial("~/Common/top1.ascx")
@@ -120,8 +125,8 @@
                     <img src="img/shenfenbsm.png" class="bsmsf" />
                     <b class="mxcgb">本省名校试题</b>
                     <div class="sfyx1"><a href="../Test_Center?level=3&type=1">&nbsp;&nbsp;&nbsp;&nbsp;More</a></div>
-                    <div class="sfyx2"><a onclick="change_css_span(this), test_mingxiao(' between 7 and 9')">&nbsp;&nbsp;&nbsp;&nbsp;初中</a></div>
-                    <div class="sfyx3"><a onclick="change_css_span(this), test_mingxiao(' between 10 and 12')">&nbsp;&nbsp;&nbsp;&nbsp;高中</a></div>
+                    <div class="sfyx2" style="cursor:pointer;"><a onclick="change_css_span(this), test_mingxiao(' between 7 and 9')">&nbsp;&nbsp;&nbsp;&nbsp;初中</a></div>
+                    <div class="sfyx3" style="cursor:pointer;"><a onclick="change_css_span(this), test_mingxiao(' between 10 and 12')">&nbsp;&nbsp;&nbsp;&nbsp;高中</a></div>
                 </div>
                 <div class="gkdtdiv" id="test_mingxiao">
                 </div>

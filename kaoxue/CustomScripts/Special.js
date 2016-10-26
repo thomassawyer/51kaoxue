@@ -26,7 +26,7 @@ function GetTest_Hot_Download() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
 
             }
             $("#hot_download").html(html);
@@ -44,7 +44,7 @@ function GetTest_Recommend() {
             var html = "";
             for (var i = 0; i < 11; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -66,7 +66,7 @@ function GetList() {
     $.post("../Special/GetList", { id: id, way: way, pageindex: pageindex }, function (data) {
         if (data) {
             var html = "            <div class=\"lxclan\">\
-                <b class=\"bix\"></b>\
+                <b class=\"bix\">" + title_name + "</b>\
             </div>";
             if (data != "]") {
                 var temp = eval(data);
@@ -85,9 +85,8 @@ function GetList() {
                                     <a><b class=\"b320\">" + text + "</b></a><br>\
                                     <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
                                 </div>\
-                                <div class=\"xiazai fl\">\
-                                    <a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class=\"xztb1 fl\"><img src=\"../img/yulan.png\"><img src=\"../img/hover-31.png\" class=\"dpnone\"></a>\
-                                    <a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class=\"xztb2 fl\"><img src=\"../img/xiazaitb.png\"><img src=\"../img/yll.png\" class=\"yll\"></a>\
+                                <div class=\"xiazai fl\"  style='position:static;width:45px;height:45px;margin-left:160px;'>\
+                                    <a href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank' class=\"xztb2 fl\"><img src=\"../img/xiazaitb.png\"></a>\
                                 </div>\
                             </div>";
                     }
@@ -206,14 +205,14 @@ function StartReading(controlid) {
     var html = "<br/><br/><br/><br/><div class='loader1'><i></i><i></i></div>";
     $("#" + controlid).html(html);
 }
-
+var title_name;
 $(document).ready(function () {
     StartReading("data_list_td");
     GetTest_Hot_Download();
     GetTest_Recommend();
     id = GetQueryString("id");
     way = GetQueryString("way");
-    var name = GetQueryString("name");
+    title_name = GetQueryString("name");
     $("#title_left").html(name);
     GetDataCount();
     GetList();

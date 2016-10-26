@@ -50,7 +50,7 @@ function GetList() {
                     html += "<div class=\"pxx114\">\
                                 <img src=\"img/xintb.png\" class=\"img11\">\
                                 <div class=\"div_a\"><a>" + temp[i - 1].name + "</a></div>\
-                                <div class=\"div_a2\"><a>显示更多>></a></div>\
+                                <div class=\"div_a2\"><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'>显示更多>></a></div>\
                                 <div class=\"spgxshijian\"><span>更新时间：" + time + "</span></div>\
                                 <img src=\"img/xintbh.png\" class=\"img22\">\
                             </div>";
