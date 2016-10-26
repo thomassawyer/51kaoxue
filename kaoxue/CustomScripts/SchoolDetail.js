@@ -54,17 +54,7 @@ function GetSchoolTest() {
                     var date = new Date(temp[i].uploadtime);
                     var text = temp[i].testname.length > 50 ? temp[i].testname.substr(0, 50) : temp[i].testname;
                     date = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
-                    ////学校试题
-                    //if (i == 0) {
-                    //    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='school_tests_container'><span class='school_tests_container_left_red'>" + (i + 1) + "</span><span class='school_tests_container_middle'>" + text + "</span><span class='school_tests_container_right'>" + date + "</span></div></a>";
-                    //} else if (i == 1) {
-                    //    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='school_tests_container'><span class='school_tests_container_left_orange'>" + (i + 1) + "</span><span class='school_tests_container_middle'>" + text + "</span><span class='school_tests_container_right'>" + date + "</span></div></a>";
-                    //} else if (i == 2) {
-                    //    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='school_tests_container'><span class='school_tests_container_left_yellow'>" + (i + 1) + "</span><span class='school_tests_container_middle'>" + text + "</span><span class='school_tests_container_right'>" + date + "</span></div></a>";
-                    //} else {
-                    //    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='school_tests_container'><span class='school_tests_container_left_gray'>" + (i + 1) + "</span><span class='school_tests_container_middle'>" + text + "</span><span class='school_tests_container_right'>" + date + "</span></div></a>";
-                    //}
-                    html += "  <li class=\"jianju\"><a href='../Download?cid=1&id=" + temp[i].id + "' class=\"stcfh fl\">" + (i + 1) + "</a><a href=\"\" class=\"fl wdwenben\">" + text + "</a><a href=\"\" class=\"fl rqbenxiao\">" + date + "</a></li>";
+                    html += "  <li class=\"jianju\"><a class=\"stcfh fl\">" + (i + 1) + "</a><a title='" + temp[i].testname.replace(" ", "-") + "'  href='../Download?cid=1&id=" + temp[i].id + "' class=\"fl wdwenben\">" + text + "</a><a href=\"\" class=\"fl rqbenxiao\">" + date + "</a></li>";
 
                 }
             }
@@ -89,7 +79,7 @@ function President_Special_Column() {
                     var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) : temp[i].title;
                     //校长专栏
                     //html += "<a href='../News_Detail?id="+temp[i].id+"'><div class='president_special_columns_container'><span class='sign_red'>·</span><span>" + text + "</span></div><a>";
-                    html += " <li><a href='../News_Detail?id=" + temp[i].id + "'>●" + text + "...</a></li>";
+                    html += " <li><a title='" + temp[i].title.replace(" ", "-") + "' href='../News_Detail?id=" + temp[i].id + "'>●" + text + "...</a></li>";
                 }
             }
             //校长专栏ID, 填充代码
@@ -115,23 +105,10 @@ function Province_Test() {
                     var text = temp[i].testname.length > 15 ? temp[i].testname.substr(0, 15) + "..." : temp[i].testname;
                     date = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
                     //本省试题
-                    //if (i == 0) {
-                    //    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='school_tests_container1'><span class='school_tests_container_left_red'>" + (i + 1) + "</span><span class='school_tests_container_middle1'>" + text + "</span><span class='school_tests_container_right'>" + date + "</span></div></a>";
-                    //} else if (i == 1) {
-                    //    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='school_tests_container1'><span class='school_tests_container_left_orange'>" + (i + 1) + "</span><span class='school_tests_container_middle1'>" + text + "</span><span class='school_tests_container_right'>" + date + "</span></div></a>";
-                    //} else if (i == 2) {
-                    //    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='school_tests_container1'><span class='school_tests_container_left_yellow'>" + (i + 1) + "</span><span class='school_tests_container_middle1'>" + text + "</span><span class='school_tests_container_right'>" + date + "</span></div></a>";
-                    //} else {
-                    //    html += "<a href='../Download?cid=1&id=" + temp[i].id + "'><div class='school_tests_container1'><span class='school_tests_container_left_gray'>" + (i + 1) + "</span><span class='school_tests_container_middle1'>" + text + "</span><span class='school_tests_container_right'>" + date + "</span></div></a>";
-                    //}
-
-                    //if ((i+1) % 2 != 0) {
-                    //    html += "<div class='school_tests_container1_seprate'></div>";
-                    //}
                     if ((i + 1) % 2 != 0) {
-                        html += " <div class=\"fl hgh\"><a href='../Download?cid=1&id=" + temp[i].id + "' class=\"bxst2f fl\">" + (i + 1) + "</a><a href=\"\" class=\"wenben2 fl\">" + text + "2016...</a><a href=\"\" class=\"fl rqbenxiao ys7\">" + date + "</a></div>";
+                        html += " <div class=\"fl hgh\"><a href='../Download?cid=1&id=" + temp[i].id + "' class=\"bxst2f fl\">" + (i + 1) + "</a><a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"wenben2 fl\">" + text + "2016...</a><a href=\"\" class=\"fl rqbenxiao ys7\">" + date + "</a></div>";
                     } else {
-                        html += " <div class=\"fl hgh\" style=\"margin-left:120px;\"><a href='../Download?cid=1&id=" + temp[i].id + "' class=\"bxst2f fl\">" + (i + 1) + "</a><a href=\"\" class=\"wenben2 fl\">" + text + "2016...</a><a href=\"\" class=\"fl rqbenxiao ys7\">" + date + "</a></div>";
+                        html += " <div class=\"fl hgh\" style=\"margin-left:120px;\"><a href='../Download?cid=1&id=" + temp[i].id + "' class=\"bxst2f fl\">" + (i + 1) + "</a><a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"wenben2 fl\">" + text + "2016...</a><a href=\"\" class=\"fl rqbenxiao ys7\">" + date + "</a></div>";
                     }
 
                 }
@@ -158,7 +135,7 @@ function President_Introduce() {
                 for (var i = 0; i < temp.length; i++) {
                     //校长介绍
                     //照片
-                    $("#president_head_img").html("<img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" width=\"215\" height=\"130\" />");
+                    $("#president_head_img").html("<img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" width=\"215\" height=\"130\"  style='width:210px;height:259px;' />");
                     //姓名
                     $("#president_name").html("校长:" + temp[i].name);
                     //简介
@@ -190,13 +167,13 @@ function Correlation_Elite_School() {
                     if ((i + 1) != 1) {
                         html += "        <div class=\"fl\" style='margin-left:11px;'>\
            <img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" width=\"139px\" height=\"110px\" />\
-            <a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' class=\"xxmingzi\"> " + text + "</a>\
+            <a title='" + temp[i].name.replace(" ", "-") + "' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' class=\"xxmingzi\"> " + text + "</a>\
         </div>";
                     } else
                     {
                         html += "        <div class=\"fl\" >\
            <img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" width=\"139px\" height=\"110px\" />\
-            <a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' class=\"xxmingzi\"> " + text + "</a>\
+            <a  title='" + temp[i].name.replace(" ", "-") + "' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' class=\"xxmingzi\"> " + text + "</a>\
         </div>";
                     }
 
