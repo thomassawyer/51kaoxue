@@ -397,10 +397,10 @@ function GetSchool() {
                 <div  class=\"ztk_div_div \">\
                     <div class=\"xian1 fl\"></div>\
                     <div class=\"quanquan fl\">\
-                        <div class=\"qq1 fl qdankong\"><a  class=\"fff\">备课中心</a></div>\
-                        <div class=\"qq1 fl qqq1\"><a  class=\"fff\">每日专题</a></div>\
-                        <div class=\"qq1 fl qqq1\"><a  class=\"fff\">历年考题</a></div>\
-                        <div class=\"qq1 fl qqq1\"><a  class=\"fff\">名校测题</a></div>\
+                        <div class=\"qq1 fl qdankong\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb001.png\") repeat scroll 0 0;'><a  class=\"fff\">备课中心</a></div>\
+                        <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb002.png\") repeat scroll 0 0;'><a  class=\"fff\">每日专题</a></div>\
+                        <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb003.png\") repeat scroll 0 0;'><a  class=\"fff\">历年考题</a></div>\
+                        <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb004.png\") repeat scroll 0 0;'><a  class=\"fff\">名校测题</a></div>\
                     </div>\
                     <div class=\"xian2 fl\"><a href='../school' class=\"genduo\"><img src=\"../../img/lantb.png\" alt=\"\"></a></div>\
                 </div>";
@@ -416,13 +416,13 @@ function GetSchool() {
                         if (i <= 15) {
                             html += "</ul>\
                                     </div>\
-                                    <div  class=\"mxhz6 fl mxhz_left\">\
-                                        <ul class=\"mxhz6ul\">";
+                                    <div  class=\"mxhz6 fl mxhz_left\"  >\
+                                        <ul class=\"mxhz6ul\" style='padding-left:55px;'>";
                         } else {
                             html += "</ul>\
                                     </div>\
                                     <div  class=\"mxhz6 fl mxhz_left mxhz_dk\">\
-                                        <ul class=\"mxhz6ul\">";
+                                        <ul class=\"mxhz6ul\" >";
                         }
                     }
                 }
@@ -432,14 +432,14 @@ function GetSchool() {
                         <div class=\"mxzy_border\">\
                             <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" />\
                         </div>\
-                        <a  href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
+                        <a   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";
                     } else {
                         html2 += "<div  class=\"mxzy_8 fl mxzykz6\">\
                         <div class=\"mxzy_border\">\
                             <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" />\
                         </div>\
-                        <a  href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
+                        <a   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";
                     }
 
