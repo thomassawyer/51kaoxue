@@ -28,7 +28,7 @@ function beike_jingpin() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a  href='../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ","-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
+                                <a class=\"fl btnjps btnjspt\">" + number + "</a><div style=\"width:456px;\" class=\"fl jpstys jpys\"><a  href='../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
                                     <a class=\"ayblue\" >[" + time + "]</a>\
                                 </div>\
                             </div>\
@@ -56,7 +56,7 @@ function test_jingpin() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
+                                <a class=\"fl btnjps btnjspt\">" + number + "</a><div style=\"width:456px;\" class=\"fl jpstys jpys\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
                                     <a class=\"ayblue\" >["+ time + "]</a>\
                                 </div>\
                             </div>\
@@ -269,7 +269,7 @@ function test_mingxiao_senior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                                 <div class=\"jpstli zxzhutiys\">\
-                                    <a class=\"fl btnjps btnjspt kaz\">" + number + "</a><div class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                    <a class=\"fl btnjps btnjspt kaz\">" + number + "</a><div style=\"width:464px;\" class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
                                         <a class=\"ayblue rqys\">[" + time + "]</a>\
                                     </div>\
                                 </div>\
@@ -298,7 +298,7 @@ function test_mingxiao_junior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                                 <div class=\"jpstli zxzhutiys\">\
-                                    <a class=\"fl btnjps btnjspt kaz1\">" + number + "</a><div class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                    <a class=\"fl btnjps btnjspt kaz1\">" + number + "</a><div style=\"width:464px;\" class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
                                         <a class=\"ayblue rqys1\">[" + time + "]</a>\
                                     </div>\
                                 </div>\
@@ -327,7 +327,7 @@ function kejian_senior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                                 <div class=\"jpstli zxzhutiys\">\
-                                    <a class=\"fl btnjps btnjspt kaz\">" + number + "</a><div class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\" href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                    <a class=\"fl btnjps btnjspt kaz\">" + number + "</a><div style=\"width:461px;\" class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\" href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
                                         <a class=\"ayblue rqys\">[" + time + "]</a>\
                                     </div>\
                                 </div>\
@@ -356,7 +356,7 @@ function kejian_junior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                                 <div class=\"jpstli zxzhutiys\">\
-                                    <a class=\"fl btnjps btnjspt kaz1\">" + number + "</a><div class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\" href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                    <a class=\"fl btnjps btnjspt kaz1\">" + number + "</a><div style=\"width:461px;\" class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\" href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
                                         <a class=\"ayblue rqys1\">[" + time + "]</a>\
                                     </div>\
                                 </div>\
@@ -383,7 +383,7 @@ function tongbu_senior(level) {
                 var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a  href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a  href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
             }
             $("#tongbu_senior").html(html);
         }
@@ -405,7 +405,7 @@ function tongbu_junior(level) {
                 var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
             }
             $("#tongbu_junior").html(html);
         }
@@ -427,7 +427,7 @@ function jiaoan_senior(level) {
                 var text = temp[i].name.length > 12 ? temp[i].name.substr(0,12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
             }
             $("#jiaoan_senior").html(html);
         }
@@ -449,7 +449,7 @@ function jiaoan_junior(level) {
                 var text = temp[i].name.length > 12? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
             }
             $("#jiaoan_junior").html(html);
         }
@@ -471,7 +471,7 @@ function xuean_senior(level) {
                 var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
             }
             $("#xuean_senior").html(html);
         }
@@ -494,7 +494,7 @@ function xuean_junior(level) {
                 var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
             }
             $("#xuean_junior").html(html);
         }
