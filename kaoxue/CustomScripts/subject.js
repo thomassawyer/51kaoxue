@@ -511,7 +511,7 @@ function banner() {
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<li><img src='" + "http://www.5ihzy.com:82/" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "'></li>";
+                html += "<li><img src='" + "http://www.5ihzy.com:82/" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "'  style='width:870px; height:442px;'></li>";
                 html1 += "<a href='#' title='" + (i + 1) + "'><span></span></a>";
             }
             $("#banner_images").html(html);
@@ -583,7 +583,7 @@ function GetArea() {
                     <ul>";
 
                 for (var i = 1; i <= temp.length; i++) {
-                    html += "<li><a href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"hover1\"><img src=\"../../img/hover-10.png\" alt=\"\" class=\"hover10\" />" + temp[i - 1].areaname + "</a></li>";
+                    html += "<li><a href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"hover1\" style='font-size:14px;'><img src=\"../../img/hover-10.png\" alt=\"\" class=\"hover10\" />" + temp[i - 1].areaname + "</a></li>";
                     if (i % 8 == 0 && i != 0) {
                         html += "</ul>\
                                 </div>\
