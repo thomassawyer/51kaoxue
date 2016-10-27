@@ -12,7 +12,6 @@
     <link href="~/engine1/style.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-
 </head>
 <body>
     @Html.Partial("~/Common/top1.ascx")
@@ -37,7 +36,7 @@
             </div>
         </div>
 
-        <div class="fl lunbo">
+        <div class="fl lunbo" style="margin-top:-5px;">
             <div id="wowslider-container1">
                 <div class="ws_images">
                     <ul id="banner_images">
@@ -175,9 +174,7 @@
                     <div class="ztsousuo_div2">
                         <form action="#" method="get">
                             @*<input type="text" class="zt_sousuo" placeholder="&nbsp&nbsp输入年份" />*@
-                            <select id="years" style="width:120px; margin-top:8px; margin-left:10px;">
-                                
-                            </select>
+                            <select id="years" style="width:120px; margin-top:8px; margin-left:10px;"></select>
                             <a style="background-color: red; color: white; padding-left: 4px; cursor: pointer;" onclick="search_years()"> 查找&nbsp;</a>
                         </form>
                     </div>
@@ -216,7 +213,12 @@
 
         <div class="zhentiku">
             <div class="ztk_div ztkyanse sttjyanse">
-                <div class="mxttbggd"></div>
+                <div class="mxttbggd">
+                    <div class="daimg9">
+                        <span style="color: #08c79e; font-size: 35px; padding-left: 200px; position: absolute; padding-top: 50px;">51考学网推荐名校套题</span>
+                        <b style="color: #08c79e; font-size: 35px; padding-left: 600px; position: absolute; padding-top: 50px; ">精选权威套题 助力考生考学</b>
+                    </div>
+                </div>
                 <b><h3>名校套题 SCHOOL PROBLEM SET</h3></b>
                 <div class="ztk_div_div ">
                     <div class="xian1 fl"></div>
@@ -316,10 +318,10 @@
                     <div class="ztk_div_div ">
                         <div class="xian1 fl"></div>
                         <div class="quanquan fl">
-                            <div class="qq1 fl qdankong"><a class="fff">备课中心</a></div>
-                            <div class="qq1 fl qqq1"><a class="fff">每日专题</a></div>
-                            <div class="qq1 fl qqq1"><a class="fff">历年考题</a></div>
-                            <div class="qq1 fl qqq1"><a class="fff">名校测题</a></div>
+                            <div class="qq1 fl qdankong" style="background: url(img/tbkb001.png) repeat scroll 0 0; "><a class="fff">备课中心</a></div>
+                            <div class="qq1 fl qqq1" style="background: url(img/tbkb002.png) repeat scroll 0 0; "><a class="fff">每日专题</a></div>
+                            <div class="qq1 fl qqq1" style="background: url(img/tbkb003.png) repeat scroll 0 0; "><a class="fff">历年考题</a></div>
+                            <div class="qq1 fl qqq1" style="background: url(img/tbkb004.png) repeat scroll 0 0; "><a class="fff">名校测题</a></div>
                         </div>
                         <div class="xian2 fl"><a href="../School" class="genduo"><img src="../../img/lantb.png" alt=""></a></div>
                     </div>
@@ -460,10 +462,10 @@
                     <div class="ztk_div_div dankong_sttj ">
                         <div class="xian1 fl"></div>
                         <div class="quanquan fl">
-                            <div class="qq1 fl qdankong"><a class="sttjys"><p style="position: absolute;">备课中心</p></a></div>
-                            <div class="qq1 fl qqq1"><a class="sttjys">每日专题</a></div>
-                            <div class="qq1 fl qqq1"><a class="sttjys">历年考题</a></div>
-                            <div class="qq1 fl qqq1"><a class="sttjys">名校测题</a></div>
+                            <div class="qq1 fl qdankong" style="background: url(img/weilan111.png) repeat scroll 0 0; "><a class="sttjys"><p style="position: absolute;">备课中心</p></a></div>
+                            <div class="qq1 fl qqq1" style="background: url(img/weilan222.png) repeat scroll 0 0; "><a class="sttjys">每日专题</a></div>
+                            <div class="qq1 fl qqq1" style="background: url(img/weilan333.png) repeat scroll 0 0; "><a class="sttjys">历年考题</a></div>
+                            <div class="qq1 fl qqq1" style="background: url(img/weilan444.png) repeat scroll 0 0; "><a class="sttjys">名校测题</a></div>
                         </div>
                         <div class="xian2 fl"><a href="../Test_Center?type=1" class="genduo"><img src="../../img/gengduo.png" alt=""></a></div>
                     </div>
@@ -481,10 +483,10 @@
                     <div class="ztk_div_div ">
                         <div class="xian1 fl yansemstj"></div>
                         <div class="quanquan fl">
-                            <div class="qq1 fl qdankong qq2"><a class="yansemstjcolor">备课中心</a></div>
-                            <div class="qq1 fl qqq1 qq2"><a class="yansemstjcolor">每日专题</a></div>
-                            <div class="qq1 fl qqq1 qq2"><a class="yansemstjcolor">历年考题</a></div>
-                            <div class="qq1 fl qqq1 qq2"><a class="yansemstjcolor">名校测题</a></div>
+                            <div class="qq1 fl qdankong qq2" style="background: url(img/weilan111.png) repeat scroll 0 0; "><a class="yansemstjcolor">备课中心</a></div>
+                            <div class="qq1 fl qqq1 qq2" style="background: url(img/weilan222.png) repeat scroll 0 0; "><a class="yansemstjcolor">每日专题</a></div>
+                            <div class="qq1 fl qqq1 qq2" style="background: url(img/weilan333.png) repeat scroll 0 0; "><a class="yansemstjcolor">历年考题</a></div>
+                            <div class="qq1 fl qqq1 qq2" style="background: url(img/weilan444.png) repeat scroll 0 0; "><a class="yansemstjcolor">名校测题</a></div>
                         </div>
                         <div class="xian2 fl yansemstj"><a href="../President" class="genduo"><img src="../../img/gdlan.png" alt=""></a></div>
                     </div>
