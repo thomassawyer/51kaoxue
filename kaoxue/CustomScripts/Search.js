@@ -88,7 +88,7 @@ function GetList() {
                                 <div class=\"wdk fl\"></div>\
                                 <div class=\"wenbenkui fl\">\
                                     <a><b class=\"b320\">"+ text + "</b></a><br>\
-                                    <span class=\"lxcsp320\">时间：" + temp[i].pubdate + "</span>\
+                                    <span class=\"lxcsp320\">时间：" + temp[i].uploadtime + "</span>\
                                 </div>\
                                 <div class=\"xiazai fl\" style='position:static;width:45px;height:45px;margin-left:160px;'>\
                                     <a class=\"xztb2 fl\"  href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' target='_blank')><img src=\"img/xiazaitb.png\"></a>\

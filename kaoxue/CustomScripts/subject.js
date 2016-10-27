@@ -81,11 +81,11 @@ function zhuanti_new_recommend_senior() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 if (time == "NaN-NaN")
                     time = "";
-                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var text = temp[i].name.length > 8 ? temp[i].name.substr(0, 8) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += " <li>\
-                            <div class=\"fl gkdt_270\">\
+                            <div class=\"fl gkdt_2701\">\
                                 <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
@@ -114,11 +114,11 @@ function zhuanti_new_recommend_junior() {
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     if (time == "NaN-NaN")
                         time = "";
-                    var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                    var text = temp[i].name.length > 8 ? temp[i].name.substr(0, 8) : temp[i].name;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += " <li>\
-                            <div class=\"fl gkdt_270\">\
+                            <div class=\"fl gkdt_2701\">\
                                 <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
@@ -145,11 +145,11 @@ function test_new_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].testname.length > 13 ? temp[i].testname.substr(0, 13) : temp[i].testname;
+                var text = temp[i].testname.length > 8 ? temp[i].testname.substr(0, 8) : temp[i].testname;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_270\">\
+                            <div class=\"fl gkdt_2701\">\
                                 <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
@@ -175,11 +175,11 @@ function test_new_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].testname.length > 13 ? temp[i].testname.substr(0, 13) : temp[i].testname;
+                var text = temp[i].testname.length > 8 ? temp[i].testname.substr(0, 8) : temp[i].testname;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_270\">\
+                            <div class=\"fl gkdt_2701\">\
                                 <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
@@ -205,11 +205,11 @@ function beikao_new(wheel) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var text = temp[i].name.length > 8 ? temp[i].name.substr(0, 8) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_270\">\
+                            <div class=\"fl gkdt_2701\">\
                                 <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
@@ -235,11 +235,11 @@ function moni_junior() {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var text = temp[i].name.length > 8 ? temp[i].name.substr(0, 8) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_270\">\
+                            <div class=\"fl gkdt_2701\">\
                                 <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
@@ -264,7 +264,7 @@ function test_mingxiao_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].testname.length > 30 ? temp[i].testname.substr(0, 30) : temp[i].testname;
+                var text = temp[i].testname.length > 27 ? temp[i].testname.substr(0, 27) : temp[i].testname;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
@@ -380,10 +380,10 @@ function tongbu_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 18 ? temp[i].name.substr(0, 18) : temp[i].name;
+                var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a  href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a >[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a  href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
             }
             $("#tongbu_senior").html(html);
         }
@@ -402,10 +402,10 @@ function tongbu_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a>[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
             }
             $("#tongbu_junior").html(html);
         }
@@ -424,10 +424,10 @@ function jiaoan_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var text = temp[i].name.length > 12 ? temp[i].name.substr(0,12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a >[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
             }
             $("#jiaoan_senior").html(html);
         }
@@ -446,10 +446,10 @@ function jiaoan_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var text = temp[i].name.length > 12? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a>[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
             }
             $("#jiaoan_junior").html(html);
         }
@@ -468,10 +468,10 @@ function xuean_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a >[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
             }
             $("#xuean_senior").html(html);
         }
@@ -491,10 +491,10 @@ function xuean_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a>[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
             }
             $("#xuean_junior").html(html);
         }

@@ -519,9 +519,9 @@ function lxfEndtime() {
             $(this).attr("style", "font-size:24px");
         } else {
             if ($(this).attr("lxfday") == "no") {
-                $(this).html("<span>" + CHour + "</span>时<span>" + CMinute + "</span>分<span>" + CSecond + "</span>秒");          //输出没有天数的数据
+                $(this).html( CHour + "时" + CMinute + "分" + CSecond + "秒");          //输出没有天数的数据
             } else {
-                $(this).html("距离高考还有<span style='clear:both;color:red;font-size:24px;font-weight:bold;'>" + days + "</span>天<span>");          //输出有天数的数据
+                $(this).html("倒计时：" + days + "天");          //输出有天数的数据
             }
         }
     });
