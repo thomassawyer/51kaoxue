@@ -35,7 +35,7 @@ function News(type, controlid) {
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     var number_str = (i) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><div class=\"fl ul1div\"><a class=\"abt\">" + number + "</a>&nbsp;<a class=\"ul1a\" href='../News_Detail?id=" + temp[i - 1].id + "' title='" + temp[i-1].title.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
+                    html += "<li><div style='width: 240px;' class=\"fl ul1div\"><a class=\"abt\">" + number + "</a>&nbsp;<a class=\"ul1a\" href='../News_Detail?id=" + temp[i - 1].id + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
                     if (i % 6 == 0 && i != 0 && i < temp.length) {
                         html += "</ul>\
                 <ul class=\"ul1 fl\">";
