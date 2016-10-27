@@ -220,6 +220,7 @@
     <Content Include="CustomScripts\subject.js" />
     <Content Include="CustomScripts\Test_Center.js" />
     <Content Include="CustomScripts\The_School_Test.js" />
+    <Content Include="CustomScripts\top.js" />
     <Content Include="data1\images\1.jpg" />
     <Content Include="data1\images\2.jpg" />
     <Content Include="data1\images\3.jpg" />
