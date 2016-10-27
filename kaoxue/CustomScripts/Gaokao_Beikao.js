@@ -208,7 +208,7 @@ function GetTest_Hot_Download() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -225,7 +225,7 @@ function GetTest_Recommend() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
                
             }
             $("#recommend").html(html);
@@ -303,9 +303,8 @@ function GetList() {
                                     <a><b class=\"b320\">"+ text + "</b></a><br>\
                                     <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
                                 </div>\
-                                <div class=\"xiazai fl\">\
-                                    <a class=\"xztb1 fl\"  onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' ><img src=\"img/yulan.png\"><img src=\"img/hover-31.png\" class=\"dpnone\"></a>\
-                                    <a class=\"xztb2 fl\"  onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\")><img src=\"img/xiazaitb.png\"><img src=\"img/yll.png\" class=\"yll\"></a>\
+                                <div class=\"xiazai fl\" style='position:static;width:45px;height:45px;margin-left:160px;'>\
+                                    <a class=\"xztb2 fl\"  href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank'><img src=\"img/xiazaitb.png\"></a>\
                                 </div>\
                             </div>";
                     //html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style='width:500px'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span>类型：<span id='text_type'>" + Produce_TypeName(temp[i].category) + "</span></span></span></div></div><div class='data_list_td_container_right'><a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";

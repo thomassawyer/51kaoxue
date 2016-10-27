@@ -26,7 +26,7 @@ function GetTest_Hot_Download() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a class=\"rmxzaa\">"+text+"</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a class=\"rmxzaa\"  href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -43,7 +43,7 @@ function GetTest_Recommend() {
             var html = "";
             for (var i = 0; i < 11; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -77,9 +77,8 @@ function GetList() {
                                     <a ><b class=\"b320\">"+text+"</b></a><br>\
                                     <span class=\"lxcsp320\">" + temp[i].uploadtime + "</span>\
                                 </div>\
-                                <div class=\"xiazai fl\">\
-                                    <a  class=\"xztb1 fl\"><img src=\"img/yulan.png\" ><img src=\"img/hover-31.png\"  class=\"dpnone\"></a>\
-                                    <a  class=\"xztb2 fl\"><img src=\"img/xiazaitb.png\" ><img src=\"img/yll.png\"  class=\"yll\"></a>\
+                                <div class=\"xiazai fl\" style='position:static;width:45px;height:45px;margin-left:160px;'>\
+                                    <a  class=\"xztb2 fl\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank'><img src=\"img/xiazaitb.png\" ></a>\
                                 </div>\
                             </div>";
                 }

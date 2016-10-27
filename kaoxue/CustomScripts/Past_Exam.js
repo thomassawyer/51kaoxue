@@ -87,7 +87,7 @@ function GetProvince() {
 
                 for (var i = 0; i < temp.length; i++) {
                     html += "<div id=subject" + (i + 1) + " class=\"fl\" onclick=a_selected(this,\"dkhh5_selected\"),anchor_go('exam" + temp[i].id + "')>\
-                                <a  class=\" xdh51 fl dkhh5\" style=\"margin-left:20px; margin-right:20px;\">" + temp[i].name + "</a>\
+                                <a class=\" xdh51 fl dkhh5\" style=\"margin-left:20px; margin-right:20px;\">" + temp[i].name + "</a>\
                                 </div>";
                 }
             }
@@ -122,7 +122,6 @@ function anchor_go(obj) {
 //
 var daohangid;
 function GetList() {
-
     $("#list").html("");
     $.post("../Past_Exam/GetProvince", { year: year }, function (data) {
         if (data) {
@@ -152,7 +151,7 @@ function GetList() {
                             if (json != "]") {
                                 var flag = eval(json);
                                 for (var j = 0; j < flag.length; j++) {
-                                    html += "<a  class=\"wrd1 fl\"><span class=\"wdsp\"><b class=\"wdb\">" + flag[j].subject + "</b></span><b class=\"wdjx\" style='left:10px;'>";
+                                    html += "<a class=\"wrd1 fl\"><span class=\"wdsp\"><b class=\"wdb\">" + flag[j].subject + "</b></span><b class=\"wdjx\" style='left:10px;'>";
                                     $.post("../Past_Exam/GetList1", { daohangid: daohangid, subjectid: flag[j].subjectid }, function (list) {
                                         if (list) {
                                             if (list != "]") {
