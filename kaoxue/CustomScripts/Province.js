@@ -41,7 +41,7 @@ function test_mingxiao(level) {
                         html += "</ul>\
                         </div>\
                     </div>\
-                    <div class=\"gkd_3 fl gkdt_lianjiedk\">\
+                    <div class=\"gkd_3 fl gkdt_lianjiedk\" style='margin-left:61px;'>\
                         <div id=\"\" class=\"gdk3_2 ie8\">\
                             <ul>";
                     }
@@ -234,7 +234,7 @@ function News(type, controlid) {
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     var number_str = (i) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><div class=\"fl ul1div\"><a class=\"abt abtdk\">" + number + "</a>&nbsp;<a  title='" + temp[i-1].title.replace(" ", "-") + "' href='../News_Detail?id=" + temp[i - 1].id + "' class=\"ul1a\">" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
+                    html += "<li><div class=\"fl ul1div\" style='width:240px;'><a class=\"abt abtdk\">" + number + "</a>&nbsp;<a  title='" + temp[i-1].title.replace(" ", "-") + "' href='../News_Detail?id=" + temp[i - 1].id + "' class=\"ul1a\">" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
                     if (i % 6 == 0 && i != 0 && i < temp.length) {
                         html += "</ul>\
                                 <ul class=\"ul1 fl\">";
@@ -256,7 +256,7 @@ function Banner() {
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<li><img src='" + "http://www.5ihzy.com:82/" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:900px; height:442px;'></li>";
+                html += "<li><img src='" + "http://www.5ihzy.com:82/" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:900px; height:444px;'></li>";
                 html1 += "<a href='#' title='" + (i + 1) + "'><span></span></a>";
             }
             $("#banner_images").html(html);
