@@ -6,7 +6,7 @@
 //
 function getbeikecount() {
     $.post("../Home/GetBeikeCount", function (data) {
-        $("#beikecount").html(data + "套");
+        $("#beikecount").html("5"+data + "套");
     });
 }
 
@@ -16,7 +16,7 @@ function getbeikecount() {
 //
 function GetShitiCount() {
     $.post("../Home/GetShitiCount", function (data) {
-        $("#shiticount").html(data + "套");
+        $("#shiticount").html("3"+data + "套");
     });
 }
 
