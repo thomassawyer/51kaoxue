@@ -539,7 +539,7 @@ function GetYearForHeightSchool() {
                     if (i == 0) {
                         html += "<li class=\"lngkli1  fl\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a class=\"lngka\"><b class=\"linian\">历年高考试卷</b></a></li>";
                     } else {
-                        html += "<li class=\"lngkli lhove1 fl\"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\" href=\"../Past_Exam?year=" + temp[i-1].id + "&year_text=" + temp[i-1].name + "\">" + temp[i-1].name + "年</a></li>";
+                        html += "<li class=\"lngkli lhove1 fl\" style='background: #F2F2F2 none repeat scroll 0 0;'><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\" href=\"../Past_Exam?year=" + temp[i - 1].id + "&year_text=" + temp[i - 1].name + "\">" + temp[i - 1].name + "年</a></li>";
                     }
                 }
             }
@@ -560,7 +560,7 @@ function GetYear() {
                         html += "<li class=\"lngkli1 fl lngklv\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a class=\"lngka\"><b class=\"linian\">历年中考试卷</b></a></li>";
                    } else {
                         //html += "<li class=\"lngkli lhove1 fl\"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
-                        html += " <li class=\"lngkli lhove2 fl\"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
+                        html += " <li class=\"lngkli lhove2 fl\" style='background: #F2F2F2 none repeat scroll 0 0;'><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
                    }
                }
            }
