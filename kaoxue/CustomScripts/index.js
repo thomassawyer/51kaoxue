@@ -428,15 +428,15 @@ function GetSchool() {
                 for (var i = 0; i < 8; i++) {
                     if (i == 0) {
                         html2 += "<div  class=\"mxzy_8 fl\">\
-                        <div class=\"mxzy_border\">\
-                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" />\
+                        <div>\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" style='    width: 140px;height: 86px;'  />\
                         </div>\
                         <a   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";
                     } else {
                         html2 += "<div  class=\"mxzy_8 fl mxzykz6\">\
-                        <div class=\"mxzy_border\">\
-                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" />\
+                        <div>\
+                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" style='    width: 140px;height: 86px;' />\
                         </div>\
                         <a   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";
