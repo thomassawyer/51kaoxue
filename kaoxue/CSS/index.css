@@ -46,7 +46,7 @@ a{text-decoration:none;}
 
 .daohanglan_ul>ul>li:hover img{display: inline;}
 .zhuti{width:1189px;height:489px;margin:0 auto;margin-top:30px;}
-.cebianlan{width:220px;height:100%; border:1px solid #e5e5e5; }
+.cebianlan{width:220px;height:100%;}
 .lanse{width:100%;height:33px;background:#2ea7f8;}
 .lanse>h3{line-height:33px;color:#fff;padding-left:70px;font-size: 18px;}
 .cebianlan_xia{width:100%;height:220px; z-index:99; position:relative; background-color:white; }
@@ -61,7 +61,7 @@ a{text-decoration:none;}
 .hong_xia{width:100%;height:85px;}
 .cebianlan_ul1{width:25%;height:100%;}
 .hang{background:#ffb726;}
-.lunbo{margin-left:17px; width:712px; height:489px; }
+.lunbo{margin-left:17px; width:714px; height:489px; }
 .mokuai8{width:228px;height:100%;margin-left:7px;}
 .mokuai8_div{width:100%;height:25%;}
 .mk5{width:50%;padding-top:7px;padding-top:0px;padding-bottom:0px;}
