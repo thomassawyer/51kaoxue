@@ -113,7 +113,7 @@ function GetDataCount() {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "<a  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
+    var html = "<a  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\" style='left:249px;'>上一页</a>";
     var signs_length;
     if (pageindex >= pagecount - 3) {
         signs_length = (pagecount - pageindex) + 1;
@@ -121,11 +121,11 @@ function Produce_A_Signs() {
         signs_length = 5;
     }
     if (pageindex >= 2) {
-        html += "<span class=\"anniusp1\">...</span>";
+        html += "<span class=\"anniusp1\"  style='left:349px;'>...</span>";
     }
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
-        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\" style='left:"+(369+(50*i))+"px;'><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
 
         //if (i == 0) {
         //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
@@ -134,12 +134,12 @@ function Produce_A_Signs() {
         //}
     }
     if (pageindex <= pagecount - 5) {
-        html += "<span class=\"anniusp\">...</span>";
+        html += "<span class=\"anniusp\" style='left:619px;'>...</span>";
     }
-    html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
-        <span class=\"anniusp2\">跳转到</span>\
-        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
-        <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
+    html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\" style='left:639px;'>下一页</a>\
+        <span class=\"anniusp2\" style='left:739px;'>跳转到</span>\
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\"  style='left:789px;'>\
+        <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\"  style='left:859px;'>G O</a>";
     $("#pages").html(html);
 }
 

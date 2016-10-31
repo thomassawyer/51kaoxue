@@ -17,7 +17,7 @@ a{text-decoration:none;}
 .fl{float:left;}
 #ztc{padding-top:3px;padding-left:14px;}
 #shousuo{border:1px solid #62cf00;height:38px;margin-top:9px;margin-left:60px;width:450px;border-top-left-radius:5px;border-bottom-left-radius:5px;}
-#tijiao{display:block;height:38px;background:#64d201;border:1px solid #96d1f8;width:120px;border-bottom-right-radius:5px;border-top-right-radius:5px;position:absolute;top:9px;left: 510px}
+#tijiao{display:block;height:38px;background:#64d201;border:1px solid #64d201;width:120px;border-bottom-right-radius:5px;border-top-right-radius:5px;position:absolute;top:9px;left: 510px}
 #ztc_bottom{position: relative;}
 #soussuo{position:absolute;top:22px;left: 560px;}
 #boshimao{width:22px;float: left;}
@@ -46,7 +46,7 @@ a{text-decoration:none;}
 
 .daohanglan_ul>ul>li:hover img{display: inline;}
 .zhuti{width:1189px;height:489px;margin:0 auto;margin-top:30px;}
-.cebianlan{width:220px;height:100%;}
+.cebianlan{width:220px;height:100%; border:1px solid #e5e5e5; }
 .lanse{width:100%;height:33px;background:#2ea7f8;}
 .lanse>h3{line-height:33px;color:#fff;padding-left:70px;font-size: 18px;}
 .cebianlan_xia{width:100%;height:220px; z-index:99; position:relative; background-color:white; }
@@ -61,7 +61,7 @@ a{text-decoration:none;}
 .hong_xia{width:100%;height:85px;}
 .cebianlan_ul1{width:25%;height:100%;}
 .hang{background:#ffb726;}
-.lunbo{margin-left:17px; width:716px; height:489px; }
+.lunbo{margin-left:17px; width:712px; height:489px; }
 .mokuai8{width:228px;height:100%;margin-left:7px;}
 .mokuai8_div{width:100%;height:25%;}
 .mk5{width:50%;padding-top:7px;padding-top:0px;padding-bottom:0px;}
@@ -213,7 +213,7 @@ a{text-decoration:none;}
 .lszp>p{padding-left:10px;font-size:12px;height:26px;}
 .lszp>button{width:64px;margin-left:10px;margin-top:10px;}
 .lstp_mg{margin-left:36px;}
-.youqinlianjie{width:100%;height:92px;background:#373737;}
+.youqinlianjie{width:100%;height:92px;background:#373737; padding-top:50px;}
 .yqlj1189{width:1189px;height:100%;margin:0 auto;}
 .yqljimg{width:100%;height:30px;padding-top:20px;}
 .yqljimg>ul>li{width:60px;height:29px;}
