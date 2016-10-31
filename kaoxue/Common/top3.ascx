@@ -16,7 +16,7 @@
         <div class="f2_head">
             <ul>
                 <li class="li1 lispan" style="padding-left:8px;">试题资源：<span id="shiticount"></span></li>
-                <li class="li1 lispan">总数：<span id="beikecount"></span></li>
+                <li class="li1 lispan" style="padding-left:30px;" >总数：<span id="beikecount"></span></li>
                 <li class="li3">免费咨询热线：400-819-8115</li>
             </ul>
         </div>
