@@ -10,7 +10,7 @@
         <div class="fl_head">
             <ul>
                 <li>您好,欢迎来到51考学网</li>
-                <li class="li1"  id="logininfo">请<a>[登录]</a></li>
+                <li class="li1"  id="logininfo">请<a href="../Login">[登录]</a></li>
             </ul>
         </div>
         <div class="f2_head">
