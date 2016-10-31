@@ -46,7 +46,7 @@ a{text-decoration:none;}
 
 .daohanglan_ul>ul>li:hover img{display: inline;}
 .zhuti{width:1189px;height:489px;margin:0 auto;margin-top:30px;}
-.cebianlan{width:220px;height:100%; border:1px solid #e5e5e5; }
+.cebianlan{width:220px;height:100%;}
 .lanse{width:100%;height:33px;background:#2ea7f8;}
 .lanse>h3{line-height:33px;color:#fff;padding-left:70px;font-size: 18px;}
 .cebianlan_xia{width:100%;height:220px; z-index:99; position:relative; background-color:white; }
