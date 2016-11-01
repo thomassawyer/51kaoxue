@@ -383,7 +383,7 @@ function tongbu_senior(level) {
                 var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a  href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\" style='width:258px'><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a  href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
             }
             $("#tongbu_senior").html(html);
         }
@@ -405,7 +405,7 @@ function tongbu_junior(level) {
                 var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                html += "<li><div class=\"zxtlianjiediv fl\"  style='width:258px'><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
             }
             $("#tongbu_junior").html(html);
         }
