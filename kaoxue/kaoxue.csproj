@@ -326,6 +326,7 @@
     <Content Include="img\drw.png" />
     <Content Include="img\dshuben.png" />
     <Content Include="img\duanluo.png" />
+    <Content Include="img\find_logo.png" />
     <Content Include="img\fj.png" />
     <Content Include="img\fonz1.jpg" />
     <Content Include="img\fonz2.jpg" />
@@ -360,6 +361,7 @@
     <Content Include="img\hover-10.png" />
     <Content Include="img\hover-31.png" />
     <Content Include="img\hover-57.png" />
+    <Content Include="img\hover10_1.png" />
     <Content Include="img\hs-107.png" />
     <Content Include="img\hsanjiao.png" />
     <Content Include="img\hsgzcz.png" />

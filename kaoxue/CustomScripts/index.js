@@ -284,7 +284,7 @@ function Banner() {
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<li><a href='"+temp[i].link+"'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:714px; height:489px;'></a></li>";
+                html += "<li><a href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:714px; height:489px;'></a></li>";
                 html1 += "<a href='#' title='" + (i + 1) + "'><span></span></a>";
             }
             $("#banner_images").html(html);
@@ -320,7 +320,12 @@ function GetArea() {
                     <ul>";
 
                 for (var i = 1; i <= temp.length; i++) {
-                    html += "<li><a href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"hover1\"><img src=\"../../img/hover-10.png\" alt=\"\" class=\"hover10\" />" + temp[i - 1].areaname + "</a></li>";
+                    if (temp[i - 1].areaname.length == 2) {
+                        html += "<li><a href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"hover1\"><img src=\"../../img/hover-10.png\" alt=\"\" class=\"hover10\" />" + temp[i - 1].areaname + "</a></li>";
+                    } else {
+                        html += "<li><a href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"hover1\"><img src=\"../../img/hover10_1.png\" alt=\"\" class=\"hover10 hover10_1\" />" + temp[i - 1].areaname + "</a></li>";
+                    }
+                  
                     if (i % 8 == 0 && i != 0) {
                         html += "</ul>\
                                 </div>\
@@ -518,9 +523,9 @@ function lxfEndtime() {
             $(this).attr("style", "font-size:24px");
         } else {
             if ($(this).attr("lxfday") == "no") {
-                $(this).html( CHour + "时" + CMinute + "分" + CSecond + "秒");          //输出没有天数的数据
+                $(this).html(CHour + "时" + CMinute + "分" + CSecond + "秒");          //输出没有天数的数据
             } else {
-                $(this).html("倒计时：" + days + "天");          //输出有天数的数据
+                $(this).html("倒计时<b class=\"enlarge_day\">" + days + "</b>天");          //输出有天数的数据
             }
         }
     });
