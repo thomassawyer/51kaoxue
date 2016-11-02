@@ -466,13 +466,13 @@ function gettestbycategory(category, controlid,flag) {
 //获取轮播图
 //
 function Banner() {
-    $.post("../Province/GetBanner", { type: 31 }, function (data) {
+    $.post("../Province/GetBanner", { type: 9 }, function (data) {
         if (data) {
             var temp = eval(data);
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<li><img src='" + "http://www.5ihzy.com:82/" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:900px; height:444px;'></li>";
+                html += "<li><a  href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:900px; height:444px;'></a></li>";
                 html1 += "<a href='#' title='" + (i + 1) + "'><span></span></a>";
             }
             $("#banner_images").html(html);
