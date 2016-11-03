@@ -22,16 +22,16 @@ function New_Zhuanti() {
                     if (i < 6) {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps\">" + number + "</a><div class=\"fl jpstys\" style='width:390px;'><a title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
-                                <a  class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' style='color:#f5bc2b;'>[" + time + "]</a>\
+                            <a class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
+                                <b  class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' style='color:#f5bc2b;'>[" + time + "]</b>\
                             </div>\
                         </div>\
                     </li>";
                     } else {
                         html += "<li>\
-                        <div class=\"jpstli zxzhutiys pps\">\
-                            <a class=\"fl btnjps\">" + number + "</a><div class=\"fl jpstys\" style='width:390px;'><a title='" + temp[i].name.replace(" ", "-") + "' href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
-                                <a class=\"ayblue1\" href=\"\" style='color:#f5bc2b;'>[" + time + "]</a>\
+                        <div class=\"jpstli zxzhutiys\">\
+                            <a class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a title='" + temp[i].name.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
+                                <b style='color:#f5bc2b;' href=\"\">[" + time + "]</b>\
                             </div>\
                         </div>\
                     </li>";
@@ -39,7 +39,7 @@ function New_Zhuanti() {
                     if ((i + 1) % 6 == 0 && i != 0 && (i + 1) < temp.length) {
                         html += "</ul>\
                             </div>\
-                            <div id=\"\" class=\"jpst_lianjie fl mgjpst\">\
+                            <div id=\"\" class=\"jpst_lianjie fr\">\
                                 <ul>";
                     }
                 }
@@ -68,7 +68,7 @@ function Taoti() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = i + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a title='" + temp[i - 1].name.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "'> " + temp[i - 1].name + "</a></li>";
+                html += "<li><a class=\"btn size_com fl\">" + number + "</a>&nbsp;<a title='" + temp[i - 1].name.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "'> " + temp[i - 1].name + "</a></li>";
                 if (i % 6 == 0 && i != 0 && i < temp.length) {
                     html += "</ul>\
                                 </div>\
@@ -103,8 +103,8 @@ function Test() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].testname + "</a></div><div class=\"fl\" id=\"\">\
-                                <a class=\"ayblue\" href=\"\">["+ time + "]</a>\
+                            <a class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
+                                <b class=\"ayblue\" href=\"\">["+ time + "]</b>\
                             </div>\
                         </div>\
                     </li>";
@@ -130,7 +130,8 @@ function School_Test() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"fff\"> " + text + "</a></li>";
+                //html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"fff\"> " + text + "</a></li>";
+                html += "<li><a class=\"btn size_com fl\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].testname + "'> " + temp[i].testname + "</a></li>";
                 if ((i + 1) % 6 == 0 && i != 0 && (i + 1) < temp.length) {
                     html += "</ul>\
                                 </div>\
@@ -166,8 +167,8 @@ function Beike() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fl\" id=\"\">\
-                                <a class=\"ayblue\" href=\"\">["+ time + "]</a>\
+                            <a class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
+                                <b class=\"ayblue\" href=\"\">["+ time + "]</b>\
                             </div>\
                         </div>\
                     </li>";
@@ -192,7 +193,13 @@ function Taoti_JuniorMiddleSchool() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a  title='" + temp[i].name.replace(" ", "-") + "' href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                html += "<li>\
+                        <div class=\"zxtlianjiediv fl\">\
+                            <a class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                                <b href=\"\">[" + time + "]</b>\
+                            </div>\
+                        </div>\
+                    </li>";
             }
             $("#Taoti_JuniorMiddleSchool").html(html);
         }
@@ -214,7 +221,13 @@ function Test_JuniorMiddleSchool() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a  title='" + temp[i].testname.replace(" ", "-") + "' href=\"../Download?id=" + temp[i].id + "&cid=1\">" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                html += "<li>\
+                        <div class=\"zxtlianjiediv fl\">\
+                            <a class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a title='" + temp[i].testname.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].testname + "\">[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                                <b href=\"\">[" + time + "]</b>\
+                            </div>\
+                        </div>\
+                    </li>";
             }
             $("#Test_JuniorMiddleSchool").html(html);
         }
@@ -236,7 +249,13 @@ function Mid_examination() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a  title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                html += "<li>\
+                        <div class=\"zxtlianjiediv fl\">\
+                            <a class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a title='" + temp[i].testname.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].testname + "\">[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                                <b href=\"\">[" + time + "]</b>\
+                            </div>\
+                        </div>\
+                    </li>";
             }
             $("#Mid_examination").html(html);
         }
@@ -261,10 +280,10 @@ function News(type, controlid) {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += "<li>\
                             <div  class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a  title='" + temp[i].title.replace(" ", "-") + "'  class=\"gdkys\" href='../News_Detail?id=" + temp[i].id + "'>[新闻] " + text + "</a>\
+                                <a class=\"fl gkdtbtn size_com\">" + number + "</a>&nbsp;<a  title='" + temp[i].title.replace(" ", "-") + "'  class=\"gdkys flow_nowrap fl\" href='../News_Detail?id=" + temp[i].id + "'>[新闻] " + text + "</a>\
                     </div>\
-                    <div class=\" fl\">\
-                                <a  class=\"gkdttime\">["+ time + "]</a>\
+                    <div class=\" fr\">\
+                                <b  class=\"gkdttime fr\">["+ time + "]</b>\
                             </div>\
                         </li>";
                 }
@@ -406,22 +425,22 @@ function GetSchool() {
                         <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb003.png\") repeat scroll 0 0;'><a  class=\"fff\">历年考题</a></div>\
                         <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb004.png\") repeat scroll 0 0;'><a  class=\"fff\">名校测题</a></div>\
                     </div>\
-                    <div class=\"xian2 fl\"><a href='../school' class=\"genduo\"><img src=\"../../img/lantb.png\" alt=\"\"></a></div>\
+                    <div class=\"xian2 fl\"><a href='../school' class=\"genduo lantb_set\"><img src=\"../../img/lantb.png\" alt=\"\"></a></div>\
                 </div>";
 
                 html += "<div  class=\"mxhz6 fl\">\
                     <ul class=\"mxhz6_ul\">";
 
-                for (var i = 0; i < temp.length; i++) {
+                for (var i = 0; i < 15; i++) {
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><a>" + number + "</a>&nbsp;<a title='" + temp[i].name.replace(" ", "-") + "' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a></li>";
-                    if ((i + 1) % 3 == 0 && i != 0 && (i + 1) < temp.length) {
+                    html += "<li><a class=\"fl size_com mxhz6_btn\">" + number + "</a>&nbsp;<a title='" + temp[i].name.replace(" ", "-") + "' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a></li>";
+                    if ((i + 1) % 3 == 0 && i != 0 && (i + 1) < 15) {
                         if (i <= 15) {
                             html += "</ul>\
                                     </div>\
                                     <div  class=\"mxhz6 fl mxhz_left\"  >\
-                                        <ul class=\"mxhz6ul\" style='padding-left:55px;'>";
+                                        <ul class=\"mxhz6ul\">";
                         } else {
                             html += "</ul>\
                                     </div>\

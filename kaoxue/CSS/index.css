@@ -77,6 +77,9 @@ a {
 .fl {
     float: left;
 }
+.fr {
+    float:right;
+}
 
 #ztc {
     padding-top: 3px;
@@ -503,11 +506,12 @@ a {
     height: 100%;
     margin: 0 auto;
     background: #6bb336;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    /*padding-top:8px;*/
 }
 
     .ztk_div > img {
-        padding-top: 10px;
+        padding-top: 18px;
     }
 
     .ztk_div > b > h3 {
@@ -528,6 +532,10 @@ a {
     /*margin-bottom: 10px;*/
 }
 
+.ztk_set {
+    position:absolute;
+    top:2458px;
+}
 .xian1 {
     height: 50%;
     width: 29.9%;
@@ -616,9 +624,16 @@ a {
 .btn {
     background: #fff;
     color: #08c79e;
-    border: 1px solid#fff;
+    /*border: 1px solid #fff;*/
 }
-
+.size_com {
+    display:block;
+    width:18px;
+    height:18px;
+    font-size:12px;
+    text-align:center;
+    margin-top:5px;
+}
 .mxttimg {
     height: 80%;
     width: 205px;
@@ -655,8 +670,8 @@ a {
 }
 
 .jpst_lianjie {
-    width: 48%;
-    height: 215px;
+    width: 552px;
+    /*height: 215px;*/
 }
 
     .jpst_lianjie > ul > li {
@@ -667,19 +682,27 @@ a {
     }
 
 .jpstys {
-    width: 438px;
+    width: 450px;
     height: 25px;
      overflow:hidden;
 }
 .jpstys > a {
     display:block;
-        width: 438px;
+        width: 450px;
     height: 25px;
      overflow:hidden;
      text-overflow: ellipsis; /*以省略号...显示*/
 
     white-space: nowrap;  /*强制不换行*/
     color:#fff;
+}
+.flow_nowrap {
+    display:block;
+    width:240px;
+         overflow:hidden;
+     text-overflow: ellipsis; /*以省略号...显示*/
+
+    white-space: nowrap;  /*强制不换行*/
 }
 .div55 {
     margin-left: 2px;
@@ -693,6 +716,7 @@ a {
 .jpst_div2 {
     height: 100%;
     width: 49.5%;
+    margin-bottom:15px;
 }
 
 .jpstys > a {
@@ -707,6 +731,7 @@ a {
     height: 255px;
     width: 1189px;
     margin: 0 auto;
+    margin-top:25px;
     font-size:18px;
 }
 
@@ -717,16 +742,16 @@ a {
 }
 
 .mgjpst {
-    margin-left: 45px;
+    margin-left: 76px;
 }
 
-//向右移动距离 .jpst_lianjie > ul > li {
+ .jpst_lianjie > ul > li {
     margin-top: 5px;
 }
 
 .zuixintaotiyellow {
     width: 100%;
-    height: 466px;
+    height: 516px;
 }
 
 .yellow {
@@ -735,20 +760,21 @@ a {
 
 .zuixintaoti {
     width: 1189px;
-    height: 466px;
+    height: 516px;
     margin: 0 auto;
 }
 
 .zuixintaoti390 {
-    width: 390px;
+    width: 370px;
     height: 400px;
-    margin-top: 30px;
+    margin-top: 58px;
 }
 
 .zuixintaoti160 {
     width: 100%;
-    height: 160px;
+    height: 132px;
     background: #fff;
+    margin-bottom:30px;
 }
 
 .zuixintaoti160 {
@@ -759,15 +785,46 @@ a {
         padding-left: 60px;
         padding-top: 30px;
     }
-
+    .zuixintaoti160 .ksquan {
+        padding-left: 69px;
+        padding-top: 31px;
+    }
+        .zuixintaoti160 .ksxin {
+        padding-left: 62px;
+        padding-top: 34px;
+    }
+    .zuixintaoti160 .ksall {
+        padding-left: 26px;
+        padding-top: 24px;
+    }
 .zuixintaotspan {
     position: absolute;
     top: 30px;
     left: 140px;
     color: #808ffb;
-    font-size: 18px;
+    font-size: 24px;
 }
-
+.ab_ps_lf162 {
+    position: absolute;
+    top: 30px;
+    left: 162px;
+}
+.ab_ps_lf160 {
+    position: absolute;
+    top: 35px;
+    left: 160px;
+}
+.ab_ps_lf135 {
+    position: absolute;
+    top: 32px;
+    left: 115px;
+}
+.line_h25 {
+    line-height:25px;
+}
+.w_norap {
+    white-space:nowrap;
+}
 .btnjps {
     margin-right: 10px;
 }
@@ -800,11 +857,26 @@ a {
 
 .zxtlianjiediv {
     height: 100%;
-    width: 270px;
-}
+    width:100%;
 
+}
+.zxzt_index {
+      width:270px;
+    height: 25px;
+    overflow: hidden;
+}
+.zxzt_index > a {
+    display:block;
+        width:270px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:#fff;
+
+}
 .zuixinzt {
-    margin-left: 100px;
+    /*margin-left: 100px;*/
 }
 
 .zuixinzt1 {
@@ -818,13 +890,14 @@ a {
 .zxzt_btn {
     background: #fff;
     color: #f5bc2b;
+    margin-right:10px;
 }
 
 .zxtlianjiediv > a {
     color: #fff;
 }
 
-.zuixinzt > a {
+.zuixinzt > a, .zuixinzt > b{
     color: #fff;
 }
 
@@ -833,11 +906,11 @@ a {
 }
 
 .zxstts {
-    margin-left: 9.5px;
+    margin-left: 36px;
 }
 
 .mgjpst > ul > li {
-    padding-left: 15px;
+    /*padding-left: 15px;*/
 }
 
 .x1 {
@@ -871,22 +944,23 @@ a {
 }
 
 .mxhz6 {
-    width: 15%;
+    width: 235px;
     height: 165px;
+    font-size:18px;
 }
 
 .mxhz_left {
-    margin-left: 23px;
+    margin-left: 3px;
 }
 
 .mxhz6 > ul > li {
     margin-top: 30px;
-    height: 18px;
+    height: 25px;
     overflow: hidden;
 }
 
 .mxhz6ul {
-    padding-left: 20px;
+    /*padding-left: 20px;*/
 }
 
 .mxhz6_ul {
@@ -948,13 +1022,14 @@ a {
 
 .gkdt {
     width: 1189px;
-    height: 610px;
+    height: 620px;
     margin: 0 auto;
 }
 
 .gkdtdiv {
     width: 1189px;
     height: 50%;
+    margin-top:20px;
 }
 
 .gkd_3 {
@@ -983,6 +1058,7 @@ a {
 .gdk3_2 {
     width: 100%;
     height: 215px;
+    font-size:18px;
 }
 
     .gdk3_2 > ul > li > .gkdt_270 > botton {
@@ -996,8 +1072,8 @@ a {
     }
 
 .gkdt_270 {
-    width: 300px;
-    height: 17px;
+    /*width: 300px;
+    height: 17px;*/
 }
 
 .gkdt_2701 {
@@ -1037,7 +1113,12 @@ a {
     left: 308px;
     top: 65px;
 }
-
+.more6_1 {
+    position: absolute;
+    z-index: 19;
+    left: 308px;
+    top: 5px;
+}
 .gkdt_lianjiedk {
     margin-left: 54px;
 }
@@ -1048,7 +1129,7 @@ a {
 
 .sttj {
     width: 100%;
-    height: 570px;
+    height: 580px;
     background: #07c7bc;
 }
 
@@ -1072,7 +1153,7 @@ a {
 }
 
 .stkz > ul > li {
-    height: 20px;
+    height: 25px;
 }
 
 .sttjkz {
@@ -1221,11 +1302,15 @@ a {
 }
 
 .mstjbtn {
+    width:58px;
+    height:19px;
     background: #07c7bc;
-    border: 1px solid #07c7bc;
+    /*border: 1px solid #07c7bc;*/
     color: #fff;
     float: left;
     margin-left: 10px;
+    font-size:14px;
+    text-align:center;
 }
 
 .dkms {
@@ -1262,8 +1347,9 @@ a {
 
 .gkdtbtn {
     background: #6bb336;
-    border: 1px solid #6bb336;
+    /*border: 1px solid #6bb336;*/
     color: #fff;
+    margin-right:10px;
 }
 
 .gkdt_270a {
@@ -1309,6 +1395,10 @@ a {
 .mxhz6_uldankong > li > a {
     color: #fff;
 }
+.mxhz6_btn {
+    background:#fff;
+    color:#6bb336 !important;
+}
 
 .zxzths {
     color: #f5bc2b;
@@ -1349,10 +1439,17 @@ a {
     }
 .more1 {
     display: block;
-    margin-left: 335px;
-    margin-top: 20px;
+    /*margin-left: 335px;
+    margin-top: 20px;*/
+    margin-left:305px;
+    margin-bottom:13px;
+    width:50px;
+    height:18px;
 }
-
+.more1_sp {
+        margin-bottom:0px;
+        margin-top:10px;
+}
 .hover1 {
     position: relative;
 }
@@ -1460,8 +1557,8 @@ a {
 }
 
 .mgjpst > ul {
-    position: absolute;
-    padding-left: 10px;
+    /*position: absolute;
+    padding-left: 10px;*/
 }
 
 .genduo {
@@ -1478,7 +1575,22 @@ a {
     .genduo > img {
         
     }
-
+.lantb_set {
+    position:absolute;
+    top:2873px;
+}
+.lantb_set_1 {
+    position:absolute;
+    top:3170px;
+}
+.sttj_set {
+    position:absolute;
+    top:4280px;
+}
+.mstj_set {
+    position:absolute;
+    top:4687px;
+}
 .mxttbggd {
     width: 1189px;
     height: 141px;
@@ -1495,4 +1607,8 @@ a {
     width: 620px;
     height: 268px;
     float: left;
+}
+
+.font_size16 {
+    font-size:16px;
 }
