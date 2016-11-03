@@ -23,7 +23,7 @@ function New_Zhuanti() {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
                             <a class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
-                                <b  class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' style='color:#f5bc2b;'>[" + time + "]</b>\
+                                <a  class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' style='color:#f5bc2b;'>[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -31,7 +31,7 @@ function New_Zhuanti() {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
                             <a class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a title='" + temp[i].name.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
-                                <b style='color:#f5bc2b;' href=\"\">[" + time + "]</b>\
+                                <a style='color:#f5bc2b;' href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -78,9 +78,9 @@ function Taoti() {
             }
             html += " </ul>\
                 </div>\
-                <div class=\"fl mxttimg\">\
-                    <img src=\"../../img/gedigaokao.jpg\" />\
+                <div class=\"fl mxttimg gedigaokao_img\">\
                 </div>";
+            //<img src=\"../../img/gedigaokao.jpg\" />\
             $("#taoti").html(html);
         }
     });
@@ -104,7 +104,7 @@ function Test() {
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
                             <a class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
-                                <b class=\"ayblue\" href=\"\">["+ time + "]</b>\
+                                <a class=\"ayblue\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -141,10 +141,10 @@ function School_Test() {
             }
             html += "</ul>\
                     </div>\
-                    <div class=\"fl mxttimg\">\
-                        <img src=\"../../img/gedigaokao.jpg\" />\
+                    <div class=\"fl mxttimg gedigaokao_img\">\
                     </div>\
                 </div>";
+            //<img src=\"../../img/gedigaokao.jpg\" />
             $("#shiti_school").html(html);
         }
     });
@@ -168,7 +168,7 @@ function Beike() {
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
                             <a class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
-                                <b class=\"ayblue\" href=\"\">["+ time + "]</b>\
+                                <a class=\"ayblue\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -196,7 +196,7 @@ function Taoti_JuniorMiddleSchool() {
                 html += "<li>\
                         <div class=\"zxtlianjiediv fl\">\
                             <a class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
-                                <b href=\"\">[" + time + "]</b>\
+                                <a href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -224,7 +224,7 @@ function Test_JuniorMiddleSchool() {
                 html += "<li>\
                         <div class=\"zxtlianjiediv fl\">\
                             <a class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a title='" + temp[i].testname.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].testname + "\">[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
-                                <b href=\"\">[" + time + "]</b>\
+                                <a href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -252,7 +252,7 @@ function Mid_examination() {
                 html += "<li>\
                         <div class=\"zxtlianjiediv fl\">\
                             <a class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a title='" + temp[i].testname.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].testname + "\">[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
-                                <b href=\"\">[" + time + "]</b>\
+                                <a href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -283,7 +283,7 @@ function News(type, controlid) {
                                 <a class=\"fl gkdtbtn size_com\">" + number + "</a>&nbsp;<a  title='" + temp[i].title.replace(" ", "-") + "'  class=\"gdkys flow_nowrap fl\" href='../News_Detail?id=" + temp[i].id + "'>[新闻] " + text + "</a>\
                     </div>\
                     <div class=\" fr\">\
-                                <b  class=\"gkdttime fr\">["+ time + "]</b>\
+                                <a  class=\"gkdttime fr\">["+ time + "]</a>\
                             </div>\
                         </li>";
                 }
