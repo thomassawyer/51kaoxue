@@ -386,7 +386,7 @@ namespace kaoxue.Controllers
 
         public int GetMemberCount() 
         {
-            string sql = string.Format("SELECT COUNT(1) FROM [haoziyuan].[dbo].[webusers]");
+            string sql = string.Format("SELECT COUNT(1) FROM [webusers]");
             return Convert.ToInt32(DbHelperSQL.GetSingle(sql));
         }
 
