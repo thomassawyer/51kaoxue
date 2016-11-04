@@ -383,10 +383,13 @@ namespace kaoxue.Controllers
             string sql = string.Format("select count(1) from [select_beike_all] where DATEDIFF(DAY,uploadtime,GETDATE())<=1");
             return Convert.ToInt32(DbHelperSQL.GetSingle(sql));
         }
-
+        /// <summary>
+        /// GetMemberCount   For  GetSchoolCount
+        /// </summary>
+        /// <returns>SchoolCount</returns>
         public int GetMemberCount() 
         {
-            string sql = string.Format("SELECT COUNT(1) FROM [webusers]");
+            string sql = string.Format("select COUNT(1) from tblschool");
             return Convert.ToInt32(DbHelperSQL.GetSingle(sql));
         }
 

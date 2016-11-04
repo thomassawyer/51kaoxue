@@ -17,7 +17,7 @@
             <div class="f2_head">
                 <ul>
                     <li class="li1 lispan" style="padding-left:8px;">今日上新：<span id="UpCountByDay"></span></li>
-                    <li class="li1 lispan" style="padding-left:30px;" >会员数：<span id="MemberCount"></span></li>
+                    <li class="li1 lispan" style="padding-left:30px;" >网校数：<span id="MemberCount"></span></li>
                     <li class="li1 lispan" style="padding-left:8px;">试题资源：<span id="shiticount"></span></li>
                     <li class="li1 lispan" style="padding-left:30px;" >总数：<span id="beikecount"></span></li>
                     <li class="li3">免费咨询热线：400-819-8115</li>
