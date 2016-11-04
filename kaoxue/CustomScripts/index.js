@@ -23,7 +23,7 @@ function New_Zhuanti() {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
                             <a class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
-                                <a  class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' style='color:#f5bc2b;'>[" + time + "]</a>\
+                                <a  class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' class=\"zxzths\">[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -31,7 +31,7 @@ function New_Zhuanti() {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
                             <a class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a title='" + temp[i].name.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
-                                <a style='color:#f5bc2b;' href=\"\">[" + time + "]</a>\
+                                <a class=\"zxzths\" href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -416,7 +416,7 @@ function GetSchool() {
             if (data != "]") {
                 temp = eval(data);
 
-                html += "<b><h3>名校合作 UNIVERCITIES COOPERATION</h3></b>\
+                html += "<b><h3 class=\"mingxiaoziyuan_h3\">名校合作 UNIVERCITIES COOPERATION</h3></b>\
                 <div  class=\"ztk_div_div \">\
                     <div class=\"xian1 fl\"></div>\
                     <div class=\"quanquan fl\">\
@@ -449,18 +449,18 @@ function GetSchool() {
                         }
                     }
                 }
-                for (var i = 0; i < 8; i++) {
+                for (var i = 0; i < 5; i++) {
                     if (i == 0) {
                         html2 += "<div  class=\"mxzy_8 fl\">\
                         <div>\
-                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" style='    width: 140px;height: 86px;'  />\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\" />\
                         </div>\
                         <a   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";
                     } else {
                         html2 += "<div  class=\"mxzy_8 fl mxzykz6\">\
                         <div>\
-                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" style='    width: 140px;height: 86px;' />\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\" />\
                         </div>\
                         <a   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";

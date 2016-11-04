@@ -537,9 +537,16 @@ function GetYearForHeightSchool() {
 
                 for (var i = 0; i < temp.length; i++) {
                     if (i == 0) {
-                        html += "<li class=\"lngkli1  fl\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a class=\"lngka\"><b class=\"linian\">历年高考试卷</b></a></li>";
+                        html += "<li class=\"lngkli1 lngk_title fl\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a class=\"lngka\"><b class=\"linian\">历年高考试卷</b></a></li>";
                     } else {
-                        html += "<li class=\"lngkli lhove1 fl\" style='background: #F2F2F2 none repeat scroll 0 0;'><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\" href=\"../Past_Exam?year=" + temp[i - 1].id + "&year_text=" + temp[i - 1].name + "\">" + temp[i - 1].name + "年</a></li>";
+                        if (i % 2 == 0) {
+                            html += "<li class=\"lngkli lhove1 fl \"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\" href=\"../Past_Exam?year=" + temp[i - 1].id + "&year_text=" + temp[i - 1].name + "\">" + temp[i - 1].name + "年</a></li>";
+                        }
+                        else {
+                            html += "<li class=\"lngkli lhove1 fl\"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\" href=\"../Past_Exam?year=" + temp[i - 1].id + "&year_text=" + temp[i - 1].name + "\">" + temp[i - 1].name + "年</a></li>";
+
+                        }
+                        
                     }
                 }
             }
@@ -557,10 +564,15 @@ function GetYear() {
 
                for (var i = 0; i < temp.length; i++) {
                     if (i == 0) {
-                        html += "<li class=\"lngkli1 fl lngklv\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a class=\"lngka\"><b class=\"linian\">历年中考试卷</b></a></li>";
-                   } else {
+                        html += "<li class=\"lngkli1 fl lngk_title lngklv\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a class=\"lngka\"><b class=\"linian\">历年中考试卷</b></a></li>";
+                    } else {
+                        if (i % 2 == 0) {
+                            html += " <li class=\"lngkli lhove2 fl \"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
+                        } else {
+                            html += " <li class=\"lngkli lhove2 fl\"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
+                        }
                         //html += "<li class=\"lngkli lhove1 fl\"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
-                        html += " <li class=\"lngkli lhove2 fl\" style='background: #F2F2F2 none repeat scroll 0 0;'><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
+                        
                    }
                }
            }
@@ -609,7 +621,12 @@ function GetAreaTop5()
             if (data != "]") {
                 temp = eval(data);
                 for (var i = 1; i <= 5; i++) {
-                    html += " <li  class=\"ce_z ce_xh\"><a  href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"ce_x fl\"><span class=\"ce_sp\">" + temp[i - 1].areaname + "</span></a><a class=\"sppd fl\">></a></li>";
+                    if (i == 5) {
+                        html += " <li  class=\"ce_z ce_xh border_bn ce_pro_h\"><a  href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"ce_x fl\"><span class=\"ce_sp\">" + temp[i - 1].areaname + "</span></a><a class=\"sppd fr\">></a></li>";
+                    } else {
+                        html += " <li  class=\"ce_z ce_xh ce_pro_h\"><a  href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"ce_x fl\"><span class=\"ce_sp\">" + temp[i - 1].areaname + "</span></a><a class=\"sppd fr\">></a></li>";
+                    }
+                    
                 }
             }
             $("#Top5").html(html);

@@ -18,37 +18,40 @@
     @Html.Partial("~/Common/top1.ascx")
 
     <div class="ce_nva">
-        <div class="celan fl" style="width:135px;">
+        <div class="celan fl">
             <div class="celan50">
-                <ul>
-                    <li class="lan_ce sfhv">
-                        <span style="font-size:14px;"><b>更多省份导航</b></span><img src="../../img/zu-1.png" class="zu1" style="left:115px;">
-                        <div class="shenfenhover">
+                <div class="lan_ce sfhv">
+                    <span class="title_gen">更多省份导航</span><img src="../../img/zu-1.png" class="zu1">
+                    <div class="shenfenhover">
+                        <div class="cebianlan_xia1" id="province_more">
+
+                        </div>
+                    </div>
+                </div>
+
+                <ul id="Top5"></ul>
+
+            </div>
+            <div class="celan50">
+                <div class="lan_ce h_ce">
+                    <span class="title_gen">全部资料分类</span><img src="../../img/zu-1.png" class="zu1">
+                    @*<div class="shenfenhover">
                             <div class="cebianlan_xia1" id="province_more">
 
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <ul id="Top5">
-
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </div>
-            <div class="celan50">
-                <ul>
-                    <li class="lan_ce h_ce"><span style="font-size:14px;"><b>全部资料分类</b></span><img src="../../img/tubiaozu1.png" class="zu1" style="left:115px;"></li>
-                    <li class="ce_z"><a class="ce_x fl" href="../Beike_Center?level=3"><span class="ce_sp ceh">高中备课</span></a><a class="sppd fl">></a></li>
-                    <li class="ce_z"><a class="ce_x fl" href="../Test_Center?level=3"><span class="ce_sp ceh">高中试题</span></a><a class="sppd fl">></a></li>
-                    <li class="ce_z"><a class="ce_x fl" href="../Gaokao_Beikao"><span class="ce_sp ceh">高中复习</span></a><a class="sppd fl">></a></li>
-                    <li class="ce_z"><a class="ce_x fl" href="../Beike_Center?level=2"><span class="ce_sp ceh">初中备课</span></a><a class="sppd fl">></a></li>
-                    <li class="ce_z"><a class="ce_x ce_xx fl" href="../Test_Center?level=2"><span class="ce_sp ceh">初中试题</span></a><a class="sppd fl">></a></li>
+                        </div>*@
+                </div>
+                <ul class="ce_ul_data">
+                    @*<li class="lan_ce h_ce"><span class="title_gen">全部资料分类</span><img src="../../img/tubiaozu1.png" class="zu1"></li>*@
+                    <li class="ce_z ce_data_h"><a class="ce_x fl" href="../Beike_Center?level=3"><span class="ce_sp ceh">高中备课</span></a><a class="sppd fr">></a></li>
+                    <li class="ce_z ce_data_h"><a class="ce_x fl" href="../Test_Center?level=3"><span class="ce_sp ceh">高中试题</span></a><a class="sppd fr">></a></li>
+                    <li class="ce_z ce_data_h"><a class="ce_x fl" href="../Gaokao_Beikao"><span class="ce_sp ceh">高中复习</span></a><a class="sppd fr">></a></li>
+                    <li class="ce_z ce_data_h"><a class="ce_x fl" href="../Beike_Center?level=2"><span class="ce_sp ceh">初中备课</span></a><a class="sppd fr">></a></li>
+                    <li class="ce_z border_bn ce_data_h"><a class="ce_x ce_xx fl" href="../Test_Center?level=2"><span class="ce_sp ceh">初中试题</span></a><a class="sppd fr">></a></li>
                 </ul>
             </div>
         </div><!-- 地址侧栏块 -->
-        <div class="lb9 fl" style="width:870px;height:442px; margin-top:-3px;margin-left:15px;">
+        <div class="lb9 fl" style="width:715px;height:442px;margin-left:18px;">
             <div id="wowslider-container1" style="height:422px;">
                 <div class="ws_images">
                     <ul id="banner_images">
@@ -85,443 +88,441 @@
                             </div>
                         </li>
                         @*<li><img src="../data1/images/1.jpg" alt="1" title="1" id="wows1_0"></li>
-                        <li><img src="../data1/images/2.jpg" alt="2" title="2" id="wows1_1"></li>
-                        <li><a href="http://wowslider.com/vi"><img src="../data1/images/3.jpg" alt="bootstrap carousel" title="3" id="wows1_2"></a></li>
-                        <li><img src="../data1/images/4.jpg" alt="4" title="4" id="wows1_3"></li>*@
+                            <li><img src="../data1/images/2.jpg" alt="2" title="2" id="wows1_1"></li>
+                            <li><a href="http://wowslider.com/vi"><img src="../data1/images/3.jpg" alt="bootstrap carousel" title="3" id="wows1_2"></a></li>
+                            <li><img src="../data1/images/4.jpg" alt="4" title="4" id="wows1_3"></li>*@
 
                     </ul>
                 </div>
                 <div class="ws_bullets">
                     <div id="banner_buttons">
                         @*<a href="#" title="1"><span><img src="../data1/tooltips/1.jpg" alt="1">1</span></a>
-                        <a href="#" title="2"><span><img src="../data1/tooltips/2.jpg" alt="2">2</span></a>
-                        <a href="#" title="3"><span><img src="../data1/tooltips/3.jpg" alt="3">3</span></a>
-                        <a href="#" title="4"><span><img src="../data1/tooltips/4.jpg" alt="4">4</span></a>*@@*<a href="#" title="1"><span><img src="../data1/tooltips/1.jpg" alt="1"></span></a>
-                        <a href="#" title="2"><span><img src="../data1/tooltips/2.jpg" alt="2"></span></a>
-                        <a href="#" title="3"><span><img src="../data1/tooltips/3.jpg" alt="3"></span></a>
-                        <a href="#" title="4"><span><img src="../data1/tooltips/4.jpg" alt="4"></span></a>*@
-                    </div>
-                </div><div class="ws_script" style="position:absolute;left:-99%"></div>
-                <div class="ws_shadow"></div>
-            </div>
-        </div>
-        <div class="fl dakuai4" style="margin-left:15px;">
-            <div class="dk4 dkdk4">
-                <a href="http://zujuan.51kaoxue.com"><img src="../../img/hh110.jpg" width="125"></a>
-            </div>
-            <div class="dk4 ">
-                <a href="../Past_Exam"><img src="../../img/hh112.jpg" width="125"></a>
-            </div>
-            <div class="dk4 ">
-                <a href="../Elite_School"><img src="../../img/hh113.jpg" width="125"></a>
-            </div>
-            <div class="dk4 ">
-                <a href="../Gaokao_Beikao"><img src="../../img/hh114.jpg" width="125"></a>
-            </div>
-        </div><!-- 四大模块 -->
-    </div>
-
-    <div class="liniangaokao">
-        <div class="lngk">
-            <ul id="HeightSchoolYear">
-            </ul>
-        </div>
-        <div class="lngk">
-            <ul id="Year">
-            </ul>
-        </div>
-    </div><!-- 历年高考试题 -->
-
-    <div class="zhentiku" style="height:490px">
-        <div class="ztk_div ztkyanse sttjyanse yanse">
-            <div class="daimg9">
-                <span class="sfbd">51考学第一时间发布</span>
-                <b class="asf11">2017年语文一轮复习要点</b>
-            </div>
-            <div class="ywfyxi">
-                <div class="ywfyxi2 fl">
-                    <a><img src="../../img/tubiaostk.png" class="imgywfy" /><b class="stb1">精品试题</b></a><a style="padding-left:370px;" href="../Test_Center"><img src="../../img/91more.png" /></a>
-                </div>
-                <div class="ywfyxi2 fl dkmg10">
-                    <a><img src="../../img/cekbei.png" class="fy" /><b class="stb1">精品备课</b></a><a style="padding-left:370px;" href="../Beike_Center"><img src="../../img/91more.png" /></a>
-                </div>
-            </div>
-
-            <div class="jpshijuan jsppd">
-                <div class="jpst_lianjie fl">
-                    <ul id="test_jingpin"></ul>
-                </div>
-
-                <div class="jpst_lianjie fl mgjpst">
-                    <ul id="beike_jingpin" ></ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="gkdt">
-        <div class="gkdtdiv">
-            <div class="gkd_3 fl">
-                <div class="gdk3_1">
-                    <div class="gdk3_1_1">
-                    </div>
-                    <div class="gdk3_1_2">
-                        <div class="gkdt_tb">
-                            <img src="../../img/mm11.png" class="gkdt_img" />
-                            <span class="gkdt_span">
-                                <b class="gkdttime">最新试题 [高中]</b>
-                            </span>
+                            <a href="#" title="2"><span><img src="../data1/tooltips/2.jpg" alt="2">2</span></a>
+                            <a href="#" title="3"><span><img src="../data1/tooltips/3.jpg" alt="3">3</span></a>
+                            <a href="#" title="4"><span><img src="../data1/tooltips/4.jpg" alt="4">4</span></a>*@@*<a href="#" title="1"><span><img src="../data1/tooltips/1.jpg" alt="1"></span></a>
+                            <a href="#" title="2"><span><img src="../data1/tooltips/2.jpg" alt="2"></span></a>
+                            <a href="#" title="3"><span><img src="../data1/tooltips/3.jpg" alt="3"></span></a>
+                            <a href="#" title="4"><span><img src="../data1/tooltips/4.jpg" alt="4"></span></a>*@
                         </div>
-                        <a class="more6" href="../Test_Center?level=3&type=1"><img src="../../img/more1.png" /></a>
-                    </div>
-                </div>
-                <div class="gdk3_2 ie8">
-                    <ul id="test_new_senior"></ul>
+                    </div><div class="ws_script" style="position:absolute;left:-99%"></div>
+                    <div class="ws_shadow"></div>
                 </div>
             </div>
-
-            <div class="gkd_3 fl gkdt_lianjiedk">
-                <div class="gdk3_1">
-                    <div class="gdk3_1_1">
-                    </div>
-                    <div class="gdk3_1_2">
-                        <div class="gkdt_tb">
-                            <img src="../../img/mm22.png" class="gkdt_img" />
-                            <span class="gkdt_span">
-                                <b class="gkdttime">最新备考 [高中]</b>
-                            </span>
-                        </div>
-                        <a class="more6" href="../Gaokao_Beikao"><img src="../../img/more1.png" /></a>
-                    </div>
+            <div class="fl dakuai4">
+                <div class="dk4 dkdk4 border_ffb726 mar_bott_19">
+                    <a href="http://zujuan.51kaoxue.com"><img src="../../img/hh110.jpg"></a>
                 </div>
-                <div class="gdk3_2 ie8">
-                    <ul id="beikao_new"></ul>
+                <div class="dk4 border_07c277 mar_bott_19">
+                    <a href="../Past_Exam"><img src="../../img/hh112.jpg"></a>
                 </div>
-            </div>
-
-            <div class="gkd_3 fl gkdt_lianjiedk">
-                <div class="gdk3_1">
-                    <div class="gdk3_1_1">
-                    </div>
-                    <div class="gdk3_1_2">
-                        <div class="gkdt_tb" style="width:300px;">
-                            <img src="../../img/mm33.png" class="gkdt_img" />
-                            <span class="gkdt_span">
-                                <b class="gkdttime">最新专题推荐[高中]</b>
-                            </span>
-                        </div>
-                        <a class="more6" href="../Guide"><img src="../../img/more1.png" /></a>
-                    </div>
+                <div class="dk4 border_ff4a52 mar_bott_19">
+                    <a href="../Elite_School"><img src="../../img/hh113.jpg"></a>
                 </div>
-                <div class="gdk3_2 ie8">
-                    <ul id="zhuanti_new_recommend_senior"></ul>
+                <div class="dk4 border_2ea7f8">
+                    <a href="../Gaokao_Beikao"><img src="../../img/hh114.jpg"></a>
                 </div>
-            </div>
+            </div><!-- 四大模块 -->
         </div>
 
-        <div class="gkdtdiv">
-            <div class="gkd_3 fl">
-                <div class="gdk3_1">
-                    <div class="gdk3_1_1">
-                    </div>
-                    <div class="gdk3_1_2">
-                        <div class="gkdt_tb">
-                            <img src="../../img/mm44.png" class="gkdt_img" />
-                            <span class="gkdt_span">
-                                <b class="gkdttime">最新试题 [初中]</b>
-                            </span>
-                        </div>
-                        <a class="more6" href="../Test_Center?level=2&type=1"><img src="../../img/more1.png" /></a>
-                    </div>
-                </div>
-                <div class="gdk3_2 ie8">
-                    <ul id="test_new_junior"></ul>
-                </div>
+        <div class="liniangaokao">
+            <div class="lngk mar_bott_7">
+                <ul id="HeightSchoolYear"></ul>
             </div>
-
-            <div class="gkd_3 fl gkdt_lianjiedk">
-                <div class="gdk3_1">
-                    <div class="gdk3_1_1">
-                    </div>
-                    <div class="gdk3_1_2">
-                        <div class="gkdt_tb">
-                            <img src="../../img/mm55.png" class="gkdt_img" />
-                            <span class="gkdt_span">
-                                <b class="gkdttime">中考模拟 [初中]</b>
-                            </span>
-                        </div>
-                        <a class="more6" href="../Test_Center?level=2&testcategory=22"><img src="../../img/more1.png" /></a>
-                    </div>
-                </div>
-                <div class="gdk3_2 ie8">
-                    <ul id="moni_junior"></ul>
-                </div>
+            <div class="lngk">
+                <ul id="Year"></ul>
             </div>
+        </div><!-- 历年高考试题 -->
 
-            <div class="gkd_3 fl gkdt_lianjiedk">
-                <div class="gdk3_1">
-                    <div class="gdk3_1_1">
-                    </div>
-                    <div class="gdk3_1_2">
-                        <div class="gkdt_tb" style="width:300px;">
-                            <img src="../../img/mm66.png" class="gkdt_img" />
-                            <span class="gkdt_span">
-                                <b class="gkdttime">最新专题推荐  [初中]</b>
-                            </span>
-                        </div>
-                        <a class="more6" href="../Guide"><img src="../../img/more1.png" /></a>
-                    </div>
+        <div class="zhentiku">
+            <div class="ztk_div ztkyanse sttjyanse yanse">
+                <div class="daimg9">
+                    <span class="sfbd">51考学第一时间发布</span>
+                    <b class="asf11">2017年语文一轮复习要点</b>
                 </div>
-                <div class="gdk3_2 ie8">
-                    <ul id="zhuanti_new_recommend_junior"></ul>
-                </div>
-            </div>
-        </div>
-    </div><!--高考试题动态-->
-
-    <div class="gzjpst">
-        <div class="daimg9 dklvlv">
-            <span class="sfbd yss11">51考学第一时间发布</span>
-            <b class="asf11 yss11">2017年语文一轮复习要点</b>
-        </div>
-        <div class="zuixintaoti">
-            <div class="zuixintaoti390 fl ">
-                <div class="zuixintaoti160">
-                    <img src="../../img/lx11.png" /><span class="zuixintaotspan"><b class="tblx">同步练习<br>Synchronous practice</b></span>
-                    <a class="zyi" onclick="change_css_span(this), tongbu_senior(' between 10 and 12')">全部</a>
-                    <a class="zyi top1" onclick="change_css_span(this), tongbu_senior(' =10')">高一</a>
-                    <a class="zyi top2" onclick="change_css_span(this), tongbu_senior(' =11')">高二</a>
-                    <a class="zyi top3" onclick="change_css_span(this), tongbu_senior(' =12')">高三</a>
-                    <a class="zyi top4" href="../Beike_Center?level=3&type=6">More</a>
-                </div>
-                <div class="zuixintaotilj">
-                    <ul id="tongbu_senior"></ul>
-                </div>
-            </div>
-
-            <div class="zuixintaoti390 fl zxstts">
-                <div class="zuixintaoti160">
-                    <img src="../../img/lx22.png" /><span class="zuixintaotspan"><b class="tblx">精品教案<br>NEW TEST</b></span>
-                    <a class="zyi" onclick="change_css_span(this), jiaoan_senior(' between 10 and 12')">全部</a>
-                    <a class="zyi top1" onclick="change_css_span(this), jiaoan_senior(' =10')">高一</a>
-                    <a class="zyi top2" onclick="change_css_span(this), jiaoan_senior(' =11')">高二</a>
-                    <a class="zyi top3" onclick="change_css_span(this), jiaoan_senior(' =12')">高三</a>
-                    <a class="zyi top4" href="../Test_Center?level=3&type=3">More</a>
-                </div>
-                <div class="zuixintaotilj">
-                    <ul id="jiaoan_senior"></ul>
-                </div>
-            </div>
-
-            <div class="zuixintaoti390 fl zxstts">
-                <div class="zuixintaoti160">
-                    <img src="../../img/lx33.png" /><span class="zuixintaotspan"><b class="tblx">更多学案<br>RECENT EXAMINATION PAPER</b></span>
-                    <a class="zyi" onclick="change_css_span(this), xuean_senior(' between 10 and 12')">全部</a>
-                    <a class="zyi top1" onclick="change_css_span(this), xuean_senior(' =10')">高一</a>
-                    <a class="zyi top2" onclick="change_css_span(this), xuean_senior(' =11')">高二</a>
-                    <a class="zyi top3" onclick="change_css_span(this), xuean_senior(' =12')">高三</a>
-                    <a class="zyi top4" href="../Test_Center?level=3&type=4">More</a>
-                </div>
-                <div class="zuixintaotilj">
-                    <ul id="xuean_senior"></ul>
-                </div>
-            </div>
-        </div>
-    </div><!-- 高中精品试题 -->
-
-    <div class="gzzy_gz">
-        <div class="mstj">
-            <div class="mstj_1189">
-                <div class="ztk_div zxztyanse mstjyanse">
-                    <b><h3 style="color:#8cc407;">名校套题 SCHOOL PROBLEM SET</h3></b>
-                    <div class="ztk_div_div ">
-                        <div class="xian1 fl yansemstj"></div>
-                        <div class="quanquan fl">
-                            <div class="qq1 q1 fl qdankong qq2"><a class="yansemstjcolor yslv">备课中心</a></div>
-                            <div class="qq1 q2 fl qqq1 qq2"><a class="yansemstjcolor yslv">每日专题</a></div>
-                            <div class="qq1 q3 fl qqq1 qq2"><a class="yansemstjcolor yslv">历年考试</a></div>
-                            <div class="qq1 q4 fl qqq1 qq2"><a class="yansemstjcolor yslv">名校测题</a></div>
-                        </div>
-                        <div class="xian2 xx22 fl yansemstj"></div>
-                    </div>
-
-                </div>
-
-
                 <div class="ywfyxi">
-                    <div class="ywfyxi2 xxyx1 fl">
-                        <a><img src="../../img/stk11.png" class="imgywfy" /><b class="lvl">名校试题</b></a>
-                        <span>
-                            <a class="yi111" onclick="change_css_span(this), test_mingxiao_senior(' between 10 and 12')">全部</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq1" onclick="change_css_span(this), test_mingxiao_senior(' =10')">高一</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq2" onclick="change_css_span(this), test_mingxiao_senior(' =11')">高二</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq3" onclick="change_css_span(this), test_mingxiao_senior(' =12')">高三</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq4" href="../Test_Center?level=3&type=1">more</a>
-                        </span>
+                    <div class="ywfyxi2 fl">
+                        <a><img src="../../img/tubiaostk.png" class="imgywfy" /><b class="stb1">精品试题</b></a><a style="padding-left:370px;" href="../Test_Center"><img src="../../img/91more.png" /></a>
                     </div>
-                    <div class="ywfyxi2 xxyx1 fl dkmg10">
-                        <a><img src="../../img/stk22.png" class="fy" /><b class="lvl">精品课件</b></a>
-                        <span>
-                            <a class="yi111" onclick="change_css_span(this), kejian_senior(' between 10 and 12')">全部</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq1" onclick="change_css_span(this), kejian_senior(' =10')">高一</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq2" onclick="change_css_span(this), kejian_senior(' =11')">高二</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq3" onclick="change_css_span(this), kejian_senior(' =12')">高三</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq4" href="../Test_Center?level=3&type=2">more</a>
-                        </span>
+                    <div class="ywfyxi2 fl dkmg10">
+                        <a><img src="../../img/cekbei.png" class="fy" /><b class="stb1">精品备课</b></a><a style="padding-left:370px;" href="../Beike_Center"><img src="../../img/91more.png" /></a>
                     </div>
                 </div>
 
                 <div class="jpshijuan jsppd">
                     <div class="jpst_lianjie fl">
-                        <ul id="test_mingxiao_senior"></ul>
+                        <ul id="test_jingpin"></ul>
                     </div>
 
                     <div class="jpst_lianjie fl mgjpst">
-                        <ul id="kejian_senior"></ul>
+                        <ul id="beike_jingpin"></ul>
                     </div>
                 </div>
-
-            </div>
-        </div><!-- 高中资源 -->
-    </div>
-
-    <div class="gzjpst dklvse">
-        <div class="daimg9 lallaal">
-            <span class="sfbd yss1">51考学第一时间发布</span>
-            <b class="asf11 yss1">2017年语文一轮复习要点</b>
-        </div>
-        <div class="zuixintaoti">
-            <div class="zuixintaoti390 fl ">
-                <div class="zuixintaoti160 zi160">
-                    <img src="../../img/ll0011.png" /><span class="zuixintaotspan"><b class="tblx1">同步练习<br>Synchronous practice</b></span>
-                    <a class="zyi lanlan" onclick="change_css_span(this), tongbu_junior(' between 7 and 9')">全部</a>
-                    <a class="zyi top1 lanlan" onclick="change_css_span(this), tongbu_junior(' =7')">初一</a>
-                    <a class="zyi top2 lanlan" onclick=" change_css_span(this), tongbu_junior(' =8')">初二</a>
-                    <a class="zyi top3 lanlan" onclick=" change_css_span(this), tongbu_junior(' =9')">初三</a>
-                    <a class="zyi top4 lanlan" href="../Beike_Center?level=2&type=6">More</a>
-                </div>
-                <div class="zuixintaotilj ">
-                    <ul id="tongbu_junior"></ul>
-                </div>
-            </div>
-
-            <div class="zuixintaoti390 fl zxstts">
-                <div class="zuixintaoti160 zi160">
-                    <img src="../../img/ll0022.png" /><span class="zuixintaotspan"><b class="tblx1">精品教案<br>NEW TEST</b></span>
-                    <a class="zyi lanlan" onclick="change_css_span(this), jiaoan_junior(' between 7 and 9')">全部</a>
-                    <a class="zyi top1 lanlan" onclick="change_css_span(this), jiaoan_junior(' =7')">初一</a>
-                    <a class="zyi top2 lanlan" onclick=" change_css_span(this), jiaoan_junior(' =8')">初二</a>
-                    <a class="zyi top3 lanlan" onclick=" change_css_span(this), jiaoan_junior(' =9')">初三</a>
-                    <a class="zyi top4 lanlan" href="../Test_Center?level=2&type=3">More</a>
-                </div>
-                <div class="zuixintaotilj">
-                    <ul id="jiaoan_junior"></ul>
-                </div>
-            </div>
-
-            <div class="zuixintaoti390 fl zxstts">
-                <div class="zuixintaoti160 zi160">
-                    <img src="../../img/ll0033.png" /><span class="zuixintaotspan"><b class="tblx1">更多学案<br>RECENT EXAMINATION PAPER</b></span>
-                    <a class="zyi lanlan" onclick="change_css_span(this), xuean_junior(' between 7 and 9')">全部</a>
-                    <a class="zyi top1 lanlan" onclick="change_css_span(this), xuean_junior(' =7')">初一</a>
-                    <a class="zyi top2 lanlan" onclick="change_css_span(this), xuean_junior(' =8')">初二</a>
-                    <a class="zyi top3 lanlan" onclick="change_css_span(this), xuean_junior(' =9')">初三</a>
-                    <a class="zyi top4 lanlan" href="../Test_Center?level=2&type=4">More</a>
-                </div>
-                <div class="zuixintaotilj">
-                    <ul id="xuean_junior"></ul>
-                </div>
             </div>
         </div>
-    </div><!-- 高中精品试题 -->
-
-    <div class="gzzy_gz">
-        <div class="mstj">
-            <div class="mstj_1189">
-                <div class="ztk_div zxztyanse mstjyanse">
-                    <b><h3 style="color:#808ffb;">名校套题 SCHOOL PROBLEM SET</h3></b>
-                    <div class="ztk_div_div ">
-                        <div class="xian1 fl yansemstj1"></div>
-                        <div class="quanquan fl">
-                            <div class="qq1 q11 fl qdankong qq2"><a class="yansemstjcolor yslvz">备课中心</a></div>
-                            <div class="qq1 q22 fl qqq1 qq2"><a class="yansemstjcolor yslvz">每日专题</a></div>
-                            <div class="qq1 q33 fl qqq1 qq2"><a class="yansemstjcolor yslvz">历年考试</a></div>
-                            <div class="qq1 q44 fl qqq1 qq2"><a class="yansemstjcolor yslvz">名校测题</a></div>
+        <div class="gkdt">
+            <div class="gkdtdiv">
+                <div class="gkd_3 fl">
+                    <div class="gdk3_1">
+                        <div class="gdk3_1_1">
                         </div>
-                        <div class="xian2 xx22 fl yansemstj1"></div>
+                        <div class="gdk3_1_2">
+                            <div class="gkdt_tb">
+                                <img src="../../img/mm11.png" class="gkdt_img" />
+                                <span class="gkdt_span">
+                                    <b class="gkdttime">最新试题 [高中]</b>
+                                </span>
+                            </div>
+                            <a class="more6" href="../Test_Center?level=3&type=1"><img src="../../img/more1.png" /></a>
+                        </div>
                     </div>
-
-                </div>
-
-
-                <div class="ywfyxi">
-                    <div class="ywfyxi2 xxyx11 fl">
-                        <a><img src="../../img/zbb11.png" class="imgywfy" /><b class="lvlz">名校试题</b></a>
-                        <span>
-                            <a class="yi111 y1y" onclick="change_css_span(this), test_mingxiao_junior(' between 7 and 9')">全部</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq1 y1y" onclick="change_css_span(this), test_mingxiao_junior(' =7')">初一</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq2 y1y" onclick="change_css_span(this), test_mingxiao_junior(' =8')">初二</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq3 y1y" onclick="change_css_span(this), test_mingxiao_junior(' =9')">初三</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq4 y1y" href="../Test_Center?level=2&type=1">more</a>
-                        </span>
-                    </div>
-                    <div class="ywfyxi2 xxyx11 fl dkmg10">
-                        <a><img src="../../img/zbb22.png" class="fy" /><b class="lvlz">精品课件</b></a>
-                        <span>
-                            <a class="yi111 y1y" onclick="change_css_span(this), kejian_junior(' between 7 and 9')">全部</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq1 y1y" onclick="change_css_span(this), kejian_junior(' =7')">初一</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq2 y1y" onclick="change_css_span(this), kejian_junior(' =8')">初二</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq3 y1y" onclick="change_css_span(this), kejian_junior(' =9')">初三</a>
-                        </span>
-                        <span>
-                            <a class="yi111 sq4 y1y" href="../Test_Center?level=2&type=2">more</a>
-                        </span>
+                    <div class="gdk3_2 ie8">
+                        <ul id="test_new_senior"></ul>
                     </div>
                 </div>
 
-                <div class="jpshijuan jsppd">
-                    <div class="jpst_lianjie fl">
-                        <ul id="test_mingxiao_junior"></ul>
+                <div class="gkd_3 fl gkdt_lianjiedk">
+                    <div class="gdk3_1">
+                        <div class="gdk3_1_1">
+                        </div>
+                        <div class="gdk3_1_2">
+                            <div class="gkdt_tb">
+                                <img src="../../img/mm22.png" class="gkdt_img" />
+                                <span class="gkdt_span">
+                                    <b class="gkdttime">最新备考 [高中]</b>
+                                </span>
+                            </div>
+                            <a class="more6" href="../Gaokao_Beikao"><img src="../../img/more1.png" /></a>
+                        </div>
                     </div>
-
-                    <div class="jpst_lianjie fl mgjpst">
-                        <ul id="kejian_junior"></ul>
+                    <div class="gdk3_2 ie8">
+                        <ul id="beikao_new"></ul>
                     </div>
                 </div>
 
+                <div class="gkd_3 fl gkdt_lianjiedk">
+                    <div class="gdk3_1">
+                        <div class="gdk3_1_1">
+                        </div>
+                        <div class="gdk3_1_2">
+                            <div class="gkdt_tb" style="width:300px;">
+                                <img src="../../img/mm33.png" class="gkdt_img" />
+                                <span class="gkdt_span">
+                                    <b class="gkdttime">最新专题推荐[高中]</b>
+                                </span>
+                            </div>
+                            <a class="more6" href="../Guide"><img src="../../img/more1.png" /></a>
+                        </div>
+                    </div>
+                    <div class="gdk3_2 ie8">
+                        <ul id="zhuanti_new_recommend_senior"></ul>
+                    </div>
+                </div>
             </div>
-        </div><!-- 高中资源 -->
-    </div>
 
-    @Html.Partial("~/Common/bottom.ascx")
-</body>
+            <div class="gkdtdiv">
+                <div class="gkd_3 fl">
+                    <div class="gdk3_1">
+                        <div class="gdk3_1_1">
+                        </div>
+                        <div class="gdk3_1_2">
+                            <div class="gkdt_tb">
+                                <img src="../../img/mm44.png" class="gkdt_img" />
+                                <span class="gkdt_span">
+                                    <b class="gkdttime">最新试题 [初中]</b>
+                                </span>
+                            </div>
+                            <a class="more6" href="../Test_Center?level=2&type=1"><img src="../../img/more1.png" /></a>
+                        </div>
+                    </div>
+                    <div class="gdk3_2 ie8">
+                        <ul id="test_new_junior"></ul>
+                    </div>
+                </div>
+
+                <div class="gkd_3 fl gkdt_lianjiedk">
+                    <div class="gdk3_1">
+                        <div class="gdk3_1_1">
+                        </div>
+                        <div class="gdk3_1_2">
+                            <div class="gkdt_tb">
+                                <img src="../../img/mm55.png" class="gkdt_img" />
+                                <span class="gkdt_span">
+                                    <b class="gkdttime">中考模拟 [初中]</b>
+                                </span>
+                            </div>
+                            <a class="more6" href="../Test_Center?level=2&testcategory=22"><img src="../../img/more1.png" /></a>
+                        </div>
+                    </div>
+                    <div class="gdk3_2 ie8">
+                        <ul id="moni_junior"></ul>
+                    </div>
+                </div>
+
+                <div class="gkd_3 fl gkdt_lianjiedk">
+                    <div class="gdk3_1">
+                        <div class="gdk3_1_1">
+                        </div>
+                        <div class="gdk3_1_2">
+                            <div class="gkdt_tb" style="width:300px;">
+                                <img src="../../img/mm66.png" class="gkdt_img" />
+                                <span class="gkdt_span">
+                                    <b class="gkdttime">最新专题推荐  [初中]</b>
+                                </span>
+                            </div>
+                            <a class="more6" href="../Guide"><img src="../../img/more1.png" /></a>
+                        </div>
+                    </div>
+                    <div class="gdk3_2 ie8">
+                        <ul id="zhuanti_new_recommend_junior"></ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--高考试题动态-->
+
+        <div class="gzjpst">
+            <div class="daimg9 dklvlv">
+                <span class="sfbd yss11">51考学第一时间发布</span>
+                <b class="asf11 yss11">2017年语文一轮复习要点</b>
+            </div>
+            <div class="zuixintaoti">
+                <div class="zuixintaoti390 fl ">
+                    <div class="zuixintaoti160">
+                        <img src="../../img/lx11.png" /><span class="zuixintaotspan"><b class="tblx">同步练习<br>Synchronous practice</b></span>
+                        <a class="zyi" onclick="change_css_span(this), tongbu_senior(' between 10 and 12')">全部</a>
+                        <a class="zyi top1" onclick="change_css_span(this), tongbu_senior(' =10')">高一</a>
+                        <a class="zyi top2" onclick="change_css_span(this), tongbu_senior(' =11')">高二</a>
+                        <a class="zyi top3" onclick="change_css_span(this), tongbu_senior(' =12')">高三</a>
+                        <a class="zyi top4" href="../Beike_Center?level=3&type=6">More</a>
+                    </div>
+                    <div class="zuixintaotilj">
+                        <ul id="tongbu_senior"></ul>
+                    </div>
+                </div>
+
+                <div class="zuixintaoti390 fl zxstts">
+                    <div class="zuixintaoti160">
+                        <img src="../../img/lx22.png" /><span class="zuixintaotspan"><b class="tblx">精品教案<br>NEW TEST</b></span>
+                        <a class="zyi" onclick="change_css_span(this), jiaoan_senior(' between 10 and 12')">全部</a>
+                        <a class="zyi top1" onclick="change_css_span(this), jiaoan_senior(' =10')">高一</a>
+                        <a class="zyi top2" onclick="change_css_span(this), jiaoan_senior(' =11')">高二</a>
+                        <a class="zyi top3" onclick="change_css_span(this), jiaoan_senior(' =12')">高三</a>
+                        <a class="zyi top4" href="../Test_Center?level=3&type=3">More</a>
+                    </div>
+                    <div class="zuixintaotilj">
+                        <ul id="jiaoan_senior"></ul>
+                    </div>
+                </div>
+
+                <div class="zuixintaoti390 fl zxstts">
+                    <div class="zuixintaoti160">
+                        <img src="../../img/lx33.png" /><span class="zuixintaotspan"><b class="tblx">更多学案<br>RECENT EXAMINATION PAPER</b></span>
+                        <a class="zyi" onclick="change_css_span(this), xuean_senior(' between 10 and 12')">全部</a>
+                        <a class="zyi top1" onclick="change_css_span(this), xuean_senior(' =10')">高一</a>
+                        <a class="zyi top2" onclick="change_css_span(this), xuean_senior(' =11')">高二</a>
+                        <a class="zyi top3" onclick="change_css_span(this), xuean_senior(' =12')">高三</a>
+                        <a class="zyi top4" href="../Test_Center?level=3&type=4">More</a>
+                    </div>
+                    <div class="zuixintaotilj">
+                        <ul id="xuean_senior"></ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- 高中精品试题 -->
+
+        <div class="gzzy_gz">
+            <div class="mstj">
+                <div class="mstj_1189">
+                    <div class="ztk_div zxztyanse mstjyanse">
+                        <b><h3 style="color:#8cc407;">名校套题 SCHOOL PROBLEM SET</h3></b>
+                        <div class="ztk_div_div ">
+                            <div class="xian1 fl yansemstj"></div>
+                            <div class="quanquan fl">
+                                <div class="qq1 q1 fl qdankong qq2"><a class="yansemstjcolor yslv">备课中心</a></div>
+                                <div class="qq1 q2 fl qqq1 qq2"><a class="yansemstjcolor yslv">每日专题</a></div>
+                                <div class="qq1 q3 fl qqq1 qq2"><a class="yansemstjcolor yslv">历年考试</a></div>
+                                <div class="qq1 q4 fl qqq1 qq2"><a class="yansemstjcolor yslv">名校测题</a></div>
+                            </div>
+                            <div class="xian2 xx22 fl yansemstj"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="ywfyxi">
+                        <div class="ywfyxi2 xxyx1 fl">
+                            <a><img src="../../img/stk11.png" class="imgywfy" /><b class="lvl">名校试题</b></a>
+                            <span>
+                                <a class="yi111" onclick="change_css_span(this), test_mingxiao_senior(' between 10 and 12')">全部</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq1" onclick="change_css_span(this), test_mingxiao_senior(' =10')">高一</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq2" onclick="change_css_span(this), test_mingxiao_senior(' =11')">高二</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq3" onclick="change_css_span(this), test_mingxiao_senior(' =12')">高三</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq4" href="../Test_Center?level=3&type=1">more</a>
+                            </span>
+                        </div>
+                        <div class="ywfyxi2 xxyx1 fl dkmg10">
+                            <a><img src="../../img/stk22.png" class="fy" /><b class="lvl">精品课件</b></a>
+                            <span>
+                                <a class="yi111" onclick="change_css_span(this), kejian_senior(' between 10 and 12')">全部</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq1" onclick="change_css_span(this), kejian_senior(' =10')">高一</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq2" onclick="change_css_span(this), kejian_senior(' =11')">高二</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq3" onclick="change_css_span(this), kejian_senior(' =12')">高三</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq4" href="../Test_Center?level=3&type=2">more</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="jpshijuan jsppd">
+                        <div class="jpst_lianjie fl">
+                            <ul id="test_mingxiao_senior"></ul>
+                        </div>
+
+                        <div class="jpst_lianjie fl mgjpst">
+                            <ul id="kejian_senior"></ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- 高中资源 -->
+        </div>
+
+        <div class="gzjpst dklvse">
+            <div class="daimg9 lallaal">
+                <span class="sfbd yss1">51考学第一时间发布</span>
+                <b class="asf11 yss1">2017年语文一轮复习要点</b>
+            </div>
+            <div class="zuixintaoti">
+                <div class="zuixintaoti390 fl ">
+                    <div class="zuixintaoti160 zi160">
+                        <img src="../../img/ll0011.png" /><span class="zuixintaotspan"><b class="tblx1">同步练习<br>Synchronous practice</b></span>
+                        <a class="zyi lanlan" onclick="change_css_span(this), tongbu_junior(' between 7 and 9')">全部</a>
+                        <a class="zyi top1 lanlan" onclick="change_css_span(this), tongbu_junior(' =7')">初一</a>
+                        <a class="zyi top2 lanlan" onclick=" change_css_span(this), tongbu_junior(' =8')">初二</a>
+                        <a class="zyi top3 lanlan" onclick=" change_css_span(this), tongbu_junior(' =9')">初三</a>
+                        <a class="zyi top4 lanlan" href="../Beike_Center?level=2&type=6">More</a>
+                    </div>
+                    <div class="zuixintaotilj ">
+                        <ul id="tongbu_junior"></ul>
+                    </div>
+                </div>
+
+                <div class="zuixintaoti390 fl zxstts">
+                    <div class="zuixintaoti160 zi160">
+                        <img src="../../img/ll0022.png" /><span class="zuixintaotspan"><b class="tblx1">精品教案<br>NEW TEST</b></span>
+                        <a class="zyi lanlan" onclick="change_css_span(this), jiaoan_junior(' between 7 and 9')">全部</a>
+                        <a class="zyi top1 lanlan" onclick="change_css_span(this), jiaoan_junior(' =7')">初一</a>
+                        <a class="zyi top2 lanlan" onclick=" change_css_span(this), jiaoan_junior(' =8')">初二</a>
+                        <a class="zyi top3 lanlan" onclick=" change_css_span(this), jiaoan_junior(' =9')">初三</a>
+                        <a class="zyi top4 lanlan" href="../Test_Center?level=2&type=3">More</a>
+                    </div>
+                    <div class="zuixintaotilj">
+                        <ul id="jiaoan_junior"></ul>
+                    </div>
+                </div>
+
+                <div class="zuixintaoti390 fl zxstts">
+                    <div class="zuixintaoti160 zi160">
+                        <img src="../../img/ll0033.png" /><span class="zuixintaotspan"><b class="tblx1">更多学案<br>RECENT EXAMINATION PAPER</b></span>
+                        <a class="zyi lanlan" onclick="change_css_span(this), xuean_junior(' between 7 and 9')">全部</a>
+                        <a class="zyi top1 lanlan" onclick="change_css_span(this), xuean_junior(' =7')">初一</a>
+                        <a class="zyi top2 lanlan" onclick="change_css_span(this), xuean_junior(' =8')">初二</a>
+                        <a class="zyi top3 lanlan" onclick="change_css_span(this), xuean_junior(' =9')">初三</a>
+                        <a class="zyi top4 lanlan" href="../Test_Center?level=2&type=4">More</a>
+                    </div>
+                    <div class="zuixintaotilj">
+                        <ul id="xuean_junior"></ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- 高中精品试题 -->
+
+        <div class="gzzy_gz">
+            <div class="mstj">
+                <div class="mstj_1189">
+                    <div class="ztk_div zxztyanse mstjyanse">
+                        <b><h3 style="color:#808ffb;">名校套题 SCHOOL PROBLEM SET</h3></b>
+                        <div class="ztk_div_div ">
+                            <div class="xian1 fl yansemstj1"></div>
+                            <div class="quanquan fl">
+                                <div class="qq1 q11 fl qdankong qq2"><a class="yansemstjcolor yslvz">备课中心</a></div>
+                                <div class="qq1 q22 fl qqq1 qq2"><a class="yansemstjcolor yslvz">每日专题</a></div>
+                                <div class="qq1 q33 fl qqq1 qq2"><a class="yansemstjcolor yslvz">历年考试</a></div>
+                                <div class="qq1 q44 fl qqq1 qq2"><a class="yansemstjcolor yslvz">名校测题</a></div>
+                            </div>
+                            <div class="xian2 xx22 fl yansemstj1"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="ywfyxi">
+                        <div class="ywfyxi2 xxyx11 fl">
+                            <a><img src="../../img/zbb11.png" class="imgywfy" /><b class="lvlz">名校试题</b></a>
+                            <span>
+                                <a class="yi111 y1y" onclick="change_css_span(this), test_mingxiao_junior(' between 7 and 9')">全部</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq1 y1y" onclick="change_css_span(this), test_mingxiao_junior(' =7')">初一</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq2 y1y" onclick="change_css_span(this), test_mingxiao_junior(' =8')">初二</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq3 y1y" onclick="change_css_span(this), test_mingxiao_junior(' =9')">初三</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq4 y1y" href="../Test_Center?level=2&type=1">more</a>
+                            </span>
+                        </div>
+                        <div class="ywfyxi2 xxyx11 fl dkmg10">
+                            <a><img src="../../img/zbb22.png" class="fy" /><b class="lvlz">精品课件</b></a>
+                            <span>
+                                <a class="yi111 y1y" onclick="change_css_span(this), kejian_junior(' between 7 and 9')">全部</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq1 y1y" onclick="change_css_span(this), kejian_junior(' =7')">初一</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq2 y1y" onclick="change_css_span(this), kejian_junior(' =8')">初二</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq3 y1y" onclick="change_css_span(this), kejian_junior(' =9')">初三</a>
+                            </span>
+                            <span>
+                                <a class="yi111 sq4 y1y" href="../Test_Center?level=2&type=2">more</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="jpshijuan jsppd">
+                        <div class="jpst_lianjie fl">
+                            <ul id="test_mingxiao_junior"></ul>
+                        </div>
+
+                        <div class="jpst_lianjie fl mgjpst">
+                            <ul id="kejian_junior"></ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- 高中资源 -->
+        </div>
+
+        @Html.Partial("~/Common/bottom.ascx")
+    </body>
 </html>

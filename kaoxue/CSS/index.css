@@ -16,12 +16,12 @@ a {
 
 .fl_head {
     float: left;
-    width: 594.5px;
+    width: 260px;
 }
 
 .f2_head {
     float: right;
-    width: 594.5px;
+    width: 820px;
 }
 
 .fl_head > ul {
@@ -717,7 +717,7 @@ a {
 }
 
 .btnjps {
-    background: #f5bc2b;
+    background: #808ffb;
     color: #fff;
 }
 
@@ -838,7 +838,7 @@ a {
 }
 
 .jpstys > a {
-    color: #f8ce76;
+    color: #808ffb;
 }
 
 .zuixintaoti160 > button {
@@ -922,7 +922,7 @@ a {
 }
 
 .x1 {
-    border-bottom: 1px solid #f5bc2b;
+    border-bottom: 1px solid #808ffb;
 }
 
 .zxzhuti {
@@ -941,7 +941,7 @@ a {
 
 .mingxiaohezuo {
     width: 100%;
-    height: 613px;
+    height: 685px;
     background: #6bb336;
 }
 
@@ -1013,20 +1013,20 @@ a {
     padding-top:20px;
 }
 .mxzy_8 {
-    width: 140px;
-    height: 160px;
+    width:223px;
+    height: 250px;
 }
 
     .mxzy_8 > a {
         display: block;
         color: #fff;
         padding-top: 7px;
-        width: 140px;
+        width: 223px;
         text-align: center;
     }
 
 .mxzykz6 {
-    margin-left: 9.8px;
+    margin-left: 18px;
 }
 
 .mxzy_border {
@@ -1414,7 +1414,7 @@ a {
 }
 
 .zxzths {
-    color: #f5bc2b;
+    color: #808ffb !important;
 }
 
 .zxzt_btn {
@@ -1558,19 +1558,19 @@ a {
 }
 
 .b11 {
-    background: url(../img/z-11.png);
+    background: url(../img/z-11.jpg);
 }
 
 .b22 {
-    background: url(../img/z-22.png);
+    background: url(../img/z-22.jpg);
 }
 
 .b33 {
-    background: url(../img/z-33.png);
+    background: url(../img/z-33.jpg);
 }
 
 .b44 {
-    background: url(../img/z-44.png);
+    background: url(../img/z-44.jpg);
 }
 
 .mgjpst > ul {
@@ -1598,15 +1598,15 @@ a {
 }
 .lantb_set_1 {
     position:absolute;
-    top:3257px;
+    top:3329px;
 }
 .sttj_set {
     position:absolute;
-    top:4375px;
+    top:4447px;
 }
 .mstj_set {
     position:absolute;
-    top:4812px;
+    top:4889px;
 }
 .mxttbggd {
     width: 1189px;
@@ -1634,4 +1634,9 @@ a {
     width: 328px;
     height: 218px;
     margin-top: 25px;
+}
+.school_img {
+    width:223px;
+    height:176px;
+    border:1px solid #ffffff;
 }
