@@ -6,17 +6,26 @@
 //
 function getbeikecount() {
     $.post("../Home/GetBeikeCount", function (data) {
-        $("#beikecount").html("5"+data + "套");
+        $("#beikecount").html("5" + data + "套");
+    });
+}
+function GetUpCountByDay() {
+    $.post("../Home/GetBeikeCountByDay", function (data) {
+        $("#UpCountByDay").html("5" + data + "套");
     });
 }
 
-
+function MemberCount() {
+    $.post("../Home/GetMemberCount", function (data) {
+        $("#MemberCount").html(data + "人");
+    });
+}
 //
 //试题资源数量
 //
 function GetShitiCount() {
     $.post("../Home/GetShitiCount", function (data) {
-        $("#shiticount").html("3"+data + "套");
+        $("#shiticount").html("3" + data + "套");
     });
 }
 
@@ -46,4 +55,6 @@ $(document).ready(function () {
     getbeikecount();
     GetShitiCount();
     GetUserInfo();
+    GetUpCountByDay();
+    MemberCount();
 });

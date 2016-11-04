@@ -374,6 +374,21 @@ namespace kaoxue.Controllers
             string sql = "SELECT  COUNT(1) FROM [select_beike_all]";
             return Convert.ToInt32(DbHelperSQL.GetSingle(sql));
         }
+        /// <summary>
+        /// 今日上新
+        /// </summary>
+        /// <returns></returns>
+        public int GetBeikeCountByDay()
+        {
+            string sql = string.Format("select count(1) from [select_beike_all] where DATEDIFF(DAY,uploadtime,GETDATE())<=1");
+            return Convert.ToInt32(DbHelperSQL.GetSingle(sql));
+        }
+
+        public int GetMemberCount() 
+        {
+            string sql = string.Format("SELECT COUNT(1) FROM [haoziyuan].[dbo].[webusers]");
+            return Convert.ToInt32(DbHelperSQL.GetSingle(sql));
+        }
 
         /// <summary>
         /// 试题数量
@@ -415,7 +430,7 @@ namespace kaoxue.Controllers
                 }
                 return json;
             }
-            else 
+            else
             {
                 return "0";
             }
