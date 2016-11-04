@@ -386,7 +386,7 @@ namespace kaoxue.Controllers
 
         public int GetMemberCount() 
         {
-            string sql = string.Format("SELECT COUNT(1) FROM [webusers]");
+            string sql = string.Format("select COUNT(1) from tblschool");
             return Convert.ToInt32(DbHelperSQL.GetSingle(sql));
         }
 

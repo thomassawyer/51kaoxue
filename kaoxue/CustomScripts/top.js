@@ -17,7 +17,7 @@ function GetUpCountByDay() {
 
 function MemberCount() {
     $.post("../Home/GetMemberCount", function (data) {
-        $("#MemberCount").html(data + "人");
+        $("#MemberCount").html("3"+data + "所");
     });
 }
 //
