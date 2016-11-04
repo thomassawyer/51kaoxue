@@ -41,7 +41,7 @@ function GetYear() {
                     }
                 }
             }
-            $("#years").html(html);
+            $("#years_columns").html(html);
             if (year_para != "" && year_para != null && year_para != undefined) {
                 year_text = GetQueryString("year_text");
                 $("#year" + year_para).click();
