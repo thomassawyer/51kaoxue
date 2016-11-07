@@ -23,12 +23,12 @@ function beike_jingpin() {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].pubdate);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 20 ? temp[i].name.substr(0, 20) : temp[i].name;
+                var text = temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a class=\"fl btnjps btnjspt\">" + number + "</a><div style=\"width:456px;\" class=\"fl jpstys jpys\"><a  href='../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
+                                <a class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a  href='../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
                                     <a class=\"ayblue\" >[" + time + "]</a>\
                                 </div>\
                             </div>\
@@ -51,12 +51,12 @@ function test_jingpin() {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].testname.length > 15 ? temp[i].testname.substr(0, 15) : temp[i].testname;
+                var text = temp[i].testname;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a class=\"fl btnjps btnjspt\">" + number + "</a><div style=\"width:456px;\" class=\"fl jpstys jpys\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\" id=\"\">\
+                                <a class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
                                     <a class=\"ayblue\" >["+ time + "]</a>\
                                 </div>\
                             </div>\
@@ -81,16 +81,16 @@ function zhuanti_new_recommend_senior() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 if (time == "NaN-NaN")
                     time = "";
-                var text = temp[i].name.length > 8 ? temp[i].name.substr(0, 8) : temp[i].name;
+                var text = temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += " <li>\
-                            <div class=\"fl gkdt_2701\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
-                            <div class=\" fl\">\
-                                <a class=\"gkdttime\">[" + time + "]</a>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
             }
@@ -114,16 +114,16 @@ function zhuanti_new_recommend_junior() {
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     if (time == "NaN-NaN")
                         time = "";
-                    var text = temp[i].name.length > 8 ? temp[i].name.substr(0, 8) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += " <li>\
-                            <div class=\"fl gkdt_2701\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
-                            <div class=\" fl\">\
-                                <a class=\"gkdttime\">[" + time + "]</a>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
                 }
@@ -145,16 +145,16 @@ function test_new_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].testname.length > 8 ? temp[i].testname.substr(0, 8) : temp[i].testname;
+                var text = temp[i].testname;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_2701\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
-                            <div class=\" fl\">\
-                                <a class=\"gkdttime\">["+ time + "]</a>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
             }
@@ -175,16 +175,16 @@ function test_new_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].testname.length > 8 ? temp[i].testname.substr(0, 8) : temp[i].testname;
+                var text = temp[i].testname;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_2701\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
-                            <div class=\" fl\">\
-                                <a class=\"gkdttime\">["+ time + "]</a>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
             }
@@ -205,16 +205,16 @@ function beikao_new(wheel) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 8 ? temp[i].name.substr(0, 8) : temp[i].name;
+                var text = temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_2701\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
-                            <div class=\" fl\">\
-                                <a class=\"gkdttime\">[" + time + "]</a>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
             }
@@ -235,16 +235,16 @@ function moni_junior() {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 8 ? temp[i].name.substr(0, 8) : temp[i].name;
+                var text = temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_2701\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
                                 <a class=\"gdkys\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
-                            <div class=\" fl\">\
-                                <a class=\"gkdttime\">[" + time + "]</a>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
             }
@@ -264,13 +264,13 @@ function test_mingxiao_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].testname.length > 27 ? temp[i].testname.substr(0, 27) : temp[i].testname;
+                var text = temp[i].testname;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                                <div class=\"jpstli zxzhutiys\">\
-                                    <a class=\"fl btnjps btnjspt kaz\">" + number + "</a><div style=\"width:464px;\" class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
-                                        <a class=\"ayblue rqys\">[" + time + "]</a>\
+                                <div class=\"jpstli zxzhutiys overf_com gkdttime\">\
+                                    <a class=\"fl btnjps btnjspt kaz dot_data_com\">" + number + "</a><div style=\"width:464px;\" class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\">\
+                                        <a class=\"ayblue rqys  fr\">[" + time + "]</a>\
                                     </div>\
                                 </div>\
                             </li>";
@@ -293,13 +293,13 @@ function test_mingxiao_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].testname.length > 30 ? temp[i].testname.substr(0, 30) : temp[i].testname;
+                var text = temp[i].testname;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                                <div class=\"jpstli zxzhutiys\">\
-                                    <a class=\"fl btnjps btnjspt kaz1\">" + number + "</a><div style=\"width:464px;\" class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
-                                        <a class=\"ayblue rqys1\">[" + time + "]</a>\
+                                <div class=\"jpstli zxzhutiys overf_com gkdttime\">\
+                                    <a class=\"fl btnjps btnjspt kaz1 dot_data_com\">" + number + "</a><div style=\"width:464px;\" class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\">\
+                                        <a class=\"ayblue rqys1 fr\">[" + time + "]</a>\
                                     </div>\
                                 </div>\
                             </li>";
@@ -327,7 +327,7 @@ function kejian_senior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                                 <div class=\"jpstli zxzhutiys\">\
-                                    <a class=\"fl btnjps btnjspt kaz\">" + number + "</a><div style=\"width:461px;\" class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\" href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                    <a class=\"fl btnjps btnjspt kaz dot_data_com\">" + number + "</a><div style=\"width:461px;\" class=\"fl jpstys jpys\"><a style=\"color:#8CC407;\" href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\">\
                                         <a class=\"ayblue rqys\">[" + time + "]</a>\
                                     </div>\
                                 </div>\
@@ -356,7 +356,7 @@ function kejian_junior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                                 <div class=\"jpstli zxzhutiys\">\
-                                    <a class=\"fl btnjps btnjspt kaz1\">" + number + "</a><div style=\"width:461px;\" class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\" href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                                    <a class=\"fl btnjps btnjspt kaz1 dot_data_com\">" + number + "</a><div style=\"width:461px;\" class=\"fl jpstys jpys\"><a style=\"color:#808ffb;\" href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
                                         <a class=\"ayblue rqys1\">[" + time + "]</a>\
                                     </div>\
                                 </div>\
@@ -380,10 +380,19 @@ function tongbu_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
+                var text = temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\" style='width:258px'><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a  href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                //html += "<li><div class=\"zxtlianjiediv fl overf_com width_315\"><a class=\"zxzt_btn dot_data_com fl\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a  href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fr zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
             }
             $("#tongbu_senior").html(html);
         }
@@ -402,10 +411,19 @@ function tongbu_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
+                var text = temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"  style='width:258px'><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                //html += "<li><div class=\"zxtlianjiediv fl\"  style='width:258px'><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
             }
             $("#tongbu_junior").html(html);
         }
@@ -424,10 +442,19 @@ function jiaoan_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 12 ? temp[i].name.substr(0,12) : temp[i].name;
+                var text = temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                //html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
             }
             $("#jiaoan_senior").html(html);
         }
@@ -446,10 +473,19 @@ function jiaoan_junior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 12? temp[i].name.substr(0, 12) : temp[i].name;
+                var text = temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                //html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
             }
             $("#jiaoan_junior").html(html);
         }
@@ -468,10 +504,19 @@ function xuean_senior(level) {
             for (var i = 0; i < temp.length; i++) {
                 date = new Date(temp[i].uploadtime);
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
+                var text = temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                //html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a >[" + time + "]</a></div></li>";
+                html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
             }
             $("#xuean_senior").html(html);
         }
@@ -494,7 +539,16 @@ function xuean_junior(level) {
                 var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                //html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a>[" + time + "]</a></div></li>";
+                html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
             }
             $("#xuean_junior").html(html);
         }
