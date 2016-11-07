@@ -108,7 +108,7 @@ function GetInformation() {
             //上传时间
             $("#uploadtime").html(datestr);
             filepath = m.filesrc;
-            $("#download_resource").show();
+            $("#download").show();
             Preview();
         }
     });
