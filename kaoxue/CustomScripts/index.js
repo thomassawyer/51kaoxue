@@ -23,7 +23,7 @@ function New_Zhuanti() {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
                             <a class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
-                                <a  class=\"ayblue1\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' class=\"zxzths\">[" + time + "]</a>\
+                                <a  class=\"zxzths\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' class=\"zxzths\">[" + time + "]</a>\
                             </div>\
                         </div>\
                     </li>";
@@ -68,7 +68,14 @@ function Taoti() {
                 var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                 var number_str = i + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
-                html += "<li><a class=\"btn size_com fl\">" + number + "</a>&nbsp;<a title='" + temp[i - 1].name.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "'> " + temp[i - 1].name + "</a></li>";
+                //html += "<li><a class=\"btn size_com fl\">" + number + "</a>&nbsp;<a title='" + temp[i - 1].name.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "'> " + temp[i - 1].name + "</a></li>";
+                html += "<li>\
+                        <div class=\"jpstli zxzhutiys\">\
+                            <a class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a class=\"fff\" title='" + temp[i - 1].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i - 1].id + "&way=2&name=" + temp[i - 1].name + "\">[试题试卷] " + temp[i - 1].name + "</a></div><div class=\"fr\" id=\"\">\
+                                <a class=\"fff\" href=\"\">["+ time + "]</a>\
+                            </div>\
+                        </div>\
+                    </li>";
                 if (i % 6 == 0 && i != 0 && i < temp.length) {
                     html += "</ul>\
                                 </div>\
@@ -131,7 +138,13 @@ function School_Test() {
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 //html += "<li><a class=\"btn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"fff\"> " + text + "</a></li>";
-                html += "<li><a class=\"btn size_com fl\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].testname + "'> " + temp[i].testname + "</a></li>";
+                html += "<li>\
+                        <div class=\"jpstli zxzhutiys\">\
+                            <a class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a class=\"fff\" title='" + temp[i].testname.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].testname + "\">[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
+                                <a class=\"fff\" href=\"\">["+ time + "]</a>\
+                            </div>\
+                        </div>\
+                    </li>";
                 if ((i + 1) % 6 == 0 && i != 0 && (i + 1) < temp.length) {
                     html += "</ul>\
                                 </div>\
