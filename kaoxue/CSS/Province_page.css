@@ -25,6 +25,7 @@
 .sfyx1 {
     width: 69px;
     height: 27px;
+    line-height:27px;
     position: absolute;
     right: 0px;
     top: 50px;
@@ -33,6 +34,7 @@
 .sfyx2 {
     width: 69px;
     height: 27px;
+        line-height:27px;
     position: absolute;
     right: 187px;
     top: 50px;
@@ -43,6 +45,7 @@
 .sfyx3 {
     width: 69px;
     height: 27px;
+    line-height:27px;
     position: absolute;
     right: 92px;
     top: 50px;
@@ -63,24 +66,24 @@
     color: #fff;
 }
 
-.sfyx1:hover {
+/*.sfyx1:hover {
     background: url(../img/sfyuanxing.png);
 }
 
 .sfyx2:hover {
     background: url(../img/sfyuanxing.png);
-}
+}*/
 
-.sfyx3:hover {
+/*.sfyx3:hover {
     background: url(../img/sfyuanxing.png);
-}
+}*/
 
-.sfyx3 > a:hover,.sfyx2 > a:hover, .sfyx1 > a:hover {
+/*.sfyx3 > a:hover,.sfyx2 > a:hover, .sfyx1 > a:hover {
     color: #808ffb;
-}
+}*/
 
 .zuixintaoti {
-    height: 340px;
+    height: 360px;
 }
 
 .bsdkbtn {
@@ -121,7 +124,7 @@
 }
 
 .dkwidth {
-    height: 500px;
+    height: 520px;
 }
 
 .dk3111 {
@@ -295,7 +298,7 @@
     float: left;
     width: 105px;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     line-height: 30px;
     font-size: 24px;
@@ -303,6 +306,8 @@
     font-family:'Microsoft YaHei';
     margin-right: 20px;
     cursor: pointer;
+    padding-left:5px;
+    padding-right:5px;
 }
 
 

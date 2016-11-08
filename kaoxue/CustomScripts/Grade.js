@@ -40,7 +40,7 @@ function News(type, controlid) {
                 //        html += "</ul>\
                 //<ul class=\"ul1 fl\">";
                     //    }
-                    html += "<li>\
+                    html += "<li class=\"font_size16\">\
                             <div class=\"fl gkdt_240 overf_com color_ff\">\
                                 <a class=\"btn dot_data_com fl\">" + number + "</a>&nbsp;\
                                 <a class=\"color_ff line_hg_25\" href='../Download?cid=1&id=" + temp[i - 1].id + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\

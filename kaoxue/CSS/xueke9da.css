@@ -167,7 +167,7 @@
 }
 
 .zhentiku {
-    height: 500px;
+    height: 520px;
 }
 
 .daimg9 {
@@ -327,7 +327,7 @@
         float: left;
         width: 105px;
         height: 30px;
-        border-radius: 10px;
+        border-radius: 15px;
         text-align: center;
         line-height: 30px;
         font-size: 24px;
@@ -338,6 +338,8 @@
         height: 40px;
         line-height: 40px;
         color: white;
+        padding-left:5px;
+        padding-right:5px;
     }
 
     .mar_bott_19 {

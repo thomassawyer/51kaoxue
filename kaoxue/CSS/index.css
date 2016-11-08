@@ -496,7 +496,7 @@ a {
 
 .zhentiku {
     width: 100%;
-    height: 584px;
+    height: 564px;
     background: #08c79e;
     margin-top: 29px;
 }
@@ -536,7 +536,7 @@ a {
 
 .ztk_set {
     position:absolute;
-    top:2530px;
+    top:2454px;
 }
 .xian1 {
     height: 50%;
@@ -691,9 +691,9 @@ a {
 
     .jpst_lianjie > ul > li {
         width: 100%;
-        height: 38px;
+        height: 25px;
         position: relative;
-
+        margin-bottom:12px;
     }
 
 .jpstys {
@@ -752,7 +752,7 @@ a {
 
 .jpst_zhutineirong {
     width: 1189px;
-    height: 300px;
+    height: 280px;
     margin: 0 auto;
 }
 
@@ -761,12 +761,12 @@ a {
 }
 
  .jpst_lianjie > ul > li {
-    margin-top: 5px;
+    /*margin-top: 5px;*/
 }
 
 .zuixintaotiyellow {
     width: 100%;
-    height: 516px;
+    height: 480px;
 }
 
 .yellow {
@@ -775,7 +775,7 @@ a {
 
 .zuixintaoti {
     width: 1189px;
-    height: 500px;
+    height: 460px;
     margin: 0 auto;
 }
 
@@ -917,7 +917,7 @@ a {
 }
 
 .zuixintaotilj > ul > li {
-    margin-top: 18px;
+    margin-bottom:12px;
 }
 
 .zxstts {
@@ -1087,10 +1087,21 @@ a {
 
     .gdk3_2 > ul > li {
         width: 100%;
-        height: 17px;
-        padding-top: 15px;
+        height: 25px;
+        margin-bottom:12px;
     }
-
+#gaokaodongtai, #jingyanjiaoliu, #xuexifangfa {
+    margin-top:20px;
+}
+#keyanlunwen, #jiaoxueyanjiu, #jiaocaijiaofa {
+    margin-top:10px;
+}
+.mar_top_0 {
+    margin-top:0px;
+}
+.mar_top_50 {
+    margin-top:50px;
+}
 .gkdt_270 {
     /*width: 300px;
     height: 17px;*/
@@ -1450,7 +1461,7 @@ a {
 
     .ztk_ul > li {
         height: 25px;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         overflow: hidden;  /*溢出隐藏*/
     text-overflow: ellipsis; /*以省略号...显示*/
 
@@ -1601,19 +1612,22 @@ a {
     }
 .lantb_set {
     position:absolute;
-    top:2979px;
+    top:2902px;
 }
 .lantb_set_1 {
     position:absolute;
-    top:3329px;
+    top:3254px;
+}
+.mar_bott_30 {
+    margin-bottom:30px !important;
 }
 .sttj_set {
     position:absolute;
-    top:4447px;
+    top:4380px;
 }
 .mstj_set {
     position:absolute;
-    top:4889px;
+    top:4838px;
 }
 .mxttbggd {
     width: 1189px;
@@ -1639,7 +1653,7 @@ a {
 .gedigaokao_img {
     background: url(../img/gedigaokao.jpg);
     width: 328px;
-    height: 218px;
+    height: 200px;
     margin-top: 25px;
 }
 .school_img {
@@ -1792,4 +1806,21 @@ a {
     width: 223px;
     height: 176px;
     border: 1px solid #07c7bc;
+}
+.title_middle_nav_span_select {
+    background: url(../img/sfyuanxing.png);
+    color:#808ffb !important;
+}
+.grade_gengdu_sc {
+    position:absolute;
+    top:3680px;
+}
+.ma20 {
+    margin-top:20px;
+}
+.mar_top_55 {
+    margin-top:55px;
+}
+.mar_bott_60 {
+    margin-bottom:60px !important;
 }

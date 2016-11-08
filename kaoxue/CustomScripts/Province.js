@@ -17,7 +17,7 @@ function test_mingxiao(level) {
     $.post("../Province/Test_Mingxiao", { area: area,level:level }, function (data) {
         if (data) {
             var html = "<div class=\"gkd_3 fl\">\
-                        <div id=\"\" class=\"gdk3_2 ie8\">\
+                        <div id=\"\" class=\"gdk3_2 ie8 ma20\">\
                             <ul>";
             if (data!="]") {
                 var temp = eval(data);
@@ -51,7 +51,7 @@ function test_mingxiao(level) {
                         </div>\
                     </div>\
                     <div class=\"gkd_3 fl gkdt_lianjiedk\" style='margin-left:61px;'>\
-                        <div id=\"\" class=\"gdk3_2 ie8\">\
+                        <div id=\"\" class=\"gdk3_2 ie8 ma20\">\
                             <ul>";
                     }
                 }
@@ -275,7 +275,7 @@ function News(type, controlid) {
                     var number_str = (i) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     //html += "<li><div class=\"fl ul1div\"><a class=\"abt abtdk\">" + number + "</a>&nbsp;<a  title='" + temp[i-1].title.replace(" ", "-") + "' href='../News_Detail?id=" + temp[i - 1].id + "' class=\"ul1a\">" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
-                    html += "<li>\
+                    html += "<li  class=\"font_size16\">\
                             <div class=\"fl gkdt_240 overf_com color07c7bc\">\
                                 <a class=\"zxzt_btn_07c7bc dot_data_com fl\">" + number + "</a>&nbsp;\
                                 <a class=\"color07c7bc line_hg_25\" href='../Download?cid=1&id=" + temp[i - 1].id + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
