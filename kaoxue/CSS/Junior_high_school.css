@@ -32,7 +32,7 @@
 }
 
 .gkdt_img {
-    top: 10px;
+    top: 12px;
 }
 
 .dkzhentiku {
@@ -82,7 +82,7 @@
 
 .bdk {
     position: absolute;
-    left: 25px;
+    left: 30px;
 }
 
 .fy {
@@ -147,7 +147,7 @@
 
 .beikeyaodian {
     width: 100%;
-    height: 355px;
+    height: 395px;
     background: #07c7bc;
 }
 
@@ -155,6 +155,7 @@
     height: 100%;
     width: 1189px;
     margin: 0 auto;
+    padding-top:49px;
 }
 
 .bkyd30 {
@@ -162,10 +163,16 @@
     border-bottom: 1px solid #FFFFFF;
     height: 40px;
     position: relative;
-    margin-top: 40px;
+    margin-top: 10px;
     border-bottom: 1px solid #07c7bc;
 }
-
+.bkyd30_new {
+    width: 100%;
+    border-bottom: 1px solid #FFFFFF;
+    height: 30px;
+    position: relative;
+    border-bottom: 1px solid #07c7bc;
+}
 .beijinbai > b {
     line-height: 30px;
 }

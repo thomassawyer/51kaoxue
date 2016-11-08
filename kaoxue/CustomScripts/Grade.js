@@ -27,18 +27,37 @@ function News(type, controlid) {
         if (data) {
             if (data) {
                 var temp = eval(data);
-                var html = "<ul class=\"ul1 fl\">";
+                var html = "<ul class=\"ul1 fl mar_rg_45\">";
                 var date;
                 for (var i = 1; i <= temp.length; i++) {
                     date = new Date(temp[i - 1].pubdate);
-                    var text = temp[i - 1].title.length > 10 ? temp[i - 1].title.substr(0, 10) : temp[i - 1].title;
+                    var text = temp[i - 1].title;
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     var number_str = (i) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><div style='width: 240px;' class=\"fl ul1div\"><a class=\"abt\">" + number + "</a>&nbsp;<a class=\"ul1a\" href='../News_Detail?id=" + temp[i - 1].id + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
+                //    html += "<li><div style='width: 240px;' class=\"fl ul1div\"><a class=\"abt\">" + number + "</a>&nbsp;<a class=\"ul1a\" href='../News_Detail?id=" + temp[i - 1].id + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
+                //    if (i % 6 == 0 && i != 0 && i < temp.length) {
+                //        html += "</ul>\
+                //<ul class=\"ul1 fl\">";
+                    //    }
+                    html += "<li>\
+                            <div class=\"fl gkdt_240 overf_com color_ff\">\
+                                <a class=\"btn dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff line_hg_25\" href='../Download?cid=1&id=" + temp[i - 1].id + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"color_ff  fr line_hg_25\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                     if (i % 6 == 0 && i != 0 && i < temp.length) {
-                        html += "</ul>\
-                <ul class=\"ul1 fl\">";
+                        if (i / 6 >= 3) {
+                            html += "</ul>\
+                                <ul class=\"ul1 fl\">";
+                        } else {
+                            html += "</ul>\
+                                <ul class=\"ul1 fl mar_rg_45\">";
+                        }
+
                     }
                 }
                 html += "</ul>";
@@ -66,10 +85,19 @@ function zhuanti_tuijian() {
                     if (isNaN((date.getMonth() + 1))) {
                         time = "";
                     }
-                    var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                    html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
+                    //html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
                 }
             }
             $("#zhuanti_tuijian").html(html);
@@ -92,10 +120,19 @@ function beike_jingpin() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].pubdate);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                    html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
+                    //html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
                 }
             }
             $("#beike_jingpin").html(html);
@@ -117,10 +154,19 @@ function taoti_jingpin() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].pubdate);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
+                    html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
+                    //html += "<li><div class=\"zxtlianjiediv fl\"><a class=\"zxzt_btn\"><span>" + number + "</span></a>&nbsp;<a href='Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fl zuixinzt\"><a href=\"\">[" + time + "]</a></div></li>";
                 }
             }
             $("#taoti_jingpin").html(html);
@@ -143,17 +189,26 @@ function taoti_mingxiao() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].pubdate);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li>\
-								<div id=\"\" class=\"fl gkdt_270\">\
-									<a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a href='Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
-								</div>\
-								<div class=\" fl\">\
-									<a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
-                    </div>\
-                </li>";
+                //    html += "<li>\
+				//				<div id=\"\" class=\"fl gkdt_270\">\
+				//					<a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a href='Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
+				//				</div>\
+				//				<div class=\" fl\">\
+				//					<a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
+                //    </div>\
+                    //</li>";
+                    html += " <li>\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                 }
             }
             $("#taoti_mingxiao").html(html);
@@ -175,17 +230,26 @@ function gaokao_beikao() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html+="<li>\
-								<div id=\"\" class=\"fl gkdt_270\">\
-									<a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
-								</div>\
-								<div class=\" fl\">\
-									<a href=\"\" class=\"gkdttime\">["+time+"]</a>\
-                    </div>\
-                </li>";
+                //    html+="<li>\
+				//				<div id=\"\" class=\"fl gkdt_270\">\
+				//					<a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
+				//				</div>\
+				//				<div class=\" fl\">\
+				//					<a href=\"\" class=\"gkdttime\">["+time+"]</a>\
+                //    </div>\
+                    //</li>";
+                    html += " <li>\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                 }
             }
             $("#beizhangaokao").html(html);
@@ -207,17 +271,26 @@ function moni_zhongkao() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li>\
-								<div id=\"\" class=\"fl gkdt_270\">\
-									<a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
-								</div>\
-								<div class=\" fl\">\
-									<a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
-                    </div>\
-                </li>";
+                //    html += "<li>\
+				//				<div id=\"\" class=\"fl gkdt_270\">\
+				//					<a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
+				//				</div>\
+				//				<div class=\" fl\">\
+				//					<a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
+                //    </div>\
+                    //</li>";
+                    html += " <li>\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                 }
             }
             $("#monikao").html(html);
@@ -271,13 +344,20 @@ function Kejian_jingping() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 25 ? temp[i].name.substr(0, 25) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
+                    //html += "<li>\
+                    //        <div class=\"jpstli zxzhutiys\">\
+                    //            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                    //                <a class=\"ayblue\">["+time+"]</a>\
+                    //            </div>\
+                    //        </div>\
+                    //    </li>";
                     html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
-                                    <a class=\"ayblue\">["+time+"]</a>\
+                                <a class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
+                                    <a class=\"ayblue\" >["+ time + "]</a>\
                                 </div>\
                             </div>\
                         </li>";
@@ -302,16 +382,25 @@ function jiaoan_jingpin() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
 
+                    //html += "<li>\
+                    //        <div class=\"fl gkdt_270\">\
+                    //            <a class=\"gkdtbtn dkgkdtbtn\">" + number + "</a>&nbsp;<a class=\"gdkys kylv\" href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                    //</div>\
+                    //<div class=\" fl\">\
+                    //            <a class=\"gkdttime dkgkdttime\">["+time+"]</a>\
+                    //        </div>\
+                    //    </li>";
                     html += "<li>\
-                            <div class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn dkgkdtbtn\">" + number + "</a>&nbsp;<a class=\"gdkys kylv\" href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
-                    </div>\
-                    <div class=\" fl\">\
-                                <a class=\"gkdttime dkgkdttime\">["+time+"]</a>\
+                            <div class=\"fl gkdt_2701 overf_com color07c277\">\
+                                <a class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"color07c277  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
                 }
@@ -335,13 +424,20 @@ function xuean_jingpin() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 25 ? temp[i].name.substr(0, 25) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
+                    //html += "<li>\
+                    //        <div class=\"jpstli zxzhutiys\">\
+                    //            <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
+                    //                <a class=\"ayblue\">["+ time + "]</a>\
+                    //            </div>\
+                    //        </div>\
+                    //    </li>";
                     html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a class=\"fl btnjps btnjspt\">" + number + "</a><div class=\"fl jpstys jpys\"><a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
-                                    <a class=\"ayblue\">["+ time + "]</a>\
+                                <a class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
+                                    <a class=\"ayblue\" >["+ time + "]</a>\
                                 </div>\
                             </div>\
                         </li>";
@@ -366,16 +462,25 @@ function lianxi_jingpin() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
 
+                    //html += "<li>\
+                    //        <div class=\"fl gkdt_270\">\
+                    //            <a class=\"gkdtbtn dkgkdtbtn\">" + number + "</a>&nbsp;<a class=\"gdkys kylv\" href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                    //</div>\
+                    //<div class=\" fl\">\
+                    //            <a class=\"gkdttime dkgkdttime\">["+ time + "]</a>\
+                    //        </div>\
+                    //    </li>";
                     html += "<li>\
-                            <div class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn dkgkdtbtn\">" + number + "</a>&nbsp;<a class=\"gdkys kylv\" href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
-                    </div>\
-                    <div class=\" fl\">\
-                                <a class=\"gkdttime dkgkdttime\">["+ time + "]</a>\
+                            <div class=\"fl gkdt_2701 overf_com color07c277\">\
+                                <a class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"color07c277  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
                 }
@@ -399,16 +504,17 @@ function sucai_jingpin() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 12 ? temp[i].name.substr(0, 12) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
 
                     html += "<li>\
-                            <div class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn dkgkdtbtn\">" + number + "</a>&nbsp;<a class=\"gdkys kylv\" href='../Download?cid=5&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
-                    </div>\
-                    <div class=\" fl\">\
-                                <a class=\"gkdttime dkgkdttime\">["+ time + "]</a>\
+                            <div class=\"fl gkdt_2701 overf_com color07c277\">\
+                                <a class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"color07c277  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
                 }
@@ -436,22 +542,23 @@ function gettestbycategory(category, controlid,flag) {
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     if (flag == 1) {
-                        var text = temp[i].testname.length > 25 ? temp[i].testname.substr(0, 25) : temp[i].testname;
+                        var text = temp[i].testname;
                         html += "<li>\
-                        <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps btnjspt1\">" + number + "</a><div class=\"fl jpstys jpys\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fl\">\
-                                <a class=\"ayblue\">["+time+"]</a>\
+                            <div class=\"jpstli zxzhutiys\">\
+                                <a class=\"fl btnjps zxzt_btn_8cc407 dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
+                                    <a class=\"ayblue\" >["+ time + "]</a>\
+                                </div>\
                             </div>\
-                        </div>\
-                    </li>";
+                        </li>";
                     } else {
-                        var text = temp[i].testname.length > 12 ? temp[i].testname.substr(0, 12) : temp[i].testname;
+                        var text = temp[i].testname;
                         html += "<li>\
-                            <div class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn hhdk\">" + number + "</a>&nbsp;<a class=\"gdkys hyse\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
-                        </div>\
-                        <div class=\" fl\">\
-                                <a class=\"gkdttime htime\">["+time+"]</a>\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime_8cc407\">\
+                                <a class=\"gkdtbtn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"gkdttime_8cc407\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime_8cc407  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
                     }
@@ -472,7 +579,7 @@ function Banner() {
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<li><a  href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:900px; height:444px;'></a></li>";
+                html += "<li><a  href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:715px; height:442px;'></a></li>";
                 html1 += "<a href='#' title='" + (i + 1) + "'><span></span></a>";
             }
             $("#banner_images").html(html);
@@ -551,15 +658,26 @@ function GetSchool() {
             var temp;
             if (data != "]") {
                 temp = eval(data);
-                for (var i = 0; i < 6; i++) {
-                    html2 += "<div class=\"hs1 fl\">\
-                        <div class=\"hsimg1\">\
+                for (var i = 0; i < 5; i++) {
+                    if (i == 0) {
+                        html2 += "<div class=\"hs1 fl\">\
+                        <div class=\"hsimg1_new\">\
                             <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\" />\
                         </div>\
                         <div class=\"wzhs\">\
                             <a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' title='" + temp[i].name.replace(" ", "-") + "'>" + temp[i].name + "</a>\
                         </div>\
                     </div>";
+                    } else {
+                        html2 += "<div class=\"hs1 fl mxzykz6\">\
+                        <div class=\"hsimg1_new\">\
+                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\" />\
+                        </div>\
+                        <div class=\"wzhs\">\
+                            <a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' title='" + temp[i].name.replace(" ", "-") + "'>" + temp[i].name + "</a>\
+                        </div>\
+                    </div>";
+                    }
 
                 }
 
@@ -629,11 +747,11 @@ $(document).ready(function () {
 //点击li时，改变li样式
 function change_css_li(obj) {
     $(obj).parent().children().each(function () {
-        $(this).removeClass("selected");
-        $(this).addClass("normal");
+        $(this).removeClass("news_selected_1");
+        $(this).addClass("news_normal_1");
     });
-    $(obj).removeClass("normal");
-    $(obj).addClass("selected");
+    $(obj).removeClass("news_normal_1");
+    $(obj).addClass("news_selected_1");
 }
 
 //点击span时，改变span样式

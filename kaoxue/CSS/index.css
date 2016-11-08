@@ -1114,7 +1114,7 @@ a {
 }
 
 .gkdt_span > b {
-    font-size: 20px;
+    font-size: 24px;
     padding-left: 30px;
 }
 
@@ -1740,4 +1740,56 @@ a {
 }
 .color000 {
     color:#000;
+}
+.pad_rg_28 {
+    padding-right: 28px;
+}
+.border_lr_e5 {
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.hei_36 {
+    height: 36px !important;
+    /*line-height: 42px;*/
+}
+.hei_99 {
+    height: 99px !important;
+}
+.zuixintaoti160 .fj_grade {
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.zuixintaoti160 .xinxin_grade {
+    padding-left: 45px;
+    padding-top: 20px;
+}
+.zuixintaoti160 .ksquan_grade {
+    padding-left:50px;
+    padding-top: 20px;
+}
+.ab_ps_lf105 {
+    position: absolute;
+    top: 30px !important;
+    left: 105px !important;
+}
+.ab_ps_lf110 {
+    position: absolute;
+    top: 30px !important;
+    left: 110px !important;
+}
+.ab_ps_lf120 {
+    position: absolute;
+    top: 30px !important;
+    left: 120px !important;
+}
+.font_size24 {
+    font-size:24px;
+}
+.hei_554 {
+    height:554px !important;
+}
+.hsimg1_new {
+    width: 223px;
+    height: 176px;
+    border: 1px solid #07c7bc;
 }
