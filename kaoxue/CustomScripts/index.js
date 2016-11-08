@@ -71,7 +71,7 @@ function Taoti() {
                 //html += "<li><a class=\"btn size_com fl\">" + number + "</a>&nbsp;<a title='" + temp[i - 1].name.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "'> " + temp[i - 1].name + "</a></li>";
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a class=\"fff\" title='" + temp[i - 1].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i - 1].id + "&way=2&name=" + temp[i - 1].name + "\">[试题试卷] " + temp[i - 1].name + "</a></div><div class=\"fr\" id=\"\">\
+                            <a class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a class=\"fff\" title='" + temp[i - 1].name.replace(" ", "-") + "' href=\"../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "\">[试题试卷] " + temp[i - 1].name + "</a></div><div class=\"fr\" id=\"\">\
                                 <a class=\"fff\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
