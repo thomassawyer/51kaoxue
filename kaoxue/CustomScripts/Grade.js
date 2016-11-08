@@ -312,17 +312,18 @@ function moni_gaokao() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].testname.length > 13 ? temp[i].testname.substr(0, 13) : temp[i].testname;
+                    var text = temp[i].testname;
                     var number_str = (i+1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li>\
-								<div id=\"\" class=\"fl gkdt_270\">\
-									<a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
-								</div>\
-								<div class=\" fl\">\
-									<a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
-                    </div>\
-                </li>";
+                    html += " <li>\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].testname + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                 }
             }
             $("#monikao").html(html);
