@@ -775,7 +775,7 @@ a {
 
 .zuixintaoti {
     width: 1189px;
-    height: 516px;
+    height: 500px;
     margin: 0 auto;
 }
 
@@ -1191,7 +1191,7 @@ a {
 
 .mstj {
     width: 100%;
-    height: 382px;
+    height: 410px;
 }
 
 .mstj_1189 {
@@ -1646,4 +1646,98 @@ a {
     width:223px;
     height:176px;
     border:1px solid #ffffff;
+}
+.shenfenhover {
+    position: absolute;
+    width: 500px;
+    height: 442px;
+    background: #fff;
+    left: 210px;
+    top: -1px;
+    display: none;
+    border: 1px solid #e5e5e5;
+}
+.pad_lf_28 {
+    padding-left:28px;
+}
+
+.zxzt_btn_808ffb {
+    background: #fff;
+    color: #808ffb;
+}
+
+.dot_data_com {
+    display: block;
+    width: 16px;
+    height: 15px;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+.overf_com {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.color_ff {
+    color: #fff;
+}
+.gdk3_1_new {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+}
+.more6_new {
+    position: absolute;
+    z-index: 19;
+    left: 308px;
+    top: 12px;
+}
+.zxzt_btn_07c277 {
+    background: #fff;
+    color: #07c277;
+    border:1px solid #fff;
+}
+
+.zxzt_btn_fff {
+    background: #07c277;
+    color: #fff;
+    border:1px solid #07c277;
+}
+.color07c277 {
+    color:#07c277;
+}
+.zxzt_btn_8cc407 {
+    background: #fff;
+    color: #8cc407;
+    border: 1px solid #fff;
+}
+.gkdttime_8cc407 {
+    color:#8cc407;
+}
+.gkdtbtn_8cc407 {
+    background: #8cc407;
+    color: #fff;
+    border: 1px solid #8cc407;
+}
+.color07c7bc {
+    color: #07c7bc;
+}
+.zxzt_btn_07c7bc {
+    background: #07c7bc;
+    color: #fff;
+    border: 1px solid #07c7bc;
+}
+.gkdt_240 {
+    width: 200px;
+    height: 25px;
+}
+.line_hg_25 { 
+    line-height:25px;
+}
+.mar_rg_45 {
+    margin-right:45px;
+}
+.color000 {
+    color:#000;
 }

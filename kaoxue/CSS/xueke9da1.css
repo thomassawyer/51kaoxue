@@ -419,12 +419,14 @@
     position: absolute;
     width: 50px;
     height: 18px;
+    /*padding-bottom:8px;*/
     background: url(../img/zqshijiandj.png);
     top: 105px;
     text-align: center;
     vertical-align:middle;
     color: #fff;
     left: 47px;
+    line-height:18px;
 }
 
 .top1 {
@@ -496,6 +498,7 @@
     left: 240px;
     color: #fff;
     text-align: center;
+    line-height:18px;
 }
 
 .sq1 {
@@ -668,7 +671,7 @@
     line-height:23px;
 }
 .pad_lf_49 {
-    padding-left:49px !important;
+    padding-left:60px !important;
 }
 .pad_top_18 {
     padding-top:18px !important;
@@ -677,7 +680,7 @@
     line-height:23px;
     position: absolute;
     top: 30px;
-    left: 125px;
+    left: 136px;
     /*color: #808ffb;*/
     font-size: 24px;
 }
@@ -696,7 +699,7 @@
     font-size: 24px;
 }
 .pad_lf_37 {
-    padding-left:37px !important;
+    padding-left:25px !important;
 }
 .pad_top_15 {
     padding-top:15px !important;
@@ -705,7 +708,7 @@
     line-height:23px;
     position: absolute;
     top: 30px;
-    left: 112px;
+    left: 100px;
     /*color: #808ffb;*/
     font-size: 24px;
 }
