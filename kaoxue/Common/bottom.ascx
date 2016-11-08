@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
+<center>
 <div class="youqinlianjie" style="clear:both;">
         <div class="yqlj1189">
             <div class="yqljimg">
@@ -20,12 +21,13 @@
 
     </div>
     <div class="yqlj2" style="clear:both;">
-        <div class="yqlj2auot">
-            <span class="yqljyou">
-                主办单位：北京利德智达科技有限公司     客服热线：400-819-8115     客服邮箱：kaoxue51@163.com
+        <div class="yqlj2auot" style="color:white;">
+            <span>
+                <%--主办单位：北京利德智达科技有限公司     --%>客服热线：400-819-8115     客服邮箱：kaoxue51@163.com
             </span><br /><br />
-            <span class="yqljyou1">
+            <span>
                 Copyright © 51kaoxue.com All rights reserved 京ICP备16049392号
             </span>
         </div>
     </div>
+    </center>
