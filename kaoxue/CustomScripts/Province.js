@@ -26,17 +26,26 @@ function test_mingxiao(level) {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].testname.length > 13 ? temp[i].testname.substr(0, 13 ) : temp[i].testname;
+                    var text = temp[i].testname;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
+                    //html += "<li>\
+                    //                <div id=\"\" class=\"fl gkdt_270\">\
+                    //                    <a class=\"gkdtbtn bsdkbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys gkgdkys\">[试题试卷] " + text + "</a>\
+                    //                </div>\
+                    //                <div class=\" fl\">\
+                    //                    <a href=\"\" class=\"gkdttime gkgdkys\">["+time+"]</a>\
+                    //                </div>\
+                    //            </li>";
                     html += "<li>\
-                                    <div id=\"\" class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn bsdkbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys gkgdkys\">[试题试卷] " + text + "</a>\
-                                    </div>\
-                                    <div class=\" fl\">\
-                                        <a href=\"\" class=\"gkdttime gkgdkys\">["+time+"]</a>\
-                                    </div>\
-                                </li>";
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                     if ((i + 1) % 6 == 0 && i != 0 && (i + 1) < temp.length) {
                         html += "</ul>\
                         </div>\
@@ -69,15 +78,24 @@ function test_jingpin() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].testname.length > 13 ? temp[i].testname.substr(0, 13) : temp[i].testname;
+                    var text = temp[i].testname;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li>\
-                            <div id=\"\" class=\"fl gkdt_270\">\
-                                <a  class=\"gkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "'  href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
-                    </div>\
-                    <div class=\" fl\">\
-                                <a href=\"\" class=\"gkdttime\">["+time+"]</a>\
+                    //html += "<li>\
+                    //        <div id=\"\" class=\"fl gkdt_270\">\
+                    //            <a  class=\"gkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "'  href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
+                    //</div>\
+                    //<div class=\" fl\">\
+                    //            <a href=\"\" class=\"gkdttime\">["+time+"]</a>\
+                    //        </div>\
+                    //    </li>";
+                    html += " <li>\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].testname + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
                 }
@@ -101,15 +119,24 @@ function beike_jingpin() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].pubdate);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li>\
-                            <div id=\"\" class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].name.replace(" ", "-") + "' href='../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
-                    </div>\
-                    <div class=\" fl\">\
-                                <a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
+                    //html += "<li>\
+                    //        <div id=\"\" class=\"fl gkdt_270\">\
+                    //            <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].name.replace(" ", "-") + "' href='../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
+                    //</div>\
+                    //<div class=\" fl\">\
+                    //            <a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
+                    //        </div>\
+                    //    </li>";
+                    html += " <li>\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
                 }
@@ -133,15 +160,24 @@ function taoti_tuijian() {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].pubdate);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].name.length > 13 ? temp[i].name.substr(0, 13) : temp[i].name;
+                    var text = temp[i].name;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li>\
-                            <div id=\"\" class=\"fl gkdt_270\">\
-                                <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].name.replace(" ", "-") + "' href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
-                    </div>\
-                    <div class=\" fl\">\
-                                <a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
+                    //html += "<li>\
+                    //        <div id=\"\" class=\"fl gkdt_270\">\
+                    //            <a class=\"gkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].name.replace(" ", "-") + "' href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' class=\"gdkys\">[试题试卷] " + text + "</a>\
+                    //</div>\
+                    //<div class=\" fl\">\
+                    //            <a href=\"\" class=\"gkdttime\">["+ time + "]</a>\
+                    //        </div>\
+                    //    </li>";
+                    html += " <li>\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                                <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime  fr\">[" + time + "]</a>\
                             </div>\
                         </li>";
                 }
@@ -164,45 +200,49 @@ function gettest_bucategory(category,controlid,iswhite) {
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    var text = temp[i].testname.length > 13 ? temp[i].testname.substr(0, 13) : temp[i].testname;
+                    var text = temp[i].testname;
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     if (iswhite == 0) {
                         html += "<li>\
-                                    <div  class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn dkgkdtbtn\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys kylv\">[试题试卷] " + text + "</a>\
-                                    </div>\
-                                    <div class=\" fl\">\
-                                        <a  class=\"gkdttime dkgkdttime\">["+ time + "]</a>\
-                                    </div>\
-                                </li>";
+                            <div class=\"fl gkdt_2701 overf_com color07c277\">\
+                                <a class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"color07c277  fr\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                     } else if(iswhite==1) {
                         html += "<li>\
-                                    <div  class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn dkgkdtbtn1\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys kylv1\">[试题试卷] " + text + "</a>\
-                                    </div>\
-                                    <div class=\" fl\">\
-                                        <a  class=\"gkdttime dkgkdttime kylv1\">["+ time + "]</a>\
-                                    </div>\
-                                </li>";
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_07c277 dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                     } else if (iswhite == 2) {
                         html += "<li>\
-                                    <div  class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn dkgkdtbtn2\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys kylv1\">[试题试卷] " + text + "</a>\
-                                    </div>\
-                                    <div class=\" fl\">\
-                                        <a  class=\"gkdttime dkgkdttime kylv1\">["+ time + "]</a>\
-                                    </div>\
-                                </li>";
+                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                                <a class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"fr color_ff\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                     } else if (iswhite == 3) {
-                        html += "<li>\
-                                    <div  class=\"fl gkdt_270\">\
-                                        <a class=\"gkdtbtn hhdk\">" + number + "</a>&nbsp;<a title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"gdkys hyse\">[试题试卷] " + text + "</a>\
-                                    </div>\
-                                    <div class=\" fl\">\
-                                        <a  class=\"gkdttime htime\">[" + time + "]</a>\
-                                    </div>\
-                                </li>";
+                  html += "<li>\
+                            <div class=\"fl gkdt_2701 overf_com gkdttime_8cc407\">\
+                                <a class=\"gkdtbtn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"gkdttime_8cc407\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"gkdttime_8cc407  fr\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                     }
                     
                 }
@@ -226,18 +266,33 @@ function News(type, controlid) {
         if (data) {
             if (data) {
                 var temp = eval(data);
-                var html = "<ul class=\"ul1 fl\">";
+                var html = "<ul class=\"ul1 fl mar_rg_45\">";
                 var date;
                 for (var i = 1; i <= temp.length; i++) {
                     date = new Date(temp[i - 1].pubdate);
-                    var text = temp[i - 1].title.length > 11 ? temp[i - 1].title.substr(0, 11) : temp[i - 1].title;
+                    var text = temp[i - 1].title;
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     var number_str = (i) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><div class=\"fl ul1div\" style='width:240px;'><a class=\"abt abtdk\">" + number + "</a>&nbsp;<a  title='" + temp[i-1].title.replace(" ", "-") + "' href='../News_Detail?id=" + temp[i - 1].id + "' class=\"ul1a\">" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
+                    //html += "<li><div class=\"fl ul1div\"><a class=\"abt abtdk\">" + number + "</a>&nbsp;<a  title='" + temp[i-1].title.replace(" ", "-") + "' href='../News_Detail?id=" + temp[i - 1].id + "' class=\"ul1a\">" + text + "</a></div><div class=\"fl\"><a class=\"ul1a\">[" + time + "]</a></div></li>";
+                    html += "<li>\
+                            <div class=\"fl gkdt_240 overf_com color07c7bc\">\
+                                <a class=\"zxzt_btn_07c7bc dot_data_com fl\">" + number + "</a>&nbsp;\
+                                <a class=\"color07c7bc line_hg_25\" href='../Download?cid=1&id=" + temp[i - 1].id + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
+                            </div>\
+                            <div class=\" fr\">\
+                                <a class=\"color07c7bc  fr line_hg_25\">[" + time + "]</a>\
+                            </div>\
+                        </li>";
                     if (i % 6 == 0 && i != 0 && i < temp.length) {
-                        html += "</ul>\
+                        if (i / 6 >= 3) {
+                            html += "</ul>\
                                 <ul class=\"ul1 fl\">";
+                        } else {
+                            html += "</ul>\
+                                <ul class=\"ul1 fl mar_rg_45\">";
+                        }
+
                     }
                 }
                 html += "</ul>";
@@ -256,7 +311,7 @@ function Banner() {
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<li><a href='"+temp[i].link+"'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:900px; height:444px;'></a></li>";
+                html += "<li><a href='"+temp[i].link+"'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:715px; height:442px;'></a></li>";
                 html1 += "<a href='#' title='" + (i + 1) + "'><span></span></a>";
             }
             $("#banner_images").html(html);
@@ -281,16 +336,27 @@ function GetSchool() {
             var temp;
             if (data != "]") {
                 temp = eval(data);
-                for (var i = 0; i < 6; i++) {
+                for (var i = 0; i < 5; i++) {
+                    if (i == 0) {
                         html2 += "<div class=\"hs1 fl\">\
                         <div class=\"hsimg1\">\
-                            <img src=\""+"http://source.51kaoxue.com/" + temp[i].imgsrc+"\" alt=\"\" class=\"img190\" />\
+                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\" />\
                         </div>\
                         <div class=\"wzhs\">\
                             <a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                         </div>\
                     </div>";
 
+                    } else {
+                        html2 += "<div class=\"hs1 fl mxzykz6\">\
+                        <div class=\"hsimg1\">\
+                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\" />\
+                        </div>\
+                        <div class=\"wzhs\">\
+                            <a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
+                        </div>\
+                    </div>";
+                    }
                 }
 
             }
