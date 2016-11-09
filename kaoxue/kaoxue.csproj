@@ -324,6 +324,7 @@
     <Content Include="img\dlbjk1.png" />
     <Content Include="img\dlyhhh.png" />
     <Content Include="img\dlylog.png" />
+    <Content Include="img\down_hover.gif" />
     <Content Include="img\drw.png" />
     <Content Include="img\dshuben.png" />
     <Content Include="img\duanluo.png" />
@@ -449,6 +450,7 @@
     <Content Include="img\qiuda1.png" />
     <Content Include="img\qq.png" />
     <Content Include="img\qzqm.png" />
+    <Content Include="img\raw_d.png" />
     <Content Include="img\redkj.png" />
     <Content Include="img\renwu.png" />
     <Content Include="img\rwmctb.png" />

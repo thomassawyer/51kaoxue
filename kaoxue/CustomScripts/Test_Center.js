@@ -282,7 +282,7 @@ function GetList() {
         if (data) {
 
             var html = "<div class=\"lxclan\">\
-                <b class=\"bix\">文件</b>\
+                <img src=\"img/doc_bag.jpg\" class=\"doc_bag_p_ab\"><a class=\"bix\">文件</a>\
             </div>";
             if (data != "]") {
                 var temp = eval(data);
@@ -294,11 +294,11 @@ function GetList() {
                     html += "<div class=\"lxc_320\">\
                                 <div class=\"wdk fl\"></div>\
                                 <div class=\"wenbenkui fl\">\
-                                    <a><b class=\"b320\">"+text+"</b></a><br>\
+                                    <a class=\"b320 font_size16 overf_com\"  title='" + text + "'>" + text + "</a><br>\
                                     <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
                                 </div>\
-                                <div class=\"xiazai fl\" style='position:static;width:45px;height:45px;margin-left:160px;'>\
-                                    <a class=\"xztb2 fl\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ><img src=\"img/xiazaitb.png\"></a>\
+                                <div class=\"xiazai fr\" style='position:static;width:45px;height:45px;margin-right: 15px;'>\
+                                    <a class=\"xztb2 fr\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ></a>\
                                 </div>\
                             </div>";
                     //html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style='width:500px'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span>类型：<span id='text_type'>" + Produce_TypeName(temp[i].category) + "</span></span></span></div></div><div class='data_list_td_container_right'><a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";
@@ -358,6 +358,16 @@ function GetDataCount() {
 }
 
 //
+//接收键盘消息处理函数
+//
+function in_enter_key_fun(evt) {
+    if (evt.keyCode) {
+        if (evt.keyCode == 13) {
+            Go();
+        }
+    }
+}
+//
 //分页页码
 //
 function Produce_A_Signs() {
@@ -373,7 +383,11 @@ function Produce_A_Signs() {
     }
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
-        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        if (i == 0) {
+            html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        } else {
+            html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        }
 
         //if (i == 0) {
         //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
@@ -386,7 +400,7 @@ function Produce_A_Signs() {
     }
     html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
-        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\" onkeyup = \"in_enter_key_fun(event)\">\
         <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }
