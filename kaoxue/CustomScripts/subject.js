@@ -728,11 +728,11 @@ $(document).ready(function () {
 });
 
 //点击span时，改变span样式
-function change_css_span(obj) {
+function change_css_span(obj,num) {
     $(obj).parent().children().each(function () {
-        $(this).removeClass("title_middle_nav_span_select");
+        $(this).addClass("title_middle_nav_span_normal_" + num);
     });
-    $(obj).addClass("title_middle_nav_span_select");
+    $(obj).removeClass("title_middle_nav_span_normal_" + num);
 }
 
 function showorhidediv_province(controlid) {

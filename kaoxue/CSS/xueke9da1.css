@@ -498,7 +498,7 @@
     left: 240px;
     color: #fff;
     text-align: center;
-    line-height:18px;
+    line-height:18px !important;
 }
 
 .sq1 {
@@ -715,4 +715,22 @@
 
 .pad_lf_30 {
     padding-left:30px;
+}
+.box_sizing_box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.title_middle_nav_span_normal_1 {
+    border:1px solid #8cc407;
+    background-image:none;
+    color:#8cc407;
+    border-radius:9px;
+    font-size:12px;
+}
+.title_middle_nav_span_normal_2 {
+    border:1px solid #808ffb;
+    background-image:none;
+    color:#808ffb;
+    border-radius:9px;
+    font-size:12px;
 }

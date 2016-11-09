@@ -288,6 +288,7 @@
     <Content Include="img\9da_1.png" />
     <Content Include="img\9tbbiao.png" />
     <Content Include="img\anniuhui.png" />
+    <Content Include="img\anniulan.jpg" />
     <Content Include="img\anniulan.png" />
     <Content Include="img\baidibai.png" />
     <Content Include="img\baijiamingxiao.png" />
@@ -324,6 +325,7 @@
     <Content Include="img\dlbjk1.png" />
     <Content Include="img\dlyhhh.png" />
     <Content Include="img\dlylog.png" />
+    <Content Include="img\doc_bag.jpg" />
     <Content Include="img\down_hover.gif" />
     <Content Include="img\drw.png" />
     <Content Include="img\dshuben.png" />
@@ -347,6 +349,7 @@
     <Content Include="img\gkzkjiaocai.png" />
     <Content Include="img\gkzkkytb.png" />
     <Content Include="img\gongju.png" />
+    <Content Include="img\gotb.jpg" />
     <Content Include="img\gotb.png" />
     <Content Include="img\guanyubq.png" />
     <Content Include="img\guoxuetb.png" />
@@ -476,6 +479,7 @@
     <Content Include="img\stk11.png" />
     <Content Include="img\stk22.png" />
     <Content Include="img\stxkfx.png" />
+    <Content Include="img\syy.gif" />
     <Content Include="img\syy.png" />
     <Content Include="img\taochanh.jpg" />
     <Content Include="img\taochanh.png" />
@@ -555,6 +559,7 @@
     <Content Include="img\zthzjd.png" />
     <Content Include="img\zu-1.png" />
     <Content Include="img\zui-25.png" />
+    <Content Include="img\zui_2222.jpg" />
     <Content Include="img\zxlansebj.png" />
     <Content Include="img\zz110.png" />
     <Content Include="img\zz220.png" />
