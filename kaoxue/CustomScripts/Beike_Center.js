@@ -170,7 +170,7 @@ function version_second_selected(versionid, title) {
 //获取三四级版本
 //
 function GetVersion_ThirdAndFourth() {
-    $("#directory").html("数据加载中...");
+    $("#directory").html("<div class=\"waiting_bg\"></div>");
     $.ajaxSetup({
         async: false
     });

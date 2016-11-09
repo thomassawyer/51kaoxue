@@ -16,12 +16,12 @@ a {
 
 .fl_head {
     float: left;
-    width: 260px;
+    /*width: 260px;*/
 }
 
 .f2_head {
     float: right;
-    width: 820px;
+    /*width: 820px;*/
 }
 
 .fl_head > ul {
@@ -1829,4 +1829,7 @@ a {
 }
 .mar_lf_18 {
     margin-left:18px;
+}
+.font_size8 {
+    font-size:8px;
 }

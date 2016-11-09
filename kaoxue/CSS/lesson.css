@@ -191,7 +191,7 @@
 }
 
 .ce33b {
-    color: #f5bc2b;
+    color: #2ea7f8;
 }
 
 .ce33b1 {
@@ -518,4 +518,9 @@
     width: 900px;
     height: 775px;
     margin: 0px auto;
+}
+.waiting_bg {
+    background-image:url(../img/waiting_bg.gif);
+    width:210px;
+    height:36px;
 }

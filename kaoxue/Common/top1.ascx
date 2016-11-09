@@ -7,7 +7,7 @@
 <script src="../CustomScripts/top.js"></script>
 
     <div class="top_head">
-        <div class="top_head_div">
+        <div class="top_head_div font_size8">
             <div class="fl_head">
                 <ul>
                     <li>您好,欢迎来到51考学网</li>
@@ -20,7 +20,7 @@
                     <li class="li1 lispan" style="padding-left:30px;" >网校数：<span id="MemberCount"></span></li>
                     <li class="li1 lispan" style="padding-left:8px;">试题资源：<span id="shiticount"></span></li>
                     <li class="li1 lispan" style="padding-left:30px;" >总数：<span id="beikecount"></span></li>
-                    <li class="li3">免费咨询热线：400-819-8115</li>
+                    <li class="li3 fr">免费咨询热线：400-819-8115</li>
                 </ul>
             </div>
         </div>
