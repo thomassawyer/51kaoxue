@@ -67,11 +67,25 @@ namespace kaoxue.Controllers
         public string GetList()
         {
             int pageindex = Convert.ToInt32(Request["pageindex"]);
-            int startindex = (pageindex - 1) * 5;
-            if (pageindex != 1) {
-                startindex = (pageindex - 1) * 5 + 1;
+            //int startindex = (pageindex - 1) * 5;
+            //if (pageindex != 1) {
+            //    startindex = (pageindex - 1) * 5 + 1;
+            //}
+            //int endindex = pageindex * 5;
+            //构造数据起始坐标
+            int startindex = 0;
+            int endindex = 0;
+            if (pageindex > 1)
+            {
+                startindex = (pageindex - 1) * 10 + 1;
+                endindex = pageindex * 10;
             }
-            int endindex = pageindex * 5;
+            else
+            {
+                startindex = (pageindex - 1) * 10;
+                endindex = pageindex * 10;
+            }
+            //构造数据起始坐标结束
             ProduceParameters();
             string condition = ProduceCondition();
 

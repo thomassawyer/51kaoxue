@@ -28,8 +28,20 @@ namespace kaoxue.Controllers
         public string GetList()
         {
             int pageindex = Convert.ToInt32(Request["pageindex"]);
+            //构造数据起始坐标
             int startindex = 0;
             int endindex = 0;
+            if (pageindex > 1)
+            {
+                startindex = (pageindex - 1) * 10 + 1;
+                endindex = pageindex * 10;
+            }
+            else
+            {
+                startindex = (pageindex - 1) * 10;
+                endindex = pageindex * 10;
+            }
+            //构造数据起始坐标结束
             if (pageindex > 1)
             {
                 startindex = (pageindex - 1) * 8 + 1;
