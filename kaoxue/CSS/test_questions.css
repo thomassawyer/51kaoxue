@@ -12,7 +12,12 @@ a {
     background: pink;
     margin-bottom: 20px;
 }
-
+.xd52_new {
+    height: 49px;
+    width: 100%;
+    background: pink;
+    margin-bottom: 20px;
+}
 .xd521 {
     width: 137px;
     height: 100%;
@@ -22,8 +27,8 @@ a {
 
 .xd522 {
     height: 100%;
-    width: 1039px;
-    background: pink;
+    width: 1052px;
+    /*background: pink;*/
 }
 
 .stzxxueke {
@@ -33,7 +38,13 @@ a {
     color: #fff;
     word-spacing:15px;
 }
-
+.xd52_new .stzxxueke {
+    line-height: 49px;
+    padding-left: 56px;
+    font-size: 16px;
+    color: #fff;
+    word-spacing:15px;
+}
 .xdtb521 {
     position: absolute;
     top: 40px;
@@ -80,7 +91,7 @@ a {
 
     .stzx115 a {
         width: 150px;
-        height: 50px;
+        height: 49px;
         float: left;
         text-align: center;
     }
@@ -121,4 +132,6 @@ a {
 }
 .district_selected > a {
     color:#fff;
+}
+._111111 {
 }

@@ -1824,3 +1824,9 @@ a {
 .mar_bott_60 {
     margin-bottom:60px !important;
 }
+.display_none {
+    display:none;
+}
+.mar_lf_18 {
+    margin-left:18px;
+}

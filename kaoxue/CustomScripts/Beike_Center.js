@@ -130,19 +130,20 @@ function GetVersion_Second() {
             var temp;
             if (data != "]") {
                 temp = eval(data);
-
+                html += "<div class=\"xd522 fl\">";
                 for (var i = 0; i < temp.length; i++) {
                     if (i == 0) {
-                        html += "<div id=subject" + (i + 1) + " class=\"fl xdh5_selected\" onclick=\"a_selected(this, 'xdh5_selected'), version_second_selected('" + temp[i].id + "','" + temp[i].name + "')\">\
-                    <a class=\" xdh5 fl\" style='font-size:18px; text-align:center; line-height:50px;padding:0px 20px;'>" + temp[i].name + "</a>\
+                        html += "<div id=subject" + (i + 1) + " class=\"fl xdh5_selected _111111\" onclick=\"a_selected(this, 'xdh5_selected'), version_second_selected('" + temp[i].id + "','" + temp[i].name + "')\">\
+                    <a class=\" xdh5 fl\" style='font-size:16px; text-align:center; line-height:49px;height:49px; padding:0px 16px;'>" + temp[i].name + "</a>\
                     </div>";
                     } else {
-                        html += "<div id=subject" + (i + 1) + " class=\"fl\" onclick=\"a_selected(this, 'xdh5_selected'), version_second_selected('" + temp[i].id + "','" + temp[i].name + "')\">\
-                                <a class=\" xdh5 fl\" style='font-size:18px;text-align:center;line-height:50px;padding:0px 20px;'>" + temp[i].name + "</a>\
+                        html += "<div id=subject" + (i + 1) + " class=\"fl _111111\" onclick=\"a_selected(this, 'xdh5_selected'), version_second_selected('" + temp[i].id + "','" + temp[i].name + "')\">\
+                                <a class=\" xdh5 fl\" style='font-size:16px;text-align:center;line-height:49px;height:49px; padding:0px 16px;'>" + temp[i].name + "</a>\
                                 </div>";
                     }
                     
                 }
+                html += "</div>";
             }
             $("#version_second").html(html);
             version_second_selected(temp[0].id, temp[0].name);
@@ -170,7 +171,6 @@ function version_second_selected(versionid, title) {
 //
 function GetVersion_ThirdAndFourth() {
     $("#directory").html("数据加载中...");
-    Loading_start();
     $.ajaxSetup({
         async: false
     });
@@ -181,12 +181,18 @@ function GetVersion_ThirdAndFourth() {
                 var flag;
                 var title1 = "";
                 var title2 = "";
-                var html = "<div class=\"lianxice33\"><b>章节单元</b></div>";
+                var html = "<div class=\"lianxice33\"><a>章节单元</a></div>";
                 if (data != "]") {
                     temp = eval(data);
                     for (var i = 0; i < temp.length; i++) {
-                        html += "<div class=\"lx136 zjie fl\" style='height:auto;padding-bottom:15px;'>\
+                        if (i == (temp.length - 1)) {
+                            html += "<div class=\"lx136 zjie fl\" style='height:auto;padding:0px 20px;'>\
+                                <ul  style='border:none;'>";
+                        } else {
+                            html += "<div class=\"lx136 zjie fl\" style='height:auto;padding:0px 20px;'>\
                                 <ul>";
+                        }
+
                         html += "<li><a id=directory" + (i + 1) + "  onclick=\"anchor(this),tree_title_selected('" + temp[i].id + "','" + temp[i].name + "')\"><b class=\"ce33b\">" + temp[i].name + "</b></a></li>";
                         $.post("../Beike_Center/GetVersion_ThirdAndFourth", { subject: subject, version_second: temp[i].id }, function (data1) {
                             if (data1) {
@@ -234,7 +240,7 @@ function GetVersion_ThirdAndFourth() {
         $.ajaxSetup({
             async: true
         });
-        Loading_end();
+
     }, 1000);
 }
 
@@ -283,6 +289,7 @@ function GetList() {
         if (data) {
             var html = "";
             if (data != "]") {
+                $("#pages").removeClass("display_none");
                 var temp = eval(data);
                 var date;
                 for (var i = 0; i < temp.length; i++) {
@@ -292,15 +299,19 @@ function GetList() {
                     html += "<div class=\"lxc_320\">\
                                 <div class=\"wdk fl\"></div>\
                                 <div class=\"wenbenkui fl\">\
-                                    <a><b class=\"b320\">" + text + "</b></a><br>\
+                                    <b class=\"b320 font_size16 overf_com\"  title='" + text + "'>" + text + "</b><br>\
                                     <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
                                 </div>\
-                                <div class=\"xiazai fl\"  style='position:static;width:45px;height:45px;margin-left:160px;'>\
-                                    <a  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' class=\"xztb2 fl\"><img src=\"img/xiazaitb.png\"></a>\
+                                <div class=\"xiazai fr\"  style='position:static;width:45px;height:45px;margin-right: 15px;'>\
+                                    <a class=\"xztb2 fr\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' class=\"xztb2 fl\"></a>\
                                 </div>\
                             </div>";
                     //html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span>类型：<span id='text_type'>" + Produce_TypeName(temp[i].category) + "</span></span></span></div></div><div class='data_list_td_container_right'><a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";
                 }
+            }
+            else {
+                $("#pages").addClass("display_none");
+                html += "<div class=\"no_data_bg\"></div>";
             }
             $("#data_list_td").html(html);
             Produce_A_Signs();
@@ -318,7 +329,9 @@ function GetList() {
 //获取某小节数据条数
 //
 function GetDataCount() {
-
+    $.ajaxSetup({
+        async: false
+    });
     $.post("../Beike_Center/GetDataCount", { subject: subject, level: level_num, version_first: version_first, version_second: version_second, version_third: version_third, version_fourth: version_fourth, pageindex: pageindex, category: category }, function (data) {
         if (data) {
             $("#all_data_count").html(click_title + "（" + data + "份）");
@@ -327,6 +340,9 @@ function GetDataCount() {
             } else {
                 pagecount = Math.floor((data / 10)) + 1;
             }
+            $.ajaxSetup({
+                async: true
+            });
         }
 
     });
@@ -368,6 +384,16 @@ function next_page() {
 }
 
 //
+//接收键盘消息处理函数
+//
+function in_enter_key_fun(evt) {
+    if (evt.keyCode) {
+        if (evt.keyCode == 13) {
+            Go();
+        }
+    }
+}
+//
 //分页页码
 //
 function Produce_A_Signs() {
@@ -383,7 +409,11 @@ function Produce_A_Signs() {
     }
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
-        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        if (i == 0) {
+            html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        } else {
+            html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        }
 
         //if (i == 0) {
         //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
@@ -396,7 +426,7 @@ function Produce_A_Signs() {
     }
     html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
-        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\" onkeyup = \"in_enter_key_fun(event)\">\
         <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }
@@ -471,15 +501,6 @@ function preview_show(url) {
 function StartReading(controlid) {
     var html = "<br/><br/><br/><br/><div class='loader1'><i></i><i></i></div>";
     $("#" + controlid).html(html);
-}
-
-function Loading_start() {
-    $("#message_start").click();
-
-}
-
-function Loading_end() {
-    $("#message_close").click();
 }
 
 function GetQueryString(name) {

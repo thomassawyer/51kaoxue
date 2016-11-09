@@ -280,11 +280,9 @@ function anchor(obj) {
 function GetList() {
     $.post("../Test_Center/GetList", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
         if (data) {
-
-            var html = "<div class=\"lxclan\">\
-                <img src=\"img/doc_bag.jpg\" class=\"doc_bag_p_ab\"><a class=\"bix\">文件</a>\
-            </div>";
+            var html ="";
             if (data != "]") {
+                $("#pages").removeClass("display_none");
                 var temp = eval(data);
                 var date;
                 for (var i = 0; i < temp.length; i++) {
@@ -294,7 +292,7 @@ function GetList() {
                     html += "<div class=\"lxc_320\">\
                                 <div class=\"wdk fl\"></div>\
                                 <div class=\"wenbenkui fl\">\
-                                    <a class=\"b320 font_size16 overf_com\"  title='" + text + "'>" + text + "</a><br>\
+                                    <b class=\"b320 font_size16 overf_com\"  title='" + text + "'>" + text + "</b><br>\
                                     <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
                                 </div>\
                                 <div class=\"xiazai fr\" style='position:static;width:45px;height:45px;margin-right: 15px;'>\
@@ -303,6 +301,10 @@ function GetList() {
                             </div>";
                     //html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style='width:500px'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span>类型：<span id='text_type'>" + Produce_TypeName(temp[i].category) + "</span></span></span></div></div><div class='data_list_td_container_right'><a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";
                 }
+            }
+            else {
+                $("#pages").addClass("display_none");
+                html += "<div class=\"no_data_bg\"></div>";
             }
             $("#data_list_td").html(html);
             Produce_A_Signs();

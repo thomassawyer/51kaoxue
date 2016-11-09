@@ -41,7 +41,7 @@
     .xd5_hover > a {
         color: #5a5a5a;
         font-size: 16px;
-        line-height: 50px;
+        line-height: 49px;
         text-align: center;
         float: left;
         width: 73px;
@@ -138,13 +138,14 @@
 }
 
     .lx136 > ul > li {
-        width: 70%;
-        margin-left: 55px;
-        margin-top: 6px;
+    margin-left: 20px;
+    margin-top: 6px;
     }
 
     .lx136 > ul {
-        margin-top: 15px;
+           margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
     }
 
         .lx136 > ul > li > a {
@@ -152,14 +153,19 @@
         }
 
 .lx136 {
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+    /*border-top: 1px solid #e5e5e5;*/
+    /*border-bottom: 1px solid #e5e5e5;*/
+    border:1px solid #e5e5e5;
+    border-top:none;
+    border-bottom:none;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
 }
 
 .lianxice {
-    width: 962px;
+    width: 959px;
     height: auto;
-    margin-left: 15px;
+    /*margin-left: 18px;*/
     margin-bottom: 80px;
 }
 
@@ -173,6 +179,8 @@
     background: #2ea7f8;
     height: 33px;
     position:relative;
+    width: 959px;
+    margin-left: 18px;
 }
 
 .bix {
@@ -504,4 +512,10 @@
     position: absolute;
     top: 4px;
     left: 2px;
+}
+.no_data_bg {
+    background-image:url(../img/no_data_bg.jpg);
+    width: 900px;
+    height: 775px;
+    margin: 0px auto;
 }
