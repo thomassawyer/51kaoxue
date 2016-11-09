@@ -1,25 +1,124 @@
 a {
-    cursor:pointer;
+    cursor: pointer;
 }
-.xueduan{height:auto;}
-.xd52{height:100px;width:100%;background:pink;margin-bottom:20px;}
-.xd521{width:150px;height:100%;background:#07c277;position:relative;}
-.xd522{height:100%;width:1039px;background:pink;}
-.stzxxueke{line-height:97px;padding-left:50px;font-size:18px;color:#fff;}
-.xdtb521{position:absolute;top:40px;left:30px;}
-.xdh33_selected{background:#51d4a0;}
-.xd5mg{margin-top:20px;margin-bottom:20px;}
-.xd5k1{background:#00b2c2;}
-.xdh5_selected{background:#4cc9d4;}
-.xdh15_selected{background:#aed651;}
-.xd51k1{background:#8cc407;}
-.stzx115{width:150px;height:50px;line-height:50px;}
-.stzx115 a{width:150px; height:50px;float:left;text-align:center;}
-.stzx115_selected{background:#ff8086;}
-.stzx115{font-size:18px;}
-.xdl01{display:block;margin-left:40px}
-.czgkt{width:120px}
-.xdh313:hover{background:#ff8086;}
-.x521{background:#ff4a52;}
-.xd150{background:#07c7bc;}
-.district_selected{background:#51d8d0;}
+
+.xueduan {
+    height: auto;
+}
+
+.xd52 {
+    height: 98px;
+    width: 100%;
+    background: pink;
+    margin-bottom: 20px;
+}
+
+.xd521 {
+    width: 137px;
+    height: 100%;
+    background: #07c277;
+    position: relative;
+}
+
+.xd522 {
+    height: 100%;
+    width: 1039px;
+    background: pink;
+}
+
+.stzxxueke {
+    line-height: 98px;
+    padding-left: 56px;
+    font-size: 16px;
+    color: #fff;
+    word-spacing:15px;
+}
+
+.xdtb521 {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+
+.xdh33_selected {
+    background: #51d4a0;
+}
+.xdh33_selected > a {
+    color:#fff;
+}
+
+.xd5mg {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.xd5k1 {
+    background: #00b2c2;
+}
+
+.xdh5_selected {
+    background: #4cc9d4;
+}
+.xdh5_selected > a {
+    color:#fff;
+}
+.xdh15_selected {
+    background: #aed651;
+}
+.xdh15_selected > a {
+    color:#fff;
+}
+.xd51k1 {
+    background: #8cc407;
+}
+
+.stzx115 {
+    width: 150px;
+    height: 49px;
+    line-height: 49px;
+}
+
+    .stzx115 a {
+        width: 150px;
+        height: 50px;
+        float: left;
+        text-align: center;
+    }
+
+.stzx115_selected {
+    background: #ff8086;
+}
+.stzx115_selected > a {
+    color:#fff;
+}
+.stzx115 {
+    font-size: 16px;
+}
+
+.xdl01 {
+    display: block;
+    margin-left: 40px;
+}
+
+.czgkt {
+    width: 120px;
+}
+
+.xdh313:hover {
+    background: #ff8086;
+}
+
+.x521 {
+    background: #ff4a52;
+}
+
+.xd150 {
+    background: #07c7bc;
+}
+
+.district_selected {
+    background: #51d8d0;
+}
+.district_selected > a {
+    color:#fff;
+}
