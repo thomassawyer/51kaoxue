@@ -97,8 +97,8 @@ function GetInformation() {
             //地区
             if (m.areaname!="" && m.areaname != null && m.areaname != undefined)
             $("#district").html(m.areaname);
-            //具体类型
-            $("#testcategory").html("同步检测");
+            ////具体类型
+            //$("#testcategory").html("同步检测");
             //文件格式
             $("#filetype").html(m.extension);
             //下载扣点
