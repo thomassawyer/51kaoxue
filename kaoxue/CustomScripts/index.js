@@ -195,7 +195,7 @@ function Beike() {
 //最新套题
 //
 function Taoti_JuniorMiddleSchool() {
-    $.post("../Home/GetTaoti_JuniorMiddleSchool", function (data) {
+    $.post("../Home/GetTaoti_SeniorMiddleSchool", function (data) {
         if (data) {
             var temp = eval(data);
             var html = "";
@@ -223,7 +223,7 @@ function Taoti_JuniorMiddleSchool() {
 //最新试题
 //
 function Test_JuniorMiddleSchool() {
-    $.post("../Home/GetTest_JuniorMiddleSchool", function (data) {
+    $.post("../Home/GetTest_SeniorMiddleSchool", function (data) {
         if (data) {
             var temp = eval(data);
             var html = "";

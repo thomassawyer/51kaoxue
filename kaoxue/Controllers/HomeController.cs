@@ -138,9 +138,9 @@ namespace kaoxue.Controllers
         /// 最新套题-初中
         /// </summary>
         /// <returns></returns>
-        public string GetTaoti_JuniorMiddleSchool()
+        public string GetTaoti_SeniorMiddleSchool()
         {
-            string condition = " level between 7 and 9";
+            string condition = " level between 10 and 12";
             DataSet ds = taoti_bll.GetList(6, condition, "pubdate desc");
             string json = string.Empty;
             if (ds != null)
@@ -157,9 +157,9 @@ namespace kaoxue.Controllers
         /// 最新试题-初中
         /// </summary>
         /// <returns></returns>
-        public string GetTest_JuniorMiddleSchool()
+        public string GetTest_SeniorMiddleSchool()
         {
-            string condition = " level between 7 and 9";
+            string condition = " level between 10 and 12";
             DataSet ds = test_bll.GetList(6, condition, "uploadtime desc");
             string json = string.Empty;
             if (ds != null)
