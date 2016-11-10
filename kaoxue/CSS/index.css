@@ -1833,3 +1833,14 @@ a {
 .font_size8 {
     font-size:8px;
 }
+.xd522 {
+    height: 100%;
+    width: 1052px;
+    /* background: pink; */
+}
+.display_block {
+    display:block;
+}
+.font_wb {
+    font-weight:bold;
+}
