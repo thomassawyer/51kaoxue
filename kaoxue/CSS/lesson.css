@@ -524,3 +524,27 @@
     width:210px;
     height:300px;
 }
+.waiting_bg_1 {
+    background-image:url(../img/waiting_bg_1.jpg);
+    width:1189px;
+    height:300px;
+    margin:0px auto;
+}
+.bg_07c277 {
+    background:#07c277;
+}
+
+.com_sel_49 {
+    height:49px;
+    line-height:49px;
+    padding:0px 16px;
+    text-align:center;
+}
+
+.down_title_logo {
+    background-image:url(../img/newspaper_1.png);
+    width: 112px;
+    height: 84px;
+    margin-left:25px;
+    margin-top:25px;
+}

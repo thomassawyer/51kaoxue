@@ -716,10 +716,6 @@
 .pad_lf_30 {
     padding-left:30px;
 }
-.box_sizing_box {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
 .title_middle_nav_span_normal_1 {
     border:1px solid #8cc407;
     background-image:none;

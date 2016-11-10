@@ -447,6 +447,7 @@
     <Content Include="img\mxtubiao.png" />
     <Content Include="img\mxzy1.png" />
     <Content Include="img\newspaper.png" />
+    <Content Include="img\newspaper_1.png" />
     <Content Include="img\nianfen.png" />
     <Content Include="img\no_data_bg.jpg" />
     <Content Include="img\pclunbo.png" />
@@ -502,6 +503,7 @@
     <Content Include="img\ty-10-kb.png" />
     <Content Include="img\waiting_bg.gif" />
     <Content Include="img\waiting_bg.jpg" />
+    <Content Include="img\waiting_bg_1.jpg" />
     <Content Include="img\wd110.png" />
     <Content Include="img\weilan111.png" />
     <Content Include="img\weilan222.png" />

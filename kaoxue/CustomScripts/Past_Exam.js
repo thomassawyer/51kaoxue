@@ -25,18 +25,18 @@ function a_selected(obj, css) {
 function GetYear() {
     $.post("../Past_Exam/GetYears", function (data) {
         if (data) {
-            var html = "<div class=\"xd5_div1 fl\"><img src=\"img/gongju.png\" class=\"xdtb5\"><a class=\"xd5a\"><b>年 份</b></a></div>";
+            var html = "<div class=\"xd5_div1 fl\"><img src=\"img/gongju.png\" class=\"xdtb5\"><a target='_blank' class=\"xd5a\"><b>年 份</b></a></div>";
             var temp;
             if (data != "]") {
                 temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
                     if (i == 0) {
                         html += "<div class=\"xd5_hover xdh5 fl years_selected\" onclick=a_selected(this,\"years_selected\"),year_selected('" + temp[i].id + "','" + temp[i].name + "')>";
-                        html += "<a id=year" + temp[i].id + ">" + temp[i].name + "</a>";
+                        html += "<a target='_blank' id=year" + temp[i].id + ">" + temp[i].name + "</a>";
                         html += "</div>";
                     } else {
                         html += "<div class=\"xd5_hover xdh5 fl\" onclick=a_selected(this,\"years_selected\"),year_selected('" + temp[i].id + "','" + temp[i].name + "')>";
-                        html += "<a id=year" + temp[i].id + ">" + temp[i].name + "</a>";
+                        html += "<a target='_blank' id=year" + temp[i].id + ">" + temp[i].name + "</a>";
                         html += "</div>";
                     }
                 }
@@ -70,7 +70,7 @@ function year_selected(num, text) {
     year = num;
     year_text = text;
     //数据读取中
-    $("#loading").html("数据读取中……");
+    $("#loading").html("<div class=\"waiting_bg_1\"></div>");
     GetProvince();
 }
 
@@ -80,17 +80,25 @@ function year_selected(num, text) {
 function GetProvince() {
     $.post("../Past_Exam/GetProvince", { year: year }, function (data) {
         if (data) {
-            var html = "<div class=\"xd5_div1 fl xd5k1 xd5_div1dk\"><img src=\"img/leixin.png\" class=\"xdtb5\" ><a  class=\"xd5a\"><b>地 区</b></a></div>";
+            var html = "<div class=\"xd5_div1 fl xd5k1 xd5_div1dk\"><img src=\"img/leixin.png\" class=\"xdtb5\" ><a target='_blank'  class=\"xd5a\"><b>地 区</b></a></div><div class=\"xd522 fl\">";
             var temp;
             if (data != "]") {
                 temp = eval(data);
 
                 for (var i = 0; i < temp.length; i++) {
+                    var num = temp[i].name.indexOf("：");
+                    var text = temp[i].name;
+                    if (num != -1) {
+                        text = text.substring(0,num);
+                    }
                     html += "<div id=subject" + (i + 1) + " class=\"fl\" onclick=a_selected(this,\"dkhh5_selected\"),anchor_go('exam" + temp[i].id + "')>\
-                                <a class=\" xdh51 fl dkhh5\" style=\"margin-left:20px; margin-right:20px;\">" + temp[i].name + "</a>\
+                                <a target='_blank' class=\" xdh51 fl dkhh5\" style=\"margin-left:20px; margin-right:20px;\">" + text + "</a>\
                                 </div>";
                 }
             }
+
+            html += "</div>";
+
             $("#province").html(html);
             
             Loading_start();
@@ -131,18 +139,42 @@ function GetList() {
                 temp = eval(data);
 
                 for (var i = 0; i < temp.length; i++) {
+                    var num = temp[i].name.indexOf("：");
+                    var text = temp[i].name;
+                    var sub_title = "";
+
+                    if (num != -1) {
+                        sub_title = text.substring(num+1);
+                        text = text.substring(0, num); 
+                    }
+
                     html += "<div class=\"gkzj101\"  id='exam" + temp[i].id + "'>\
-                                <div class=\"gkzj21\">\
-                                    <div class=\"lan44\">";
-                    html += "<span class=\"zjshijian\"><b>" + year_text + "</b></span>";
-                    html += "</div>\
-                                <div class=\"bai630\">\
-                                    <img src=\"img/wenjianltb.png\"  class=\"wenjianl\" />\
-                                    <span class=\"qgjy\" style='height:25px;overflow:hidden;'>\
-                                        " + temp[i].name + "\
+                                <div class=\"gkzj21\">";
+                       
+                    if (sub_title.length != 0) {
+                        html += "<img src=\"img/wenjianltb.png\"  class=\"wenjianl fl\" />\
+                                <div class=\"bai630 fl\">\
+                                    <span class=\"qgjy fl\" style='line-height: 44px;'>\
+                                        " + text + "\
                                     </span>\
-                                </div>\
+                                    <span class=\"qgjy_1 fl\" style='line-height: 44px;padding-left: 18px;'>\
+                                        " + "(" + sub_title + ")" + "\
+                                    </span>\
                             </div>";
+                            
+                    } else {
+                        html += "<img src=\"img/wenjianltb.png\"  class=\"wenjianl fl\" />\
+                                <div class=\"bai630 fl\">\
+                                    <span class=\"qgjy\" style='line-height: 44px;'>\
+                                        " + text + "\
+                                    </span>\
+                            </div>";
+
+                    }
+                    
+
+                    html += "<div class=\"box_sizing_box fl year_title_b\">" + year_text + "</div></div>";
+
                     daohangid = temp[i].id;
                     html += "<div class=\"wdtb\">";
                     $.post("../Past_Exam/GetList", { daohangid: daohangid }, function (json) {
@@ -151,18 +183,23 @@ function GetList() {
                             if (json != "]") {
                                 var flag = eval(json);
                                 for (var j = 0; j < flag.length; j++) {
-                                    html += "<a class=\"wrd1 fl\"><span class=\"wdsp\"><b class=\"wdb\">" + flag[j].subject + "</b></span><b class=\"wdjx\" style='left:10px;'>";
+                                    if (j % 3 == 0) {
+                                        html += "<div class=\"fl mar_top_16\"><div class=\"fl sub_title_a\">" + flag[j].subject + "</div><div class=\"fl box_sizing_box sub_type_all\">";
+                                    } else {
+                                        html += "<div class=\"fl mar_top_16 mar_lf_130\"><div class=\"fl sub_title_a\">" + flag[j].subject + "</div><div class=\"fl box_sizing_box sub_type_all\">";
+                                    }
+
                                     $.post("../Past_Exam/GetList1", { daohangid: daohangid, subjectid: flag[j].subjectid }, function (list) {
                                         if (list) {
                                             if (list != "]") {
                                                 var flag2 = eval(list);
                                                 for (var k = 0; k < flag2.length; k++) {
-                                                    html += "<span style='cursor:pointer;' onclick=\"javascript:window.open('../Download?cid=1&id=" + flag2[k].testid + "');\" target='_blank'>" + GetTypeName(flag2[k].type) + "</span>";
+                                                    html += "<a class=\"sub_type_per\" onclick=\"javascript:window.open('../Download?cid=1&id=" + flag2[k].testid + "');\" target='_blank'>" + GetTypeName(flag2[k].type) + "</a>";
                                                 }
                                             }
                                         }
                                     });
-                                    html += "</b></a>";
+                                    html += "</div></div>";
                                 }
                             }
                         }
@@ -182,7 +219,7 @@ function GetList() {
 
 function GetTypeName(para) {
     var type = para;
-    if (type == "1") type = "WORD";
+    if (type == "1") type = "Word";
     if (type == "2") type = "解析";
     if (type == "3") type = "答案";
     if (type == "4") type = "作文";

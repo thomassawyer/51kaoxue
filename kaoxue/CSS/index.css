@@ -1844,3 +1844,16 @@ a {
 .font_wb {
     font-weight:bold;
 }
+.font_size18 {
+    font-size:18px;
+}
+.box_sizing_box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.mar_top_16 {
+    margin-top:16px;
+}
+.mar_lf_130 {
+    margin-left:129px;
+}

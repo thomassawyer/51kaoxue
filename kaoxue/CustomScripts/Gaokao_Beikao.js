@@ -208,7 +208,7 @@ function GetTest_Hot_Download() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  title='" + temp[i].testname + "' href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -225,8 +225,7 @@ function GetTest_Recommend() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
-               
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a title='" + temp[i].testname + "'  href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -285,12 +284,9 @@ function anchor(obj) {
 function GetList() {
     $.post("../Gaokao_Beikao/GetList", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
         if (data) {
-
-            var html = "<div class=\"lxclan\">\
-                <img src=\"img/wendang.png\" class=\"wdtubiao\" >\
-                <b class=\"bix\">文件</b>\
-            </div>";
+            var html ="";
             if (data != "]") {
+                $("#pages").removeClass("display_none");
                 var temp = eval(data);
                 var date;
                 for (var i = 0; i < temp.length; i++) {
@@ -298,17 +294,21 @@ function GetList() {
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     var text = temp[i].name.length > 40 ? temp[i].name.substr(0, 40) : temp[i].name;
                     html += "<div class=\"lxc_320\">\
-                                <div class=\"wdk fl\"></div>\
+                                <a class=\"wdk fl\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ></a>\
                                 <div class=\"wenbenkui fl\">\
-                                    <a><b class=\"b320\">"+ text + "</b></a><br>\
+                                    <a class=\"b320 font_size16 overf_com font_wb\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank'  title='" + text + "'>" + text + "</a><br>\
                                     <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
                                 </div>\
-                                <div class=\"xiazai fl\" style='position:static;width:45px;height:45px;margin-left:160px;'>\
-                                    <a class=\"xztb2 fl\"  href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank'><img src=\"img/xiazaitb.png\"></a>\
+                                <div class=\"xiazai fr\" style='position:static;width:45px;height:45px;margin-right: 15px;'>\
+                                    <a class=\"xztb2 fr\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ></a>\
                                 </div>\
                             </div>";
                     //html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style='width:500px'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span>类型：<span id='text_type'>" + Produce_TypeName(temp[i].category) + "</span></span></span></div></div><div class='data_list_td_container_right'><a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";
                 }
+            }
+            else {
+                $("#pages").addClass("display_none");
+                html += "<div class=\"no_data_bg\"></div>";
             }
             $("#data_list_td").html(html);
             Produce_A_Signs();
@@ -364,6 +364,16 @@ function GetDataCount() {
 }
 
 //
+//接收键盘消息处理函数
+//
+function in_enter_key_fun(evt) {
+    if (evt.keyCode) {
+        if (evt.keyCode == 13) {
+            Go();
+        }
+    }
+}
+//
 //分页页码
 //
 function Produce_A_Signs() {
@@ -379,15 +389,24 @@ function Produce_A_Signs() {
     }
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
-        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        if (i == 0) {
+            html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        } else {
+            html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        }
 
+        //if (i == 0) {
+        //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //} else {
+        //    html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //}
     }
     if (pageindex <= pagecount - 5) {
         html += "<span class=\"anniusp\">...</span>";
     }
     html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
-        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\" onkeyup = \"in_enter_key_fun(event)\">\
         <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }
