@@ -387,7 +387,7 @@ function tongbu_senior(level) {
                 html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color_ff\">\
                                 <a class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                                <a class=\"color_ff\" href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"fr color_ff\">[" + time + "]</a>\
@@ -418,7 +418,7 @@ function tongbu_junior(level) {
                 html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color_ff\">\
                                 <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                                <a class=\"color_ff\" href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"fr color_ff\">[" + time + "]</a>\
@@ -449,7 +449,7 @@ function jiaoan_senior(level) {
                 html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color_ff\">\
                                 <a class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                                <a class=\"color_ff\" href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"fr color_ff\">[" + time + "]</a>\
@@ -480,7 +480,7 @@ function jiaoan_junior(level) {
                 html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color_ff\">\
                                 <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                                <a class=\"color_ff\" href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"fr color_ff\">[" + time + "]</a>\
@@ -511,7 +511,7 @@ function xuean_senior(level) {
                 html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color_ff\">\
                                 <a class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                                <a class=\"color_ff\" href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"fr color_ff\">[" + time + "]</a>\
@@ -543,7 +543,7 @@ function xuean_junior(level) {
                 html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color_ff\">\
                                 <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
+                                <a class=\"color_ff\" href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"fr color_ff\">[" + time + "]</a>\

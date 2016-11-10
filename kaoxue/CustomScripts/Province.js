@@ -92,7 +92,7 @@ function test_jingpin() {
                     html += " <li>\
                             <div class=\"fl gkdt_2701 overf_com gkdttime\">\
                                 <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].testname + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                                <a class=\"gdkys\"  href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"gkdttime  fr\">[" + time + "]</a>\
@@ -133,7 +133,7 @@ function beike_jingpin() {
                     html += " <li>\
                             <div class=\"fl gkdt_2701 overf_com gkdttime\">\
                                 <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                                <a class=\"gdkys\"  href='../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"gkdttime  fr\">[" + time + "]</a>\
@@ -174,7 +174,7 @@ function taoti_tuijian() {
                     html += " <li>\
                             <div class=\"fl gkdt_2701 overf_com gkdttime\">\
                                 <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                                <a class=\"gdkys\"  href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"gkdttime  fr\">[" + time + "]</a>\
@@ -278,7 +278,7 @@ function News(type, controlid) {
                     html += "<li  class=\"font_size16\">\
                             <div class=\"fl gkdt_240 overf_com color07c7bc\">\
                                 <a class=\"zxzt_btn_07c7bc dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color07c7bc line_hg_25\" href='../Download?cid=1&id=" + temp[i - 1].id + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
+                                <a class=\"color07c7bc line_hg_25\" href='../News_Detail?id="+temp[i-1].id+"' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"color07c7bc  fr line_hg_25\">[" + time + "]</a>\
