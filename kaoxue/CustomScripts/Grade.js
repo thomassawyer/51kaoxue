@@ -43,7 +43,7 @@ function News(type, controlid) {
                     html += "<li class=\"font_size16\">\
                             <div class=\"fl gkdt_240 overf_com color_ff\">\
                                 <a class=\"btn dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff line_hg_25\" href='../Download?cid=1&id=" + temp[i - 1].id + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
+                                <a class=\"color_ff line_hg_25\" href='../News_Detail?id="+temp[i-1].id+"' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"color_ff  fr line_hg_25\">[" + time + "]</a>\
@@ -91,7 +91,7 @@ function zhuanti_tuijian() {
                     html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color_ff\">\
                                 <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                                <a class=\"color_ff\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"fr color_ff\">[" + time + "]</a>\
@@ -126,7 +126,7 @@ function beike_jingpin() {
                     html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color_ff\">\
                                 <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                                <a class=\"color_ff\" href='Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"fr color_ff\">[" + time + "]</a>\
@@ -160,7 +160,7 @@ function taoti_jingpin() {
                     html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color_ff\">\
                                 <a class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                                <a class=\"color_ff\" href='Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"fr color_ff\">[" + time + "]</a>\
@@ -203,7 +203,7 @@ function taoti_mingxiao() {
                     html += " <li>\
                             <div class=\"fl gkdt_2701 overf_com gkdttime\">\
                                 <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                                <a class=\"gdkys\"  href='Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"gkdttime  fr\">[" + time + "]</a>\
@@ -244,7 +244,7 @@ function gaokao_beikao() {
                     html += " <li>\
                             <div class=\"fl gkdt_2701 overf_com gkdttime\">\
                                 <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                                <a class=\"gdkys\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"gkdttime  fr\">[" + time + "]</a>\
@@ -285,7 +285,7 @@ function moni_zhongkao() {
                     html += " <li>\
                             <div class=\"fl gkdt_2701 overf_com gkdttime\">\
                                 <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                                <a class=\"gdkys\"  href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"gkdttime  fr\">[" + time + "]</a>\
@@ -357,7 +357,7 @@ function Kejian_jingping() {
                     //    </li>";
                     html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
+                                <a class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
                                     <a class=\"ayblue\" >["+ time + "]</a>\
                                 </div>\
                             </div>\
@@ -398,7 +398,7 @@ function jiaoan_jingpin() {
                     html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color07c277\">\
                                 <a class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                                <a class=\"color07c277\" href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"color07c277  fr\">[" + time + "]</a>\
@@ -437,7 +437,7 @@ function xuean_jingpin() {
                     //    </li>";
                     html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
+                                <a class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
                                     <a class=\"ayblue\" >["+ time + "]</a>\
                                 </div>\
                             </div>\
@@ -478,7 +478,7 @@ function lianxi_jingpin() {
                     html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color07c277\">\
                                 <a class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                                <a class=\"color07c277\" href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"color07c277  fr\">[" + time + "]</a>\
@@ -512,7 +512,7 @@ function sucai_jingpin() {
                     html += "<li>\
                             <div class=\"fl gkdt_2701 overf_com color07c277\">\
                                 <a class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                                <a class=\"color07c277\" href='../Download?cid=5&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"color07c277  fr\">[" + time + "]</a>\
