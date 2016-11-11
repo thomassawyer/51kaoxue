@@ -72,13 +72,13 @@ function GetList() {
                         cid = 2;
                     }
                     html += "<div class=\"lxc_320\">\
-                                <div class=\"wdk fl\"></div>\
+                                <a class=\"wdk fl\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank' ></a>\
                                 <div class=\"wenbenkui fl\">\
-                                    <a ><b class=\"b320\">"+text+"</b></a><br>\
+                                    <a class=\"b320 font_size16 overf_com font_wb\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank'  title='" + text + "'>" + text + "</a><br>\
                                     <span class=\"lxcsp320\">" + temp[i].uploadtime + "</span>\
                                 </div>\
-                                <div class=\"xiazai fl\" style='position:static;width:45px;height:45px;margin-left:160px;'>\
-                                    <a  class=\"xztb2 fl\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank'><img src=\"img/xiazaitb.png\" ></a>\
+                                <div class=\"xiazai fr\" style='position:static;width:45px;height:45px;margin-right: 15px;'>\
+                                    <a class=\"xztb2 fr\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank' ></a>\
                                 </div>\
                             </div>";
                 }

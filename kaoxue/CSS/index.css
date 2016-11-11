@@ -1857,3 +1857,9 @@ a {
 .mar_lf_130 {
     margin-left:129px;
 }
+.mar_lf_0 {
+    margin-left:0px !important;
+}
+.font_size12 {
+    font-size:12px;
+}

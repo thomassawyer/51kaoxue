@@ -28,7 +28,12 @@ function anchor(obj) {
     if ($(obj).offset().top > 1400)
         $("html,body").animate({ scrollTop: $("#content_container_anchor").offset().top }, 500);
 }
-
+//
+//打开专题列表页面
+//
+function open_other_page_fun(id, name) {
+    window.open('../SpecialSubject?id=' + id + '&name=' + name);
+}
 //
 //获取试题数据
 //
@@ -47,10 +52,11 @@ function GetList() {
                         time = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
                     }
                     var text = temp[i - 1].name.length > 100 ? temp[i - 1].name.substr(0, 100) : temp[i - 1].name;
-                    html += "<div class=\"pxx114\">\
+                    //href = '../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'
+                    html += "<div class=\"pxx114\" onclick=\"open_other_page_fun('"+temp[i - 1].id+"','"+temp[i - 1].name+"')\">\
                                 <img src=\"img/xintb.png\" class=\"img11\">\
-                                <div class=\"div_a\"><a>" + temp[i - 1].name + "</a></div>\
-                                <div class=\"div_a2\"><a href='../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'>显示更多>></a></div>\
+                                <div class=\"div_a\"><a target='_blank'>" + temp[i - 1].name + "</a></div>\
+                                <div class=\"div_a2\"><a   target='_blank'>显示更多>></a></div>\
                                 <div class=\"spgxshijian\"><span>更新时间：" + time + "</span></div>\
                                 <img src=\"img/xintbh.png\" class=\"img22\">\
                             </div>";
@@ -110,6 +116,16 @@ function GetDataCount() {
 }
 
 //
+//接收键盘消息处理函数
+//
+function in_enter_key_fun(evt) {
+    if (evt.keyCode) {
+        if (evt.keyCode == 13) {
+            Go();
+        }
+    }
+}
+//
 //分页页码
 //
 function Produce_A_Signs() {
@@ -125,7 +141,12 @@ function Produce_A_Signs() {
     }
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
-        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\" style='left:"+(369+(50*i))+"px;'><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        //html += "<a target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\" style='left:" + (369 + (50 * i)) + "px;'><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+	if (i == 0) {
+            html += "<a target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\" style='left:" + (369 + (50 * i)) + "px;'><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        } else {
+	    html += "<a target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\" style='left:" + (369 + (50 * i)) + "px;'><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        }
 
         //if (i == 0) {
         //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
@@ -211,7 +232,7 @@ function StartReading(controlid) {
 
 //点击span时，改变span样式
 function change_css_span(obj) {
-    $(obj).parent().children().each(function () {
+    $(obj).parent().siblings().children().each(function () {
         $(this).removeClass("nav_normal_select");
         $(this).addClass("nav_normal");
     });

@@ -7,7 +7,7 @@
 <script src="../CustomScripts/top.js"></script>
 
     <div class="top_head">
-        <div class="top_head_div font_size8">
+        <div class="top_head_div font_size12">
             <div class="fl_head">
                 <ul>
                     <li>您好,欢迎来到51考学网</li>

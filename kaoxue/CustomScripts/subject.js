@@ -591,7 +591,7 @@ function GetYearForHeightSchool() {
 
                 for (var i = 0; i < temp.length; i++) {
                     if (i == 0) {
-                        html += "<li class=\"lngkli1 lngk_title fl\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a class=\"lngka\"><b class=\"linian\">历年高考试卷</b></a></li>";
+                        html += "<li class=\"lngkli1 lngk_title fl\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a class=\"lngka\"><b class=\"linian font_size16\">历年高考试卷</b></a></li>";
                     } else {
                         if (i % 2 == 0) {
                             html += "<li class=\"lngkli lhove1 fl \"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a class=\"nfa\" href=\"../Past_Exam?year=" + temp[i - 1].id + "&year_text=" + temp[i - 1].name + "\">" + temp[i - 1].name + "年</a></li>";

@@ -44,7 +44,7 @@ function GetTest_Recommend() {
             var html = "";
             for (var i = 0; i < 11; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  class=\"rmxzaa\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -65,7 +65,7 @@ function anchor(obj) {
 function GetList() {
     $.post("../Special/GetList", { id: id, way: way, pageindex: pageindex }, function (data) {
         if (data) {
-            var html = "            <div class=\"lxclan\">\
+            var html = "            <div class=\"lxclan mar_lf_0\">\
                 <b class=\"bix\">" + title_name + "</b>\
             </div>";
             if (data != "]") {
@@ -80,13 +80,13 @@ function GetList() {
                         var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                         var text = temp[i].name.length > 40 ? temp[i].name.substr(0, 40) : temp[i].name;
                         html += "<div class=\"lxc_320\">\
-                                <div class=\"wdk fl\"></div>\
+                                <a class=\"wdk fl\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ></a>\
                                 <div class=\"wenbenkui fl\">\
-                                    <a><b class=\"b320\">" + text + "</b></a><br>\
+                                    <a class=\"b320 font_size16 overf_com font_wb\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank'  title='" + text + "'>" + text + "</a><br>\
                                     <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
                                 </div>\
-                                <div class=\"xiazai fl\"  style='position:static;width:45px;height:45px;margin-left:160px;'>\
-                                    <a href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank' class=\"xztb2 fl\"><img src=\"../img/xiazaitb.png\"></a>\
+                                <div class=\"xiazai fr\" style='position:static;width:45px;height:45px;margin-right: 15px;'>\
+                                    <a class=\"xztb2 fr\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ></a>\
                                 </div>\
                             </div>";
                     }
@@ -146,6 +146,16 @@ function GetDataCount() {
 }
 
 //
+//接收键盘消息处理函数
+//
+function in_enter_key_fun(evt) {
+    if (evt.keyCode) {
+        if (evt.keyCode == 13) {
+            Go();
+        }
+    }
+}
+//
 //分页页码
 //
 function Produce_A_Signs() {
@@ -161,7 +171,11 @@ function Produce_A_Signs() {
     }
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
-        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        if (i == 0) {
+            html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        } else {
+            html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        }
 
         //if (i == 0) {
         //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
@@ -174,7 +188,7 @@ function Produce_A_Signs() {
     }
     html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
-        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\" onkeyup = \"in_enter_key_fun(event)\">\
         <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }

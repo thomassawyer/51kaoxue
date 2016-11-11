@@ -1,18 +1,105 @@
-.quanbu{width:1189px;height:1245px;margin:0 auto;margin-top:20px;}
-.qb49px{width:100%;height:49px;background:#31acff;line-height:49px;}
-.qb49px>ul>li{height:100%;width:91.4px;background:#2b9ce8;}
-.qb49px>ul>li>a{padding-left:30px;color:#fff;}
-.qb49px>ul>li:hover{background:#31acff;}
-.pxx114{width:100%;height:114px;background:#f3f3f3;margin-top:30px;position:relative;}
-.img11{position:absolute;top:-10px;left:70px;}
-.div_a{padding-top:40px;padding-left:180px;}
-.div_a>a{font-size:20px;}
-.div_a2{position:absolute;top:80px;left:1050px;}
-.div_a2>a{color:#9e9e9e}
-.spgxshijian{position:absolute;top:80px;left:180px;}
-.img22{position:absolute;top:-10px;left:70px;}
-.spgxshijian>span{color:#9e9e9e}
-.pxx114:hover .div_a>a{color:#31acff;}
-.pxx114:hover .img22{display:none;}
-.jd1195{height:420px;overflow:hidden;background:#f5bc2b;}
-.jiaodain{height:420px;background:#f5bc2b;}
+.quanbu {
+    width: 1189px;
+    height: 1245px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.qb49px {
+    width: 100%;
+    height: 49px;
+    background: #31acff;
+    line-height: 49px;
+}
+
+    .qb49px > ul > li {
+        height: 100%;
+        width: 91.4px;
+        background: #31acff;
+    }
+
+        .qb49px > ul > li > a {
+    display: block;
+    /* padding-left: 30px; */
+    color: #fff;
+    font-size: 16px;
+    width: 91.4px;
+    height: 50px;
+    text-align: center;
+        }
+
+        .qb49px > ul > li:hover {
+            background: #2b9ce8;
+        }
+#content_container_anchor .nav_normal_select {
+    background: #2b9ce8;
+}
+.pxx114 {
+    width: 100%;
+    height: 114px;
+    background: #f3f3f3;
+    margin-top: 30px;
+    position: relative;
+    cursor:pointer;
+}
+
+.img11 {
+    position: absolute;
+    top: -10px;
+    left: 70px;
+}
+
+.div_a {
+    padding-top: 30px;
+    padding-left: 200px;
+}
+
+    .div_a > a {
+        font-size: 24px;
+    }
+
+.div_a2 {
+    position: absolute;
+    bottom: 26px;
+    right: 28px;
+}
+
+    .div_a2 > a {
+        color: #9e9e9e;
+    }
+
+.spgxshijian {
+    position: absolute;
+    top: 70px;
+    left: 200px;
+}
+
+.img22 {
+    position: absolute;
+    top: -10px;
+    left: 70px;
+}
+
+.spgxshijian > span {
+    color: #9e9e9e;
+    font-size:18px;
+}
+
+.pxx114:hover .div_a > a {
+    color: #31acff;
+}
+
+.pxx114:hover .img22 {
+    display: none;
+}
+
+.jd1195 {
+    height: 420px;
+    overflow: hidden;
+    background: #f5bc2b;
+}
+
+.jiaodain {
+    height: 420px;
+    background: #f5bc2b;
+}
