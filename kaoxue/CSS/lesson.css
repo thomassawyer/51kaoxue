@@ -272,6 +272,7 @@
     margin-left: 10px;
     position: relative;
     background-image:url(../img/xiazaitb.png);
+    background-repeat:no-repeat;
 }
 
 .dpnone {

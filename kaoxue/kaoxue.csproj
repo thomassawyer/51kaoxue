@@ -330,6 +330,7 @@
     <Content Include="img\drw.png" />
     <Content Include="img\dshuben.png" />
     <Content Include="img\duanluo.png" />
+    <Content Include="img\fen_100_1.png" />
     <Content Include="img\find_logo.png" />
     <Content Include="img\fj.jpg" />
     <Content Include="img\fj.png" />
@@ -375,6 +376,7 @@
     <Content Include="img\hsgzcz.png" />
     <Content Include="img\hshu.jpg" />
     <Content Include="img\hshu.png" />
+    <Content Include="img\html_logo_ico.ico" />
     <Content Include="img\hyeu.jpg" />
     <Content Include="img\hyeu.png" />
     <Content Include="img\hyxdj.png" />

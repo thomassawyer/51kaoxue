@@ -1753,7 +1753,10 @@ a {
     margin-right:45px;
 }
 .color000 {
-    color:#000;
+    color:#000 !important;
+}
+.color555 {
+     color:#555 !important;
 }
 .pad_rg_28 {
     padding-right: 28px;
@@ -1862,4 +1865,10 @@ a {
 }
 .font_size12 {
     font-size:12px;
+}
+.bg_color_07c277 {
+    background-color:#07c277 !important;
+}
+.mar_lf_11 {
+    margin-left:11px;
 }
