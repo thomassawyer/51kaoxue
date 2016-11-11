@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 <style>
     a {
-        cursor:pointer;
+        cursor: pointer;
     }
 </style>
 <script src="../CustomScripts/top.js"></script>
@@ -10,13 +10,15 @@
         <div class="fl_head">
             <ul>
                 <li>您好,欢迎来到51考学网</li>
-                <li class="li1"  id="logininfo">请<a href="../Login">[登录]</a></li>
+                <li class="li1" id="logininfo">请<a href="../Login">[登录]</a></li>
             </ul>
         </div>
         <div class="f2_head">
             <ul>
-                <li class="li1 lispan" style="padding-left:8px;">试题资源：<span id="shiticount"></span></li>
-                <li class="li1 lispan" style="padding-left:30px;" >总数：<span id="beikecount"></span></li>
+                <li class="li1 lispan" style="padding-left: 8px;">今日上新：<span id="UpCountByDay"></span></li>
+                <li class="li1 lispan" style="padding-left: 30px;">网校数：<span id="MemberCount"></span></li>
+                <li class="li1 lispan" style="padding-left: 8px;">试题资源：<span id="shiticount"></span></li>
+                <li class="li1 lispan" style="padding-left: 30px;">总数：<span id="beikecount"></span></li>
                 <li class="li3">免费咨询热线：400-819-8115</li>
             </ul>
         </div>
@@ -33,15 +35,16 @@
 
         </div>
         <div id="ztc" class="fl">
-            <a href="../ThroughTrain"><img src="../../img/ztc.png" /></a>
+            <a href="../ThroughTrain">
+                <img src="../../img/ztc.png" /></a>
         </div>
         <div id="ztc_bottom" class="fl">
             <form action="#" method="get">
-                <input type="text" name="lname" class="fl" id="shousuo" style="padding-left:20px; width:430px;" placeholder="请输入搜索内容" /><a id="tijiao" class="fl"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor:pointer;"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()">
+                <input type="text" name="lname" class="fl" id="shousuo" style="padding-left: 20px; width: 430px;" placeholder="请输入搜索内容" /><a id="tijiao" class="fl" onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor: pointer;" onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()">
             </form>
         </div>
         <div class="fl xbs">
-            <img src="../../img/boshimao.png" class="fl" /><h3 class="fl h3gaokao"><a  href="../Test_Center">高考试题</a></h3>
+            <img src="../../img/boshimao.png" class="fl" /><h3 class="fl h3gaokao"><a href="../Test_Center">高考试题</a></h3>
         </div>
         <div class="fl xbss">
             <img src="../../img/shutubiao1.png" class="fl" /><h3 class="fl h3gaokao"><a href="../News">天天新闻</a></h3>
