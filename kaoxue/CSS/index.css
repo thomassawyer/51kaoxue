@@ -1872,3 +1872,32 @@ a {
 .mar_lf_11 {
     margin-left:11px;
 }
+.bg_color_07c7bc {
+    background-color:#07c7bc !important;
+}
+
+.mar_lf_20 {
+    margin-left:20px;
+}
+.mar_lf_120 {
+    margin-left:119px;
+}
+.mar_bott_30 {
+    margin-bottom:30px !important;
+}
+.a_more_com {
+    font-size:14px !important;
+    width:42px !important;
+    height:20px !important;
+    line-height:1.5em !important;
+    padding-left:0px !important;
+}
+.no_data_text {
+    width:350px;
+    height:250px;
+    margin:0px auto;
+    background:url(../img/no_data_bg_22.png);
+}
+.mar_lf_25 {
+    margin-left:25px;
+}

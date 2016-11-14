@@ -216,7 +216,8 @@ function test_recommend() {
                     //                    <span class=\"sign_red\">·</span>\
                     //                    <div class=\"school_name\"><a href=\"../Download?cid=1&id="+ temp[i].id + "\" target=\"_blank\">" + text + "</a></div>\
                     //                </div>";
-                    html += "<li><a href=\"../Download?cid=1&id=" + temp[i].id + "\" target=\"_blank\">●" + text + "</a></li>";
+                    //html += "<li><a href=\"../Download?cid=1&id=" + temp[i].id + "\" target=\"_blank\">●" + text + "</a></li>";
+		    html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a title='" + temp[i].testname + "'  href=\"../Download?cid=1&id=" + temp[i].id + "\" target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
                 }
             }
             $("#test_recommend").html(html);
@@ -257,22 +258,23 @@ function GetList() {
             if (data != "]") {
                 var temp = eval(data);
                 var date;
-                html += "<div class=\"lxclan\">\
+                html += "<div class=\"lxclan mar_lf_0\">\
                 <img src=\"img/renwu.png\" alt=\"\" class=\"rwimg\" />\
-                <b class=\"bix dkbix\">校长列表</b>\
+                <a target='_blank' class=\"bix dkbix\">校长列表</a>\
             </div>";
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].intime);
                     var time = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
                     html += "<div class=\"xz360\" style=\"width:100%;\">\
-                <div class=\"fl\"><img src=\"http://source.51kaoxue.com/"+ temp[i].headimgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></div>\
+                <div class=\"fl\">\
+                    <a class=\"img_a_p\" target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid+"\"><img src=\"http://source.51kaoxue.com/" + temp[i].headimgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></a></div>\
                 <div class=\"fl neirong620\">\
-                    <b class=\"fz25\">" + temp[i].headname + "</b>\
-                    <div id=\"\" class=\"lssp\" style='display:block;height:51px;overflow-y:auto;overflow-x:hidden;'>\
+                     <a target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid+"\" class=\"fz25\">" + temp[i].name + "&nbsp校长&nbsp" + temp[i].headname + "</a>\
+                    <div id=\"\" class=\"lssp\">\
                        " + temp[i].memo + "\
                     </div>\
-                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   学校校长：" + temp[i].headname + "   |   地区：" + temp[i].areaname + "</span>\
-                    <a href=\"../President_Special_Column?id="+temp[i].headid+"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
+                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   学校：" + temp[i].name + "   |   地区：" + temp[i].areaname + "</span>\
+                    <a  target ='_blank' href=\"../President_Special_Column?id="+temp[i].headid+"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
                 </div>\
             </div>\
                     ";
@@ -284,6 +286,17 @@ function GetList() {
     });
 }
 
+//
+//
+//接收键盘消息处理函数
+//
+function in_enter_key_fun(evt) {
+    if (evt.keyCode) {
+        if (evt.keyCode == 13) {
+            Go();
+        }
+    }
+}
 
 //
 //上一页
@@ -364,7 +377,11 @@ function Produce_A_Signs() {
     }
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
-        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        if (i == 0) {
+            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        } else {
+            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        }
 
         //if (i == 0) {
         //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
@@ -377,8 +394,8 @@ function Produce_A_Signs() {
     }
     html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
-        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
-        <span class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</span>";
+        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\" onkeyup = \"in_enter_key_fun(event)\">\
+        <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }
 

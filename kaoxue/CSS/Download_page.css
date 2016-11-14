@@ -89,13 +89,13 @@
     height: 45px;
     position: absolute;
     top: 40px;
-    background: url(../img/baidibai.png);
+    background: url(../img/baidibai.png) no-repeat;
     /*left: 900px;*/
     right:25px;
 }
 
     .xiazaibai:hover {
-        background: url(../img/xiazaibai.png);
+        background: url(../img/xiazaibai.png) no-repeat;
     }
 
 .lianxi {

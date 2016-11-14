@@ -452,8 +452,10 @@
     <Content Include="img\newspaper_1.png" />
     <Content Include="img\nianfen.png" />
     <Content Include="img\no_data_bg.jpg" />
+    <Content Include="img\no_data_bg_22.png" />
     <Content Include="img\pclunbo.png" />
     <Content Include="img\pinxin.png" />
+    <Content Include="img\p_1.png" />
     <Content Include="img\qiuda1.png" />
     <Content Include="img\qq.png" />
     <Content Include="img\qzqm.png" />
@@ -478,6 +480,7 @@
     <Content Include="img\souhu.png" />
     <Content Include="img\sousuo.png" />
     <Content Include="img\srenwu.png" />
+    <Content Include="img\stars_red.png" />
     <Content Include="img\stk.jpg" />
     <Content Include="img\stk1.jpg" />
     <Content Include="img\stk11.png" />

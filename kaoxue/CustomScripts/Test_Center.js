@@ -57,7 +57,8 @@ function level_selected(num) {
     category = ""; //类型名称
     testcategory = ""; //试题类型
     grade = ""; // 年级
-    district = ""; //地区
+    if (district == null)
+        district = ""; //地区
     
     GetSubject();
     GetTestCategory();
@@ -234,18 +235,32 @@ function GetTest_Recommend() {
 function GetArea() {
     $.post("../Test_Center/GetArea", function (data) {
         if (data) {
-            var html = "<div class=\"xd5_hover xdh33 fl district_selected\" onclick='a_selected(this, \"district_selected\"), district_selected(0)'>\
-                        <a>全部</a>\
+            var html = "";
+            if (district.length != 0) {
+                html = "<div class=\"xd5_hover xdh33 fl\" onclick='a_selected(this, \"district_selected\"), district_selected(0)'>\
+                        <a target='_blank'>全部</a>\
                     </div>";
+            } else {
+                html = "<div class=\"xd5_hover xdh33 fl district_selected\" onclick='a_selected(this, \"district_selected\"), district_selected(0)'>\
+                        <a target='_blank'>全部</a>\
+                    </div>";
+            }
             var temp;
             if (data != "]") {
                 temp = eval(data);
 
                 for (var i = 0; i < temp.length; i++) {
 
-                    html += "<div id=area" + (i + 1) + " class=\"xd5_hover xdh33 fl \" onclick='a_selected(this, \"district_selected\"), district_selected(" + temp[i].id + ")'>\
+                    if (district == temp[i].id) {
+                        html += "<div id=area" + (i + 1) + " class=\"xd5_hover xdh33 fl district_selected\" onclick='a_selected(this, \"district_selected\"), district_selected(" + temp[i].id + ")'>\
                         <a>" + temp[i].areaname + "</a>\
                     </div>";
+                    } else {
+                        html += "<div id=area" + (i + 1) + " class=\"xd5_hover xdh33 fl \" onclick='a_selected(this, \"district_selected\"), district_selected(" + temp[i].id + ")'>\
+                        <a>" + temp[i].areaname + "</a>\
+                    </div>";
+                    }
+
                 }
             }
             $("#district").html(html);
@@ -490,6 +505,7 @@ $(document).ready(function () {
     para_subjectid = GetQueryString("subjectid");
     para_type = GetQueryString("type");
     para_testcategory = GetQueryString("testcategory");
+    district = GetQueryString("district");
     var para_level = GetQueryString("level");
     if (para_level != undefined && para_level != null) {
         $("#level" + para_level).click();

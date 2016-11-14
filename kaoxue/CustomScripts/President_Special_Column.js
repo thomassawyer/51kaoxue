@@ -19,9 +19,10 @@ function GetPresidentInfo() {
                 var temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
                     //校长头像
-                    $("#president_headimg").attr("src", "http://source.51kaoxue.com/" + temp[i].imgsrc);
+                    $("#president_headimg").attr("src", "http://source.51kaoxue.com/" + temp[i].headimgsrc);
                     //校长简介
                     $("#president_introduce").html(temp[i].memo);
+                    $("#presidentName").html(temp[i].headname);
                     $("#schooleName").html(temp[i].name);
                 }
                 

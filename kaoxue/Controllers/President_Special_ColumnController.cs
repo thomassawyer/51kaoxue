@@ -24,7 +24,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string GetPresidentInfo()
         {
-            string sql = "select id,name,schoolid,memo,imgsrc from tblteacher where id=" + Request["id"];
+            string sql = "select id,name,headname,schoolid,memo,headimgsrc from vw_school where headid=" + Request["id"];
             DataSet ds = DbHelperSQL.Query(sql);
             string json = string.Empty;
             if (ds != null)
