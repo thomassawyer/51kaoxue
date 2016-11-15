@@ -150,13 +150,14 @@ function GetList() {
         if (data) {
 
             var html = "";
-            if (data != "]") {
-                var temp = eval(data);
-                var date;
-                html += "<div class=\"lxclan mar_lf_0\">\
+            html += "<div class=\"lxclan mar_lf_0\">\
                 <img src=\"img/mxtubiao.png\" alt=\"\" class=\"rwimg\" />\
                 <a target='_blank' class=\"bix dkbix\">名校列表</a>\
             </div>";
+            if (data != "]") {
+                var temp = eval(data);
+                var date;
+                $("#pages").removeClass("display_none");
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].intime);
                     var time = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
@@ -164,7 +165,7 @@ function GetList() {
                 <div class=\"fl\">\
                     <a class=\"img_a_p\" target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\"><img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></a></div>\
                 <div class=\"fl neirong620\">\
-                    <a target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid="+temp[i].areaid+"\" class=\"fz25\">" + temp[i].name + "</a>\
+                    <a target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\" class=\"fz25\">" + temp[i].name + "</a>\
                     <div id=\"\" class=\"lssp\">\
                        " + temp[i].content + "\
                     </div>\
@@ -174,9 +175,12 @@ function GetList() {
             </div>\
                     ";
                 }
+                $("#data_list").html(html);
+                Produce_A_Signs();
+            } else {
+                $("#pages").addClass("display_none");
+                $("#data_list").html(html + "<div class=\"no_data_bg\"></div>");
             }
-            $("#data_list").html(html);
-            Produce_A_Signs();
         }
     });
 }

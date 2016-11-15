@@ -255,33 +255,37 @@ function GetList() {
         if (data) {
 
             var html = "";
-            if (data != "]") {
-                var temp = eval(data);
-                var date;
-                html += "<div class=\"lxclan mar_lf_0\">\
+            html += "<div class=\"lxclan mar_lf_0\">\
                 <img src=\"img/renwu.png\" alt=\"\" class=\"rwimg\" />\
                 <a target='_blank' class=\"bix dkbix\">校长列表</a>\
             </div>";
+            if (data != "]") {
+                var temp = eval(data);
+                var date;
+                $("#pages").removeClass("display_none");
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].intime);
                     var time = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
                     html += "<div class=\"xz360\" style=\"width:100%;\">\
                 <div class=\"fl\">\
-                    <a class=\"img_a_p\" target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid+"\"><img src=\"http://source.51kaoxue.com/" + temp[i].headimgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></a></div>\
+                    <a class=\"img_a_p\" target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid + "\"><img src=\"http://source.51kaoxue.com/" + temp[i].headimgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></a></div>\
                 <div class=\"fl neirong620\">\
-                     <a target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid+"\" class=\"fz25\">" + temp[i].name + "&nbsp校长&nbsp" + temp[i].headname + "</a>\
+                     <a target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid + "\" class=\"fz25\">" + temp[i].name + "&nbsp校长&nbsp" + temp[i].headname + "</a>\
                     <div id=\"\" class=\"lssp\">\
                        " + temp[i].memo + "\
                     </div>\
                     <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   学校：" + temp[i].name + "   |   地区：" + temp[i].areaname + "</span>\
-                    <a  target ='_blank' href=\"../President_Special_Column?id="+temp[i].headid+"\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
+                    <a  target ='_blank' href=\"../President_Special_Column?id="+ temp[i].headid + "\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
                 </div>\
             </div>\
                     ";
                 }
+                $("#data_list").html(html);
+                Produce_A_Signs()
+            } else {
+                $("#pages").addClass("display_none");
+                $("#data_list").html(html + "<div class=\"no_data_bg\"></div>");
             }
-            $("#data_list").html(html);
-            Produce_A_Signs();
         }
     });
 }
@@ -328,10 +332,8 @@ function GetDataCount() {
     $.ajaxSetup({
         async: false
     });
-    $.post("../Elite_School/GetDataCount", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
+    $.post("../President/GetDataCount", { level: level_num, district: district, pageindex: pageindex }, function (data) {
         if (data) {
-            $("#all_data_count").html("该章节（" + data + "份）");
-
             if (Number(data) % 10 == 0) {
                 pagecount = data / 10;
             } else {

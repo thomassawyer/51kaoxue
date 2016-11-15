@@ -38,7 +38,9 @@
 }
 
 .xuexiaoimg {
-    height: 395px;
+    /*height: 395px;*/
+    height:auto;
+    margin-bottom:10px;
     width: 100%;
     position: relative;
     overflow:hidden;
@@ -88,10 +90,10 @@
 
 #imgurl {
     width: 427px;
-    height: 316px;
+    height: 288px;
     float: left;
     margin-right:20px;
-    margin-bottom:20px;
+    margin-bottom:5px;
 }
 
 .bxst {

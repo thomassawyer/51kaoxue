@@ -112,12 +112,12 @@
 }
 .xzgd1 {
     position: absolute;
-    top: 7px;
+    top: 6px;
     left: 160px;
     color: #fff;
     cursor:pointer;
 }
     .xzgd1 > img {
-        top: 6px;
+        top: 7px;
         position: absolute;
     }

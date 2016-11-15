@@ -26,13 +26,13 @@ function Reading_Lists() {
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
                 if (i == 0) {
-                    html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + "> " + text + "</a></li>";
+                    html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a target='_blank' class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + "> " + text + "</a></li>";
                 } else if (i == 1) {
-                    html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm2\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
+                    html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' class=\"rm2\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else if (i == 2) {
-                    html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a class=\"rm3\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
+                    html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' class=\"rm3\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else {
-                    html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
+                    html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
                 }
 
             }
@@ -93,9 +93,9 @@ function GetList() {
             if (data != "]") {
                 var temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
-                    html += "<div class=\"fenlei11\">\
+                    html += "<div class=\"fenlei11\" onclick='update_viewcount(" + temp[i].id + ")'>\
                                 <img src=\"img/shushuxian.png\"  class=\"shushu\">\
-                                <a  class=\"fla\" onclick='update_viewcount(" + temp[i].id + ")'>" + temp[i].title + "</a>\
+                                <a  target='_blank' class=\"fla\" >" + temp[i].title + "</a>\
                             </div>";
                 }
             }
@@ -118,6 +118,16 @@ function update_viewcount(id) {
 }
 
 //
+//接收键盘消息处理函数
+//
+function in_enter_key_fun(evt) {
+    if (evt.keyCode) {
+        if (evt.keyCode == 13) {
+            Go();
+        }
+    }
+}
+//
 //分页页码
 //
 function Produce_A_Signs() {
@@ -133,7 +143,11 @@ function Produce_A_Signs() {
     }
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
-        html += "<a  onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + "\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        if (i == 0) {
+            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        } else {
+            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+        }
 
         //if (i == 0) {
         //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
@@ -146,7 +160,7 @@ function Produce_A_Signs() {
     }
     html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
-        <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\">\
+        <input type=\"number\" class=\"tzsr\" id=\"page_size\" value=\"\" min='1' max='" + pagecount + "'"+"onkeyup = \"in_enter_key_fun(event)\">\
         <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }

@@ -170,6 +170,8 @@ function President_Introduce() {
                 $("#president_head_img").html("<img src=\"../img/p_1.png\" class=\"president_head_img_1\"/>");
                 $("#president_more").addClass("display_none");
                 $("#president_more_1").addClass("display_none");
+                //简介
+                $("#president_description").attr("style","height:82px");
             }
         } else {
             //照片
