@@ -296,16 +296,11 @@
     <Content Include="img\beijing8.png" />
     <Content Include="img\beike01.png" />
     <Content Include="img\bg_cyan.jpg" />
-    <Content Include="img\bg_cyan.png" />
     <Content Include="img\book_bg.jpg" />
     <Content Include="img\book_blue.jpg" />
-    <Content Include="img\book_blue.png" />
     <Content Include="img\book_green.jpg" />
-    <Content Include="img\book_green.png" />
     <Content Include="img\book_lightgreen.jpg" />
-    <Content Include="img\book_lightgreen.png" />
     <Content Include="img\book_yellow.jpg" />
-    <Content Include="img\book_yellow.png" />
     <Content Include="img\boshimao.png" />
     <Content Include="img\cekbei.png" />
     <Content Include="img\chuchi1.png" />
