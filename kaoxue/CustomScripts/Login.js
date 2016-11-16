@@ -25,14 +25,35 @@ function getpara() {
 function validate() {
     getpara();
     if (username == "" || username == undefined || username == null) {
-        alert("请输入用户名");
+        //alert("请输入用户名");
+        var tip = $("#username").easytip();
+        tip.show("用户名不能为空!");
         return false;
     }
     if (password == "" || password == undefined || password == null) {
-        alert("请输入密码");
+        //alert("请输入密码");
+        var tip = $("#password").easytip();
+        tip.show("用户密码不能为空!");
         return false;
     }
     return true;
+}
+
+function keyPro(event) {
+    if (event.keyCode == 13) {
+        if($("#password").val() != '') {
+            Login();
+        } else {
+            $("#password").focus();
+        }
+            
+     }
+}
+
+function keyPro_1(event) {
+    if (event.keyCode == 13) {
+            Login();
+    }
 }
 
 function Login() {
@@ -44,7 +65,9 @@ function Login() {
         username:username
     }, function (data) {
         if (data == "0") {
-            alert("用户名不存在");
+            var tip = $("#username").easytip();
+            tip.show("用户名不存在!");
+            //alert("用户名不存在");
         } else if(data=="1") {
             $.post("../Login/ValidateUsernameAndPassword", {
                 username: username,
@@ -60,7 +83,9 @@ function Login() {
                         location.href = return_url;
                     }
                 } else {
-                    alert("密码错误");
+                    //alert("密码错误");
+                    var tip = $("#password").easytip();
+                    tip.show("密码错误!");
                 }
             });
         }
@@ -125,5 +150,20 @@ function loginEnterCheck() {
 
 
 $(document).ready(function () {
+    $("#reg-form").easyform();
+
     remove_div();
+
+    $("#password").blur(function () {
+        if ($("#password").val() == '') {
+            var tip = $("#password").easytip();
+            tip.show("用户密码不能为空!");
+        }
+    });
+    $("#username").blur(function () {
+        if ($("#username").val() == '') {
+            var tip = $("#username").easytip();
+            tip.show("用户名不能为空!");
+        } 
+    });
 });

@@ -176,6 +176,7 @@
     <Content Include="CSS\list_of_principals.css" />
     <Content Include="CSS\Literature_culture.css" />
     <Content Include="CSS\Literature_reading_page.css" />
+    <Content Include="CSS\login.css" />
     <Content Include="CSS\News_consulting_industry.css" />
     <Content Include="CSS\News_information_list_page.css" />
     <Content Include="CSS\Principal_recommendation_page.css" />
@@ -295,6 +296,12 @@
     <Content Include="img\baiseyuanxing-12.png" />
     <Content Include="img\beijing8.png" />
     <Content Include="img\beike01.png" />
+    <Content Include="img\bg %281%29.jpg" />
+    <Content Include="img\bg %282%29.jpg" />
+    <Content Include="img\bg %283%29.jpg" />
+    <Content Include="img\bg %284%29.jpg" />
+    <Content Include="img\bg %285%29.jpg" />
+    <Content Include="img\bg %286%29.jpg" />
     <Content Include="img\bg_cyan.jpg" />
     <Content Include="img\book_bg.jpg" />
     <Content Include="img\book_blue.jpg" />
@@ -591,6 +598,8 @@
     <Content Include="indeximages\zhuzhou.jpg" />
     <None Include="Properties\PublishProfiles\FaBu.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="js\easyform\easyform.css" />
+    <Content Include="js\easyform\easyform.js" />
     <Content Include="js\highlight.pack.js" />
     <Content Include="js\jPages.js" />
     <Content Include="js\jPages.min.js" />

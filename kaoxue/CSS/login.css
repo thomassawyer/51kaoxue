@@ -1,0 +1,168 @@
+.bj {
+    width: 100%;
+    height: 100%;
+}
+
+.shouye {
+    width: 100%;
+    height: 150px;
+    background: #fff;
+    position: absolute;
+    display: none;
+}
+.p_ab {
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+.syz {
+    width: 1189px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.dlylog {
+    padding-top: 28px;
+}
+
+.dlsp > a {
+    color: #373737;
+}
+
+.dlsp {
+    position: absolute;
+    top: 60px;
+    font-size: 20px;
+    left: 980px;
+}
+
+    .dlsp > a:hover {
+        color: #64d200;
+    }
+
+.zhmm {
+    width: 472px;
+    height: 529px;
+    position: fixed;
+    top: 25%;
+}
+
+.zhmm {
+    width: 472px;
+    height: 529px;
+    background: url(../img/dlbjk.png);
+    position: absolute;
+}
+
+.dlyhhh {
+    width: 430px;
+    height: 490px;
+    background: #e7e1ba;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 15px;
+    position: relative;
+}
+
+.shuidenglu {
+    color: #80d339;
+    font-size: 34px;
+    position: absolute;
+    top: 50px;
+    left: 140px;
+    font-weight:normal;
+}
+
+.zhmingzi {
+    width: 363px;
+    height: 57px;
+    background: url(../img/yonghuming.png);
+    position: absolute;
+    top: 140px;
+    left: 35px;
+}
+
+.rwmctb {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.yhminzi {
+    position: absolute;
+    top: 14px;
+    left: 60px;
+    border: none;
+    font-size:20px;
+    width:260px;
+    color:#a0a0a0;
+}
+
+.topzhi {
+    top: 220px;
+}
+
+.gxk {
+    position: absolute;
+    top: 320px;
+    left: 70px;
+}
+
+.jzyhm {
+    position: absolute;
+    top: 318px;
+    left: 85px;
+}
+
+.wjmm {
+    position: absolute;
+    top: 318px;
+    left: 260px;
+}
+
+.wjmima {
+    position: absolute;
+    top: 320px;
+    left: 295px;
+}
+
+.denglulu {
+    display: block;
+    width: 160px;
+    height: 57px;
+    background: url(../img/denglu.png);
+    position: absolute;
+    top: 380px;
+    left: 140px;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    color: #fff;
+    border: none;
+}
+    .denglulu:hover {
+        cursor:pointer;
+    }
+
+.sp11 {
+    line-height: 57px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.sn-separator {
+    display: inline-block;
+    width: 0;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: top;
+    position: relative;
+    top: 7px;
+    left: 0;
+    font-size: 0;
+    border-left: 1px solid #373737;
+    margin: 0 8px;
+}

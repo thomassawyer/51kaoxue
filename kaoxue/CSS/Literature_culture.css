@@ -49,7 +49,7 @@
 
 .ccimg1 {
     position: relative;
-    background: url('../../img/book_bg.jpg') no-repeat;
+    background: url('../../img/bg (6).jpg') no-repeat;
     width:86px;
     height:112px;
     display: table;
@@ -58,14 +58,17 @@
     display:table-cell;
     vertical-align:middle;
 }
+.rm1 {
+    color: #ff4a52;
+}
 .text_border {
     /*height:104px;*/
     width:27px;
     padding:2px;
     border:1px solid #fff;
     /*margin-top:1px;*/
-    margin-left: 30px;
-    border-radius:5px;
+    margin-left: 20px;
+    /*border-radius:5px;*/
 }
 .bg {
     text-align: center;
@@ -82,42 +85,42 @@
     background-size:100% 100%;
     -webkit-background-origin:content-box; /* Safari */
     /*background-origin:content-box;*/
-    border-radius:5px;
+    /*border-radius:5px;*/
     /*writing-mode:tb-rl;*/    
 }
     .ccimg1:hover {
         cursor:pointer;
     }
 .bg_yellow:hover {
-    background: url('../../img/book_yellow.jpg') no-repeat;
+    background: url('../../img/bg (1).jpg') no-repeat;
 }
     .bg_yellow:hover > div > div > a {
         color:#2ea7f8;
     }
 
 .bg_green:hover {
-    background: url('../../img/book_green.jpg') no-repeat;
+    background: url('../../img/bg (3).jpg') no-repeat;
 }
     .bg_green:hover  > div > div > a {
         color:#07c277;
     }
 
 .bg_blue:hover {
-    background: url('../../img/book_blue.jpg') no-repeat;
+    background: url('../../img/bg (2).jpg') no-repeat;
 }
     .bg_blue:hover > div > div  > a {
         color:#808ffb;
     }
 
 .bg_lightgreen:hover {
-    background: url('../../img/book_lightgreen.jpg') no-repeat;
+    background: url('../../img/bg (5).jpg') no-repeat;
 }
     .bg_lightgreen:hover > div > div  > a {
         color:#8cc407;
     }
 
 .bg_cyan:hover {
-    background: url('../../img/bg_cyan.jpg') no-repeat;
+    background: url('../../img/bg (4).jpg') no-repeat;
 }
     .bg_cyan:hover > div  > div > a {
         color:#00b2c2;
