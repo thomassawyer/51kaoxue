@@ -1,28 +1,136 @@
-.zhitongche{width:1189px;height:50px;margin: 0 auto;margin-top:20px;background:#f3f3f3;}
-.ztccs{width:1189px;height:100%;}
-.ztccs>li{width:108px;height: 100%;background:#f3f3f3;}
-.beis1{height:40px;width:100px;background: #ffb726;margin: 0 auto;margin-top:5px;position:relative;}
-.img0011{position: absolute;top:15px;left:5px;}
-.b0011{position:absolute;left:25px;top:15px;color:#fff;}
-.ztca{display: block;width:110px;text-align: center;line-height:50px;color:#777777;}
-.ztca:hover{color:#ffb726;}
-.bys2{background:#07c277;}
-.imgb1{background: url(../img/0022.png);}
-.aztc1:hover{color:#07c277;}
-.bys3{background:#ff4a52;}
-.aztc2:hover{color:#ff4a52;}
-.bys4{background:#2ea7f8;}
-.aztc3:hover{color:#2ea7f8;}
-.bys5{background:#00b2c2;}
-.aztc4:hover{color:#00b2c2;}
-.bys6{background:#808ffb;}
-.aztc5:hover{color:#808ffb;}
-.bys7{background:#8cc407;}
-.aztc6:hover{color:#8cc407;}
-.bys8{background:#07c7bc;}
-.aztc7:hover{color:#07c7bc;}
-.bys9{background:#c96ec2;}
-.aztc8:hover{color:#c96ec2;}
-.bys10{background:#c36634;}
-.aztc9:hover{color:#c36634;}
+.zhitongche {
+    width: 1189px;
+    height: 33px;
+    margin: 0 auto;
+    /*margin-top: 20px;*/
+    margin-bottom:11px;
+    background: #f3f3f3;
+    padding:8px 0px 8px 23px;
+}
 
+.ztccs {
+    width: 1189px;
+    height: 100%;
+}
+
+    .ztccs > li {
+        width:80px;
+        height: 100%;
+        background: #f3f3f3;
+    }
+
+.beis1 {
+    height: 33px;
+    width: 129px;
+    background: #ffb726;
+    margin: 0 auto;
+    /*margin-top: 5px;*/
+    position: relative;
+}
+
+.img0011 {
+    position: absolute;
+    top: 9px;
+    left: 11px;
+}
+
+.b0011 {
+    position: absolute;
+    left: 36px;
+    top: 6px;
+    color: #fff;
+    font-size:16px;
+}
+
+.ztca {
+    display: block;
+    width: 80px;
+    text-align: left;
+    line-height: 33px;
+    color: #373737;
+    padding-left:25px;
+}
+
+    .ztca:hover {
+        color: #ffb726;
+    }
+
+.bys2 {
+    background: #07c277;
+}
+
+.imgb1 {
+    background: url(../img/0022.png);
+}
+
+.aztc1:hover {
+    color: #07c277;
+}
+
+.bys3 {
+    background: #ff4a52;
+}
+
+.aztc2:hover {
+    color: #ff4a52;
+}
+
+.bys4 {
+    background: #2ea7f8;
+}
+
+.aztc3:hover {
+    color: #2ea7f8;
+}
+
+.bys5 {
+    background: #00b2c2;
+}
+
+.aztc4:hover {
+    color: #00b2c2;
+}
+
+.bys6 {
+    background: #808ffb;
+}
+
+.aztc5:hover {
+    color: #808ffb;
+}
+
+.bys7 {
+    background: #8cc407;
+}
+
+.aztc6:hover {
+    color: #8cc407;
+}
+
+.bys8 {
+    background: #07c7bc;
+}
+
+.aztc7:hover {
+    color: #07c7bc;
+}
+
+.bys9 {
+    background: #c96ec2;
+}
+
+.aztc8:hover {
+    color: #c96ec2;
+}
+
+.bys10 {
+    background: #c36634;
+}
+
+.aztc9:hover {
+    color: #c36634;
+}
+
+.daohanglan {
+    display:none;
+}

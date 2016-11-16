@@ -36,7 +36,7 @@
             </div>
             <div id="ztc_bottom" class="fl">
                 <form action="#" method="get">
-                    <input type="text" name="lname" class="fl" id="shousuo" style="padding-left:20px; width:430px;" placeholder="请输入搜索内容" /><a id="tijiao" class="fl"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor:pointer;"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"/>
+                    <input type="text" name="keywords" class="fl" id="shousuo" style="padding-left:20px; width:430px;" placeholder="请输入搜索内容" onkeyup="shousuo_keyfun(event)"/><a id="tijiao" target='_blank' class="fl"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor:pointer;"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"/>
                 </form>
             </div>
             <div class="fl xbs">
@@ -62,8 +62,8 @@
                 <li class="fl pad bk"><a href="../Subject?subjectname=地理">地理</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk1" id="bk"><a href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk1"><a href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a href="../Grade?level=2">初中</a><img src="../../img/tc-93.png" alt="" /></li>
                 <li class="fl pad bk"><a href="../Grade?level=3">高中</a><img src="../../img/tc-93.png" alt="" /></li>
+                <li class="fl pad bk"><a href="../Grade?level=2">初中</a><img src="../../img/tc-93.png" alt="" /></li>  
             </ul>
         </div>
     </div><!--导航栏-->

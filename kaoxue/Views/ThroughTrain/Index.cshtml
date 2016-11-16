@@ -18,7 +18,8 @@
     <link rel="stylesheet" type="text/css" href="css/News_consulting_industry.css" />
     <link rel="stylesheet" href="css/Contact_us.css" />
     <link rel="stylesheet" type="text/css" href="css/Through_train.css" />
-    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/CustomScripts/jquery.reveal.js"></script>
     <style>
         .lxclan {
             background: #7bbd26;
@@ -102,55 +103,15 @@
     </style>
 </head>
 <body>
-    <div class="top_head">
-        <div class="top_head_div">
-            <div id="" class="fl_head">
-                <ul>
-                    <li>您好,欢迎来到51考学网</li>
-                    <li class="li1">请<a href="">[登录]</a></li>
-                    <li class="li2"><a href="">免费注册</a></li>
-                </ul>
-            </div>
-            <div class="f2_head">
-                <ul>
-                    <li class="li1 lispan">今日上新：<span>999套</span></li>
-                    <li class="li1 lispan">总数：<span>9999套</span></li>
-                    <li class="li3">免费咨询热线：400-819-8115</li>
-                </ul>
-            </div>
-        </div>
-    </div><!--这是头部  登录部分-->
-
-    <div class="navinput">
-        <div class="navinput_div">
-            <div id="" class="fl logo">
-                <a href="../Home"><img src="img/logo.png" class="logo1"></a>
-            </div>
-            <div id="ztc" class="fl">
-                <img src="img/ztc.png" />
-            </div>
-            <div id="ztc_bottom" class="fl">
-                <form action="#" method="get">
-                    <input type="text" name="lname" class="fl" id="shousuo" placeholder="&nbsp&nbsp请输入搜索内容" /><a href="" id="tijiao" class="fl"></a><img src="img/sousuo.png" id="soussuo">
-                </form>
-            </div>
-            <div class="fl xbs">
-                <img src="img/boshimao.png" alt="" class="fl" /><h3 class="fl h3gaokao"><a href="">高考试题</a></h3>
-            </div>
-            <div class="fl xbss">
-                <img src="img/shutubiao1.png" alt="" class="fl" /><h3 class="fl h3gaokao"><a href="">天天新闻</a></h3>
-            </div>
-        </div>
-    </div><!--这是搜索框部分-->
+    @Html.Partial("~/Common/top1.ascx")
 
     <div id="" class="zhitongche">
+        <div id="" class="beis1 fl">
+            <img src="img/0011.jpg" class="img0011">
+            <b class="b0011">常用工具</b>
+        </div>
         <ul class="ztccs">
-            <li class="fl">
-                <div id="" class="beis1">
-                    <img src="img/0011.jpg" class="img0011">
-                    <b class="b0011">常用工具</b>
-                </div>
-            </li>
+    
             <li class="fl">
                 <a href="../Elite_School" class="ztca">名校套题</a>
             </li>
@@ -182,13 +143,11 @@
     </div>
 
     <div id="" class="zhitongche">
+        <div id="" class="beis1 bys2 fl">
+            <img src="img/0022.jpg" class="img0011 imgb1">
+            <b class="b0011">频 道</b>
+        </div>
         <ul class="ztccs">
-            <li class="fl">
-                <div id="" class="beis1 bys2">
-                    <img src="img/0022.jpg" class="img0011 imgb1">
-                    <b class="b0011">频 道</b>
-                </div>
-            </li>
             <li class="fl">
                 <a href="Test_Center?level=3&type=6" class="ztca aztc1">素材</a>
             </li>
@@ -213,13 +172,12 @@
     </script>
 
     <div id="" class="zhitongche">
+        <div id="" class="beis1 bys3 fl">
+            <img src="img/0033.jpg" class="img0011 imgb1">
+            <b class="b0011">学科(高中)</b>
+        </div>
         <ul class="ztccs">
-            <li class="fl">
-                <div id="" class="beis1 bys3">
-                    <img src="img/0033.jpg" class="img0011 imgb1">
-                    <b class="b0011">学科(高中)</b>
-                </div>
-            </li>
+
             <li class="fl">
                 <a class="ztca aztc2" onclick="subjecturl(3,19)">语文</a>
             </li>
@@ -251,13 +209,12 @@
     </div>
 
     <div id="" class="zhitongche">
+        <div id="" class="beis1 bys4 fl">
+            <img src="img/0044.jpg" class="img0011 imgb1">
+            <b class="b0011">学科(初中)</b>
+        </div>
         <ul class="ztccs">
-            <li class="fl">
-                <div id="" class="beis1 bys4">
-                    <img src="img/0044.jpg" class="img0011 imgb1">
-                    <b class="b0011">学科(初中)</b>
-                </div>
-            </li>
+
             <li class="fl">
                 <a onclick="subjecturl(2,9)" class="ztca aztc3">语文</a>
             </li>
@@ -292,13 +249,12 @@
     </div>
 
     <div id="" class="zhitongche">
+        <div id="" class="beis1 bys5 fl">
+            <img src="img/0055.jpg" class="img0011 imgb1">
+            <b class="b0011">天天阅读</b>
+        </div>
         <ul class="ztccs">
-            <li class="fl">
-                <div id="" class="beis1 bys5">
-                    <img src="img/0055.jpg" class="img0011 imgb1">
-                    <b class="b0011">天天阅读</b>
-                </div>
-            </li>
+   
             <li class="fl">
                 <a href="../News?type=1&typename=高考动态" class="ztca aztc4">高考动态</a>
             </li>
@@ -321,13 +277,12 @@
     </div>
 
     <div id="" class="zhitongche">
+        <div id="" class="beis1 bys6 fl">
+            <img src="img/0066.jpg" class="img0011 imgb1">
+            <b class="b0011">学段</b>
+        </div>
         <ul class="ztccs">
-            <li class="fl">
-                <div id="" class="beis1 bys6">
-                    <img src="img/0066.jpg" class="img0011 imgb1">
-                    <b class="b0011">学段</b>
-                </div>
-            </li>
+   
             <li class="fl">
                 <a href="" class="ztca aztc5">初中</a>
             </li>
@@ -338,13 +293,12 @@
     </div>
 
     <div id="" class="zhitongche">
+        <div id="" class="beis1 bys7 fl">
+            <img src="img/0077.jpg" class="img0011 imgb1">
+            <b class="b0011">高考备考</b>
+        </div>
         <ul class="ztccs">
-            <li class="fl">
-                <div id="" class="beis1 bys7">
-                    <img src="img/0077.jpg" class="img0011 imgb1">
-                    <b class="b0011">高考备考</b>
-                </div>
-            </li>
+
             <li class="fl">
                 <a href="../Gaokao_Beikao?category=1" class="ztca aztc6">一轮复习</a>
             </li>
@@ -361,13 +315,12 @@
     </div>
 
     <div id="" class="zhitongche">
+        <div id="" class="beis1 bys8 fl">
+            <img src="img/0088.jpg" class="img0011 imgb1">
+            <b class="b0011">文学国学</b>
+        </div>
         <ul class="ztccs">
-            <li class="fl">
-                <div id="" class="beis1 bys8">
-                    <img src="img/0088.jpg" class="img0011 imgb1">
-                    <b class="b0011">文学国学</b>
-                </div>
-            </li>
+
             <li class="fl">
                 <a href="../Ancient" class="ztca aztc7">国学</a>
             </li>

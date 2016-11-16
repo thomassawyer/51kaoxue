@@ -29,6 +29,13 @@ function GetShitiCount() {
     });
 }
 
+
+function shousuo_keyfun(event) {
+    var val = $('#shousuo').val();
+    if (event.keyCode == 13) {
+        location.href = '../Search?keywords=' + val;
+    }
+}
 function GetUserInfo() {
     $.post("../Home/GetUserInfo", function (data) {
         if (data != "0") {

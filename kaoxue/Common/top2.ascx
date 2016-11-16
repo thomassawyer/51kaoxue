@@ -39,7 +39,7 @@
         </div>
         <div id="ztc_bottom" class="fl">
             <form action="#" method="get">
-                <input type="text" name="lname" class="fl" id="shousuo" style="padding-left:20px; width:430px;" placeholder="请输入搜索内容" /><a id="tijiao" class="fl"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor:pointer;"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()">
+                <input type="text" name="keywords" class="fl" id="shousuo" style="padding-left:20px; width:430px;" placeholder="请输入搜索内容" onkeyup="shousuo_keyfun(event)"/><a id="tijiao" class="fl" target='_blank' onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor:pointer;"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()">
             </form>
         </div>
         <div class="fl xbs">
@@ -59,7 +59,7 @@
             <li class="fl pad bk1"><a href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" class="bkimg2" /></li>
             <li class="fl pad bk1"><a href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" class="bkimg3" /></li>
             <li class="fl pad bk1"><a href="../Past_Exam">高考真题</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
-            <li class="fl pad bk1"><a href="../Elite_School">百强名校</a><img src="../../img/tc-93.png" class="bkimg5" /></li>
+            <li class="fl pad bk1"><a href="../Elite_School">名校试题</a><img src="../../img/tc-93.png" class="bkimg5" /></li>
             <li class="fl pad bk1"><a href="../Gaokao_Beikao">高考备考</a><img src="../../img/tc-93.png" class="bkimg6" /></li>
         </ul>
 
