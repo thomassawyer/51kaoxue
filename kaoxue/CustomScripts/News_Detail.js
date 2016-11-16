@@ -18,8 +18,8 @@ function GetTest_Hot_Download() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
-                //html += "<li><a href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
-		html += "<li class=\"rmxzli\"><span class=\"rmxzsp_07c277\">●</span>&nbsp;<a  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa_07c277\">" + text + "</a></li>";
+                //html += "<li><a target='_blank' href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
+		html += "<li class=\"rmxzli\"><span class=\"rmxzsp_07c277\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa_07c277\">" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -36,8 +36,8 @@ function GetTest_Recommend() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
-                //html += "<li><a href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
-		html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
+                //html += "<li><a target='_blank' href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
+		html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -55,6 +55,7 @@ function GetList() {
                 var date;
                 for (var i = 0; i < temp.length; i++) {
                     $("#data_title_title").html(temp[i].title);
+                    $("#data_img").attr("src", "img/wenhao.png");
                     $("#data_date").html("更新时间:  " + temp[i].pubdate);
                     $("#data_content").html(temp[i].content);
                 }

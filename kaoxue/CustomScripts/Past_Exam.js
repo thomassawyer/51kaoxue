@@ -25,18 +25,18 @@ function a_selected(obj, css) {
 function GetYear() {
     $.post("../Past_Exam/GetYears", function (data) {
         if (data) {
-            var html = "<div class=\"xd5_div1 fl\"><img src=\"img/gongju.png\" class=\"xdtb5\"><a target='_blank' class=\"xd5a\"><b>年 份</b></a></div>";
+            var html = "<div class=\"xd5_div1 fl\"><img src=\"img/gongju.png\" class=\"xdtb5\"><a target='_blank' target='_blank' class=\"xd5a\"><b>年 份</b></a></div>";
             var temp;
             if (data != "]") {
                 temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
                     if (i == 0) {
                         html += "<div class=\"xd5_hover xdh5 fl years_selected\" onclick=a_selected(this,\"years_selected\"),year_selected('" + temp[i].id + "','" + temp[i].name + "')>";
-                        html += "<a target='_blank' id=year" + temp[i].id + ">" + temp[i].name + "</a>";
+                        html += "<a target='_blank' target='_blank' id=year" + temp[i].id + ">" + temp[i].name + "</a>";
                         html += "</div>";
                     } else {
                         html += "<div class=\"xd5_hover xdh5 fl\" onclick=a_selected(this,\"years_selected\"),year_selected('" + temp[i].id + "','" + temp[i].name + "')>";
-                        html += "<a target='_blank' id=year" + temp[i].id + ">" + temp[i].name + "</a>";
+                        html += "<a target='_blank' target='_blank' id=year" + temp[i].id + ">" + temp[i].name + "</a>";
                         html += "</div>";
                     }
                 }
@@ -80,7 +80,7 @@ function year_selected(num, text) {
 function GetProvince() {
     $.post("../Past_Exam/GetProvince", { year: year }, function (data) {
         if (data) {
-            var html = "<div class=\"xd5_div1 fl xd5k1 xd5_div1dk\"><img src=\"img/leixin.png\" class=\"xdtb5\" ><a target='_blank'  class=\"xd5a\"><b>地 区</b></a></div><div class=\"xd522 fl\">";
+            var html = "<div class=\"xd5_div1 fl xd5k1 xd5_div1dk\"><img src=\"img/leixin.png\" class=\"xdtb5\" ><a target='_blank' target='_blank'  class=\"xd5a\"><b>地 区</b></a></div><div class=\"xd522 fl\">";
             var temp;
             if (data != "]") {
                 temp = eval(data);
@@ -92,7 +92,7 @@ function GetProvince() {
                         text = text.substring(0,num);
                     }
                     html += "<div id=subject" + (i + 1) + " class=\"fl\" onclick=a_selected(this,\"dkhh5_selected\"),anchor_go('exam" + temp[i].id + "')>\
-                                <a target='_blank' class=\" xdh51 fl dkhh5\" style=\"margin-left:20px; margin-right:20px;\">" + text + "</a>\
+                                <a target='_blank' target='_blank' class=\" xdh51 fl dkhh5\" style=\"margin-left:20px; margin-right:20px;\">" + text + "</a>\
                                 </div>";
                 }
             }
@@ -194,7 +194,7 @@ function GetList() {
                                             if (list != "]") {
                                                 var flag2 = eval(list);
                                                 for (var k = 0; k < flag2.length; k++) {
-                                                    html += "<a class=\"sub_type_per\" onclick=\"javascript:window.open('../Download?cid=1&id=" + flag2[k].testid + "');\" target='_blank'>" + GetTypeName(flag2[k].type) + "</a>";
+                                                    html += "<a target='_blank' class=\"sub_type_per\" onclick=\"javascript:window.open('../Download?cid=1&id=" + flag2[k].testid + "');\" target='_blank'>" + GetTypeName(flag2[k].type) + "</a>";
                                                 }
                                             }
                                         }

@@ -46,7 +46,7 @@ function President_Special_Columns() {
                     //            "+temp[i].title+"\
                     //        </div>";
                     var text = temp[i].title.length > 11 ? temp[i].title.substr(0, 11) + "..." : temp[i].title;
-                    html += "<li><a onclick=\"GetNewsDetail(" + temp[i].id + ")\">●" + text + "</a></li>";
+                    html += "<li><a target='_blank' onclick=\"GetNewsDetail(" + temp[i].id + ")\">●" + text + "</a></li>";
                 }
                 $("#president_special_columns").html(html);
                 GetNewsDetail(temp[0].id);

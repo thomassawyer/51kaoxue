@@ -11,7 +11,7 @@
             <div class="fl_head">
                 <ul>
                     <li>您好,欢迎来到51考学网</li>
-                    <li class="li1" id="logininfo">请<a href="../Login">[登录]</a></li>
+                    <li class="li1" id="logininfo">请<a target='_blank' href="../Login">[登录]</a></li>
                 </ul>
             </div>
             <div class="f2_head">
@@ -29,24 +29,24 @@
 <div class="navinput">
     <div class="navinput_div">
         <div class="fl logo">
-            <a href="../Home">
+            <a target='_blank'  href="../Home">
                 <img src="../../img/logo.png" class="logo1">
             </a>
 
         </div>
         <div id="ztc" class="fl">
-            <a href="../ThroughTrain"><img src="../../img/ztc.png" /></a>
+            <a target='_blank'  href="../ThroughTrain"><img src="../../img/ztc.png" /></a>
         </div>
         <div id="ztc_bottom" class="fl">
             <form action="#" method="get">
-                <input type="text" name="keywords" class="fl" id="shousuo" style="padding-left:20px; width:430px;" placeholder="请输入搜索内容" onkeyup="shousuo_keyfun(event)"/><a id="tijiao" class="fl" target='_blank' onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor:pointer;"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()">
+                <input type="text" name="keywords" class="fl" id="shousuo" style="padding-left:20px; width:430px;" placeholder="请输入搜索内容" onkeyup="shousuo_keyfun(event)"/><a target='_blank' id="tijiao" class="fl" target='_blank' onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor:pointer;"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()">
             </form>
         </div>
         <div class="fl xbs">
-            <img src="../../img/boshimao.png" class="fl" /><h3 class="fl h3gaokao"><a  href="../Test_Center">高考试题</a></h3>
+            <img src="../../img/boshimao.png" class="fl" /><h3 class="fl h3gaokao"><a target='_blank'  href="../Test_Center">高考试题</a></h3>
         </div>
         <div class="fl xbss">
-            <img src="../../img/shutubiao1.png" class="fl" /><h3 class="fl h3gaokao"><a  href="../News">天天新闻</a></h3>
+            <img src="../../img/shutubiao1.png" class="fl" /><h3 class="fl h3gaokao"><a target='_blank'  href="../News">天天新闻</a></h3>
         </div>
     </div>
 </div>
@@ -55,12 +55,12 @@
 <div class="daohanglan">
     <div class="daohanglan_ul">
         <ul class="uuu">
-            <li class="fl"><a href="../Home"><span>首页</span></a></li>
-            <li class="fl pad bk1"><a href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" class="bkimg2" /></li>
-            <li class="fl pad bk1"><a href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" class="bkimg3" /></li>
-            <li class="fl pad bk1"><a href="../Past_Exam">高考真题</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
-            <li class="fl pad bk1"><a href="../Elite_School">名校试题</a><img src="../../img/tc-93.png" class="bkimg5" /></li>
-            <li class="fl pad bk1"><a href="../Gaokao_Beikao">高考备考</a><img src="../../img/tc-93.png" class="bkimg6" /></li>
+            <li class="fl"><a target='_blank' href="../Home"><span>首页</span></a></li>
+            <li class="fl pad bk1"><a target='_blank'  href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" class="bkimg2" /></li>
+            <li class="fl pad bk1"><a target='_blank'  href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" class="bkimg3" /></li>
+            <li class="fl pad bk1"><a target='_blank'  href="../Past_Exam">高考真题</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
+            <li class="fl pad bk1"><a target='_blank'  href="../Elite_School">名校试题</a><img src="../../img/tc-93.png" class="bkimg5" /></li>
+            <li class="fl pad bk1"><a target='_blank'  href="../Gaokao_Beikao">高考备考</a><img src="../../img/tc-93.png" class="bkimg6" /></li>
         </ul>
 
     </div>

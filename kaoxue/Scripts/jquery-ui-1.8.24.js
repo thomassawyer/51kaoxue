@@ -146,7 +146,7 @@ $.fn.extend({
 });
 
 // support: jQuery <1.8
-if ( !$( "<a>" ).outerWidth( 1 ).jquery ) {
+if ( !$( "<a target='_blank'>" ).outerWidth( 1 ).jquery ) {
 	$.each( [ "Width", "Height" ], function( i, name ) {
 		var side = name === "Width" ? [ "Left", "Right" ] : [ "Top", "Bottom" ],
 			type = name.toLowerCase(),
@@ -6280,7 +6280,7 @@ $.widget( "ui.autocomplete", {
 	_renderItem: function( ul, item) {
 		return $( "<li></li>" )
 			.data( "item.autocomplete", item )
-			.append( $( "<a></a>" ).text( item.label ) )
+			.append( $( "<a target='_blank'></a>" ).text( item.label ) )
 			.appendTo( ul );
 	},
 
@@ -8383,17 +8383,17 @@ $.extend(Datepicker.prototype, {
 			this._daylightSavingAdjust(new Date(drawYear, drawMonth - stepMonths, 1)),
 			this._getFormatConfig(inst)));
 		var prev = (this._canAdjustMonth(inst, -1, drawYear, drawMonth) ?
-			'<a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click"' +
+			'<a target='_blank' class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click"' +
 			' title="' + prevText + '"><span class="ui-icon ui-icon-circle-triangle-' + ( isRTL ? 'e' : 'w') + '">' + prevText + '</span></a>' :
-			(hideIfNoPrevNext ? '' : '<a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="'+ prevText +'"><span class="ui-icon ui-icon-circle-triangle-' + ( isRTL ? 'e' : 'w') + '">' + prevText + '</span></a>'));
+			(hideIfNoPrevNext ? '' : '<a target='_blank' class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="'+ prevText +'"><span class="ui-icon ui-icon-circle-triangle-' + ( isRTL ? 'e' : 'w') + '">' + prevText + '</span></a>'));
 		var nextText = this._get(inst, 'nextText');
 		nextText = (!navigationAsDateFormat ? nextText : this.formatDate(nextText,
 			this._daylightSavingAdjust(new Date(drawYear, drawMonth + stepMonths, 1)),
 			this._getFormatConfig(inst)));
 		var next = (this._canAdjustMonth(inst, +1, drawYear, drawMonth) ?
-			'<a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click"' +
+			'<a target='_blank' class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click"' +
 			' title="' + nextText + '"><span class="ui-icon ui-icon-circle-triangle-' + ( isRTL ? 'w' : 'e') + '">' + nextText + '</span></a>' :
-			(hideIfNoPrevNext ? '' : '<a class="ui-datepicker-next ui-corner-all ui-state-disabled" title="'+ nextText + '"><span class="ui-icon ui-icon-circle-triangle-' + ( isRTL ? 'w' : 'e') + '">' + nextText + '</span></a>'));
+			(hideIfNoPrevNext ? '' : '<a target='_blank' class="ui-datepicker-next ui-corner-all ui-state-disabled" title="'+ nextText + '"><span class="ui-icon ui-icon-circle-triangle-' + ( isRTL ? 'w' : 'e') + '">' + nextText + '</span></a>'));
 		var currentText = this._get(inst, 'currentText');
 		var gotoDate = (this._get(inst, 'gotoCurrent') && inst.currentDay ? currentDate : today);
 		currentText = (!navigationAsDateFormat ? currentText :
@@ -8482,7 +8482,7 @@ $.extend(Datepicker.prototype, {
 							((!otherMonth || showOtherMonths) && daySettings[2] ? ' title="' + daySettings[2] + '"' : '') + // cell title
 							(unselectable ? '' : ' data-handler="selectDay" data-event="click" data-month="' + printDate.getMonth() + '" data-year="' + printDate.getFullYear() + '"') + '>' + // actions
 							(otherMonth && !showOtherMonths ? '&#xa0;' : // display for other months
-							(unselectable ? '<span class="ui-state-default">' + printDate.getDate() + '</span>' : '<a class="ui-state-default' +
+							(unselectable ? '<span class="ui-state-default">' + printDate.getDate() + '</span>' : '<a target='_blank' class="ui-state-default' +
 							(printDate.getTime() == today.getTime() ? ' ui-state-highlight' : '') +
 							(printDate.getTime() == currentDate.getTime() ? ' ui-state-active' : '') + // highlight selected day
 							(otherMonth ? ' ui-priority-secondary' : '') + // distinguish dates from other months
@@ -8868,7 +8868,7 @@ $.widget("ui.dialog", {
 				)
 				.prependTo(uiDialog),
 
-			uiDialogTitlebarClose = $('<a href="#"></a>')
+			uiDialogTitlebarClose = $('<a target='_blank' href="#"></a>')
 				.addClass(
 					'ui-dialog-titlebar-close ' +
 					'ui-corner-all'
@@ -10026,7 +10026,7 @@ $.widget( "ui.slider", $.ui.mouse, {
 		var self = this,
 			o = this.options,
 			existingHandles = this.element.find( ".ui-slider-handle" ).addClass( "ui-state-default ui-corner-all" ),
-			handle = "<a class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a>",
+			handle = "<a target='_blank' class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a>",
 			handleCount = ( o.values && o.values.length ) || 1,
 			handles = [];
 
@@ -10681,7 +10681,7 @@ $.widget( "ui.tabs", {
 		select: null,
 		show: null,
 		spinner: "<em>Loading&#8230;</em>",
-		tabTemplate: "<li><a href='#{href}'><span>#{label}</span></a></li>"
+		tabTemplate: "<li><a target='_blank' href='#{href}'><span>#{label}</span></a></li>"
 	},
 
 	_create: function() {

@@ -21,8 +21,8 @@ function GetTest_Hot_Download() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
-                //html += "<li><a href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
-		html += "<li class=\"rmxzli\"><span class=\"rmxzsp_07c277\">●</span>&nbsp;<a  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa_07c277\">" + text + "</a></li>";
+                //html += "<li><a target='_blank' href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
+		html += "<li class=\"rmxzli\"><span class=\"rmxzsp_07c277\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa_07c277\">" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -39,8 +39,8 @@ function GetTest_Recommend() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
-                //html += "<li><a href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
-		html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
+                //html += "<li><a target='_blank' href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
+		html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -83,7 +83,7 @@ function GetList() {
                     <span class=\"xwgxsj color555\">\
                         更新时间:	 <span class=\"color555\">" + temp[i].pubdate + "</span>\
                     </span>\
-                    <a class=\"xqhsankz\"><img src=\"img/xqhsan.png\" /></a>";
+                    <a target='_blank' class=\"xqhsankz\"><img src=\"img/xqhsan.png\" /></a>";
                     
                     html += "</div>\
                         </div>";
@@ -166,7 +166,7 @@ function in_enter_key_fun(evt) {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "<a  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
+    var html = "<a target='_blank'  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
     var signs_length;
     if (pageindex >= pagecount - 3) {
         signs_length = (pagecount - pageindex) + 1;
@@ -179,24 +179,24 @@ function Produce_A_Signs() {
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
         if (i == 0) {
-            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
         } else {
-            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
         }
 
         //if (i == 0) {
-        //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //    html += "<a target='_blank' class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
         //} else {
-        //    html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //    html += "<a target='_blank' class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
         //}
     }
     if (pageindex <= pagecount - 5) {
         html += "<span class=\"anniusp\">...</span>";
     }
-    html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
+    html += "<a target='_blank' class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
         <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\" onkeyup = \"in_enter_key_fun(event)\">\
-        <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
+        <a target='_blank' class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }
 //

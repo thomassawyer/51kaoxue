@@ -91,7 +91,7 @@ function GetSubject() {
     $.post("../Test_Center/GetSubject", { level: level_num }, function (data) {
         if (data) {
             var html = "<div class=\"xd5_hover xdh33 fl xdh33_selected\" onclick=' a_selected(this, \"xdh33_selected\"), subject_selected(0)'>\
-                        <a>全部</a>\
+                        <a target='_blank'>全部</a>\
                     </div>";
             var temp;
             if (data != "]") {
@@ -99,7 +99,7 @@ function GetSubject() {
 
                 for (var i = 0; i < temp.length; i++) {
                     html += "<div id=subject" + temp[i].id + " class=\"xd5_hover xdh33 fl\" onclick=' a_selected(this, \"xdh33_selected\"), subject_selected(" + temp[i].id + ")'>\
-                        <a>"+ temp[i].name + "</a>\
+                        <a target='_blank'>"+ temp[i].name + "</a>\
                     </div>";
                 }
             }
@@ -126,13 +126,13 @@ function subject_selected(subjectid) {
 function GetTestCategory() {
     $.post("../Test_Center/GetTestCategory", { level: level_num }, function (data) {
         if (data) {
-            var html = "<div class=\"stzx115 fl stzx115_selected\" onclick='a_selected(this, \"stzx115_selected\"), testcategory_selected(0) '><a>全部</a></div>";
+            var html = "<div class=\"stzx115 fl stzx115_selected\" onclick='a_selected(this, \"stzx115_selected\"), testcategory_selected(0) '><a target='_blank'>全部</a></div>";
             var temp;
             if (data != "]") {
                 temp = eval(data);
 
                 for (var i = 0; i < temp.length; i++) {
-                    html += "<div id=testcategory" + temp[i].id + " class=\"stzx115 fl\" onclick='a_selected(this, \"stzx115_selected\"), testcategory_selected(" + temp[i].id + ") '><a>" + temp[i].name + "</a></div>";
+                    html += "<div id=testcategory" + temp[i].id + " class=\"stzx115 fl\" onclick='a_selected(this, \"stzx115_selected\"), testcategory_selected(" + temp[i].id + ") '><a target='_blank'>" + temp[i].name + "</a></div>";
                 }
             }
             $("#testcategory").html(html);
@@ -166,15 +166,15 @@ function testcategory_selected(num) {
 function GetGrade() {
     $.post("../Test_Center/GetGrade", { level: level_num }, function (data) {
         if (data) {
-            var html = "<div class=\"xd5_div1 fl xd5k1\"><img src=\"img/gongju.png\" class=\"xdtb5\"><a class=\"xd5a\"><b>年 级</b></a></div><div class=\"xd5_hover xdh5 fl xdh5_selected\" onclick='a_selected(this, \"xdh5_selected\"), grade_selected(0)'>\
-                    <a>全部</a>\
+            var html = "<div class=\"xd5_div1 fl xd5k1\"><img src=\"img/gongju.png\" class=\"xdtb5\"><a target='_blank' class=\"xd5a\"><b>年 级</b></a></div><div class=\"xd5_hover xdh5 fl xdh5_selected\" onclick='a_selected(this, \"xdh5_selected\"), grade_selected(0)'>\
+                    <a target='_blank'>全部</a>\
                 </div>";
             var temp;
             if (data != "]") {
                 temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
                     html += "<div id=subject" + (i + 1) + " class=\"xd5_hover xdh5 fl\" onclick='a_selected(this, \"xdh5_selected\"), grade_selected(" + temp[i].id  +")'>\
-                    <a>" + temp[i].name + "</a>\
+                    <a target='_blank'>" + temp[i].name + "</a>\
                 </div>";
                     
                 }
@@ -205,7 +205,7 @@ function GetTest_Hot_Download() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  title='" + temp[i].testname + "' href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].testname + "' href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -222,7 +222,7 @@ function GetTest_Recommend() {
             var html ="";
             for (var i = 0; i < 11; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a title='" + temp[i].testname + "'  href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a target='_blank' title='" + temp[i].testname + "'  href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -238,11 +238,11 @@ function GetArea() {
             var html = "";
             if (district.length != 0) {
                 html = "<div class=\"xd5_hover xdh33 fl\" onclick='a_selected(this, \"district_selected\"), district_selected(0)'>\
-                        <a target='_blank'>全部</a>\
+                        <a target='_blank' target='_blank'>全部</a>\
                     </div>";
             } else {
                 html = "<div class=\"xd5_hover xdh33 fl district_selected\" onclick='a_selected(this, \"district_selected\"), district_selected(0)'>\
-                        <a target='_blank'>全部</a>\
+                        <a target='_blank' target='_blank'>全部</a>\
                     </div>";
             }
             var temp;
@@ -253,11 +253,11 @@ function GetArea() {
 
                     if (district == temp[i].id) {
                         html += "<div id=area" + (i + 1) + " class=\"xd5_hover xdh33 fl district_selected\" onclick='a_selected(this, \"district_selected\"), district_selected(" + temp[i].id + ")'>\
-                        <a>" + temp[i].areaname + "</a>\
+                        <a target='_blank'>" + temp[i].areaname + "</a>\
                     </div>";
                     } else {
                         html += "<div id=area" + (i + 1) + " class=\"xd5_hover xdh33 fl \" onclick='a_selected(this, \"district_selected\"), district_selected(" + temp[i].id + ")'>\
-                        <a>" + temp[i].areaname + "</a>\
+                        <a target='_blank'>" + temp[i].areaname + "</a>\
                     </div>";
                     }
 
@@ -305,16 +305,16 @@ function GetList() {
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     var text = temp[i].name.length > 40 ? temp[i].name.substr(0, 40) : temp[i].name;
                     html += "<div class=\"lxc_320\">\
-                                <a class=\"wdk fl\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ></a>\
+                                <a target='_blank' class=\"wdk fl\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ></a>\
                                 <div class=\"wenbenkui fl\">\
-                                    <a class=\"b320 font_size16 overf_com font_wb\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank'  title='" + text + "'>" + text + "</a><br>\
+                                    <a target='_blank' class=\"b320 font_size16 overf_com font_wb\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank'  title='" + text + "'>" + text + "</a><br>\
                                     <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
                                 </div>\
                                 <div class=\"xiazai fr\" style='position:static;width:45px;height:45px;margin-right: 15px;'>\
-                                    <a class=\"xztb2 fr\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ></a>\
+                                    <a target='_blank' class=\"xztb2 fr\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' ></a>\
                                 </div>\
                             </div>";
-                    //html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style='width:500px'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span>类型：<span id='text_type'>" + Produce_TypeName(temp[i].category) + "</span></span></span></div></div><div class='data_list_td_container_right'><a onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";
+                    //html += "<div class='data_list_td_container'><div class='data_list_td_container_left'><img src='../Images/%e5%a4%87%e8%af%be%e4%b8%ad%e5%bf%83/%e6%96%87%e6%a1%a3.png' /></div><div class='data_list_td_container_middle' style='width:500px'><div><span id='text_title'>" + text + "</span></div><div><span class='text_description'><span>下载扣点：<span id='download_point'>" + temp[i].neednum + "</span>点</span> <span id='text_date'>" + temp[i].uploadtime + "</span> <span>类型：<span id='text_type'>" + Produce_TypeName(temp[i].category) + "</span></span></span></div></div><div class='data_list_td_container_right'><a target='_blank' onclick=DownLoad(\"" + temp[i].id + "\",\"" + temp[i].category + "\") class='download_button download_button1'>直接下载</a><a target='_blank' onclick='preview_show(\"../Download_Child?id=" + temp[i].id + "&cid=" + temp[i].category + "\")' class='download_button download_button1'>预览</a></div></div>";
                 }
             }
             else {
@@ -388,7 +388,7 @@ function in_enter_key_fun(evt) {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "<a  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
+    var html = "<a target='_blank'  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
     var signs_length;
     if (pageindex >= pagecount - 3) {
         signs_length = (pagecount - pageindex) + 1;
@@ -401,24 +401,24 @@ function Produce_A_Signs() {
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
         if (i == 0) {
-            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
         } else {
-            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
         }
 
         //if (i == 0) {
-        //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //    html += "<a target='_blank' class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
         //} else {
-        //    html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //    html += "<a target='_blank' class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
         //}
     }
     if (pageindex <= pagecount - 5) {
         html += "<span class=\"anniusp\">...</span>";
     }
-    html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
+    html += "<a target='_blank' class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
         <input type=\"number\" class=\"tzsr\" id=\"page_size\" value=\"\" min='1' max='" + pagecount + "'"+"onkeyup = \"in_enter_key_fun(event)\">\
-        <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
+        <a target='_blank' class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }
 

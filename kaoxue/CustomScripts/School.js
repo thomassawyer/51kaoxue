@@ -40,7 +40,7 @@ function GetArea() {
     $.post("../Test_Center/GetArea", function (data) {
         if (data) {
             var html = "<div class=\"xd5_hover fl district_selected\" onclick='a_selected(this, \"district_selected\"), district_selected(0)'>\
-                        <a>全部</a>\
+                        <a target='_blank'>全部</a>\
                     </div>";
             var temp;
             if (data != "]") {
@@ -49,7 +49,7 @@ function GetArea() {
                 for (var i = 0; i < temp.length; i++) {
 
                     html += "<div id=area" + (i + 1) + " class=\"xd5_hover fl \" onclick='a_selected(this, \"district_selected\"), district_selected(" + temp[i].id + ")'>\
-                        <a>" + temp[i].areaname + "</a>\
+                        <a target='_blank'>" + temp[i].areaname + "</a>\
                     </div>";
                 }
             }
@@ -96,8 +96,8 @@ function eliteschool_recommend() {
                 var temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
                     var text = temp[i].name.length > 10 ? temp[i].name.substr(0, 10) + "..." : temp[i].name;
-                    //html += "<a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'><div class=\"elite_school_recommends_container\"><div class=\"elite_school_recommends_container_top\"><span class=\"sign_red\">·</span><div class=\"school_name\">" + text + "</div></div><div class=\"elite_school_recommends_container_bottom\">共计" + temp[i].testnum + "套题</div></div></a>";
-                    html += "<li><a href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>●" + text + "<br />共计" + temp[i].testnum + "套题</a></li>";
+                    //html += "<a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'><div class=\"elite_school_recommends_container\"><div class=\"elite_school_recommends_container_top\"><span class=\"sign_red\">·</span><div class=\"school_name\">" + text + "</div></div><div class=\"elite_school_recommends_container_bottom\">共计" + temp[i].testnum + "套题</div></div></a>";
+                    html += "<li><a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>●" + text + "<br />共计" + temp[i].testnum + "套题</a></li>";
                 }
             }
             $("#elite_school_recommends").html(html);
@@ -121,10 +121,10 @@ function test_recommend() {
                     var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
                     //html += "<div class=\"elite_school_recommends_container_top\">\
                     //                    <span class=\"sign_red\">·</span>\
-                    //                    <div class=\"school_name\"><a href=\"../Download?cid=1&id="+ temp[i].id + "\" target=\"_blank\">" + text + "</a></div>\
+                    //                    <div class=\"school_name\"><a target='_blank' href=\"../Download?cid=1&id="+ temp[i].id + "\" target=\"_blank\">" + text + "</a></div>\
                     //                </div>";
-                    //html += "<li><a href=\"../Download?cid=1&id=" + temp[i].id + "\" target=\"_blank\">●" + text + "</a></li>";
-		    html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a title='" + temp[i].testname + "'  href=\"../Download?cid=1&id=" + temp[i].id + "\" target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
+                    //html += "<li><a target='_blank' href=\"../Download?cid=1&id=" + temp[i].id + "\" target=\"_blank\">●" + text + "</a></li>";
+		    html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a target='_blank' title='" + temp[i].testname + "'  href=\"../Download?cid=1&id=" + temp[i].id + "\" target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
                 }
             }
             $("#test_recommend").html(html);
@@ -152,7 +152,7 @@ function GetList() {
             var html = "";
             html += "<div class=\"lxclan mar_lf_0\">\
                 <img src=\"img/mxtubiao.png\" alt=\"\" class=\"rwimg\" />\
-                <a target='_blank' class=\"bix dkbix\">名校列表</a>\
+                <a target='_blank' target='_blank' class=\"bix dkbix\">名校列表</a>\
             </div>";
             if (data != "]") {
                 var temp = eval(data);
@@ -163,14 +163,14 @@ function GetList() {
                     var time = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
                     html += "<div class=\"xz360\" style=\"width:100%;\">\
                 <div class=\"fl\">\
-                    <a class=\"img_a_p\" target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\"><img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></a></div>\
+                    <a target='_blank' class=\"img_a_p\" target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\"><img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></a></div>\
                 <div class=\"fl neirong620\">\
-                    <a target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\" class=\"fz25\">" + temp[i].name + "</a>\
+                    <a target='_blank' target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\" class=\"fz25\">" + temp[i].name + "</a>\
                     <div id=\"\" class=\"lssp\">\
                        " + temp[i].content + "\
                     </div>\
-                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   校长：" + "<a class=\"p_more_hover\" target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid + "\">" + temp[i].headname + "</a>" + "   |   地区：" + temp[i].areaname + "</span>\
-                    <a target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
+                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   校长：" + "<a target='_blank' class=\"p_more_hover\" target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid + "\">" + temp[i].headname + "</a>" + "   |   地区：" + temp[i].areaname + "</span>\
+                    <a target='_blank' target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
                 </div>\
             </div>\
                     ";
@@ -248,7 +248,7 @@ function in_enter_key_fun(evt) {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "<a  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
+    var html = "<a target='_blank'  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
     var signs_length;
     if (pageindex >= pagecount - 3) {
         signs_length = (pagecount - pageindex) + 1;
@@ -261,24 +261,24 @@ function Produce_A_Signs() {
     for (var i = 0; i < signs_length; i++) {
         flag = (i + 1);
         if (i == 0) {
-            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
         } else {
-            html += "<a  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
         }
 
         //if (i == 0) {
-        //    html += "<a class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //    html += "<a target='_blank' class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
         //} else {
-        //    html += "<a class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+        //    html += "<a target='_blank' class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
         //}
     }
     if (pageindex <= pagecount - 5) {
         html += "<span class=\"anniusp\">...</span>";
     }
-    html += "<a class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
+    html += "<a target='_blank' class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
         <span class=\"anniusp2\">跳转到</span>\
         <input type=\"text\" class=\"tzsr\" id=\"page_size\" value=\"\" onkeyup = \"in_enter_key_fun(event)\">\
-        <a class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
+        <a target='_blank' class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
     $("#pages").html(html);
 }
 

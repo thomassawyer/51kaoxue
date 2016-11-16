@@ -26,7 +26,7 @@ function GetTest_Hot_Download() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a class=\"rmxzaa\"  href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a target='_blank' class=\"rmxzaa\"  href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -43,7 +43,7 @@ function GetTest_Recommend() {
             var html = "";
             for (var i = 0; i < 11; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a class=\"rmxzaa rmxz2hv\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a target='_blank' class=\"rmxzaa rmxz2hv\" href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' title='" + temp[i].testname.replace(" ", "-") + "'>" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -72,13 +72,13 @@ function GetList() {
                         cid = 2;
                     }
                     html += "<div class=\"lxc_320\">\
-                                <a class=\"wdk fl\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank' ></a>\
+                                <a target='_blank' class=\"wdk fl\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank' ></a>\
                                 <div class=\"wenbenkui fl\">\
-                                    <a class=\"b320 font_size16 overf_com font_wb\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank'  title='" + text + "'>" + text + "</a><br>\
+                                    <a target='_blank' class=\"b320 font_size16 overf_com font_wb\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank'  title='" + text + "'>" + text + "</a><br>\
                                     <span class=\"lxcsp320\">" + temp[i].uploadtime + "</span>\
                                 </div>\
                                 <div class=\"xiazai fr\" style='position:static;width:45px;height:45px;margin-right: 15px;'>\
-                                    <a class=\"xztb2 fr\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank' ></a>\
+                                    <a target='_blank' class=\"xztb2 fr\" href='../Download?id=" + temp[i].id + "&cid=" + temp[i].category + "'  target='_blank' ></a>\
                                 </div>\
                             </div>";
                 }

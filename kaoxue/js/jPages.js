@@ -140,9 +140,9 @@
       for (; i <= this._numPages; i++) {
         if (i === 1 && this.options.startRange === 0) navhtml += "<span>...</span>";
         if (i > this.options.startRange && i <= this._numPages - this.options.endRange)
-          navhtml += "<a href='#' class='jp-hidden'>";
+          navhtml += "<a target='_blank' href='#' class='jp-hidden'>";
         else
-          navhtml += "<a>";
+          navhtml += "<a target='_blank'>";
 
         switch (this.options.links) {
           case "numeric":
@@ -167,7 +167,7 @@
     writeBtn : function(which) {
 
       return this.options[which] !== false && !$(this["_" + which]).length ?
-      "<a class='jp-" + which + "'>" + this.options[which] + "</a>" : "";
+      "<a target='_blank' class='jp-" + which + "'>" + this.options[which] + "</a>" : "";
 
     },
 

@@ -22,7 +22,7 @@ function GetTest_Hot_Download() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a  title='" + temp[i].testname + "' href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].testname + "' href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -39,7 +39,7 @@ function GetTest_Recommend() {
             var html = "";
             for (var i = 0; i < 11; i++) {
                 var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
-                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a title='" + temp[i].testname + "'  href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a target='_blank' title='" + temp[i].testname + "'  href='../Download?cid=1&id=" + temp[i].id + "' target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }

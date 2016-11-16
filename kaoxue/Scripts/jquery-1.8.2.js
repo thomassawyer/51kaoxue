@@ -1269,7 +1269,7 @@ jQuery.support = (function() {
 
 	// Preliminary tests
 	div.setAttribute( "className", "t" );
-	div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
+	div.innerHTML = "  <link/><table></table><a target='_blank' href='/a'>a</a><input type='checkbox'/>";
 
 	all = div.getElementsByTagName("*");
 	a = div.getElementsByTagName("a")[ 0 ];
@@ -3833,7 +3833,7 @@ var cachedruns,
 
 	// Check if getAttribute returns normalized href attributes
 	assertHrefNotNormalized = assert(function( div ) {
-		div.innerHTML = "<a href='#'></a>";
+		div.innerHTML = "<a target='_blank' href='#'></a>";
 		return div.firstChild && typeof div.firstChild.getAttribute !== strundefined &&
 			div.firstChild.getAttribute("href") === "#";
 	}),
@@ -3864,7 +3864,7 @@ var cachedruns,
 	assertUsableName = assert(function( div ) {
 		// Inject content
 		div.id = expando + 0;
-		div.innerHTML = "<a name='" + expando + "'></a><div name='" + expando + "'></div>";
+		div.innerHTML = "<a target='_blank' name='" + expando + "'></a><div name='" + expando + "'></div>";
 		docElem.insertBefore( div, docElem.firstChild );
 
 		// Test
