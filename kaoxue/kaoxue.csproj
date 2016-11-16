@@ -350,8 +350,11 @@
     <Content Include="img\gaokaozhenjuan.png" />
     <Content Include="img\gdlan.png" />
     <Content Include="img\gedigaokao.jpg" />
+    <Content Include="img\genduomingshi_11.png" />
     <Content Include="img\genduomixiao.png" />
+    <Content Include="img\genduotaoti_11.png" />
     <Content Include="img\genduoz1-9.png" />
+    <Content Include="img\genduo_1shiti.png" />
     <Content Include="img\gengduo.png" />
     <Content Include="img\gkdtmao.png" />
     <Content Include="img\gkzkcs.png" />

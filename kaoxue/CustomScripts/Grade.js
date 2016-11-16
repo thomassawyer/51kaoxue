@@ -268,6 +268,7 @@ function moni_zhongkao() {
                 var temp = eval(data);
 
                 var date;
+                
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].uploadtime);
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
@@ -285,7 +286,7 @@ function moni_zhongkao() {
                     html += " <li>\
                             <div class=\"fl gkdt_2701 overf_com gkdttime\">\
                                 <a class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
-                                <a class=\"gdkys\"  href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
+                                <a class=\"gdkys\"  href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a class=\"gkdttime  fr\">[" + time + "]</a>\
