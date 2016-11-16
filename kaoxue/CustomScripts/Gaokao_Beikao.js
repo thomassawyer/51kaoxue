@@ -359,7 +359,7 @@ function GetDataCount() {
     $.ajaxSetup({
         async: false
     });
-    $.post("../Test_Center/GetDataCount", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category, file_type: file_type }, function (data) {
+    $.post("../Gaokao_Beikao/GetDataCount", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category, file_type: file_type }, function (data) {
         if (data) {
             $("#all_data_count").html("该章节（" + data + "份）");
 

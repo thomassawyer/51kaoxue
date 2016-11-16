@@ -15,6 +15,7 @@ namespace kaoxue.Controllers
         private string Level = string.Empty; //学段
         private string Subject = string.Empty;  //学科
         private string Category = string.Empty; //类型
+        private string file_type = string.Empty; //试题类型
 
         public ActionResult Index()
         {
@@ -139,6 +140,8 @@ namespace kaoxue.Controllers
 
             if (!string.IsNullOrEmpty(this.Category) && this.Category != "0")
                 condition += string.Format(" and beikao={0}", this.Category);
+            if (!string.IsNullOrEmpty(this.file_type) && this.file_type != "0")
+                condition += string.Format(" and category={0}", this.file_type);
             return condition;
         }
 
@@ -160,6 +163,7 @@ namespace kaoxue.Controllers
             this.Level = Request["level"];
             this.Subject = Request["subject"];
             this.Category = Request["category"];
+            this.file_type = Request["file_type"];
         }
 
         private string digui(int pid)
