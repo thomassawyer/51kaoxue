@@ -10,6 +10,7 @@ function GetQueryString(name) {
 var level; //学段
 var level_num;
 var subject; //学科
+var file_type;//类型
 var pageindex = 1;  //当前页数
 var pagecount = 0; //总页数
 var category = ""; //类型名称
@@ -58,6 +59,7 @@ function level_selected(num) {
     testcategory = ""; //试题类型
     grade = ""; // 年级
     district = ""; //地区
+    file_type = 0;//类型
 
     GetSubject();
     GetTestCategory();
@@ -91,7 +93,7 @@ function GetSubject() {
         if (data) {
 
             var html = "<div class=\"xd5_div1 fl\"><img src=\"img/duanluo.png\" class=\"xdtb5\" ><a class=\"xd5a\"><b>学 科</b></a></div>";
-            html += "<div class=\"xd5_hover xdh5 fl xdh15_selected\"  onclick=\"a_selected(this, 'xdh15_selected'),subject_selected(0)\">\
+            html += "<div class=\"xd5_hover xdh5 fl xd5_hover_selected\"  onclick=\"a_selected(this, 'xd5_hover_selected'),subject_selected(0)\">\
                     <a>全部</a>\
                 </div>";
             // html += "<a class='condition_selected' onclick=' a_selected(this),subject_selected(0)'>全部</a>";
@@ -101,7 +103,7 @@ function GetSubject() {
 
                 for (var i = 0; i < temp.length; i++) {
                     //html += "<a id=subject" + (i + 1) + " onclick=a_selected(this),subject_selected('" + temp[i].id + "')>" + temp[i].name + "</a>";
-                    html += "<div class=\"xd5_hover xdh5 fl\" onclick=\"a_selected(this, 'xdh15_selected'),subject_selected('" + temp[i].id + "')\">\
+                    html += "<div class=\"xd5_hover xdh5 fl\" onclick=\"a_selected(this, 'xd5_hover_selected'),subject_selected('" + temp[i].id + "')\">\
                     <a>" + temp[i].name + "</a>\
                 </div>";
                 }
@@ -122,7 +124,17 @@ function subject_selected(subjectid) {
     StartReading("data_list_td");
     GetList();
 }
+//
+//点击类型A标签,为类型变量赋值
+//
+function file_type_selected(num) {
+    pageindex = 1;
+    file_type = num;
 
+    GetDataCount();
+    StartReading("data_list_td");
+    GetList();
+}
 //
 //获取试题类型
 //
@@ -282,7 +294,7 @@ function anchor(obj) {
 //获取试题数据
 //
 function GetList() {
-    $.post("../Gaokao_Beikao/GetList", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
+    $.post("../Gaokao_Beikao/GetList", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category, file_type: file_type }, function (data) {
         if (data) {
             var html ="";
             if (data != "]") {
@@ -347,7 +359,7 @@ function GetDataCount() {
     $.ajaxSetup({
         async: false
     });
-    $.post("../Test_Center/GetDataCount", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category }, function (data) {
+    $.post("../Test_Center/GetDataCount", { subject: subject, level: level_num, testcategory: testcategory, grade: grade, district: district, pageindex: pageindex, category: category, file_type: file_type }, function (data) {
         if (data) {
             $("#all_data_count").html("该章节（" + data + "份）");
 

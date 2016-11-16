@@ -20,7 +20,7 @@
 }
 
 .xd5_div1 {
-    background: #8cc407;
+    /*background: #8cc407;*/
 }
 /*.xd5_hover:hover{background:#aed651;}*/
 .xd5k1 {
@@ -37,7 +37,9 @@
     color: #5a5a5a;
     font-size: 16px;
 }
-
+.xd5_hover_selected > a {
+    color:#fff;
+}
 .xdh5a {
     padding-left: 28px;
 }
