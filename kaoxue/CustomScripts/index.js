@@ -30,7 +30,7 @@ function New_Zhuanti() {
                     } else {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a title='" + temp[i].name.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
+                            <a class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
                                 <a class=\"zxzths\" href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
