@@ -352,5 +352,6 @@
 }
 .lantb_p_set {
     position:absolute;
-    top: 3240px;
+    /*top: 3240px;*/
+    bottom:10px;
 }

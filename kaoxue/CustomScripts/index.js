@@ -85,7 +85,7 @@ function Taoti() {
             }
             html += " </ul>\
                 </div>\
-                <div class=\"fl mxttimg gedigaokao_img gedigaokao_img_1\">\
+                <div class=\"fl mxttimg gedigaokao_img\" onclick=\"javascript:window.open('http://www.51kaoxue.com/Special?id=12799&way=1&name=%E6%B2%B3%E5%8D%97%E7%9C%81%E6%96%B0%E4%B9%A1%E5%B8%822015-2016%E5%AD%A6%E5%B9%B4%E9%AB%98%E4%BA%8C%E4%B8%8B%E5%AD%A6%E6%9C%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%BB%BC%E5%90%88%E8%AF%95%E9%A2%98%EF%BC%88%E6%89%AB%E6%8F%8F%E7%89%88%E5%85%A8%E7%A7%916%E4%BB%BD%EF%BC%89');\">\
                 </div>";
             //<img src=\"../../img/gedigaokao.jpg\" />\
             $("#taoti").html(html);
@@ -154,7 +154,7 @@ function School_Test() {
             }
             html += "</ul>\
                     </div>\
-                    <div class=\"fl mxttimg gedigaokao_img\">\
+                    <div class=\"fl mxttimg gedigaokao_img  gedigaokao_img_1\" onclick=\"javascript:window.open('http://www.51kaoxue.com/Download?cid=1&id=359019');\">\
                     </div>\
                 </div>";
             //<img src=\"../../img/gedigaokao.jpg\" />
@@ -438,7 +438,7 @@ function GetSchool() {
                         <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb003.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">历年考题</a></div>\
                         <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb004.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">名校测题</a></div>\
                     </div>\
-                    <div class=\"xian2 fl\"><a target='_blank' href='../school' class=\"genduo lantb_set\"><img src=\"../../img/lantb.png\" alt=\"\"></a></div>\
+                    <div class=\"xian2 fl\" style=\"position:relative;\"><a target='_blank' href='../school' class=\"genduo lantb_set\"><img src=\"../../img/lantb.png\" alt=\"\"></a></div>\
                 </div>";
 
                 html += "<div  class=\"mxhz6 fl\">\

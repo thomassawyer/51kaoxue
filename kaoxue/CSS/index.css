@@ -152,7 +152,7 @@ a {
 }
 
 .daohanglan {
-    height: 60px;
+    height: 50px;
     background: #64d201;
 }
 
@@ -163,7 +163,7 @@ a {
 }
 
     .daohanglan_ul > ul {
-        line-height: 60px;
+        line-height: 50px;
         font-size: 21px;
     }
 
@@ -434,7 +434,7 @@ a {
     width: 170px;
     /*height: 66px;*/
     background: #ff4a52;
-    margin-top: 70px;
+    margin-top: 67px;
     margin-left: 20px;
 }
 
@@ -511,7 +511,7 @@ a {
 }
 
 .kshg {
-    padding-top: 5px;
+    padding-top: 0px;
     padding-left: 130px;
 }
 
@@ -557,7 +557,8 @@ a {
 
 .ztk_set {
     position:absolute;
-    top:2454px;
+    /* top: 2454px; */
+    bottom: 10px;
 }
 .xian1 {
     height: 50%;
@@ -680,6 +681,9 @@ a {
     height:218px;
     margin-top:25px;
 }
+    .gedigaokao_img:hover, .gedigaokao_img_1 {
+        cursor:pointer;
+    }
 .gedigaokao_img_1 {
     background:url(../img/gedigaokao_11.png) !important;
 }
@@ -1630,7 +1634,8 @@ a {
 }
 .sc_set {
     position:absolute;
-    top:1150px;
+    /* top: 1150px; */
+    bottom: 10px;
 }
 
     .genduo > img {
@@ -1638,7 +1643,8 @@ a {
     }
 .lantb_set {
     position:absolute;
-top: 4480px;
+/*top: 4480px;*/
+bottom:10px;
 
 }
 .hei_290 {
@@ -1646,18 +1652,21 @@ top: 4480px;
 }
 .lantb_set_1 {
     position:absolute;
-    top: 4128px;
+    /*top: 4128px;*/
+           bottom:10px;
 }
 .mar_bott_30 {
     margin-bottom:30px !important;
 }
 .sttj_set {
     position:absolute;
-    top: 3010px;
+    /*top: 3010px;*/
+           bottom:10px;
 }
 .mstj_set {
     position:absolute;
-       top: 4815px;
+       /*top: 4815px;*/
+       bottom:10px;
 }
 .mxttbggd {
     width: 1189px;
