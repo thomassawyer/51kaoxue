@@ -70,7 +70,7 @@ function year_selected(num, text) {
     year = num;
     year_text = text;
     //数据读取中
-    $("#loading").html("<div class=\"waiting_bg_1\"></div>");
+    $("#loading").html("<div class=\"waiting_bg_1_2\"></div>");
     GetProvince();
 }
 
@@ -232,7 +232,7 @@ function GetTypeName(para) {
 //
 function StartReading(controlid) {
     var html = "<br/><br/><br/><br/><div class='loader1'><i></i><i></i></div>";
-    $("#" + controlid).html(html);
+    $("#" + controlid).html("<div class=\"waiting_bg_1_2\"></div>");
 }
 
 //url参数集合

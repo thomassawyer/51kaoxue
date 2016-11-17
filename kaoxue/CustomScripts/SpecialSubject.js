@@ -93,7 +93,7 @@ function GetList() {
 //
 function StartReading(controlid) {
     var html = "<br/><br/><br/><br/><div class='loader1'><i></i><i></i></div>";
-    $("#" + controlid).html(html);
+    $("#" + controlid).html("<div class=\"waiting_bg_1\"></div>");
 }
 
 $(document).ready(function () {

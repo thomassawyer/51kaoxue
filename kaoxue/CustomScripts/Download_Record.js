@@ -68,7 +68,7 @@ function anchor(obj) {
 //
 function StartReading(controlid) {
     var html = "<br/><br/><br/><br/><div class='loader1'><i></i><i></i></div>";
-    $("#" + controlid).html(html);
+    $("#" + controlid).html("<div class=\"waiting_bg_1\"></div>");
 }
 //
 //获取某小节数据条数

@@ -1937,3 +1937,33 @@ bottom:10px;
 .mar_lf_25 {
     margin-left:25px;
 }
+
+.pager {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial;
+    margin-bottom: 40px;
+}
+.pager a {
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 35px;
+    color: #666;
+    text-align: center;
+    border: 1px solid #d8d8d8;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.pager a:hover,.pager_selected {
+    /*border:none;*/
+    color:#fff !important;
+    background-color:#2ea7f8;
+}

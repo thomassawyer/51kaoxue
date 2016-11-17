@@ -11,6 +11,7 @@ function GetQueryString(name) {
     if (r != null) return unescape(r[2]); return null;
 }
 
+var data_count = 0;
 //
 //点击A标签时,改变A标签背景
 //
@@ -69,9 +70,9 @@ function anchor(obj) {
 //获取试题数据
 //
 function GetList() {
-    $("#data_list_td").html("<div class=\"lxclan mar_lf_0\">\
-                <b class=\"bix\">数据读取中……</b>\
-            </div>");
+    //$("#data_list_td").html("<div class=\"lxclan mar_lf_0\">\
+    //            <b class=\"bix\">数据读取中……</b>\
+    //        </div>");
     $.post("../Search/GetList", {pageindex: pageindex, keywords:keywords }, function (data) {
         if (data) {
             var html = "<div class=\"lxclan mar_lf_0\">\
@@ -102,7 +103,7 @@ function GetList() {
                 html += "<div class=\"no_data_bg\"></div>";
             }
             $("#data_list_td").html(html);
-            Produce_A_Signs();
+            //Produce_A_Signs();
         }
     });
 }
@@ -140,11 +141,13 @@ function GetDataCount() {
     });
     $.post("../Search/GetDataCount", { pageindex: pageindex, keywords: keywords }, function (data) {
         if (data) {
+            data_count = Number(data);
             if (Number(data) % 10 == 0) {
                 pagecount = data / 10;
             } else {
                 pagecount = Math.floor((data / 10)) + 1;
             }
+	    Produce_A_Signs();
         }
     });
     $.ajaxSetup({
@@ -166,38 +169,105 @@ function in_enter_key_fun(evt) {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "<a target='_blank'  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
-    var signs_length;
-    if (pageindex >= pagecount - 3) {
-        signs_length = (pagecount - pageindex) + 1;
-    } else {
-        signs_length = 5;
-    }
-    if (pageindex >= 2) {
-        html += "<span class=\"anniusp1\">...</span>";
-    }
-    for (var i = 0; i < signs_length; i++) {
-        flag = (i + 1);
-        if (i == 0) {
-            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
-        } else {
-            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
-        }
+    //var html = "<a target='_blank'  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
+    //var signs_length;
+    //if (pageindex >= pagecount - 3) {
+    //    signs_length = (pagecount - pageindex) + 1;
+    //} else {
+    //    signs_length = 5;
+    //}
+    //if (pageindex >= 2) {
+    //    html += "<span class=\"anniusp1\">...</span>";
+    //}
+    //for (var i = 0; i < signs_length; i++) {
+    //    flag = (i + 1);
+    //    if (i == 0) {
+    //        html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+    //    } else {
+    //        html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+    //    }
 
-        //if (i == 0) {
-        //    html += "<a target='_blank' class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        //} else {
-        //    html += "<a target='_blank' class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        //}
+    //    //if (i == 0) {
+    //    //    html += "<a target='_blank' class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+    //    //} else {
+    //    //    html += "<a target='_blank' class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+    //    //}
+    //}
+    //if (pageindex <= pagecount - 5) {
+    //    html += "<span class=\"anniusp\">...</span>";
+    //}
+    //html += "<a target='_blank' class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
+    //    <span class=\"anniusp2\">跳转到</span>\
+    //    <input type=\"number\" class=\"tzsr\" id=\"page_size\" value=\"\" min='1' max='" + pagecount + "'"+"onkeyup = \"in_enter_key_fun(event)\">\
+    //    <a target='_blank' class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
+    $("#pages").paging(data_count, {
+        format: '[< nncnnn >]',
+        perpage: 10,
+        onSelect: function (page) {
+            // add code which gets executed when user selects a 
+            StartReading("data_list_td");
+            pageindex = page;
+            GetList();
+        },
+        onFormat: function (type) {
+            switch (type) {
+                case 'block': // n and c
+                    if (!this.active)
+                        return '<span class="disabled">' + this.value + '</span>';
+                    else if (this.value != this.page)
+                        return '<em><a href="#' + this.value + '">' + this.value + '</a></em>';
+                    return '<a  href="#" class="pager_selected">' + this.value + '</a>';
+                case 'next': // >
+                    return '<a href="#">下一页</a>';
+                case 'prev': // <
+                    return '<a href="#">上一页</a>';
+                case 'first': // [
+                    return '<a href="#">首页</a>';
+                case 'last': // ]
+                    return '<a href="#">末页</a>';
+            }
+        }
+    });
+    //$("#pages").html(html);
+}
+
+//
+//解析类型名称
+//
+function Produce_TypeName(category) {
+    var name = "";
+    switch (category) {
+        case "1":
+            name = "试题";
+            break;
+        case "2":
+            name = "课件";
+            break;
+        case "3":
+            name = "教案";
+            break;
+        case "4":
+            name = "学案";
+            break;
+        case "6":
+            name = "同步";
+            break;
+        case "5":
+            name = "素材";
+            break;
+        case "7":
+            name = "论文";
+            break;
+        case "8":
+            name = "套题";
+            break;
+        case "9":
+            name = "备课";
+            break;
+        default:
+            break;
     }
-    if (pageindex <= pagecount - 5) {
-        html += "<span class=\"anniusp\">...</span>";
-    }
-    html += "<a target='_blank' class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
-        <span class=\"anniusp2\">跳转到</span>\
-        <input type=\"number\" class=\"tzsr\" id=\"page_size\" value=\"\" min='1' max='" + pagecount + "'"+"onkeyup = \"in_enter_key_fun(event)\">\
-        <a target='_blank' class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
-    $("#pages").html(html);
+    return name;
 }
 
 //
@@ -223,7 +293,7 @@ function Go() {
 //
 function StartReading(controlid) {
     var html = "<br/><br/><br/><br/><div class='loader1'><i></i><i></i></div>";
-    $("#" + controlid).html(html);
+    $("#" + controlid).html("<div class=\"waiting_bg_1\"></div>");
 }
 
 $(document).ready(function () {
@@ -233,5 +303,5 @@ $(document).ready(function () {
     GetTest_Hot_Download();
     GetTest_Recommend();
     GetDataCount();
-    GetList();
+    //GetList();
 });

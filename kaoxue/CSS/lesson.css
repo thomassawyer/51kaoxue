@@ -115,7 +115,7 @@
 
 .lianxice210 {
     width: 210px;
-    height: 1088px;
+    /*height: 1088px;*/
     /*border: 1px solid #e5e5e5;*/
 }
 
@@ -166,7 +166,7 @@
     width: 959px;
     height: auto;
     /*margin-left: 18px;*/
-    margin-bottom: 80px;
+    /*margin-bottom: 80px;*/
 }
 
 .lxc_320 {
@@ -180,7 +180,7 @@
     height: 33px;
     position:relative;
     width: 959px;
-    margin-left: 18px;
+    /*margin-left: 18px;*/
 }
 
 .bix {
@@ -525,9 +525,15 @@
     width:210px;
     height:300px;
 }
-.waiting_bg_1 {
+.waiting_bg_1_2 {
     background-image:url(../img/waiting_bg_1.jpg);
     width:1189px;
+    height:300px;
+    margin:0px auto;
+}
+.waiting_bg_1 {
+    background:url(../img/waiting_bg_1.jpg) center center;
+    width:959px;
     height:300px;
     margin:0px auto;
 }

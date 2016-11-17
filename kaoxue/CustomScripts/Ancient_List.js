@@ -14,6 +14,7 @@ var category = ""; //类型名称
 var third_id = "";
 var first_id = "";
 var category_title = "";
+var data_count = 0;
 //
 //阅读排行榜
 //
@@ -101,7 +102,7 @@ function GetList() {
             }
             $("#lists").html(html);
             $("#page_title").html(category_title);
-            Produce_A_Signs();
+            //Produce_A_Signs();
         }
     });
 }
@@ -131,38 +132,66 @@ function in_enter_key_fun(evt) {
 //分页页码
 //
 function Produce_A_Signs() {
-    var html = "<a target='_blank'  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
-    var signs_length;
-    if (pageindex >= pagecount - 3) {
-        signs_length = (pagecount - pageindex) + 1;
-    } else {
-        signs_length = 5;
-    }
-    if (pageindex >= 2) {
-        html += "<span class=\"anniusp1\">...</span>";
-    }
-    for (var i = 0; i < signs_length; i++) {
-        flag = (i + 1);
-        if (i == 0) {
-            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
-        } else {
-            html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
-        }
+    //var html = "<a target='_blank'  class=\"anniu1 syy1\" onclick=\"anchor(this),pre_page()\">上一页</a>";
+    //var signs_length;
+    //if (pageindex >= pagecount - 3) {
+    //    signs_length = (pagecount - pageindex) + 1;
+    //} else {
+    //    signs_length = 5;
+    //}
+    //if (pageindex >= 2) {
+    //    html += "<span class=\"anniusp1\">...</span>";
+    //}
+    //for (var i = 0; i < signs_length; i++) {
+    //    flag = (i + 1);
+    //    if (i == 0) {
+    //        html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_selected\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+    //    } else {
+    //        html += "<a target='_blank'  target='_blank' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ") class=\"an" + flag + " pages_href_normal\"><span class=\"ysp" + flag + "\">" + (pageindex + i) + "</span></a>";
+    //    }
 
-        //if (i == 0) {
-        //    html += "<a target='_blank' class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        //} else {
-        //    html += "<a target='_blank' class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
-        //}
-    }
-    if (pageindex <= pagecount - 5) {
-        html += "<span class=\"anniusp\">...</span>";
-    }
-    html += "<a target='_blank' class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
-        <span class=\"anniusp2\">跳转到</span>\
-        <input type=\"number\" class=\"tzsr\" id=\"page_size\" value=\"\" min='1' max='" + pagecount + "'"+"onkeyup = \"in_enter_key_fun(event)\">\
-        <a target='_blank' class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
-    $("#pages").html(html);
+    //    //if (i == 0) {
+    //    //    html += "<a target='_blank' class='pages_href_selected' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+    //    //} else {
+    //    //    html += "<a target='_blank' class='pages_href_normal' onclick=anchor(this),A_Signs_selected(" + (pageindex + i) + ")>" + (pageindex + i) + "</a>";
+    //    //}
+    //}
+    //if (pageindex <= pagecount - 5) {
+    //    html += "<span class=\"anniusp\">...</span>";
+    //}
+    //html += "<a target='_blank' class=\"anniu1 xiaan2 xyy1\" onclick=\"anchor(this),next_page()\">下一页</a>\
+    //    <span class=\"anniusp2\">跳转到</span>\
+    //    <input type=\"number\" class=\"tzsr\" id=\"page_size\" value=\"\" min='1' max='" + pagecount + "'"+"onkeyup = \"in_enter_key_fun(event)\">\
+    //    <a target='_blank' class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
+    $("#pages").paging(data_count, {
+        format: '[< nncnnn >]',
+        perpage: 10,
+        onSelect: function (page) {
+            // add code which gets executed when user selects a 
+            StartReading("lists");
+            pageindex = page;
+            GetList();
+        },
+        onFormat: function (type) {
+            switch (type) {
+                case 'block': // n and c
+                    if (!this.active)
+                        return '<span class="disabled">' + this.value + '</span>';
+                    else if (this.value != this.page)
+                        return '<em><a href="#' + this.value + '">' + this.value + '</a></em>';
+                    return '<a  href="#" class="pager_selected">' + this.value + '</a>';
+                case 'next': // >
+                    return '<a href="#">下一页</a>';
+                case 'prev': // <
+                    return '<a href="#">上一页</a>';
+                case 'first': // [
+                    return '<a href="#">首页</a>';
+                case 'last': // ]
+                    return '<a href="#">末页</a>';
+            }
+        }
+    });
+    //$("#pages").html(html);
 }
 
 //
@@ -175,11 +204,14 @@ function GetDataCount() {
     $.post("../Ancient_List/GetDataCount", { pageindex: pageindex, category: third_id }, function (data) {
         if (data) {
 
+            data_count = Number(data);
             if (Number(data) % 10 == 0) {
                 pagecount = data / 10;
             } else {
                 pagecount = Math.floor((data / 10)) + 1;
             }
+
+            Produce_A_Signs();
             $.ajaxSetup({
                 async: true
             });
@@ -241,7 +273,7 @@ function next_page() {
 //
 function StartReading(controlid) {
     var html = "<br/><br/><br/><br/><div class='loader1'><i></i><i></i></div>";
-    $("#" + controlid).html(html);
+    $("#" + controlid).html("<div class=\"waiting_bg_1\"></div>");
 }
 
 
@@ -253,5 +285,5 @@ $(document).ready(function () {
     Reading_Lists();
     Relative_Recommend();
     GetDataCount();
-    GetList();
+  //  GetList();
 });

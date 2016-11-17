@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/famousschool.css">
     <link rel="stylesheet" href="css/test_questions.css" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/jquery.paging.min.js"></script>
     <script src="~/CustomScripts/Beike_Center.js"></script>
 </head>
 <body>
@@ -87,13 +88,13 @@
         </div>
     </div><!-- 学段 -->
 
-    <div class="lianxi" style="min-height:1800px">
+    <div class="lianxi" style="overflow:hidden;">
         <div class="lianxice210 fl border_bott_e5" id="directory" style="height:auto;">
             <div class="waiting_bg"></div>
         </div>
 
         <div class="lianxice fl">
-            <div class="lxclan">
+            <div class="lxclan mar_lf_18">
                 <b class="bix"><span id="all_data_count"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="all_data_count_directory"></span></b>
             </div>
             <div id="data_list_td" class="mar_lf_18 lianxice">
@@ -197,21 +198,22 @@
                     </div>
                 </div>
             </div>
+            <div class="pager" id="pages">
+                @*<a target='_blank' href="" class="anniu1 syy1">&nbsp;&nbsp;&nbsp;&nbsp;上一页</a>
+            <a target='_blank' href="" class="an1 ann1">&nbsp;&nbsp;&nbsp;<span class="ysp1" id="ysp11">1</span></a>
+            <a target='_blank' href="" class="an2">&nbsp;&nbsp;&nbsp;<span class="ysp2">2</span></a>
+            <a target='_blank' href="" class="an3">&nbsp;&nbsp;&nbsp;<span class="ysp3">3</span></a>
+            <a target='_blank' href="" class="an4">&nbsp;&nbsp;&nbsp;<span class="ysp4">4</span></a>
+            <a target='_blank' href="" class="an5">&nbsp;&nbsp;&nbsp;<span class="ysp5">5</span></a>
+            <span class="anniusp">...</span>
+            <a target='_blank' href="#" class="anniu1 xiaan2 xyy1">&nbsp;&nbsp;&nbsp;&nbsp;下一页</a>
+            <span class="anniusp2">跳转到</span>
+            <input type="text" class="tzsr" id="lll" value="">
+            <span class="an87" id="data_go" onclick="go()">&nbsp;&nbsp;&nbsp;G O</span>*@
+            </div> <!-- 跳转部分 -->
         </div>
     </div>
-    <div class="anniu" id="pages">
-        @*<a target='_blank' href="" class="anniu1 syy1">&nbsp;&nbsp;&nbsp;&nbsp;上一页</a>
-        <a target='_blank' href="" class="an1 ann1">&nbsp;&nbsp;&nbsp;<span class="ysp1" id="ysp11">1</span></a>
-        <a target='_blank' href="" class="an2">&nbsp;&nbsp;&nbsp;<span class="ysp2">2</span></a>
-        <a target='_blank' href="" class="an3">&nbsp;&nbsp;&nbsp;<span class="ysp3">3</span></a>
-        <a target='_blank' href="" class="an4">&nbsp;&nbsp;&nbsp;<span class="ysp4">4</span></a>
-        <a target='_blank' href="" class="an5">&nbsp;&nbsp;&nbsp;<span class="ysp5">5</span></a>
-        <span class="anniusp">...</span>
-        <a target='_blank' href="#" class="anniu1 xiaan2 xyy1">&nbsp;&nbsp;&nbsp;&nbsp;下一页</a>
-        <span class="anniusp2">跳转到</span>
-        <input type="text" class="tzsr" id="lll" value="">
-        <span class="an87" id="data_go" onclick="go()">&nbsp;&nbsp;&nbsp;G O</span>*@
-    </div> <!-- 跳转部分 -->
+
     <script>
         var shuzhi1 = $(".ysp1").html();
         var zs1 = Number(shuzhi1);
