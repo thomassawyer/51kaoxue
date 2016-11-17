@@ -350,6 +350,8 @@
     <Content Include="img\gaokaozhenjuan.png" />
     <Content Include="img\gdlan.png" />
     <Content Include="img\gedigaokao.jpg" />
+    <Content Include="img\gedigaokao.png" />
+    <Content Include="img\gedigaokao_11.png" />
     <Content Include="img\genduomingshi_11.png" />
     <Content Include="img\genduomixiao.png" />
     <Content Include="img\genduotaoti_11.png" />
@@ -433,6 +435,11 @@
     <Content Include="img\lx22.png" />
     <Content Include="img\lx33.png" />
     <Content Include="img\mima.png" />
+    <Content Include="img\mingshitubiao1_1.png" />
+    <Content Include="img\mingshitubiao1_2.png" />
+    <Content Include="img\mingshitubiao1_3.png" />
+    <Content Include="img\mingshitubiao1_4.png" />
+    <Content Include="img\mingshitubiao1_5.png" />
     <Content Include="img\mingxiaotaoti.png" />
     <Content Include="img\mm11.jpg" />
     <Content Include="img\mm11.png" />
@@ -457,6 +464,9 @@
     <Content Include="img\moreh.png" />
     <Content Include="img\morelan.png" />
     <Content Include="img\morell.png" />
+    <Content Include="img\more_00_12.png" />
+    <Content Include="img\mqq_11.png" />
+    <Content Include="img\mqq_12.png" />
     <Content Include="img\mxtubiao.png" />
     <Content Include="img\mxzy1.png" />
     <Content Include="img\newspaper.png" />
@@ -482,6 +492,12 @@
     <Content Include="img\shijuan.png" />
     <Content Include="img\shijuantubiao.png" />
     <Content Include="img\shijuantubiao1.png" />
+    <Content Include="img\shouye_xiaotubiao %281%29.png" />
+    <Content Include="img\shouye_xiaotubiao %282%29.png" />
+    <Content Include="img\shouye_xiaotubiao %283%29.png" />
+    <Content Include="img\shouye_xiaotubiao %284%29.png" />
+    <Content Include="img\shouye_xiaotubiao %285%29.png" />
+    <Content Include="img\shouye_xiaotubiao %286%29.png" />
     <Content Include="img\shushufan.png" />
     <Content Include="img\shushuxian.png" />
     <Content Include="img\shutubiao.png" />

@@ -85,7 +85,7 @@ function Taoti() {
             }
             html += " </ul>\
                 </div>\
-                <div class=\"fl mxttimg gedigaokao_img\">\
+                <div class=\"fl mxttimg gedigaokao_img gedigaokao_img_1\">\
                 </div>";
             //<img src=\"../../img/gedigaokao.jpg\" />\
             $("#taoti").html(html);
@@ -557,11 +557,11 @@ function lxfEndtime() {
             if ($(this).attr("lxfday") == "no") {
                 $(this).html(CHour + "时" + CMinute + "分" + CSecond + "秒");          //输出没有天数的数据
             } else {
-                $(this).html("倒计时<b class=\"enlarge_day\">" + days + "</b>天");          //输出有天数的数据
+                $(this).html("<b class=\"font_wnormal pa_sec_1\">倒计时</b><b class=\"enlarge_day\">" + days + "</b><b class=\"font_wnormal pa_sec_2\">天</b>");          //输出有天数的数据
             }
         }
     });
-    setTimeout("lxfEndtime()", 1000);
+    //setTimeout("lxfEndtime()", 1000);
 };
 
 //

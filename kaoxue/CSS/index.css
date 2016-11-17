@@ -64,7 +64,7 @@ a {
 
 .navinput {
     width: 1189px;
-    height: 120px;
+    height: 115px;
     margin: 0 auto;
 }
 
@@ -115,7 +115,7 @@ a {
 
 #soussuo {
     position: absolute;
-    top: 20px;
+    top: 19px;
     left: 560px;
 }
 
@@ -318,7 +318,7 @@ a {
 .mk5 {
     width: 50%;
     padding-top: 7px;
-    padding-top: 0px;
+    padding-top:2px;
     padding-bottom: 0px;
 }
 
@@ -331,7 +331,7 @@ a {
 }
 
 .mk5 > img {
-    padding-left: 20px;
+    padding-left: 17px;
     padding-top: 8px;
 }
 
@@ -403,17 +403,38 @@ a {
     color: #fff;
     padding-left: 20px;
     font-size: 18px;
+    font-weight: normal;
 }
 
 .enlarge_day {
-   font-size:45px;
+   font-size:40px;
    font-family:'Microsoft YaHei';
+   /*padding-top:40px;*/
+       position: absolute;
+    left: 75px;
+    top: 9px;
 }
+.font_wnormal {
+    font-weight:normal;
+}
+.pa_sec_1 {
+        position: absolute;
+    /* width: 30px; */
+    top: 30px;
+    width: 60px;
+    left:20px;
+}
+.pa_sec_2 {
+        position: absolute;
+    top: 30px;
+    left: 150px;
+}
+
 #ztsousuo {
     width: 170px;
     /*height: 66px;*/
     background: #ff4a52;
-    margin-top: 10px;
+    margin-top: 70px;
     margin-left: 20px;
 }
 
@@ -659,6 +680,9 @@ a {
     height:218px;
     margin-top:25px;
 }
+.gedigaokao_img_1 {
+    background:url(../img/gedigaokao_11.png) !important;
+}
 .jinpinshiti {
     width: 1189px;
     height: 50px;
@@ -801,16 +825,16 @@ a {
         padding-top: 30px;
     }
     .zuixintaoti160 .ksquan {
-        padding-left: 69px;
-        padding-top: 31px;
+    padding-left: 20px;
+    padding-top: 20px;
     }
         .zuixintaoti160 .ksxin {
-        padding-left: 62px;
-        padding-top: 34px;
+    padding-left: 20px;
+    padding-top: 20px;
     }
     .zuixintaoti160 .ksall {
-        padding-left: 26px;
-        padding-top: 24px;
+    padding-left: 20px;
+    padding-top: 20px;
     }
 .zuixintaotspan {
     position: absolute;
@@ -822,17 +846,17 @@ a {
 .ab_ps_lf162 {
     position: absolute;
     top: 30px;
-    left: 162px;
+    left: 100px;
 }
 .ab_ps_lf160 {
     position: absolute;
-    top: 35px;
-    left: 160px;
+    top: 30px;
+    left: 100px;
 }
 .ab_ps_lf135 {
     position: absolute;
-    top: 32px;
-    left: 115px;
+    top: 30px;
+    left: 100px;
 }
 .line_h25 {
     line-height:25px;
@@ -1072,7 +1096,7 @@ a {
 .gdk3_1_2 {
     width: 100%;
     height: 40px;
-    border-bottom: 1px solid #6bb336;
+    border-bottom: 1px solid #07c7bc;
 }
 
 .gdk3_2 {
@@ -1335,7 +1359,7 @@ a {
 .mstjbtn {
     width:58px;
     height:19px;
-    background: #07c7bc;
+    background: #6bb336;
     /*border: 1px solid #07c7bc;*/
     color: #fff;
     float: left;
@@ -1353,15 +1377,15 @@ a {
 }
 
 .yansemstj {
-    border-bottom: 1px solid #07c7bc;
+    border-bottom: 1px solid #6bb336;
 }
 
 .yansemstjcolor {
-    color: #07C7BC;
+    color: #6bb336;
 }
 
 .lszp > h3 > b, .lszp > p {
-    color: #07C7BC;
+    color: #6bb336;
 }
 
 .sttj40 {
@@ -1377,7 +1401,7 @@ a {
 }
 
 .gkdtbtn {
-    background: #6bb336;
+    background: #07c7bc;
     /*border: 1px solid #6bb336;*/
     color: #fff;
     margin-right:10px;
@@ -1388,7 +1412,7 @@ a {
 }
 
 .gkdttime {
-    color: #6bb336;
+    color: #07c7bc;
 }
 
 #shousuo {
@@ -1408,7 +1432,7 @@ a {
 }
 
 .gdkys {
-    color: #6bb336;
+    color: #07c7bc;
 }
 
 .mxhz6_ul > li > a {
@@ -1482,8 +1506,10 @@ a {
     margin-top:-2px;
 }
 .more1_sp {
-        margin-bottom:0px;
-        margin-top:8px;
+        /*margin-bottom:0px;
+        margin-top:8px;*/
+        position:absolute;
+        bottom:0px;
 }
 .hover1 {
     position: relative;
@@ -1612,23 +1638,26 @@ a {
     }
 .lantb_set {
     position:absolute;
- top: 3859px;
+top: 4480px;
 
+}
+.hei_290 {
+    height:290px !important;
 }
 .lantb_set_1 {
     position:absolute;
-     top: 3507px;
+    top: 4128px;
 }
 .mar_bott_30 {
     margin-bottom:30px !important;
 }
 .sttj_set {
     position:absolute;
- top: 2990px;
+    top: 3010px;
 }
 .mstj_set {
     position:absolute;
-    top:4838px;
+       top: 4815px;
 }
 .mxttbggd {
     width: 1189px;
@@ -1652,7 +1681,7 @@ a {
     font-size:16px;
 }
 .gedigaokao_img {
-    background: url(../img/gedigaokao.jpg);
+    background: url(../img/gedigaokao.png);
     width: 328px;
     height: 200px;
     margin-top: 25px;
