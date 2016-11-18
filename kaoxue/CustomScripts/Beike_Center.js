@@ -278,7 +278,7 @@ function GetData() {
 //
 function anchor(obj) {
     if ($(obj).offset().top > 1400)
-        $("html,body").animate({ scrollTop: $("#all_data_count").offset().top }, 500)
+        $("html,body").animate({ scrollTop: $("#anchor_id").offset().top }, 100)
 }
 
 //
@@ -431,31 +431,65 @@ function Produce_A_Signs() {
     //    <span class=\"anniusp2\">跳转到</span>\
     //    <input type=\"number\" class=\"tzsr\" id=\"page_size\" value=\"\" min='1' max='" + pagecount + "'"+"onkeyup = \"in_enter_key_fun(event)\">\
     //    <a target='_blank' class=\"an87\" id=\"data_go\" onclick=\"anchor(this),Go()\">G O</a>";
-    $("#pages").paging(data_count, {
+    var pager = $("#pages").paging(data_count, {
         format: '[< nncnnn >]',
         perpage: 10,
-        onSelect: function (page) {
-            // add code which gets executed when user selects a 
+        //onSelect: function (page) {
+        //    // add code which gets executed when user selects a 
+        //    //anchor(this);
+        //    StartReading("data_list_td");
+        //    pageindex = page;
+        //    GetList();
+        //},
+        // Set up onclick handler
+        onClick: function (ev) {
+
+            ev.preventDefault();
+
+            anchor(this);
             StartReading("data_list_td");
+
+            var page = $(this).data('page');
             pageindex = page;
             GetList();
+
+            // Call asynchronously, could be ajax, or whatever
+            window.setTimeout(function () {
+                pager.setPage(page);
+            }, 1000);
+
         },
         onFormat: function (type) {
             switch (type) {
                 case 'block': // n and c
                     if (!this.active)
-                        return '<span class="disabled">' + this.value + '</span>';
+                        return '<a disabled=\"disabled\" class=\"disabled\" href="#' + this.value + '">' + this.value + '</a>';
                     else if (this.value != this.page)
-                        return '<em><a href="#' + this.value + '">' + this.value + '</a></em>';
+                        return '<a href="#' + this.value + '">' + this.value + '</a>';
                     return '<a  href="#" class="pager_selected">' + this.value + '</a>';
                 case 'next': // >
-                    return '<a href="#">下一页</a>';
+                    if (this.active) {
+                        return '<a href="#">下一页</a>';
+                    }
+                    return '<a href="#" disabled=\"disabled\" class=\"disabled\" >下一页</a>';
+
                 case 'prev': // <
-                    return '<a href="#">上一页</a>';
+                    if (this.active) {
+                        return '<a href="#" onclick=\"anchor(this);\">上一页</a>';
+                    }
+                    return '<a href="#" disabled=\"disabled\" class=\"disabled\">上一页</a>';
                 case 'first': // [
-                    return '<a href="#">首页</a>';
+                    if (this.active) {
+
+                        return '<a href="#">首页</a>';
+                    }
+                    return '<a href="#" disabled=\"disabled\" class=\"disabled\">首页</a>';
                 case 'last': // ]
-                    return '<a href="#">末页</a>';
+                    if (this.active) {
+
+                        return '<a href="#">末页</a>';
+                    }
+                    return '<a href="#" disabled=\"disabled\" class=\"disabled\">末页</a>';
             }
         }
     });
