@@ -1284,7 +1284,7 @@ a {
 .youqinlianjie {
     width: 100%;
     height: 92px;
-    background: #373737;
+    background: #dedede;
     padding-top: 50px;
 }
 
@@ -1337,7 +1337,7 @@ a {
 .yqlj2 {
     width: 100%;
     height: 150px;
-    background: #373737;
+    background: #dedede;
 }
 
 .yqlj2auot {
@@ -1357,7 +1357,7 @@ a {
 }
 
 .dkyqlj {
-    color: #fff;
+    color: #333333;
 }
 
 .mstjbtn {
@@ -1403,7 +1403,15 @@ a {
 .sttjys {
     color: #fff;
 }
-
+.font_c {
+    color:#333 !important;
+}
+.mar_rg_30 {
+    margin-right:30px;
+}
+.text_dec_un:hover{
+    text-decoration:underline;
+}
 .gkdtbtn {
     background: #07c7bc;
     /*border: 1px solid #6bb336;*/
@@ -1974,4 +1982,12 @@ bottom:10px;
 
 .pager .disabled {
     display:none;
+}
+
+.mar_bott_13 {
+    margin-bottom:13px;
+}
+.yqlj2auot, .yqlj1189 {
+    color: #333333;
+    font-size: 16px;
 }

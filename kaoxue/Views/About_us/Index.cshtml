@@ -8,6 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <title>关于51-关于我们</title>
+    <link href="/img/html_logo_ico.ico" rel="shortcut icon" /> 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
     <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="css/Literature_culture.css">
     <link rel="stylesheet" type="text/css" href="css/News_consulting_industry.css" />
     <link rel="stylesheet" href="css/Contact_us.css" />
-    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
     <style>
         .lxclan {
             background: #7bbd26;
@@ -104,21 +105,23 @@
     @Html.Partial("~/Common/top2.ascx")
 
 
-    <div class="lianxi">
-        <div class="lianxice210 fl">
-            <div class="gywomentb">
-                <a href="../About_us" class="gywomen">关于我们</a>
+    <div class="lianxi ma20">
+        <div class="lianxice210 fl" id="nav_v">
+            <div class="gywomentb mar_bott_13">
+                @*href="../About_us"*@
+                <a onclick="anchor('about_us')" class="gywomen">关于我们</a>
             </div>
-            <div class="lxwomenll">
-                <a href="../Contact_us" class="lxwomen">联系我们</a>
+            <div class="lxwomenll mar_bott_13">
+                @*href="../Contact_us"*@
+                <a onclick="anchor('contact_us')" class="lxwomen">联系我们</a>
             </div>
             <div class="banquan">
-                <a href="" class="bqwomen">版权声明</a>
+                <a onclick="anchor('banquan_us')" class="bqwomen">版权声明</a>
             </div>
         </div>
 
-        <div class="lianxice fl">
-            <div class="wenbentop">
+        <div class="lianxice fl mar_lf_270">
+            <div class="wenbentop" id="about_us">
                 <b class="wbbt">走近51考学网</b>
                 <img src="img/wenhao.png" alt="" class="wenhao" />
                 <span class="wbbtsp">更新时间：2016-09-09</span>
@@ -127,13 +130,43 @@
                 <p class="ftsz">北京智考文化（www.51kaoxue.com），总部位于中国北京，成立于2000年，拥有员工200余人，公司始终凭“信誉和创新”求发展，深深扎根于教育一线，是一家集教育研究、教学资源、教学会议、出版发行于一体的基础教育研究企业。51考学网是总公司旗下的一个重要项目，依托领先的技术和创新精神，为客户提供最专业的教育服务平台、教学资源宝库、重要教学信息和最具权威的会议信息等，引领中国教育的蓬勃发展，51考学网是教育部面向新课改推广指定传播平台。已开通多个栏目板块、多个教学频道，均由全国知名专家负责主持， 同时国家考试院专家定期发布最权威的考试信息，可使网校会员第一时间得到最新、最快、最准的备考信息。51考学网每天更新大量精品教学资源，已成功打造了教育界内网络教学、会议教学、图书教学为一体的独家平台，深受广大教育界同仁的认可与支持；深受广大教师的信赖。</p>
                 <p class="ftsz"> “诚信、感恩、专一、创新”是企业使命，始终坚持着“诚信智考、感恩众师、专一教育、创新发展”！</p>
             </div>
-
+            <div class="ma20 overf_com" id="contact_us">
+                <p class="ftsz_1 ma20 fl"><img src="../img/ab_img (3).png">公司总机：400-819-8815</p>
+                <p class="ftsz_1 ma20 fr"><img src="../img/ab_img (4).png">客服热线：400-819-8115</p>
+                <p class="ftsz_1 ma20 fl"><img src="../img/ab_img (1).png">邮箱：kaoxue51@163.com</p>
+                <p class="ftsz_1 ma20 fr"><img src="../img/ab_img (2).png">网址：www.51kaoxue.com</p>
+            </div>
+            <div id="banquan_us" class="mar_top_50">
+                <div class="mar_auto title_banquan"><div class="sep_b display_inline mar_rg_12"></div><div class="banquan_1 display_inline">版权声明</div><div class="sep_b display_inline mar_lf_12"></div></div>
+                <p class="banquan_content">
+                    51考学网对其发行的内容或与合作公司共同发行的全部内容及网站上的资料拥有版权等知识产权，受法律保护。
+                    未经本公司书面许可，任何单位及个人不得以任何方式或理由对上述产品、服务、信息、材料的任何部分进行使用、复制、修改、抄录、传播或与其它产品捆绑使用、销售。
+                </p>
+                <p class="banquan_content">
+                    凡侵犯本公司版权等知识产权的，本公司必依法追究其法律责任。
+                <p class="font_size16">
+                    版权所有,翻版盗版必究! 特此郑重声明！
+                </p>
+                <p class="mar_top_50">本网部分资源来源于会员上传，除本网组织的资源外，版权归原作者所有，如有侵犯版权，请立刻和本网联系并提供证据(tkaoxue51@163.com)，本网将在三个工作日内改正。</p>
+            </div>
         </div>
         <div id="" style="clear: both;">
 
         </div>
+
+
+        <div class="lianxice fl mar_lf_65">
+
+
+        </div>
     </div><!--文本主题内容-->
     @Html.Partial("~/Common/bottom.ascx")
+    <script>
+        function anchor(id) {
+            
+            $("html,body").animate({ scrollTop: $("#" + id).offset().top }, 500)
+        }
+    </script>
 
 </body>
 </html>

@@ -426,11 +426,15 @@
 }
 
 .yqlj2 {
-    background: #767676;
+    background: #dedede;
 }
 
 .youqinlianjie {
-    background: #767676;
+    background: #dedede;
+}
+.yqlj2auot,.yqlj1189 {
+    color:#333333;
+    font-size:16px;
 }
 
 .zjie > ul > li > a:hover {
