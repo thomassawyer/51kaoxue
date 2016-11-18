@@ -185,6 +185,7 @@
     <Content Include="CSS\School_detail_page.css" />
     <Content Include="CSS\style.css" />
     <Content Include="CSS\Summary_page.css" />
+    <Content Include="CSS\tab.css" />
     <Content Include="CSS\test_questions.css" />
     <Content Include="CSS\Through_train.css" />
     <Content Include="CSS\xueke9da.css" />
