@@ -1700,6 +1700,10 @@ bottom:10px;
     height:176px;
     border:1px solid #ffffff;
 }
+.school_img:hover {
+    cursor:pointer;
+    opacity:0.8;
+}
 .shenfenhover {
     position: absolute;
     width: 500px;

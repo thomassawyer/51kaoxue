@@ -466,14 +466,14 @@ function GetSchool() {
                     if (i == 0) {
                         html2 += "<div  class=\"mxzy_8 fl\">\
                         <div>\
-                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\" />\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\"  onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "');\"/>\
                         </div>\
                         <a target='_blank'   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";
                     } else {
                         html2 += "<div  class=\"mxzy_8 fl mxzykz6\">\
                         <div>\
-                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\" />\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\" onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "');\"/>\
                         </div>\
                         <a target='_blank'   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
                     </div>";
