@@ -120,6 +120,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\top4.ascx.cs">
+      <DependentUpon>top4.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\top4.ascx.designer.cs">
+      <DependentUpon>top4.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\About_usController.cs" />
     <Compile Include="Controllers\AncientController.cs" />
     <Compile Include="Controllers\Ancient_ArticleController.cs" />
@@ -164,6 +171,7 @@
     <Content Include="Common\top1.ascx" />
     <Content Include="Common\top2.ascx" />
     <Content Include="Common\top3.ascx" />
+    <Content Include="Common\top4.ascx" />
     <Content Include="CSS\chushihua.css" />
     <Content Include="CSS\College_entrance_examination.css" />
     <Content Include="CSS\Contact_us.css" />
@@ -239,19 +247,27 @@
     <Content Include="img\00100.jpg" />
     <Content Include="img\0011.jpg" />
     <Content Include="img\0011.png" />
+    <Content Include="img\0011_1.png" />
     <Content Include="img\0022.jpg" />
     <Content Include="img\0022.png" />
+    <Content Include="img\0022_1.png" />
     <Content Include="img\0033.jpg" />
     <Content Include="img\0033.png" />
+    <Content Include="img\0033_1.png" />
     <Content Include="img\0044.jpg" />
     <Content Include="img\0044.png" />
+    <Content Include="img\0044_1.png" />
     <Content Include="img\0055.jpg" />
     <Content Include="img\0055.png" />
+    <Content Include="img\0055_1.png" />
     <Content Include="img\0066.jpg" />
     <Content Include="img\0066.png" />
+    <Content Include="img\0066_1.png" />
     <Content Include="img\0077.jpg" />
+    <Content Include="img\0077_1.png" />
     <Content Include="img\0088.jpg" />
     <Content Include="img\0088.png" />
+    <Content Include="img\0088_1.png" />
     <Content Include="img\0099.jpg" />
     <Content Include="img\1.gif.jpg" />
     <Content Include="img\1.jpg.jpg" />
@@ -515,7 +531,9 @@
     <Content Include="img\srenwu.png" />
     <Content Include="img\stars_red.png" />
     <Content Include="img\stk.jpg" />
+    <Content Include="img\stk.png" />
     <Content Include="img\stk1.jpg" />
+    <Content Include="img\stk1.png" />
     <Content Include="img\stk11.png" />
     <Content Include="img\stk22.png" />
     <Content Include="img\stxkfx.png" />
@@ -694,6 +712,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Video\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

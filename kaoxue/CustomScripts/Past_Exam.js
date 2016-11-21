@@ -71,6 +71,7 @@ function year_selected(num, text) {
     year_text = text;
     //数据读取中
     $("#loading").html("<div class=\"waiting_bg_1_2\"></div>");
+    $("#list").html("");
     GetProvince();
 }
 

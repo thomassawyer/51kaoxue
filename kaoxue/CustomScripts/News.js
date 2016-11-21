@@ -21,9 +21,9 @@ function GetTest_Hot_Download() {
             var temp = eval(data);
             var html = "";
             for (var i = 0; i < temp.length; i++) {
-                var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
+                var text = temp[i].title;
                 //html += "<li><a target='_blank' href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
-		html += "<li class=\"rmxzli\"><span class=\"rmxzsp_07c277\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa_07c277\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli overf_com\"><span class=\"rmxzsp_07c277\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa_07c277\">" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -39,9 +39,9 @@ function GetTest_Recommend() {
             var temp = eval(data);
             var html = "";
             for (var i = 0; i < temp.length; i++) {
-                var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
+                var text = temp[i].title;
                 //html += "<li><a target='_blank' href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
-		html += "<li class=\"rmxzli\"><span class=\"rmxzsp\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli overf_com\"><span class=\"rmxzsp\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -64,22 +64,22 @@ function GetList() {
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
                     var text = temp[i].title.length > 40 ? temp[i].title.substr(0, 40) : temp[i].title;
 
-                    var num = temp[i].content.indexOf("</table>"); 
-                    if (num != -1) {
-                        var str = temp[i].content.substr(num+14, 80);
-                    } else {
-                        var str = temp[i].content.substr(0, 80);
-                    }
+                    //var num = temp[i].content.indexOf("</table>"); 
+                    //if (num != -1) {
+                    //    var str = temp[i].content.substr(num+14, 80);
+                    //} else {
+                    //    var str = temp[i].content.substr(0, 80);
+                    //}
                     
-                    var str_1 = str.replace(/<p>/g, "");
-                    var str_2 = str_1.replace(/<\/p>/g, "<br>");
+                    //var str_1 = str.replace(/<p>/g, "");
+                    //var str_2 = str_1.replace(/<\/p>/g, "<br>");
                     html += "<div class=\"xwliebiao\" onclick=\"javascript:window.open('../News_Detail?id=" + temp[i].id + "');\">\
                             <div class=\"fl xwsc mar_lf_11\">\
                                 <img src=\"img/xwtpshucai.png\" />\
                             </div>\
                         <div class=\"fl cswx\">";
                     html += "<b class=\"xwlbzt\">" + text + "</b>\
-                    <p class=\"xwwby\">" + str_2 + "</p>";
+                    <div class=\"xwwby\">" + temp[i].content + "</div>";
                     html+="<img src=\"img/wenhao.png\" class=\"xwimg\" />\
                     <span class=\"xwgxsj color555\">\
                         更新时间:	 <span class=\"color555\">" + temp[i].pubdate + "</span>\

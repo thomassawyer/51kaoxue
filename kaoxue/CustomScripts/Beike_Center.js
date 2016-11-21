@@ -156,13 +156,13 @@ function GetVersion_Second() {
 //点击二级版本A标签,为二级版本变量赋值
 //
 function version_second_selected(versionid, title) {
+    click_title = title;
     pageindex = 1;
     version_second = versionid;
     version_third = "";
     version_fourth = "";
     GetData();
     GetVersion_ThirdAndFourth();
-    click_title = title;
     //GetList();
 }
 
@@ -302,7 +302,7 @@ function GetList() {
                                     <a target='_blank' class=\"b320 font_size16 overf_com font_wb\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank'  title='" + text + "'>" + text + "</a><br>\
                                     <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
                                 </div>\
-                                <div class=\"xiazai fr\"  style='position:static;width:45px;height:45px;margin-right: 15px;'>\
+                                <div class=\"xiazai fr\"  style='position:static;width:45px;height:45px;margin-right: 30px;'>\
                                     <a target='_blank' class=\"xztb2 fr\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' target='_blank' class=\"xztb2 fl\"></a>\
                                 </div>\
                             </div>";

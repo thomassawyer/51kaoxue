@@ -618,7 +618,7 @@ function GetYear() {
 
                for (var i = 0; i < temp.length; i++) {
                     if (i == 0) {
-                        html += "<li class=\"lngkli1 fl lngk_title lngklv\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a target='_blank' class=\"lngka\"><b class=\"linian\">历年中考试卷</b></a></li>";
+                        html += "<li class=\"lngkli1 fl lngk_title lngklv\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a target='_blank' class=\"lngka\"><b class=\"linian font_size16\">历年中考试卷</b></a></li>";
                     } else {
                         if (i % 2 == 0) {
                             html += " <li class=\"lngkli lhove2 fl \"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a target='_blank' class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
@@ -676,9 +676,9 @@ function GetAreaTop5()
                 temp = eval(data);
                 for (var i = 1; i <= 5; i++) {
                     if (i == 5) {
-                        html += " <li  class=\"ce_z ce_xh border_bn ce_pro_h\"><a target='_blank'  href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"ce_x fl\"><span class=\"ce_sp\">" + temp[i - 1].areaname + "</span></a><a target='_blank' class=\"sppd fr\">></a></li>";
+                        html += " <li  class=\"ce_z ce_xh border_bn ce_pro_h\" onclick=\"javascript:window.open('../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "');\"><a target='_blank' class=\"ce_x fl\"><span class=\"ce_sp\">" + temp[i - 1].areaname + "</span></a><a target='_blank' class=\"sppd fr\">></a></li>";
                     } else {
-                        html += " <li  class=\"ce_z ce_xh ce_pro_h\"><a target='_blank'  href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"ce_x fl\"><span class=\"ce_sp\">" + temp[i - 1].areaname + "</span></a><a target='_blank' class=\"sppd fr\">></a></li>";
+                        html += " <li  class=\"ce_z ce_xh ce_pro_h\" onclick=\"javascript:window.open('../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "');\"><a target='_blank' class=\"ce_x fl\"><span class=\"ce_sp\">" + temp[i - 1].areaname + "</span></a><a target='_blank' class=\"sppd fr\">></a></li>";
                     }
                     
                 }

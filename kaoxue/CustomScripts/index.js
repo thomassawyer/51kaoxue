@@ -503,19 +503,19 @@ function GetTeachers() {
                     if (i == 0) {
                         html += "<div class=\"ls4_img fl \">\
                         <div class=\"lszp fl\"><img src=\"" + url + temp[i].headimgsrc + "\" alt=\"\" style='width:131px;height:167px;' /></div>\
-                        <div  class=\"lszp fl\">\
+                        <div  class=\"lszp fl padding_top35\">\
                             <h3><b>" + temp[i].headname + "</b></h3>\
                             <p class=\"dkms\">" + temp[i].name + "</p>\
-                            <a target='_blank' class=\"mstjbtn\"  href='../President_Special_Column?id=" + temp[i].headid + "'>详情</a>\
+                            <a target='_blank' class=\"mstjbtn mar_top30\"  href='../President_Special_Column?id=" + temp[i].headid + "'>详情</a>\
                         </div>\
                     </div>";
                     } else {
                         html += "<div class=\"ls4_img fl lstp_mg \">\
                         <div class=\"lszp fl\"><img src=\"" + url + temp[i].headimgsrc + "\" alt=\"\" style='width:131px;height:167px;' /></div>\
-                        <div  class=\"lszp fl\">\
+                        <div  class=\"lszp fl padding_top35\">\
                             <h3><b>" + temp[i].headname + "</b></h3>\
                             <p class=\"dkms\">" + temp[i].name + "</p>\
-                            <a target='_blank' class=\"mstjbtn\" href='../President_Special_Column?id=" + temp[i].headid + "'>详情</a>\
+                            <a target='_blank' class=\"mstjbtn mar_top30\" href='../President_Special_Column?id=" + temp[i].headid + "'>详情</a>\
                         </div>\
                     </div>";
                     }

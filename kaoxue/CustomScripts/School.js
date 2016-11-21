@@ -117,13 +117,13 @@ function test_recommend() {
             if (data != "]") {
                 var temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
-                    var text = temp[i].testname.length > 10 ? temp[i].testname.substr(0, 10) + "..." : temp[i].testname;
+                    var text = temp[i].testname;
                     //html += "<div class=\"elite_school_recommends_container_top\">\
                     //                    <span class=\"sign_red\">·</span>\
                     //                    <div class=\"school_name\"><a target='_blank' href=\"../Download?cid=1&id="+ temp[i].id + "\" target=\"_blank\">" + text + "</a></div>\
                     //                </div>";
                     //html += "<li><a target='_blank' href=\"../Download?cid=1&id=" + temp[i].id + "\" target=\"_blank\">●" + text + "</a></li>";
-		    html += "<li class=\"rmxzli\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a target='_blank' title='" + temp[i].testname + "'  href=\"../Download?cid=1&id=" + temp[i].id + "\" target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
+		    html += "<li class=\"rmxzli overf_com\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a target='_blank' title='" + temp[i].testname + "'  href=\"../Download?cid=1&id=" + temp[i].id + "\" target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
                 }
             }
             $("#test_recommend").html(html);
@@ -400,4 +400,5 @@ $(document).ready(function () {
     GetArea();
     eliteschool_recommend();
     test_recommend();
+    GetList();
 });

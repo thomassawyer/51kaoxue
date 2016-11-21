@@ -30,16 +30,17 @@
 
 .img0011 {
     position: absolute;
-    top: 9px;
+    top: 7px;
     left: 11px;
 }
 
 .b0011 {
     position: absolute;
     left: 36px;
-    top: 6px;
+    top: 5px;
     color: #fff;
-    font-size:16px;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .ztca {

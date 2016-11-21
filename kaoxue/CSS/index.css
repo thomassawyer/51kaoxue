@@ -51,7 +51,7 @@ a {
     }
 
     .li1 > a {
-        color: #fd8286;
+        color: #ff4a52;
     }
 
 .li3 {
@@ -514,7 +514,12 @@ a {
     padding-top: 0px;
     padding-left: 130px;
 }
-
+.padding_top35 {
+    padding-top:35px;
+}
+.mar_top30 {
+    margin-top:30px;
+}
 .zhentiku {
     width: 100%;
     height: 564px;
@@ -559,6 +564,7 @@ a {
     position:absolute;
     /* top: 2454px; */
     bottom: 10px;
+        right: 0px;
 }
 .xian1 {
     height: 50%;
@@ -713,7 +719,7 @@ a {
 }
 
 .jpst_lianjie {
-    width: 552px;
+    width: 555px;
     /*height: 215px;*/
 }
 
@@ -758,7 +764,7 @@ a {
 
 .jpst_div2 {
     height: 100%;
-    width: 49.5%;
+    width: 555px;
     margin-bottom:15px;
 }
 
@@ -990,6 +996,7 @@ a {
     width: 235px;
     height: 165px;
     font-size:16px;
+    margin-top:20px;
 }
 
 .mxhz_left {
@@ -997,8 +1004,9 @@ a {
 }
 
 .mxhz6 > ul > li {
-    margin-top: 20px;
-    height: 20px;
+    /* margin-top: 20px; */
+    height: 25px;
+    margin-bottom: 12px;
     overflow: hidden;
 }
 
@@ -1370,6 +1378,7 @@ a {
     margin-left: 10px;
     font-size:14px;
     text-align:center;
+    line-height: 19px;
 }
 
 .dkms {
@@ -1643,6 +1652,7 @@ a {
 .sc_set {
     position:absolute;
     /* top: 1150px; */
+        right: 0px;
     bottom: 10px;
 }
 
@@ -1652,6 +1662,7 @@ a {
 .lantb_set {
     position:absolute;
 /*top: 4480px;*/
+    right: 0px;
 bottom:10px;
 
 }
@@ -1661,6 +1672,7 @@ bottom:10px;
 .lantb_set_1 {
     position:absolute;
     /*top: 4128px;*/
+        right: 0px;
            bottom:10px;
 }
 .mar_bott_30 {
@@ -1669,17 +1681,25 @@ bottom:10px;
 .sttj_set {
     position:absolute;
     /*top: 3010px;*/
+        right: 0px;
            bottom:10px;
 }
 .mstj_set {
     position:absolute;
        /*top: 4815px;*/
+           right: 0px;
        bottom:10px;
 }
 .mxttbggd {
     width: 1189px;
     height: 141px;
     background: url(../img/111.png) no-repeat bottom;
+    padding-top:28px;
+}
+.mxttbggd_1 {
+    width: 1189px;
+    height: 141px;
+    background: url(../img/mingxiaotaoti.png) no-repeat bottom;
     padding-top:28px;
 }
 
@@ -1718,7 +1738,7 @@ bottom:10px;
     height: 442px;
     background: #fff;
     left: 210px;
-    top: -1px;
+    top: 0px;
     display: none;
     border: 1px solid #e5e5e5;
 }
@@ -1755,7 +1775,7 @@ bottom:10px;
 .more6_new {
     position: absolute;
     z-index: 19;
-    left: 308px;
+    right: 0px;
     top: 12px;
 }
 .zxzt_btn_07c277 {

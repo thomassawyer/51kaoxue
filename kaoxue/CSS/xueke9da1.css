@@ -111,7 +111,7 @@
     display:block;
     width:177px;
     height:73px;
-    /*margin:auto;*/
+    margin: auto;
 }
 .border_ffb726 {
     border:1px solid #ffb726;
@@ -162,7 +162,11 @@
 }
 
 .lngka {
+     display: block;
     padding-left: 60px;
+    height: 69px;
+    /* padding-top: 10px; */
+    line-height: 69px;
 }
 
 .lngkli1 {
@@ -172,7 +176,7 @@
 .sjtb9dk {
     position: absolute;
     left: 28px;
-    top: 18px;
+    top: 22px;
 }
 
 .lngkli {
@@ -185,12 +189,12 @@
 }
 .nftb {
     position: absolute;
-    left: 30px;
+    left: 37px;
     top: 25px;
 }
 
 .nfa {
-    padding-left: 55px;
+    padding-left: 62px;
 }
 
 .lngkli {
@@ -619,7 +623,7 @@
     position: absolute;
     color: #808ffb;
     font-size: 38px;
-    top: 88px;
+    top: 85px;
     left: 200px;
 }
 
@@ -627,7 +631,7 @@
     position: absolute;
     color: #808ffb;
     font-size: 38px;
-    top: 88px;
+    top: 85px;
     left: 580px;
 }
 

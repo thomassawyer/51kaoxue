@@ -133,6 +133,9 @@
 
 .xwwby {
     margin-top: 20px;
+        height: 40px;
+    overflow: hidden;
+    color:#373737;
 }
 
 .xwimg {
