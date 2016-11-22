@@ -336,6 +336,7 @@
     <Content Include="img\czgzy.png" />
     <Content Include="img\czgzye1.png" />
     <Content Include="img\c_img_title.jpg" />
+    <Content Include="img\c_img_title_hover.png" />
     <Content Include="img\dandan.png" />
     <Content Include="img\danlan111.png" />
     <Content Include="img\danlan222.png" />
@@ -357,6 +358,8 @@
     <Content Include="img\dshuben.png" />
     <Content Include="img\duanluo.png" />
     <Content Include="img\e_img_title.png" />
+    <Content Include="img\e_img_title_hover.png" />
+    <Content Include="img\e_item_hover.png" />
     <Content Include="img\e_item_title_img.png" />
     <Content Include="img\fen_100_1.png" />
     <Content Include="img\find_logo.png" />
@@ -502,6 +505,7 @@
     <Content Include="img\pinxin.png" />
     <Content Include="img\p_1.png" />
     <Content Include="img\p_img_title.png" />
+    <Content Include="img\p_img_title_hover.png" />
     <Content Include="img\p_item_hover.png" />
     <Content Include="img\p_item_title_img.png" />
     <Content Include="img\qiuda1.png" />
@@ -565,10 +569,12 @@
     <Content Include="img\ty-10-kb-2.png" />
     <Content Include="img\ty-10-kb.png" />
     <Content Include="img\t_img_title.png" />
+    <Content Include="img\t_img_title_hover.png" />
     <Content Include="img\t_item_hover.png" />
     <Content Include="img\t_item_title_img.png" />
     <Content Include="img\university_entrance_bef_title.png" />
     <Content Include="img\u_img_title.png" />
+    <Content Include="img\u_img_title_hover.png" />
     <Content Include="img\u_item_hover.png" />
     <Content Include="img\u_item_title_img.png" />
     <Content Include="img\video_title_bg.jpg" />

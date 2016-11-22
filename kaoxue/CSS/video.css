@@ -69,6 +69,7 @@ body {
 
 .slideshow {
     overflow:hidden;
+    position:relative;
 }
 
 .item,.t_item {
@@ -180,32 +181,35 @@ body {
 .p_video_all, .slideshow {
     height:100%;
 }
-.lf_arrow,.rg_arrow {
+.slides-next,.slides-prev {
     width: 32px;
     height:100%;
-    margin:auto;
     background-repeat:no-repeat;
     background-position:center;
 }
-.lf_arrow {
+.slides-prev {
     background-image:url(../img/lf_arrow.png);
+    top:0px;
+    left:0px;
 }
-.rg_arrow {
+.slides-next {
     background-image:url(../img/rg_arrow.png);
+    top:0px;
+    right:0px;
 }
 
-.lf_arrow:hover {
+.slides-prev:hover {
     background-image:url(../img/lf_arrow_hover.png);
-    background-color:#f5f5f5;
+    /*background-color:#f5f5f5;*/
 }
-.rg_arrow:hover {
+.slides-next:hover {
     background-image:url(../img/rg_arrow_hover.png);
-    background-color:#f5f5f5;
+    /*background-color:#f5f5f5;*/
 }
-.lf_arrow:hover {
+.slides-prev:hover {
     cursor:pointer;
 }
-.rg_arrow:hover {
+.slides-next:hover {
     cursor:pointer;
 }
 .test_question_parsing {
@@ -278,4 +282,56 @@ body {
 
 .e_img_title {
     background-image:url(../img/e_img_title.png);
+}
+
+#p_slideshow > div,#e_slideshow > div{
+    width:730px;
+    margin-left:30px;
+}
+
+.slides-next, .slides-prev {
+    position: absolute;
+    z-index: 120;
+    text-indent:-9999px;
+}
+.p_img_title,.c_img_title,.t_img_title {
+    position:relative;
+}
+.p_img_title:hover,.c_img_title:hover,.t_img_title:hover {
+    cursor:pointer;
+}
+.p_img_title_hover,.c_img_title_hover,.t_img_title_hover,.e_img_title_hover,.u_img_title_hover {
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:none;
+}
+/*.u_img_title_hover {
+    width:396px;
+    height:638px;
+}*/
+.e_item_hover {
+    background-image:url(../img/e_item_hover.png);
+}
+.p_img_title_hover {
+    background-image:url(../img/p_img_title_hover.png);
+}
+.c_img_title_hover {
+    background-image:url(../img/c_img_title_hover.png);
+}
+.t_img_title_hover {
+    background-image:url(../img/t_img_title_hover.png);
+}
+.u_img_title_hover {
+   background-image:url(../img/u_img_title_hover.png);
+}
+.e_img_title_hover {
+   background-image:url(../img/e_img_title_hover.png);
+}
+.p_img_title:hover > .p_img_title_hover,.c_img_title:hover > .c_img_title_hover,.t_img_title:hover > .t_img_title_hover,.u_img_title:hover > .u_img_title_hover,.e_img_title:hover > .e_img_title_hover {
+    display:block;
+}
+
+.e_item_o_title {
+    color:#19b3e8;
 }
