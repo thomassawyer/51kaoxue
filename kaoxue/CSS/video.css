@@ -9,7 +9,7 @@ body {
     height: 461px;
     background: #7dc1fe;
     overflow: hidden;
-    background:url(../img/video_title_bg.jpg) no-repeat;
+    background:url(../img/video_title_bg.jpg) no-repeat center;
 }
 
 .content {
@@ -334,4 +334,7 @@ body {
 
 .e_item_o_title {
     color:#19b3e8;
+}
+.t_item {
+    cursor:pointer;
 }
