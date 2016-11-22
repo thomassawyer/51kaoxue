@@ -56,10 +56,10 @@
 <div class="daohanglan">
     <div class="daohanglan_ul">
         <ul class="uuu">
-            <li class="fl"><a target='_blank' href="../Home"><span>首页&nbsp;&nbsp;</span></a></li>
-            <li class="fl pad bk"><a target='_blank' href="../School">学校</a><img src="../../img/tc-93.png" class="bkimg2" /></li>
-            <li class="fl pad bk"><a target='_blank' href="../President">校长</a><img src="../../img/tc-93.png" class="bkimg3" /></li>
-            <li class="fl pad bk"><a target='_blank' href="../Elite_School">试题</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
+            <li class="fl"><a target='_blank' href="../Home"><span>首页</span></a></li><li class="fl"><a target='_blank'><span>&nbsp;&gt;&nbsp;</span><span id="nav_rec_2"></span></a></li>
+            <li class="fl mar_lf_65 bk"><a target='_blank' href="../School">学校</a><img src="../../img/tc-93.png" class="bkimg2" id="School_img"/></li>
+            <li class="fl pad bk"><a target='_blank' href="../President">校长</a><img src="../../img/tc-93.png" class="bkimg3" id="President_img"/></li>
+            <li class="fl pad bk"><a target='_blank' href="../Elite_School">试题</a><img src="../../img/tc-93.png" class="bkimg4" id="Elite_School_img"/></li>
         </ul>
 
     </div>

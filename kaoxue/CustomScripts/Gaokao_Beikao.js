@@ -582,6 +582,9 @@ $(document).ready(function () {
     GetTest_Hot_Download();
     GetTest_Recommend();
     GetArea();
+
+    $("#Gaokao_Beikao_img").css({ 'display': 'block', 'right': '42px' });
+    $("#nav_rec_2").html("高考备考");
 });
 
 //

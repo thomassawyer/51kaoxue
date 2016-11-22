@@ -582,6 +582,9 @@ $(document).ready(function () {
     GetTest_Hot_Download();
     GetTest_Recommend();
     GetArea();
+
+    $("#Test_Center_img").css({ 'display': 'block', 'right': '42px' });
+    $("#nav_rec_2").html("试题中心");
 });
 
 //

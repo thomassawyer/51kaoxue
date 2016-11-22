@@ -560,6 +560,9 @@ $(document).ready(function () {
     GetArea();
     eliteschool_recommend();
     test_recommend();
+
+    $("#President_img").css({ 'display': 'block', 'right': '21px' });
+    $("#nav_rec_2").html("校长");
 });
 
 function message(text) {

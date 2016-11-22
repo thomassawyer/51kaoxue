@@ -401,4 +401,6 @@ $(document).ready(function () {
     eliteschool_recommend();
     test_recommend();
     GetList();
+    $("#School_img").css({ 'display': 'block', 'right': '21px' });
+    $("#nav_rec_2").html("学校");
 });

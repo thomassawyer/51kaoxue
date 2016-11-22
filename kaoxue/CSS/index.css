@@ -164,9 +164,11 @@ a {
 
     .daohanglan_ul > ul {
         line-height: 50px;
-        font-size: 21px;
+        font-size: 20px;
     }
-
+.mar_lf_65 {
+    margin-left:65px;
+}
 .pad {
     margin-left: 27px;
 }
@@ -2024,4 +2026,8 @@ bottom:10px;
 .yqlj2auot, .yqlj1189 {
     color: #333333;
     font-size: 16px;
+}
+
+#nav_rec_2 {
+    /*font-weight:bold;*/
 }

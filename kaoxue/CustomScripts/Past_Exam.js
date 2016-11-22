@@ -246,5 +246,8 @@ function GetQueryString(name) {
 $(document).ready(function () {
     year_para = GetQueryString("year");
     GetYear();
+
+    $("#Past_Exam_img").css({ 'display': 'block', 'right': '42px' });
+    $("#nav_rec_2").html("高考真题");
 });
 
