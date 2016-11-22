@@ -562,7 +562,7 @@ $(document).ready(function () {
     test_recommend();
 
     $("#President_img").css({ 'display': 'block', 'right': '21px' });
-    $("#nav_rec_2").html("校长");
+    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;校长");
 });
 
 function message(text) {

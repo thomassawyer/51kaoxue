@@ -55,7 +55,7 @@
 <div class="daohanglan">
     <div class="daohanglan_ul">
         <ul class="uuu">
-            <li class="fl"><a target='_blank' href="../Home"><span>首页</span></a></li><li class="fl"><a target='_blank'><span>&nbsp;&gt;&nbsp;</span><span id="nav_rec_2"></span></a></li>
+            <li class="fl"><a target='_blank' href="../Home"><span>首页</span></a></li><li class="fl"><a target='_blank'><span></span><span id="nav_rec_2"></span></a></li>
             <li class="fl bk1 mar_lf_65"><a target='_blank'  href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" class="bkimg2" id="Beike_Center_img"/></li>
             <li class="fl pad bk1"><a target='_blank'  href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" class="bkimg3" id="Test_Center_img"/></li>
             <li class="fl pad bk1"><a target='_blank'  href="../Past_Exam">高考真题</a><img src="../../img/tc-93.png" class="bkimg4" id="Past_Exam_img"/></li>

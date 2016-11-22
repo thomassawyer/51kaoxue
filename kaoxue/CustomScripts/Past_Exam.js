@@ -248,6 +248,6 @@ $(document).ready(function () {
     GetYear();
 
     $("#Past_Exam_img").css({ 'display': 'block', 'right': '42px' });
-    $("#nav_rec_2").html("高考真题");
+    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;高考真题");
 });
 

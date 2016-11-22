@@ -540,7 +540,7 @@ $(document).ready(function () {
     GetArea();
 
     $("#Elite_School_img").css({ 'display': 'block', 'right': '42px' });
-    $("#nav_rec_2").html("名校试题");
+    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;名校试题");
 });
 
 //

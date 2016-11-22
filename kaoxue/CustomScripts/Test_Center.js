@@ -584,7 +584,7 @@ $(document).ready(function () {
     GetArea();
 
     $("#Test_Center_img").css({ 'display': 'block', 'right': '42px' });
-    $("#nav_rec_2").html("试题中心");
+    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;试题中心");
 });
 
 //

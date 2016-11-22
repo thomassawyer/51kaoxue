@@ -584,7 +584,7 @@ $(document).ready(function () {
     GetArea();
 
     $("#Gaokao_Beikao_img").css({ 'display': 'block', 'right': '42px' });
-    $("#nav_rec_2").html("高考备考");
+    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;高考备考");
 });
 
 //

@@ -402,5 +402,5 @@ $(document).ready(function () {
     test_recommend();
     GetList();
     $("#School_img").css({ 'display': 'block', 'right': '21px' });
-    $("#nav_rec_2").html("学校");
+    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;学校");
 });
