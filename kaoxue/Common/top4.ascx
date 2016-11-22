@@ -1,7 +1,7 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="top4.ascx.cs" Inherits="kaoxue.Common.top4" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 <style>
     a {
-        cursor:pointer;
+        cursor: pointer;
     }
 </style>
 <script src="../CustomScripts/top.js"></script>
@@ -26,44 +26,44 @@
         </div>
     </div><!--这是头部  登录部分-->
 
-    <div class="navinput">
-        <div class="navinput_div">
-            <div class="fl logo">
-                <a target='_blank' href="../Home"><img src="../../img/logo.png" class="logo1"/></a>
-            </div>
-            <div id="ztc" class="fl">
-                <a target='_blank' href="../ThroughTrain"><img src="../../img/ztc.png" /></a>
-            </div>
-            <div id="ztc_bottom" class="fl">
-                <form action="#" method="get">
-                    <input type="text" name="keywords" class="fl" id="shousuo" style="padding-left:20px; width:430px;" placeholder="请输入搜索内容" onkeyup="shousuo_keyfun(event)"/><a target='_blank' id="tijiao" target='_blank' class="fl"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor:pointer;"  onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"/>
-                </form>
-            </div>
-            <div class="fl xbs">
-                <img src="../../img/boshimao.png" alt="" class="fl" /><h3 class="fl h3gaokao"><a target='_blank' href="../Test_Center">高考试题</a></h3>
-            </div>
-            <div class="fl xbss">
-                <img src="../../img/shutubiao1.png" alt="" class="fl" /><h3 class="fl h3gaokao"><a target='_blank' href="../News">天天新闻</a></h3>
-            </div>
-        </div>
-    </div><!--这是搜索框部分-->
+<div class="navinput">
+    <div class="navinput_div">
+        <div class="fl logo">
+            <a target='_blank' href="../Home">
+                <img src="../../img/logo.png" class="logo1">
+            </a>
 
-    <div class="daohanglan">
-        <div class="daohanglan_ul">
-            <ul class="dhul">
-                <li class="fl bk fb1" id="pad"><a target='_blank'  href="../Subject?subjectname=语文">语文</a><img src="../../img/tc-93.png" class="maozi1" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=数学">数学</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=英语">英语</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=物理">物理</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=化学">化学</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=生物">生物</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=历史">历史</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=政治">政治</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=地理">地理</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk1" id="bk"><a target='_blank'  href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk1"><a target='_blank'  href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Grade?level=3">高中</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Grade?level=2">初中</a><img src="../../img/tc-93.png" alt="" /></li>  
-            </ul>
         </div>
-    </div><!--导航栏-->
+        <div id="ztc" class="fl">
+            <a target='_blank' href="../ThroughTrain">
+                <img src="../../img/ztc.png" /></a>
+        </div>
+        <div id="ztc_bottom" class="fl">
+            <form action="#" method="get">
+                <input type="text" name="keywords" class="fl" id="shousuo" style="padding-left: 20px; width: 430px;" placeholder="请输入搜索内容" onkeyup="shousuo_keyfun(event)"/><a target='_blank' id="tijiao" class="fl" target='_blank' onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()"></a><img src="../../img/sousuo.png" id="soussuo" style="cursor: pointer;" onclick="javascript: location.href = '../Search?keywords=' + $('#shousuo').val()">
+            </form>
+        </div>
+        <div class="fl xbs">
+            <img src="../../img/boshimao.png" class="fl" /><h3 class="fl h3gaokao"><a target='_blank' href="../Test_Center">高考试题</a></h3>
+        </div>
+        <div class="fl xbss">
+            <img src="../../img/shutubiao1.png" class="fl" /><h3 class="fl h3gaokao"><a target='_blank' href="../News">天天新闻</a></h3>
+        </div>
+    </div>
+</div>
+<!--这是搜索框部分-->
+
+<div class="daohanglan">
+    <div class="daohanglan_ul">
+        <ul class="uuu">
+            <li class="fl"><a target='_blank' href="../Home"><span>首页&nbsp;&nbsp;</span></a></li>
+            <li class="fl pad bk1"><a target='_blank' href="../School">课堂讲学</a><img src="../../img/tc-93.png" class="bkimg2" /></li>
+            <li class="fl pad bk1"><a target='_blank' href="../President">心理解压</a><img src="../../img/tc-93.png" class="bkimg3" /></li>
+            <li class="fl pad bk1"><a target='_blank' href="../Elite_School">试题解析</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
+            <li class="fl pad bk2"><a target='_blank' href="../Elite_School">高考研讨会</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
+            <li class="fl pad bk1"><a target='_blank' href="../Elite_School">高考备战</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
+        </ul>
+
+    </div>
+</div>
+<!--导航栏-->

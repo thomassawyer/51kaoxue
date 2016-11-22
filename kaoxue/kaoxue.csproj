@@ -120,13 +120,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\top4.ascx.cs">
-      <DependentUpon>top4.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Common\top4.ascx.designer.cs">
-      <DependentUpon>top4.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\About_usController.cs" />
     <Compile Include="Controllers\AncientController.cs" />
     <Compile Include="Controllers\Ancient_ArticleController.cs" />
@@ -158,6 +151,7 @@
     <Compile Include="Controllers\Test_CenterController.cs" />
     <Compile Include="Controllers\The_School_TestController.cs" />
     <Compile Include="Controllers\ThroughTrainController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -196,6 +190,7 @@
     <Content Include="CSS\tab.css" />
     <Content Include="CSS\test_questions.css" />
     <Content Include="CSS\Through_train.css" />
+    <Content Include="CSS\video.css" />
     <Content Include="CSS\xueke9da.css" />
     <Content Include="CSS\xueke9da1.css" />
     <Content Include="CustomScripts\Ancient.js" />
@@ -340,6 +335,7 @@
     <Content Include="img\czgzwb.png" />
     <Content Include="img\czgzy.png" />
     <Content Include="img\czgzye1.png" />
+    <Content Include="img\c_img_title.jpg" />
     <Content Include="img\dandan.png" />
     <Content Include="img\danlan111.png" />
     <Content Include="img\danlan222.png" />
@@ -360,6 +356,8 @@
     <Content Include="img\drw.png" />
     <Content Include="img\dshuben.png" />
     <Content Include="img\duanluo.png" />
+    <Content Include="img\e_img_title.png" />
+    <Content Include="img\e_item_title_img.png" />
     <Content Include="img\fen_100_1.png" />
     <Content Include="img\find_logo.png" />
     <Content Include="img\fj.jpg" />
@@ -415,6 +413,8 @@
     <Content Include="img\hyeu.jpg" />
     <Content Include="img\hyeu.png" />
     <Content Include="img\hyxdj.png" />
+    <Content Include="img\item_hover.png" />
+    <Content Include="img\item_title_img.jpg" />
     <Content Include="img\jianzhubai.png" />
     <Content Include="img\jiaodian.png" />
     <Content Include="img\jiaoshi.png" />
@@ -438,6 +438,8 @@
     <Content Include="img\lazyfonz5.png" />
     <Content Include="img\lazyfonz6.png" />
     <Content Include="img\leixin.png" />
+    <Content Include="img\lf_arrow.png" />
+    <Content Include="img\lf_arrow_hover.png" />
     <Content Include="img\lianxiwomen.png" />
     <Content Include="img\lianxiwomencc.png" />
     <Content Include="img\ll0011.png" />
@@ -499,12 +501,17 @@
     <Content Include="img\pclunbo.png" />
     <Content Include="img\pinxin.png" />
     <Content Include="img\p_1.png" />
+    <Content Include="img\p_img_title.png" />
+    <Content Include="img\p_item_hover.png" />
+    <Content Include="img\p_item_title_img.png" />
     <Content Include="img\qiuda1.png" />
     <Content Include="img\qq.png" />
     <Content Include="img\qzqm.png" />
     <Content Include="img\raw_d.png" />
     <Content Include="img\redkj.png" />
     <Content Include="img\renwu.png" />
+    <Content Include="img\rg_arrow.png" />
+    <Content Include="img\rg_arrow_hover.png" />
     <Content Include="img\rwmctb.png" />
     <Content Include="img\scyuanxing.png" />
     <Content Include="img\sfbeike.png" />
@@ -557,6 +564,14 @@
     <Content Include="img\tushu4tb.png" />
     <Content Include="img\ty-10-kb-2.png" />
     <Content Include="img\ty-10-kb.png" />
+    <Content Include="img\t_img_title.png" />
+    <Content Include="img\t_item_hover.png" />
+    <Content Include="img\t_item_title_img.png" />
+    <Content Include="img\university_entrance_bef_title.png" />
+    <Content Include="img\u_img_title.png" />
+    <Content Include="img\u_item_hover.png" />
+    <Content Include="img\u_item_title_img.png" />
+    <Content Include="img\video_title_bg.jpg" />
     <Content Include="img\waiting_bg.gif" />
     <Content Include="img\waiting_bg.jpg" />
     <Content Include="img\waiting_bg_1.jpg" />
@@ -667,6 +682,7 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\slideshow.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -708,11 +724,11 @@
     <Content Include="Views\Ancient_List\Index.cshtml" />
     <Content Include="Views\Ancient_Article\Index.cshtml" />
     <Content Include="Views\ThroughTrain\Index.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Video\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

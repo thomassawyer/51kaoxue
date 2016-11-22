@@ -179,6 +179,11 @@ a {
     width: 100px;
     height: 44px;
 }
+.bk2 {
+    width: 120px;
+    height: 44px;
+}
+
 
 .bk {
     width: 60px;
@@ -199,11 +204,20 @@ a {
 .bk1:hover {
     font-size: 24px;
 }
+.bk2:hover {
+    font-size: 24px;
+}
 
 .bk1 img {
     position: absolute;
     top: -14px;
     right: 35px;
+    display: none;
+}
+.bk2 img {
+    position: absolute;
+    top: -14px;
+    right: 52px;
     display: none;
 }
 
