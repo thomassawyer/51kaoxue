@@ -634,9 +634,9 @@ $(document).ready(function () {
     Mid_examination();
     News(1, "#gaokaodongtai");
     News(2, "#jiaoxueyanjiu");
-    News(5, "#keyanlunwen");
-    News(3, "#xuexifangfa");
-    News(4, "#jingyanjiaoliu");
+    News(3, "#keyanlunwen");
+    News(4, "#xuexifangfa");
+    News(5, "#jingyanjiaoliu");
     News(6, "#jiaocaijiaofa");
     Banner();
     GetSubject(2, "junior_subject", 101, 'ty-10-kb.png', 11);
