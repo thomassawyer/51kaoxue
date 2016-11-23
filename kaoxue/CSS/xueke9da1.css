@@ -353,6 +353,7 @@
 }
 .sfhv {
     position: relative;
+    z-index:999;
 }
 
 .shenfenhover {
@@ -364,6 +365,7 @@
     top: -1px;
     display: none;
     border:1px solid #e5e5e5;
+    z-index:999;
 }
 
 .cebianlan_ul1 > ul > li {
@@ -721,16 +723,16 @@
     padding-left:30px;
 }
 .title_middle_nav_span_normal_1 {
-    border:1px solid #8cc407;
-    background-image:none;
+    /*border:1px solid #8cc407;*/
+    background-image:url(../img/title_middle_nav_span_normal_1.png);
     color:#8cc407;
-    border-radius:9px;
+    /*border-radius:9px;*/
     font-size:12px;
 }
 .title_middle_nav_span_normal_2 {
-    border:1px solid #808ffb;
-    background-image:none;
+    /*border:1px solid #808ffb;*/
+    background-image:url(../img/title_middle_nav_span_normal_2.png);
     color:#808ffb;
-    border-radius:9px;
+    /*border-radius:9px;*/
     font-size:12px;
 }

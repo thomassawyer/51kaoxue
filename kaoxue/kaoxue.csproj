@@ -418,6 +418,7 @@
     <Content Include="img\hyeu.png" />
     <Content Include="img\hyxdj.png" />
     <Content Include="img\item_hover.png" />
+    <Content Include="img\item_hover_1.png" />
     <Content Include="img\item_title_img.jpg" />
     <Content Include="img\jianzhubai.png" />
     <Content Include="img\jiaodian.png" />
@@ -562,6 +563,8 @@
     <Content Include="img\tc-104.png" />
     <Content Include="img\tc-93.png" />
     <Content Include="img\tcxx-105.png" />
+    <Content Include="img\title_middle_nav_span_normal_1.png" />
+    <Content Include="img\title_middle_nav_span_normal_2.png" />
     <Content Include="img\tlbeijin.png" />
     <Content Include="img\tubiaostk.png" />
     <Content Include="img\tubiaozu1.png" />
@@ -692,6 +695,7 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\sea.js" />
     <Content Include="Scripts\slideshow.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

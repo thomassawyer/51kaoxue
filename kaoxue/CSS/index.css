@@ -265,7 +265,7 @@ a {
 .cebianlan_xia {
     width: 100%;
     height: 208px;
-    z-index: 99;
+    z-index: 999;
     position: relative;
     padding:0px 10px;
     background-color: white;
@@ -274,7 +274,7 @@ a {
 .cebianlan_xia1 {
     width: 100%;
     height: 442px;
-    z-index: 99;
+    z-index: 999;
     position: relative;
     background-color: white;
 }
@@ -1841,7 +1841,7 @@ bottom:10px;
     border: 1px solid #07c7bc;
 }
 .gkdt_240 {
-    width: 200px;
+    width: 180px;
     height: 25px;
 }
 .line_hg_25 { 

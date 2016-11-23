@@ -38,8 +38,10 @@ function test_mingxiao(level) {
                     //                </div>\
                     //            </li>";
                     html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                            <div class=\"fl overf_com color_ff\">\
                                 <a target='_blank' class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap color_ff\">\
                                 <a target='_blank' class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -90,8 +92,10 @@ function test_jingpin() {
                     //        </div>\
                     //    </li>";
                     html += " <li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                            <div class=\"fl overf_com gkdttime\">\
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime\">\
                                 <a target='_blank' class=\"gdkys\"  href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -131,8 +135,10 @@ function beike_jingpin() {
                     //        </div>\
                     //    </li>";
                     html += " <li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                            <div class=\"fl overf_com gkdttime\">\
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime\">\
                                 <a target='_blank' class=\"gdkys\"  href='../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -172,8 +178,10 @@ function taoti_tuijian() {
                     //        </div>\
                     //    </li>";
                     html += " <li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                            <div class=\"fl overf_com gkdttime\">\
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime\">\
                                 <a target='_blank' class=\"gdkys\"  href='../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -205,8 +213,10 @@ function gettest_bucategory(category,controlid,iswhite) {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     if (iswhite == 0) {
                         html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color07c277\">\
+                            <div class=\"fl overf_com color07c277\">\
                                 <a target='_blank' class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap color07c277\">\
                                 <a target='_blank' class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -215,8 +225,10 @@ function gettest_bucategory(category,controlid,iswhite) {
                         </li>";
                     } else if(iswhite==1) {
                         html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                            <div class=\"fl overf_com color_ff\">\
                                 <a target='_blank' class=\"zxzt_btn_07c277 dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap color_ff\">\
                                 <a target='_blank' class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -225,8 +237,10 @@ function gettest_bucategory(category,controlid,iswhite) {
                         </li>";
                     } else if (iswhite == 2) {
                         html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                            <div class=\"fl overf_com color_ff\">\
                                 <a target='_blank' class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap color_ff\">\
                                 <a target='_blank' class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -235,8 +249,10 @@ function gettest_bucategory(category,controlid,iswhite) {
                         </li>";
                     } else if (iswhite == 3) {
                   html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime_8cc407\">\
+                            <div class=\"fl overf_com gkdttime_8cc407\">\
                                 <a target='_blank' class=\"gkdtbtn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime_8cc407\">\
                                 <a target='_blank' class=\"gkdttime_8cc407\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -276,8 +292,10 @@ function News(type, controlid) {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     //html += "<li><div class=\"fl ul1div\"><a target='_blank' class=\"abt abtdk\">" + number + "</a>&nbsp;<a target='_blank'  title='" + temp[i-1].title.replace(" ", "-") + "' href='../News_Detail?id=" + temp[i - 1].id + "' class=\"ul1a\">" + text + "</a></div><div class=\"fl\"><a target='_blank' class=\"ul1a\">[" + time + "]</a></div></li>";
                     html += "<li  class=\"font_size16\">\
-                            <div class=\"fl gkdt_240 overf_com color07c7bc\">\
+                            <div class=\"fl overf_com color07c7bc\">\
                                 <a target='_blank' class=\"zxzt_btn_07c7bc dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl gkdt_240 overf_com color07c7bc\">\
                                 <a target='_blank' class=\"color07c7bc line_hg_25\" href='../News_Detail?id="+temp[i-1].id+"' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
