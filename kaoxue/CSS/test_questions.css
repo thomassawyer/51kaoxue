@@ -194,4 +194,16 @@ a {
     position:absolute;
     height:100%;
     width:100%;
+    background-image:url(../img/item_hover_1.png);
+    display:none;
+}
+.item:hover {
+    cursor:pointer;
+}
+.item:hover .item_hover {
+    display:block;
+}
+
+.mar_rg_22 {
+    margin-right:22px;
 }
