@@ -125,6 +125,7 @@
     <Compile Include="Controllers\Ancient_ArticleController.cs" />
     <Compile Include="Controllers\Ancient_ListController.cs" />
     <Compile Include="Controllers\Beike_CenterController.cs" />
+    <Compile Include="Controllers\Classroom_TeachingController.cs" />
     <Compile Include="Controllers\Contact_usController.cs" />
     <Compile Include="Controllers\Copyright_StatementController.cs" />
     <Compile Include="Controllers\DownloadController.cs" />
@@ -427,6 +428,7 @@
     <Content Include="img\kaojuankb.png" />
     <Content Include="img\kaoshijuan.png" />
     <Content Include="img\kcbaise.png" />
+    <Content Include="img\kemu.png" />
     <Content Include="img\ksall.png" />
     <Content Include="img\kshg.png" />
     <Content Include="img\ksquan.png" />
@@ -643,6 +645,7 @@
     <Content Include="img\zu-1.png" />
     <Content Include="img\zui-25.png" />
     <Content Include="img\zui_2222.jpg" />
+    <Content Include="img\zujuan_banner.png" />
     <Content Include="img\zxlansebj.png" />
     <Content Include="img\zz110.png" />
     <Content Include="img\zz220.png" />
@@ -731,6 +734,7 @@
     <Content Include="Views\Ancient_Article\Index.cshtml" />
     <Content Include="Views\ThroughTrain\Index.cshtml" />
     <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\Classroom_Teaching\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

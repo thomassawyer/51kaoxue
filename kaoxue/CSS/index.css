@@ -2031,3 +2031,14 @@ bottom:10px;
 #nav_rec_2 {
     /*font-weight:bold;*/
 }
+
+.zujuan_banner {
+    width:100%;
+    height:130px;
+}
+.zujuan_banner a {
+    display:block;
+    background:url(../img/zujuan_banner.png) no-repeat center;
+    width:100%;
+    height:100%;
+}

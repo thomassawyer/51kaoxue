@@ -1,0 +1,243 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课堂讲学</title>
+    <link href="/img/html_logo_ico.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" href="css/test_questions.css" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/jquery.paging.min.js"></script>
+</head>
+<body>
+    @Html.Partial("~/Common/top4.ascx")
+
+    <div class="xueduan" style="height:auto;">
+        <div class="xd5 fl">
+            <div class="beijing">
+                <div class="xd5_div1 fl"><img src="img/duanluo.png" class="xdtb5"><a target='_blank' class="xd5a"><b>视 频</b></a></div>
+                <div class="xd5_hover fl xd5_hover_selected" id="level_button3" onclick="a_selected(this, 'xd5_hover_selected'), level_selected(3)">
+                    <a target='_blank'>课堂实录</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="xd52_new fl">
+            <div class="xd521 fl">
+                <a target='_blank' class="stzxxueke"><img src="img/xueke.png" class="xdtb5"><b>年 级</b></a>
+            </div>
+            <div class="xd522 fl" style="height:100%;">
+                <div class="xdl1039 fl" id="subject">
+                    <div class="xd5_hover xdh33 fl xdh33_selected">
+                        <a target="_blank">全部</a>
+                    </div>
+                    <div class="xd5_hover xdh33 fl">
+                        <a target="_blank">高一</a>
+                    </div>
+                    <div class="xd5_hover xdh33 fl">
+                        <a target="_blank">高二</a>
+                    </div>
+                    <div class="xd5_hover xdh33 fl">
+                        <a target="_blank">高三</a>
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- 学段 -->
+        <div class="xd52 fl">
+            <div class="xd521 x521 fl">
+                <a target='_blank' class="stzxxueke"><img src="img/kemu.png" class="xdtb521"><b>科 目</b></a>
+            </div>
+            <div class="xd522 fl">
+                <div class="xdl1039 fl" id="version_first">
+                    <div class="stzx115 fl stzx115_selected stzx85">
+                        <a target="_blank">语文</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">数学</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">英语</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">物理</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">化学</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">生物</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">历史</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">地理</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">政治</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">科学</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">文科综合</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">理科综合</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">通用技术</a>
+                    </div>
+                    <div class="stzx115 fl stzx85">
+                        <a target="_blank">信息技术</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lianxi" style="overflow:hidden;">
+        <div class="lianxice210 fl border_bott_e5" id="directory" style="height:auto;">
+            <div class="lianxice33"><a target="_blank">章节单元</a></div>
+            <div class="lx136 zjie fl" style="height:auto;padding:0px 20px;">
+             <ul>
+                <li><a target="_blank" id="directory1" onclick="anchor(this),tree_title_selected('2001','第一单元')"><b class="ce33b">第一单元</b></a></li>
+                <li><a target="_blank" id="drectory11" onclick="anchor(this),tree_content_li_selected('2005','1 荷塘月色')">1 荷塘月色</a></li>
+                <li><a target="_blank" id="drectory12" onclick="anchor(this),tree_content_li_selected('2006','2 故都的秋')">2 故都的秋</a></li>
+                <li><a target="_blank" id="drectory13" onclick="anchor(this),tree_content_li_selected('2007','3 囚绿记')">3 囚绿记</a></li>
+                <li><a target="_blank" id="drectory14" onclick="anchor(this),tree_content_li_selected('2008','4 单元综合')">4 单元综合</a></li>
+                </ul>                                
+            </div>
+            <div class="lx136 zjie fl" style="height:auto;padding:0px 20px;">
+                <ul>
+                <li><a target="_blank" id="directory2" onclick="anchor(this),tree_title_selected('2002','第二单元')"><b class="ce33b">第二单元</b></a></li>
+                <li><a target="_blank" id="drectory21" onclick="anchor(this),tree_content_li_selected('2009','5 《诗经》两首')">5 《诗经》两首</a></li>
+                <li><a target="_blank" id="drectory22" onclick="anchor(this),tree_content_li_selected('2010','6 离骚')">6 离骚</a></li>
+                <li><a target="_blank" id="drectory23" onclick="anchor(this),tree_content_li_selected('2011','7 诗三首')">7 诗三首</a></li>
+                <li><a target="_blank" id="drectory24" onclick="anchor(this),tree_content_li_selected('2012','8 孔雀东南飞 并序')">8 孔雀东南飞 并序</a></li>
+                <li><a target="_blank" id="drectory25" onclick="anchor(this),tree_content_li_selected('2013','单元综合')">单元综合</a></li>
+                </ul>                                
+            </div>
+            <div class="lx136 zjie fl" style="height:auto;padding:0px 20px;">
+                <ul>
+                <li><a target="_blank" id="directory3" onclick="anchor(this),tree_title_selected('2003','第三单元')"><b class="ce33b">第三单元</b></a></li>
+                <li><a target="_blank" id="drectory31" onclick="anchor(this),tree_content_li_selected('2014','9 兰亭集序')">9 兰亭集序</a></li>
+                <li><a target="_blank" id="drectory32" onclick="anchor(this),tree_content_li_selected('2015','10 赤壁赋')">10 赤壁赋</a></li>
+                <li><a target="_blank" id="drectory33" onclick="anchor(this),tree_content_li_selected('2016','11 游褒禅山记')">11 游褒禅山记</a></li>
+                <li><a target="_blank" id="drectory34" onclick="anchor(this),tree_content_li_selected('2017','12 单元综合')">12 单元综合</a></li>
+                </ul>
+            </div>
+            <div class="lx136 zjie fl" style="height:auto;padding:0px 20px;">
+            <ul style="border:none;">
+                <li><a target="_blank" id="directory4" onclick="anchor(this),tree_title_selected('2004','第四单元')"><b class="ce33b">第四单元</b></a></li>
+                <li><a target="_blank" id="drectory41" onclick="anchor(this),tree_content_li_selected('2018','13 就任北京大学校长之演说')">13 就任北京大学校长之演说</a></li>
+                <li><a target="_blank" id="drectory42" onclick="anchor(this),tree_content_li_selected('2019','14 我有一个梦想')">14 我有一个梦想</a></li>
+                <li><a target="_blank" id="drectory43" onclick="anchor(this),tree_content_li_selected('2020','15 在马克思墓前的讲话')">15 在马克思墓前的讲话</a></li>
+                <li><a target="_blank" id="drectory44" onclick="anchor(this),tree_content_li_selected('2021','16 单元综合')">16 单元综合</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lianxice fl">
+            <div class="lxclan mar_lf_18" id="anchor_id">
+                <b class="bix"><span id="all_data_count">视频（55个）</span></b>
+            </div>
+            <div id="data_list_td" class="mar_lf_18 lianxice">
+                <div class="ma20 item_row">
+                    <div class="item">
+                        <img src="../img/item_title_img.jpg" class="item_img">
+                        <div class="item_title">
+                            <div class="item_title_name">
+                                <p class="item_title_name_o">记梁任公先生的演讲</p>
+                                <p class="item_title_name_s">主讲老师：刘甜甜</p>
+                            </div>
+                            <div class="item_title_time">
+                                <span class="item_title_time_o fl">2016/10/20</span>
+                                <span class="item_title_time_s fr">已播放99次</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                                                                                                                                                                      
+            <div class="pager" id="pages">
+                <a data-page="1" href="#" disabled="disabled" class="disabled">首页</a>
+                <a data-page="1" href="#" disabled="disabled" class="disabled">上一页</a>
+                <a data-page="1" href="#" class="pager_selected">1</a>
+                <a data-page="2" href="#2">2</a>
+                <a data-page="3" href="#3">3</a>
+                <a data-page="4" href="#4">4</a>
+                <a data-page="5" href="#5">5</a>
+                <a data-page="6" href="#6">6</a>
+                <a data-page="2" href="#">下一页</a>
+                <a data-page="171" href="#">末页</a>
+            </div> <!-- 跳转部分 -->
+    </div>
+    </div>
+    <script>
+        var shuzhi1 = $(".ysp1").html();
+        var zs1 = Number(shuzhi1);
+
+        var shuzhi2 = $(".ysp2").html();
+        var zs2 = Number(shuzhi2);
+
+        var shuzhi3 = $(".ysp3").html();
+        var zs3 = Number(shuzhi3);
+
+        var shuzhi4 = $(".ysp4").html();
+        var zs4 = Number(shuzhi4);
+
+        var shuzhi5 = $(".ysp5").html();
+        var zs5 = Number(shuzhi5);
+
+        $(".xyy1").click(function () {
+            var jd1 = zs1 += 1;
+            var jd2 = zs2 += 1;
+            var jd3 = zs3 += 1;
+            var jd4 = zs4 += 1;
+            var jd5 = zs5 += 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+        });
+
+        $(".syy1").click(function () {
+            var jd1 = zs1 - 1;
+            var jd2 = zs2 - 1;
+            var jd3 = zs3 - 1;
+            var jd4 = zs4 - 1;
+            var jd5 = zs5 - 1;
+            $(".ysp1").html(jd1);
+            $(".ysp2").html(jd2);
+            $(".ysp3").html(jd3);
+            $(".ysp4").html(jd4);
+            $(".ysp5").html(jd5);
+
+
+        });
+        //页面分页加载
+
+        function go() {
+            var zansan = $("#lll").val()
+            var goyemian = Number(zansan);
+            $(".ysp1").html(goyemian);
+            $(".ysp2").html(goyemian + 1);
+            $(".ysp3").html(goyemian + 2);
+            $(".ysp4").html(goyemian + 3);
+            $(".ysp5").html(goyemian + 4);
+        }
+        //go改变页码
+    </script>
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>
