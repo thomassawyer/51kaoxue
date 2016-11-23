@@ -45,7 +45,7 @@
         <div class="fl xbs">
             <img src="../../img/boshimao.png" class="fl" /><h3 class="fl h3gaokao"><a target='_blank'  href="../Test_Center">高考试题</a></h3>
         </div>
-        <div class="fl xbss">
+        <div class="fr xbss">
             <img src="../../img/shutubiao1.png" class="fl" /><h3 class="fl h3gaokao"><a target='_blank'  href="../News">天天新闻</a></h3>
         </div>
     </div>

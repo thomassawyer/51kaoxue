@@ -675,6 +675,7 @@
     <Content Include="js\jquery.paging.min.js" />
     <Content Include="js\js.js" />
     <Content Include="js\tabifier.js" />
+    <Content Include="Scripts\css3.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />

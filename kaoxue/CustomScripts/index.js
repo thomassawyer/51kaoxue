@@ -293,7 +293,8 @@ function News(type, controlid) {
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += "<li>\
                             <div  class=\"fl gkdt_270\">\
-                                <a target='_blank' class=\"fl gkdtbtn size_com\">" + number + "</a>&nbsp;<a target='_blank'  title='" + temp[i].title.replace(" ", "-") + "'  class=\"gdkys flow_nowrap fl\" href='../News_Detail?id=" + temp[i].id + "'>[新闻] " + text + "</a>\
+                                <a target='_blank' class=\"fl gkdtbtn size_com\">" + number + "</a>&nbsp;</div>\
+                            <div class=\"gdkys flow_nowrap fl\"><a target='_blank'  title='" + temp[i].title.replace(" ", "-") + "'  class=\"gdkys\" href='../News_Detail?id=" + temp[i].id + "'>[新闻] " + text + "</a>\
                     </div>\
                     <div class=\" fr\">\
                                 <a target='_blank'  class=\"gkdttime fr\">["+ time + "]</a>\
@@ -433,10 +434,10 @@ function GetSchool() {
                 <div  class=\"ztk_div_div \">\
                     <div class=\"xian1 fl\"></div>\
                     <div class=\"quanquan fl\">\
-                        <div class=\"qq1 fl qdankong\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb001.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">备课中心</a></div>\
-                        <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb002.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">每日专题</a></div>\
-                        <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb003.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">历年考题</a></div>\
-                        <div class=\"qq1 fl qqq1\" style='background: rgba(0, 0, 0, 0) url(\"../img/tbkb004.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">名校测题</a></div>\
+                        <div class=\"qq1 fl qdankong\" style='background:url(\"../img/tbkb001.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">备课中心</a></div>\
+                        <div class=\"qq1 fl qqq1\" style='background:url(\"../img/tbkb002.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">每日专题</a></div>\
+                        <div class=\"qq1 fl qqq1\" style='background: url(\"../img/tbkb003.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">历年考题</a></div>\
+                        <div class=\"qq1 fl qqq1\" style='background: url(\"../img/tbkb004.png\") repeat scroll 0 0;'><a target='_blank'  class=\"fff\">名校测题</a></div>\
                     </div>\
                     <div class=\"xian2 fl\" style=\"position:relative;\"><a target='_blank' href='../school' class=\"genduo lantb_set\"><img src=\"../../img/lantb.png\" alt=\"\"></a></div>\
                 </div>";

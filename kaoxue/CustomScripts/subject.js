@@ -85,8 +85,10 @@ function zhuanti_new_recommend_senior() {
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += " <li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                            <div class=\"fl overf_com gkdttime\">\
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime\">\
                                 <a target='_blank' class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -118,8 +120,10 @@ function zhuanti_new_recommend_junior() {
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
                     html += " <li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                            <div class=\"fl overf_com gkdttime\">\
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime\">\
                                 <a target='_blank' class=\"gdkys\"  href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -149,8 +153,10 @@ function test_new_senior(level) {
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                            <div class=\"fl overf_com gkdttime\">\
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime\">\
                                 <a target='_blank' class=\"gdkys\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -179,8 +185,10 @@ function test_new_junior(level) {
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                            <div class=\"fl overf_com gkdttime\">\
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime\">\
                                 <a target='_blank' class=\"gdkys\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>[试题试卷] " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -209,8 +217,10 @@ function beikao_new(wheel) {
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                            <div class=\"fl overf_com gkdttime\">\
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime\">\
                                 <a target='_blank' class=\"gdkys\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -239,8 +249,10 @@ function moni_junior() {
                 var number_str = (i + 1) + "";
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com gkdttime\">\
+                            <div class=\"fl overf_com gkdttime\">\
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap gkdttime\">\
                                 <a target='_blank' class=\"gdkys\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -385,8 +397,10 @@ function tongbu_senior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 //html += "<li><div class=\"zxtlianjiediv fl overf_com width_315\"><a target='_blank' class=\"zxzt_btn dot_data_com fl\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a target='_blank'  href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div class=\"fr zuixinzt1\"><a target='_blank' >[" + time + "]</a></div></li>";
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                            <div class=\"fl overf_com color_ff\">\
                                 <a target='_blank' class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap color_ff\">\
                                 <a target='_blank' class=\"color_ff\" href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -416,8 +430,10 @@ function tongbu_junior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 //html += "<li><div class=\"zxtlianjiediv fl\"  style='width:258px'><a target='_blank' class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a target='_blank' href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a target='_blank'>[" + time + "]</a></div></li>";
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                            <div class=\"fl overf_com color_ff\">\
                                 <a target='_blank' class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap color_ff\">\
                                 <a target='_blank' class=\"color_ff\" href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -447,8 +463,10 @@ function jiaoan_senior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 //html += "<li><div class=\"zxtlianjiediv fl\"><a target='_blank' class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a target='_blank' href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a target='_blank' >[" + time + "]</a></div></li>";
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                            <div class=\"fl overf_com color_ff\">\
                                 <a target='_blank' class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap color_ff\">\
                                 <a target='_blank' class=\"color_ff\" href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -478,8 +496,10 @@ function jiaoan_junior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 //html += "<li><div class=\"zxtlianjiediv fl\"><a target='_blank' class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a target='_blank' href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a target='_blank'>[" + time + "]</a></div></li>";
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                            <div class=\"fl overf_com color_ff\">\
                                 <a target='_blank' class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap color_ff\">\
                                 <a target='_blank' class=\"color_ff\" href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -509,8 +529,10 @@ function xuean_senior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 //html += "<li><div class=\"zxtlianjiediv fl\"><a target='_blank' class=\"zxzt_btn\"><span style=\"color:#8cc407\">" + number + "</span></a>&nbsp;<a target='_blank' href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a target='_blank' >[" + time + "]</a></div></li>";
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                            <div class=\"fl overf_com color_ff\">\
                                 <a target='_blank' class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                           <div class=\"fl flow_nowrap color_ff\">\
                                 <a target='_blank' class=\"color_ff\" href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
@@ -541,8 +563,10 @@ function xuean_junior(level) {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 //html += "<li><div class=\"zxtlianjiediv fl\"><a target='_blank' class=\"zxzt_btn\"><span style=\"color:#808ffb;\">" + number + "</span></a>&nbsp;<a target='_blank' href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a></div><div style='margin-left: 74px;' class=\"fl zuixinzt1\"><a target='_blank'>[" + time + "]</a></div></li>";
                 html += "<li>\
-                            <div class=\"fl gkdt_2701 overf_com color_ff\">\
+                            <div class=\"fl overf_com color_ff\">\
                                 <a target='_blank' class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
+                            </div>\
+                            <div class=\"fl flow_nowrap color_ff\">\
                                 <a target='_blank' class=\"color_ff\" href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>[试题试卷]  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
