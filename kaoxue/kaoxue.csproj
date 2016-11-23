@@ -733,8 +733,8 @@
     <Content Include="Views\Ancient_List\Index.cshtml" />
     <Content Include="Views\Ancient_Article\Index.cshtml" />
     <Content Include="Views\ThroughTrain\Index.cshtml" />
-    <Content Include="Views\Video\Index.cshtml" />
     <Content Include="Views\Classroom_Teaching\Index.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -152,6 +152,7 @@ a {
     height:100%;
     width:305px;
     border:1px dashed #b5b5b5;
+    position:relative;
 }
 .item_img {
     height: 170px;
@@ -187,4 +188,10 @@ a {
     width:257px;
     line-height:40px;
     margin:auto;
+}
+
+.item_hover {
+    position:absolute;
+    height:100%;
+    width:100%;
 }

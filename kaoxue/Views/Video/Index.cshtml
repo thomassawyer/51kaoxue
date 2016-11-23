@@ -1,0 +1,574 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频汇总页</title>
+    <link href="/img/html_logo_ico.ico" rel="shortcut icon" /> 
+
+    @*<link rel="stylesheet" href="css/example.css" />
+    <link rel="stylesheet" href="css/pygments.css" />
+    <link rel="stylesheet" href="css/slideshow.css" />*@
+
+    <link rel="stylesheet" href="css/index.css">
+    <link href="~/CSS/default.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da1.css">
+    <link rel="stylesheet" type="text/css" href="css/video.css">
+    <link href="~/engine1/style.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/slideshow.js"></script>
+</head>
+<body>
+    @Html.Partial("~/Common/top4.ascx")
+
+    <div class="jiaodain">
+    </div>
+    <div class="content">
+        <div class="classroom_teaching">
+            <div class="c_img_title fl">
+                <div class="c_img_title_hover">
+                </div>
+            </div>
+            <div class="c_content fr">
+                <div class="c_nav">
+                    <ul>
+                        <li class="fl c_nav_selected">语文</li>
+                        <li class="fl">数学</li>
+                        <li class="fl">英语</li>
+                        <li class="fl">物理</li>
+                        <li class="fl">化学</li>
+                        <li class="fl">生物</li>
+                        <li class="fl">历史</li>
+                        <li class="fl">地理</li>
+                        <li class="fl">政治</li>
+                    </ul>
+                </div>
+                <div class="c_video_all">
+                    <div class="slideshow">
+                        @*<div class="lf_arrow"></div>*@
+                        <ul class="mar_lf_30 ma20 overf_hid">
+                            <li class="fl mar_rg_17">
+                                <div class="item">
+                                    <div class="item_hover"></div>
+                                    <div class="item_title">
+                                        <img src="../img/item_title_img.jpg" class="item_title_img">
+                                        <div class="video_f">已播放99次</div>
+                                    </div>
+                                    <div class="item_name">
+                                        <p class="item_o_title">结尾（思路1）-三部作文</p>
+                                        <p class="item_s_title">烛之武退秦师</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17">
+                                <div class="item">
+                                    <div class="item_hover"></div>
+                                    <div class="item_title">
+                                        <img src="../img/item_title_img.jpg" class="item_title_img">
+                                        <div class="video_f">已播放99次</div>
+                                    </div>
+                                    <div class="item_name">
+                                        <p class="item_o_title">结尾（思路1）-三部作文</p>
+                                        <p class="item_s_title">烛之武退秦师</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl">
+                                <div class="item">
+                                    <div class="item_hover"></div>
+                                    <div class="item_title">
+                                        <img src="../img/item_title_img.jpg" class="item_title_img">
+                                        <div class="video_f">已播放99次</div>
+                                    </div>
+                                    <div class="item_name">
+                                        <p class="item_o_title">结尾（思路1）-三部作文</p>
+                                        <p class="item_s_title">烛之武退秦师</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="mar_lf_30 ma20 overf_hid">
+                            <li class="fl mar_rg_17">
+                                <div class="item">
+                                    <div class="item_hover"></div>
+                                    <div class="item_title">
+                                        <img src="../img/item_title_img.jpg" class="item_title_img">
+                                        <div class="video_f">已播放99次</div>
+                                    </div>
+                                    <div class="item_name">
+                                        <p class="item_o_title">结尾（思路1）-三部作文</p>
+                                        <p class="item_s_title">烛之武退秦师</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17">
+                                <div class="item">
+                                    <div class="item_hover"></div>
+                                    <div class="item_title">
+                                        <img src="../img/item_title_img.jpg" class="item_title_img">
+                                        <div class="video_f">已播放99次</div>
+                                    </div>
+                                    <div class="item_name">
+                                        <p class="item_o_title">结尾（思路1）-三部作文</p>
+                                        <p class="item_s_title">烛之武退秦师</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl">
+                                <div class="item">
+                                    <div class="item_hover"></div>
+                                    <div class="item_title">
+                                        <img src="../img/item_title_img.jpg" class="item_title_img">
+                                        <div class="video_f">已播放99次</div>
+                                    </div>
+                                    <div class="item_name">
+                                        <p class="item_o_title">结尾（思路1）-三部作文</p>
+                                        <p class="item_s_title">烛之武退秦师</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        @*<div class="rg_arrow"></div>*@
+                    </div>
+                </div>
+            </div>
+        </div>@*课堂讲学*@
+        <div class="psycho_decompression mar_top30">
+            <div class="p_img_title fl">
+                <div class="p_img_title_hover">
+                </div>
+            </div>
+            <div class="p_content fr">
+                <div class="p_video_all">
+                    <div class="slideshow" id="p_slideshow" data-visible="2" data-pagination="false">
+                        @*<div class="lf_arrow fl"></div>*@
+                        <ul class="ma20 overf_hid fl carousel">
+                            <li class="fl mar_rg_17 slide">
+                                <div class="p_item">
+                                    <div class="p_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title">第1讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/p_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl slide mar_rg_17">
+                                <div class="p_item">
+                                    <div class="p_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title">第2讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/p_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl slide mar_rg_17">
+                                <div class="p_item">
+                                    <div class="p_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title">第3讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/p_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl slide mar_rg_17">
+                                <div class="p_item">
+                                    <div class="p_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title">第4讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/p_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl slide">
+                                <div class="p_item">
+                                    <div class="p_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title">第5讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/p_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        @*<div class="rg_arrow fl"></div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*心里解压*@
+        <div class="test_question_parsing mar_top30">
+            <div class="t_img_title fl">
+                <div class="t_img_title_hover">
+                </div>
+            </div>
+            <div class="c_content fr">
+                <div class="c_nav t_nav">
+                    <ul>
+                        <li class="fl t_nav_selected">语文</li>
+                        <li class="fl">数学</li>
+                        <li class="fl">英语</li>
+                        <li class="fl">物理</li>
+                        <li class="fl">化学</li>
+                        <li class="fl">生物</li>
+                        <li class="fl">历史</li>
+                        <li class="fl">地理</li>
+                        <li class="fl">政治</li>
+                    </ul>
+                </div>
+                <div class="c_video_all">
+                    <div class="slideshow">
+                        @*<div class="lf_arrow"></div>*@
+                        <ul class="mar_lf_30 mar_top_27 overf_hid">
+                            <li class="fl mar_rg_17">
+                                <div class="t_item">
+                                    <div class="t_item_hover"></div>
+                                    <div class="t_item_title">
+                                        <div class="t_video_f">已播放99次</div>
+                                        <img src="../img/t_item_title_img.png" class="item_title_img">
+                                    </div>
+                                    <div class="t_item_name">
+                                        <p class="t_item_o_title">第1讲 一线教师微课视频</p>
+                                        <p class="t_item_s_title">突破如何区分双宾语与复合</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17">
+                                <div class="t_item">
+                                    <div class="t_item_hover"></div>
+                                    <div class="t_item_title">
+                                        <div class="t_video_f">已播放99次</div>
+                                        <img src="../img/t_item_title_img.png" class="item_title_img">
+                                    </div>
+                                    <div class="t_item_name">
+                                        <p class="t_item_o_title">第1讲 一线教师微课视频</p>
+                                        <p class="t_item_s_title">突破如何区分双宾语与复合</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17">
+                                <div class="t_item">
+                                    <div class="t_item_hover"></div>
+                                    <div class="t_item_title">
+                                        <div class="t_video_f">已播放99次</div>
+                                        <img src="../img/t_item_title_img.png" class="item_title_img">
+                                    </div>
+                                    <div class="t_item_name">
+                                        <p class="t_item_o_title">第1讲 一线教师微课视频</p>
+                                        <p class="t_item_s_title">突破如何区分双宾语与复合</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="mar_lf_30 mar_top_27 overf_hid">
+                            <li class="fl mar_rg_17">
+                                <div class="t_item">
+                                    <div class="t_item_hover"></div>
+                                    <div class="t_item_title">
+                                        <div class="t_video_f">已播放99次</div>
+                                        <img src="../img/t_item_title_img.png" class="item_title_img">
+                                    </div>
+                                    <div class="t_item_name">
+                                        <p class="t_item_o_title">第1讲 一线教师微课视频</p>
+                                        <p class="t_item_s_title">突破如何区分双宾语与复合</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17">
+                                <div class="t_item">
+                                    <div class="t_item_hover"></div>
+                                    <div class="t_item_title">
+                                        <div class="t_video_f">已播放99次</div>
+                                        <img src="../img/t_item_title_img.png" class="item_title_img">
+                                    </div>
+                                    <div class="t_item_name">
+                                        <p class="t_item_o_title">第1讲 一线教师微课视频</p>
+                                        <p class="t_item_s_title">突破如何区分双宾语与复合</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17">
+                                <div class="t_item">
+                                    <div class="t_item_hover"></div>
+                                    <div class="t_item_title">
+                                        <div class="t_video_f">已播放99次</div>
+                                        <img src="../img/t_item_title_img.png" class="item_title_img">
+                                    </div>
+                                    <div class="t_item_name">
+                                        <p class="t_item_o_title">第1讲 一线教师微课视频</p>
+                                        <p class="t_item_s_title">突破如何区分双宾语与复合</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        @*<div class="rg_arrow"></div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*试题解析*@
+        <div class="university_entrance_bef_title mar_top30">
+        </div>@*高考研讨会大标题*@
+        <div class="classroom_teaching mar_top30">
+            <div class="c_img_title  u_img_title fl">
+                <div class="u_img_title_hover">
+                </div>
+            </div>
+            <div class="c_content fr">
+                <div class="c_nav u_nav">
+                    <ul>
+                        <li class="fl u_nav_selected">语文</li>
+                        <li class="fl">数学</li>
+                        <li class="fl">英语</li>
+                        <li class="fl">物理</li>
+                        <li class="fl">化学</li>
+                        <li class="fl">生物</li>
+                        <li class="fl">历史</li>
+                        <li class="fl">地理</li>
+                        <li class="fl">政治</li>
+                    </ul>
+                </div>
+        <div class="c_video_all">
+            <div class="slideshow">
+                @*<div class="lf_arrow"></div>*@
+                <ul class="mar_lf_30 ma20 overf_hid">
+                    <li class="fl mar_rg_17">
+                        <div class="item">
+                            <div class="item_hover u_item_hover"></div>
+                            <div class="item_title">
+                                <img src="../img/u_item_title_img.png" class="item_title_img">
+                                <div class="video_f">已播放99次</div>
+                            </div>
+                            <div class="item_name">
+                                <p class="item_o_title">2017年高考备考策略研讨会</p>
+                                <p class="item_s_title u_item_s_title">研讨会邀请函</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl mar_rg_17">
+                        <div class="item">
+                            <div class="item_hover u_item_hover"></div>
+                            <div class="item_title">
+                                <img src="../img/u_item_title_img.png" class="item_title_img">
+                                <div class="video_f">已播放99次</div>
+                            </div>
+                            <div class="item_name">
+                                <p class="item_o_title">2017年高考备考策略研讨会</p>
+                                <p class="item_s_title u_item_s_title">研讨会邀请函</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl mar_rg_17">
+                        <div class="item">
+                            <div class="item_hover u_item_hover"></div>
+                            <div class="item_title">
+                                <img src="../img/u_item_title_img.png" class="item_title_img">
+                                <div class="video_f">已播放99次</div>
+                            </div>
+                            <div class="item_name">
+                                <p class="item_o_title">2017年高考备考策略研讨会</p>
+                                <p class="item_s_title u_item_s_title">研讨会邀请函</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="mar_lf_30 ma20 overf_hid">
+                    <li class="fl mar_rg_17">
+                        <div class="item">
+                            <div class="item_hover u_item_hover"></div>
+                            <div class="item_title">
+                                <img src="../img/u_item_title_img.png" class="item_title_img">
+                                <div class="video_f">已播放99次</div>
+                            </div>
+                            <div class="item_name">
+                                <p class="item_o_title">2017年高考备考策略研讨会</p>
+                                <p class="item_s_title u_item_s_title">研讨会邀请函</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl mar_rg_17">
+                        <div class="item">
+                            <div class="item_hover u_item_hover"></div>
+                            <div class="item_title">
+                                <img src="../img/u_item_title_img.png" class="item_title_img">
+                                <div class="video_f">已播放99次</div>
+                            </div>
+                            <div class="item_name">
+                                <p class="item_o_title">2017年高考备考策略研讨会</p>
+                                <p class="item_s_title u_item_s_title">研讨会邀请函</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl mar_rg_17">
+                        <div class="item">
+                            <div class="item_hover u_item_hover"></div>
+                            <div class="item_title">
+                                <img src="../img/u_item_title_img.png" class="item_title_img">
+                                <div class="video_f">已播放99次</div>
+                            </div>
+                            <div class="item_name">
+                                <p class="item_o_title">2017年高考备考策略研讨会</p>
+                                <p class="item_s_title u_item_s_title">研讨会邀请函</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                @*<div class="rg_arrow"></div>*@
+            </div>
+        </div>
+    </div>
+</div>@*高考研讨会*@
+        <div class="psycho_decompression mar_top30 exam_prepare mar_bott_30">
+            <div class="p_img_title e_img_title fl">
+                <div class="e_img_title_hover">
+                </div>
+            </div>
+            <div class="p_content fr">
+                <div class="p_video_all">
+                    <div class="slideshow" id="e_slideshow" data-visible="2" data-pagination="false">
+                        @*<div class="lf_arrow fl"></div>*@
+                        <ul class="ma20 overf_hid fl carousel">
+                            <li class="fl mar_rg_17 slide">
+                                <div class="p_item">
+                                    <div class="p_item_hover e_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title e_item_o_title">第1讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/e_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17 slide">
+                                <div class="p_item">
+                                    <div class="p_item_hover e_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title e_item_o_title">第2讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/e_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17 slide">
+                                <div class="p_item">
+                                    <div class="p_item_hover e_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title e_item_o_title">第3讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/e_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17 slide">
+                                <div class="p_item">
+                                    <div class="p_item_hover e_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title e_item_o_title">第4讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/e_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl mar_rg_17 slide">
+                                <div class="p_item">
+                                    <div class="p_item_hover e_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title e_item_o_title">第5讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/e_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl slide">
+                                <div class="p_item">
+                                    <div class="p_item_hover e_item_hover"></div>
+                                    <div class="p_item_name">
+                                        <p class="p_item_o_title e_item_o_title">第6讲 心态就是赢了未来</p>
+                                        <p class="p_item_s_title">越是临近高考，心态调整越关键</p>
+                                    </div>
+                                    <div class="p_item_title">
+                                        <img src="../img/e_item_title_img.png" class="p_item_title_img">
+                                        <div class="p_video_f">已播放99次</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        @*<div class="rg_arrow fl"></div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*高考备战*@
+    </div>
+        @Html.Partial("~/Common/bottom.ascx")
+    <script>
+        $(function () {
+            // Create slideshow instances
+            var $s = $('#p_slideshow').slides({
+                auto: 2500,                 // Autoplay timeout in milliseconds. Set to false for no autoplay.
+                autostop: false,             // Stop autoplay when user manually changes slide.
+                hoverPause: true          // Pause autoplay on hover.
+            });
+
+            // Access an instance API
+            var api = $s.eq(0).data('slides');
+
+            // Transition select
+            $('select[name=transition]').on('change', function () {
+                api.redraw(this.value);
+            });
+
+            // Create slideshow instances
+            var $s1 = $('#e_slideshow').slides({
+                auto: 2500,                 // Autoplay timeout in milliseconds. Set to false for no autoplay.
+                autostop: false,             // Stop autoplay when user manually changes slide.
+                hoverPause: true          // Pause autoplay on hover.
+            });
+
+            // Access an instance API
+            var api1 = $s1.eq(0).data('slides');
+
+            // Transition select
+            $('select[name=transition]').on('change', function () {
+                api1.redraw(this.value);
+            });
+            
+        });
+    </script>
+</body>
+</html>
