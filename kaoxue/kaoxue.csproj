@@ -501,6 +501,8 @@
     <Content Include="img\mxzy1.png" />
     <Content Include="img\newspaper.png" />
     <Content Include="img\newspaper_1.png" />
+    <Content Include="img\news_selected_1.png" />
+    <Content Include="img\news_span_selected.png" />
     <Content Include="img\nianfen.png" />
     <Content Include="img\no_data_bg.jpg" />
     <Content Include="img\no_data_bg_22.png" />

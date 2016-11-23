@@ -297,9 +297,8 @@
 
 .bkyd30 span {
     float: left;
-    width: 105px;
+    width: 120px;
     height: 30px;
-    border-radius: 15px;
     text-align: center;
     line-height: 30px;
     font-size: 24px;
@@ -307,13 +306,12 @@
     font-family:'Microsoft YaHei';
     margin-right: 20px;
     cursor: pointer;
-    padding-left:5px;
-    padding-right:5px;
 }
 
 
 .news_span_selected {
-    background-color: #07c7bc;
+    /*background-color: #07c7bc;*/
+    background-image:url(../img/news_span_selected.png);
     color: white;
 }
 

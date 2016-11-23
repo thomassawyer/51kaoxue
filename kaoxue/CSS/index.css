@@ -1867,6 +1867,13 @@ bottom:10px;
     height: 36px !important;
     /*line-height: 42px;*/
 }
+.yansemstj_1 {
+    border-bottom: 1px solid #07c7bc;
+    position:relative;
+}
+.yansemstjcolor_1 {
+    color:#07c7bc;
+}
 .hei_99 {
     height: 99px !important;
 }
@@ -1914,7 +1921,8 @@ bottom:10px;
 }
 .grade_gengdu_sc {
     position:absolute;
-      top: 3700px;
+      /*top: 3700px;*/
+      bottom:10px;
 }
 .ma20 {
     margin-top:20px;

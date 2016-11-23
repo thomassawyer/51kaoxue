@@ -200,6 +200,7 @@
 .ywfyxi2 > a {
     line-height: 51px;
     padding-left: 60px;
+    height:100%;
 }
 
 .imgywfy {
@@ -325,9 +326,9 @@
 
     .beijinbai span {
         float: left;
-        width: 105px;
+        width: 120px;
         height: 30px;
-        border-radius: 15px;
+
         text-align: center;
         line-height: 30px;
         font-size: 24px;
@@ -338,8 +339,7 @@
         height: 40px;
         line-height: 40px;
         color: white;
-        padding-left:5px;
-        padding-right:5px;
+
     }
 
     .mar_bott_19 {
@@ -384,7 +384,7 @@
     line-height: 40px;
 }
 .news_selected_1 {
-    background-color:#fff;
+    background-image:url(../img/news_selected_1.png);
     color:#07c7bc !important;
 }
 .news_normal_1 {
