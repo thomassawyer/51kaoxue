@@ -50,7 +50,7 @@ function GetList() {
                 for (var i = 1; i <= temp.length; i++) {
                     if (temp[i-1].updatetime != null && temp[i-1].updatetime != undefined && temp[i-1].updatetime != "") {
                         date = new Date(temp[i - 1].updatetime);
-                        time = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+                        time = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
                     }
                     var text = temp[i - 1].name.length > 100 ? temp[i - 1].name.substr(0, 100) : temp[i - 1].name;
                     //href = '../SpecialSubject?id=" + temp[i - 1].id + "&name=" + temp[i - 1].name + "'
