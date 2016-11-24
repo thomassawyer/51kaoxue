@@ -380,7 +380,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public int GetBeikeCountByDay()
         {
-            string sql = string.Format("select count(1) from [select_beike_all] where DATEDIFF(DAY,uploadtime,GETDATE())<=1");
+            string sql = string.Format("select  COUNT(1) from [select_beike_all] where convert(varchar(10),[select_beike_all].uploadtime,120)=convert(varchar(10),getdate(),120)");
             return Convert.ToInt32(DbHelperSQL.GetSingle(sql));
         }
         /// <summary>
