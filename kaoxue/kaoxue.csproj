@@ -366,6 +366,7 @@
     <Content Include="img\e_item_title_img.png" />
     <Content Include="img\fen_100_1.png" />
     <Content Include="img\find_logo.png" />
+    <Content Include="img\find_year.png" />
     <Content Include="img\fj.jpg" />
     <Content Include="img\fj.png" />
     <Content Include="img\fonz1.jpg" />
@@ -624,6 +625,7 @@
     <Content Include="img\xztx.png" />
     <Content Include="img\xzuizz.png" />
     <Content Include="img\xzxueke.png" />
+    <Content Include="img\years.png" />
     <Content Include="img\year_title_b.png" />
     <Content Include="img\yellowtb.jpg" />
     <Content Include="img\yellowtb.png" />

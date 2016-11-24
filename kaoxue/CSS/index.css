@@ -472,12 +472,18 @@ a {
     left:14px;
     top:10px;
 }
+.ztsousuo_div2 form {
+
+}
 #years {
-    width:155px;
+    width:150px;
     height:20px;
+    border:none;
     /*border:1px solid #f0f0f0;*/
     margin:8px;
-    /*padding-left:26px;*/
+    background-image:url(../img/years.png);
+    padding-left:10px;
+    line-height:20px;
     /*border-radius:10px;*/
 }
 /*#years option {
@@ -485,16 +491,18 @@ a {
 }*/
 .find_year {
     position:absolute;
-    background-color: #ff4a52; 
-    padding-left:8px;
+    /*background-color: #ff4a52;*/ 
+    /*padding-left:8px;*/
+    background-image:url(../img/find_year.png);
     color: white; 
     cursor: pointer;
-    width:46px;
-    line-height:20px;
+    width:54px;
+    height:20px;
+    /*line-height:20px;*/
     /*text-align:center;*/
     right:7px;
     top:8px;
-    border-radius:10px;
+    /*border-radius:10px;*/
     letter-spacing:4px;
 }
 
