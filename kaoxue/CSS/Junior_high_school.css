@@ -4,6 +4,8 @@
 
 .ce_z, .sfhv, .h_ce {
     height: 37px;
+    position:relative;
+    z-index:999;
 }
 
 .dksfhv {

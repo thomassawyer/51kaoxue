@@ -475,11 +475,14 @@ a {
 #years {
     width:155px;
     height:20px;
-    border:1px solid #f0f0f0;
+    /*border:1px solid #f0f0f0;*/
     margin:8px;
-    padding-left:26px;
-    border-radius:10px;
+    /*padding-left:26px;*/
+    /*border-radius:10px;*/
 }
+/*#years option {
+    padding-left:26px;
+}*/
 .find_year {
     position:absolute;
     background-color: #ff4a52; 

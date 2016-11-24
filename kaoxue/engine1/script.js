@@ -18,26 +18,38 @@ jQuery.extend(jQuery.easing,{easeInOutQuart:function(e,f,a,h,g){if((f/=g/2)<1){r
 // Obfuscated by Javascript Obfuscator
 // http://javascript-source.com
 //***********************************************
-jQuery("#wowslider-container1").wowSlider({
-    effect: "turn",
-    prev: "",
-    next: "",
-    duration: 20 * 100,
-    delay: 20 * 100,
-    width: 640, height: 360,
+jQuery("#wowslider-container1_new").vmcSlider({
+    width: 717,
+    height: 489,
+    gridCol: 10,
+    gridRow: 5,
+    gridVertical: 20,
+    gridHorizontal: 10,
     autoPlay: true,
-    autoPlayVideo: false,
-    playPause: true,
-    stopOnHover: false,
-    loop: false,
-    bullets: 0,
-    caption: true,
-    captionEffect: "parallax",
-    controls: true,
-    controlsThumb: false,
-    responsive: 1,
-    fullScreen: false,
-    gestures: 2,
-    onBeforeStep: 0,
-    images: 0
+    ascending: true,
+    effects: [
+        'fade'
+    ],
+    ie6Tidy: false,
+    random: false,
+    duration: 2000,
+    speed: 900
+});
+
+jQuery("#wowslider-container1_new_1").vmcSlider({
+    width: 715,
+    height: 442,
+    gridCol: 10,
+    gridRow: 5,
+    gridVertical: 20,
+    gridHorizontal: 10,
+    autoPlay: true,
+    ascending: true,
+    effects: [
+        'fade'
+    ],
+    ie6Tidy: false,
+    random: false,
+    duration: 2000,
+    speed: 900
 });
