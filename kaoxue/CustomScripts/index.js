@@ -323,7 +323,11 @@ function Banner() {
             //$("#banner_buttons").html(html1);
             jQuery.getScript("../engine1/vmc.slider.full.js", function () {
                 jQuery.getScript("../engine1/script.js", function () {
-
+                    //修复ie7问题
+                    setTimeout(function () {
+                        //$(".vui-prev").click();
+                        $(".vui-next").click();
+                    },100);
                 });
             });
 
@@ -646,7 +650,7 @@ $(document).ready(function () {
     GetTeachers();
     Today();
     lxfEndtime();
-    GetYear();
+    GetYear
 });
 
 
