@@ -526,11 +526,11 @@
 	/*border:none;
 	border-radius:6px;
 	background:#FFF;*/
-    background-image:url(../img/vui-button.png);
+    background-image:url(../img/vui-button-cur.png);
 	cursor:pointer;
 }
 .vui-slider .vui-button-cur {
-    background-image:url(../img/vui-button-cur.png);
+    background-image:url(../img/vui-button-cur_1.png);
 }
 .vui-slider .vui-transfer {
 	display:none;

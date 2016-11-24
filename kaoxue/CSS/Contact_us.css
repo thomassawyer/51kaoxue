@@ -129,6 +129,8 @@ line-height: 35px;
     }
 .display_inline {
     display:inline-block;
+     *display:inline;
+    *zoom:1;
 }
 
 .banquan_1 {

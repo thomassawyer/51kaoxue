@@ -591,6 +591,7 @@
     <Content Include="img\u_item_title_img.png" />
     <Content Include="img\video_title_bg.jpg" />
     <Content Include="img\vui-button-cur.png" />
+    <Content Include="img\vui-button-cur_1.png" />
     <Content Include="img\vui-button.png" />
     <Content Include="img\waiting_bg.gif" />
     <Content Include="img\waiting_bg.jpg" />
