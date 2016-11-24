@@ -348,6 +348,7 @@ function anchor(obj) {
 }
 
 $(document).ready(function () {
+    StartReading("data_list_td");
     typename = GetQueryString("typename");
     type = GetQueryString("type");
     if (typename != "" && typename != undefined && typename != null) {
