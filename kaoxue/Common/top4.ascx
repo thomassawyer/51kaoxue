@@ -5,7 +5,13 @@
     }
 </style>
 <script src="../CustomScripts/top.js"></script>
-
+    <div class="fixed_all">
+        <div>
+            <div class="fixed_weixin"></div>
+            <div class="fixed_return"></div>
+        </div>
+        <div class="fixed_weixin_b"></div>
+    </div>
     <div class="top_head">
         <div class="top_head_div font_size12">
             <div class="fl_head">

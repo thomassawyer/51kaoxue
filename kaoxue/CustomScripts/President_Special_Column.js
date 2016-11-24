@@ -45,8 +45,8 @@ function President_Special_Columns() {
                     //html += "<div class=\"middle_content_bottom_left_cotent_column\" onclick=\"GetNewsDetail("+temp[i].id+")\">\
                     //            "+temp[i].title+"\
                     //        </div>";
-                    var text = temp[i].title.length > 11 ? temp[i].title.substr(0, 11) + "..." : temp[i].title;
-                    html += "<li><a target='_blank' onclick=\"GetNewsDetail(" + temp[i].id + ")\">●" + text + "</a></li>";
+                    var text = temp[i].title;
+                    html += "<li class=\"overf_com\" style=\"width:180px;\"><a target='_blank' onclick=\"GetNewsDetail(" + temp[i].id + ")\">● " + text + "</a></li>";
                 }
                 $("#president_special_columns").html(html);
                 GetNewsDetail(temp[0].id);

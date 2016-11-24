@@ -652,7 +652,7 @@ $(document).ready(function () {
     GetTeachers();
     Today();
     lxfEndtime();
-    GetYear
+    GetYear();
 });
 
 

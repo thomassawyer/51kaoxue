@@ -96,7 +96,12 @@ function eliteschool_recommend() {
                 for (var i = 0; i < temp.length; i++) {
                     var text = temp[i].name.length > 10 ? temp[i].name.substr(0, 10) + "..." : temp[i].name;
                     //html += "<a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'><div class=\"elite_school_recommends_container\"><div class=\"elite_school_recommends_container_top\"><span class=\"sign_red\">·</span><div class=\"school_name\">" + text + "</div></div><div class=\"elite_school_recommends_container_bottom\">共计" + temp[i].testnum + "套题</div></div></a>";
-                    html += "<li><a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>●" + text + "<br />共计" + temp[i].testnum + "套题</a></li>";
+                    if (i == 0) {
+                        html += "<li style=\"padding-top:20px;\"><a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>●" + text + "<br /><span style=\"color:#bfbfbf;padding-left:10px;\">共计" + temp[i].testnum + "套题</span></a></li>";
+                    } else {
+                        html += "<li><a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>●" + text + "<br /><span style=\"color:#bfbfbf;padding-left:10px;\">共计" + temp[i].testnum + "套题</span></a></li>";
+                    }
+                   
                 }
             }
             $("#elite_school_recommends").html(html);
@@ -168,7 +173,13 @@ function GetList() {
                     <div id=\"\" class=\"lssp\">\
                        " + temp[i].content + "\
                     </div>\
-                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   校长：" + "<a target='_blank' class=\"p_more_hover\" target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid + "\">" + temp[i].headname + "</a>" + "   |   地区：" + temp[i].areaname + "</span>\
+                    <span class=\"gxsjsp\">更新时间：<span>" + time + "</span>   |   类型：" + produce_type(temp[i].level) + "   |   校长：";
+                    if (temp[i].headname == "") {
+                        html += "<span  class=\"\" >暂无数据</span>";
+                    } else {
+                        html += "<a target='_blank' class=\"p_more_hover\" target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid + "\">" + temp[i].headname + "</a>";
+                    }
+                    html += "   |   地区：" + temp[i].areaname + "</span>\
                     <a target='_blank' target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
                 </div>\
             </div>\

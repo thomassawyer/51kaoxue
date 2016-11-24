@@ -58,10 +58,29 @@ function getusertype(level) {
     return temp;
 }
 
+//监听滚轮事件
+
+function getScroll() {
+    $(window).scroll(function (event) {
+
+        var winPos = $(window).scrollTop();
+        if (winPos > 500) {
+            $(".fixed_all").css({ 'display': 'block'});
+        } else {
+            $(".fixed_all").css({ 'display': 'none' });
+        }
+    });
+
+    $(".fixed_return").click(function () {
+        $("html,body").animate({ scrollTop: 0 }, 1000);
+    });
+}
+
 $(document).ready(function () {
     getbeikecount();
     GetShitiCount();
     GetUserInfo();
     GetUpCountByDay();
     MemberCount();
+    getScroll();
 });

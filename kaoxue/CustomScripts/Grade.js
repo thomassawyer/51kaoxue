@@ -693,7 +693,7 @@ function GetSchool() {
                     if (i == 0) {
                         html2 += "<div class=\"hs1 fl\">\
                         <div class=\"hsimg1_new\">\
-                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\" />\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\"  onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'/>\
                         </div>\
                         <div class=\"wzhs\">\
                             <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' title='" + temp[i].name.replace(" ", "-") + "'>" + temp[i].name + "</a>\
@@ -702,7 +702,7 @@ function GetSchool() {
                     } else {
                         html2 += "<div class=\"hs1 fl mxzykz6\">\
                         <div class=\"hsimg1_new\">\
-                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\" />\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\"  onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'/>\
                         </div>\
                         <div class=\"wzhs\">\
                             <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' title='" + temp[i].name.replace(" ", "-") + "'>" + temp[i].name + "</a>\

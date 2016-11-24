@@ -367,6 +367,11 @@
     <Content Include="img\fen_100_1.png" />
     <Content Include="img\find_logo.png" />
     <Content Include="img\find_year.png" />
+    <Content Include="img\fixed_return.png" />
+    <Content Include="img\fixed_return_hover.png" />
+    <Content Include="img\fixed_weixin.png" />
+    <Content Include="img\fixed_weixin_b.png" />
+    <Content Include="img\fixed_weixin_hover.png" />
     <Content Include="img\fj.jpg" />
     <Content Include="img\fj.png" />
     <Content Include="img\fonz1.jpg" />

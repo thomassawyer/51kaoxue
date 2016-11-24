@@ -248,7 +248,10 @@
     width: 223px;
     height: 176px;
 }
-
+.img190:hover {
+    cursor:pointer;
+    opacity:0.8;
+}
 .wzhs {
     width: 223px;
     padding-top: 7px;
