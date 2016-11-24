@@ -600,17 +600,16 @@ function gettestbycategory(category, controlid,flag) {
 //
 function Banner() {
     $.post("../Province/GetBanner", { type: 9 }, function (data) {
-        if (data) {
+        if (data && data != "]") {
             var temp = eval(data);
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<li><a target='_blank'  href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:715px; height:442px;'></a></li>";
-                html1 += "<a target='_blank' href='#' title='" + (i + 1) + "'><span></span></a>";
+                html += "<a target='_blank'  href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:715px; height:442px;'></a>";
+              
             }
-            $("#banner_images").html(html);
-            $("#banner_buttons").html(html1);
-            jQuery.getScript("../engine1/wowslider.js", function () {
+            $("#wowslider-container1_new_1").html(html);
+            jQuery.getScript("../engine1/vmc.slider.full.js", function () {
                 jQuery.getScript("../engine1/script.js", function () {
 
                 });

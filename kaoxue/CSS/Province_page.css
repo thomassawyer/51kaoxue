@@ -29,6 +29,7 @@
     position: absolute;
     right: 0px;
     top: 50px;
+    text-align:center;
 }
 
 .sfyx2 {
@@ -38,6 +39,7 @@
     position: absolute;
     right: 187px;
     top: 50px;
+    text-align:center;
 }
 #test_mingxiao {
     margin-top:5px;
@@ -50,6 +52,7 @@
     position: absolute;
     right: 92px;
     top: 50px;
+    text-align:center;
 }
 
     .sfyx3 > a {
@@ -322,6 +325,8 @@
 
 .sfhv {
     height:33px;
+    position:relative;
+    z-index:999;
 }
 
 .lan_ce > span {
