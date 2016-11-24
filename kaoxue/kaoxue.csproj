@@ -238,6 +238,7 @@
     <Content Include="engine1\jquery.js" />
     <Content Include="engine1\script.js" />
     <Content Include="engine1\style.css" />
+    <Content Include="engine1\vmc.slider.full.js" />
     <Content Include="engine1\wowslider.js" />
     <Content Include="Global.asax" />
     <Content Include="img\00100.jpg" />
