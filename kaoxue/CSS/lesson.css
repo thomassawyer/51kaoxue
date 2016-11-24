@@ -115,6 +115,7 @@
 
 .lianxice210 {
     width: 210px;
+    /*overflow:hidden;*/
     /*height: 1088px;*/
     /*border: 1px solid #e5e5e5;*/
 }
@@ -133,7 +134,7 @@
     }
 
 .lx136 {
-    width: 100%;
+    width: 208px;
     height: 148.8px;
 }
 
@@ -143,6 +144,9 @@
     }
 
     .lx136 > ul {
+        width:168px;
+        margin-left:auto;
+        margin-right:auto;
            margin-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #e5e5e5;
@@ -158,8 +162,9 @@
     border:1px solid #e5e5e5;
     border-top:none;
     border-bottom:none;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
+    /*box-sizing:border-box;
+    -webkit-box-sizing:border-box;*/
+    height: auto;
 }
 
 .lianxice {

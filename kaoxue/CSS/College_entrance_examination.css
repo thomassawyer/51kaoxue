@@ -35,8 +35,10 @@
     /*width: 630px;*/
     height: 44px;
     background: #2ea7f8;
-    border-radius:22px;
+    /*border-radius:22px;*/
     /*margin-left: 52px;*/
+    /*background:url(../img/bai630.png);*/
+    /*background-size:100% 100%;*/
     margin-top: 15px;
     padding-left: 40px;
     padding-right: 30px;
@@ -72,16 +74,18 @@
     position:relative;
     color:#008dec;
     font-size:22px;
-    padding-left:50px;
+    padding-left:30px;
     padding-right:20px;
     height:44px;
     line-height:44px;
-    background:#fff;
+    /*background:#fff;*/
+    background:url(../img/year_title_b.png) no-repeat;
+    /*background-size:cover;*/
     margin-top:15px;
-    border-radius:22px;
-    margin-left:-40px;
+    /*border-radius:22px;*/
+    margin-left:-20px;
     z-index:0;
-    border:1px solid #008dec;
+    /*border:1px solid #008dec;*/
 }
 .zjshijian {
     display: block;
@@ -235,12 +239,12 @@ a {
     border-top-left-radius: 5px;
 }
 .sub_type_all {
-    width: 226px;
+    width: 224px;
     border: 1px solid #e0e0e0;
-    height: 39px;
+    height: 37px;
     border-top-right-radius: 5px;
     border-bottom-right-radius:5px;
-    line-height: 39px;
+    line-height: 37px;
 }
 .sub_type_per {
     font-size: 16px;

@@ -3,6 +3,9 @@
     a {
         cursor:pointer;
     }
+    body {
+        behavior:url(ie-css3.htc);
+    }
 </style>
 <script src="../CustomScripts/top.js"></script>
 

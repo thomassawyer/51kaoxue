@@ -309,6 +309,7 @@
     <Content Include="img\anniulan.jpg" />
     <Content Include="img\anniulan.png" />
     <Content Include="img\arrow_1111.png" />
+    <Content Include="img\bai630.png" />
     <Content Include="img\baidibai.png" />
     <Content Include="img\baijiamingxiao.png" />
     <Content Include="img\baiseyuanxing-12.png" />
@@ -622,6 +623,7 @@
     <Content Include="img\xztx.png" />
     <Content Include="img\xzuizz.png" />
     <Content Include="img\xzxueke.png" />
+    <Content Include="img\year_title_b.png" />
     <Content Include="img\yellowtb.jpg" />
     <Content Include="img\yellowtb.png" />
     <Content Include="img\yeshu.png" />

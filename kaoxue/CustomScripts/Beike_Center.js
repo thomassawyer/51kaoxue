@@ -186,10 +186,10 @@ function GetVersion_ThirdAndFourth() {
                     temp = eval(data);
                     for (var i = 0; i < temp.length; i++) {
                         if (i == (temp.length - 1)) {
-                            html += "<div class=\"lx136 zjie fl\" style='height:auto;padding:0px 20px;'>\
+                            html += "<div class=\"lx136 zjie fl\">\
                                 <ul  style='border:none;'>";
                         } else {
-                            html += "<div class=\"lx136 zjie fl\" style='height:auto;padding:0px 20px;'>\
+                            html += "<div class=\"lx136 zjie fl\">\
                                 <ul>";
                         }
 

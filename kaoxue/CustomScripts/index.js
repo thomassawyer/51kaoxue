@@ -22,7 +22,7 @@ function New_Zhuanti() {
                     if (i < 6) {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a target='_blank' class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + text + "</a></div><div class=\"fr\" id=\"\">\
+                            <a target='_blank' class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\"> " + text + "</a></div><div class=\"fr\" id=\"\">\
                                 <a target='_blank'  class=\"zxzths\" href='../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "' class=\"zxzths\">[" + time + "]</a>\
                             </div>\
                         </div>\
@@ -30,7 +30,7 @@ function New_Zhuanti() {
                     } else {
                         html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a target='_blank' class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
+                            <a target='_blank' class=\"fl btnjps size_com\">" + number + "</a><div class=\"fl jpstys\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "'  href=\"../SpecialSubject?id=" + temp[i].id + "&name=" + temp[i].name + "\"> " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
                                 <a target='_blank' class=\"zxzths\" href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
@@ -71,7 +71,7 @@ function Taoti() {
                 //html += "<li><a target='_blank' class=\"btn size_com fl\">" + number + "</a>&nbsp;<a target='_blank' title='" + temp[i - 1].name.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "'> " + temp[i - 1].name + "</a></li>";
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a target='_blank' class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a target='_blank' class=\"fff\" title='" + temp[i - 1].name.replace(" ", "-") + "' href=\"../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "\">[试题试卷] " + temp[i - 1].name + "</a></div><div class=\"fr\" id=\"\">\
+                            <a target='_blank' class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a target='_blank' class=\"fff\" title='" + temp[i - 1].name.replace(" ", "-") + "' href=\"../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "\"> " + temp[i - 1].name + "</a></div><div class=\"fr\" id=\"\">\
                                 <a target='_blank' class=\"fff\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
@@ -110,7 +110,7 @@ function Test() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a target='_blank' class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'>[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
+                            <a target='_blank' class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'> " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
                                 <a target='_blank' class=\"ayblue\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
@@ -140,7 +140,7 @@ function School_Test() {
                 //html += "<li><a target='_blank' class=\"btn\">" + number + "</a>&nbsp;<a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"fff\"> " + text + "</a></li>";
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a target='_blank' class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a target='_blank' class=\"fff\" title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'\">[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
+                            <a target='_blank' class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a target='_blank' class=\"fff\" title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'\"> " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
                                 <a target='_blank' class=\"fff\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
@@ -180,7 +180,7 @@ function Beike() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a target='_blank' class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
+                            <a target='_blank' class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "\"> " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
                                 <a target='_blank' class=\"ayblue\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
@@ -208,7 +208,7 @@ function Taoti_JuniorMiddleSchool() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"zxtlianjiediv fl\">\
-                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "\">[试题试卷] " + temp[i].name + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "\"> " + temp[i].name + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
                                 <a target='_blank' href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
@@ -236,7 +236,7 @@ function Test_JuniorMiddleSchool() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"zxtlianjiediv fl\">\
-                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'\">[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'\"> " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
                                 <a target='_blank' href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
@@ -264,7 +264,7 @@ function Mid_examination() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"zxtlianjiediv fl\">\
-                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'\">[试题试卷] " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'\"> " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
                                 <a target='_blank' href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\

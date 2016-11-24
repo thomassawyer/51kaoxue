@@ -36,15 +36,16 @@
 }
 /*.xdh33:hover{background:#8cc407;}*/
 .xuduan33 {
-    width: 100%;
+    /*width: 100%;*/
+    width:auto;
     height: 50px;
 }
 
 .lxgao521 {
     width: 100%;
     /*height: 530px;*/
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;
+    /*box-sizing:border-box;
+    -moz-box-sizing:border-box;*/
 }
 
 .rmxzli {
