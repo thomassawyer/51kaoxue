@@ -521,7 +521,7 @@
 	overflow:hidden;
 	height:12px;
 	width:12px;
-	margin:0 10px;
+	margin:0 5px;
 	padding:0;
 	/*border:none;
 	border-radius:6px;
@@ -531,6 +531,8 @@
 }
 .vui-slider .vui-button-cur {
     background-image:url(../img/vui-button-cur_1.png);
+    /*height:18px;
+	width:18px;*/
 }
 .vui-slider .vui-transfer {
 	display:none;
@@ -552,13 +554,13 @@
 	border-radius:0 10px 10px 0;
 	background:url(../img/prev.png) no-repeat center;
 	cursor:pointer;
-	filter:alpha(opacity=30);
+	/*filter:alpha(opacity=30);
 	-moz-opacity:0.3;
 	-khtml-opacity:0.3;
 	opacity:0.3;
 	transition:0.5s ease;
 	-o-transition:0.5s ease;
-	-webkit-transition:0.5s ease;
+	-webkit-transition:0.5s ease;*/
 }
 .vui-slider .vui-next {
 	position:absolute;
@@ -571,13 +573,13 @@
 	border-radius:10px 0 0 10px;
 	background:url(../img/next.png) no-repeat center;
 	cursor:pointer;
-	filter:alpha(opacity=30);
+	/*filter:alpha(opacity=30);
 	-moz-opacity:0.3;
 	-khtml-opacity:0.3;
 	opacity:0.3;
 	transition:0.5s ease;
 	-o-transition:0.5s ease;
-	-webkit-transition:0.5s ease;
+	-webkit-transition:0.5s ease;*/
 }
 .vui-slider .vui-sidebutton-hover {
 	filter:alpha(opacity=40);
