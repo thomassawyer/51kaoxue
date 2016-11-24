@@ -334,7 +334,13 @@ function Banner() {
             $("#wowslider-container1_new_1").html(html);
             jQuery.getScript("../engine1/vmc.slider.full.js", function () {
                 jQuery.getScript("../engine1/script.js", function () {
-
+                    if (navigator.userAgent.indexOf("MSIE") > 0) {
+                        //修复ie7问题
+                        setTimeout(function () {
+                            //$(".vui-prev").click();
+                            $(".vui-next").click();
+                        }, 100);
+                    }
                 });
             });
 
