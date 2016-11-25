@@ -1,6 +1,7 @@
 .fixed_all {
     position:fixed;
-    top:300px;
+    /* top: 300px; */
+    bottom: 259px;
     right:15%;
     z-index:9999;
     display:none;
@@ -321,7 +322,7 @@ a {
 
 .cebianlan_xia1 {
     width: 100%;
-    height: 442px;
+    height: 440px;
     z-index: 999;
     position: relative;
     background-color: white;
@@ -1823,7 +1824,7 @@ bottom:10px;
 .shenfenhover {
     position: absolute;
     width: 500px;
-    height: 442px;
+    height: 440px;
     background: #fff;
     left: 210px;
     top: 0px;
@@ -2091,7 +2092,7 @@ bottom:10px;
 }
 
 .pager a:hover,.pager_selected {
-    border:none !important;
+    border-color:#2ea7f8 !important;
     color:#fff !important;
     background-color:#2ea7f8;
 }

@@ -42,7 +42,7 @@ function test_mingxiao(level) {
                                 <a target='_blank' class=\"zxzt_btn_808ffb dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap color_ff\">\
-                                <a target='_blank' class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>  " + text + "</a>\
+                                <a target='_blank' class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].testname.replace(" ", "-") + "'>  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"fr color_ff\">[" + time + "]</a>\
@@ -96,7 +96,7 @@ function test_jingpin() {
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap gkdttime\">\
-                                <a target='_blank' class=\"gdkys\"  href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a>\
+                                <a target='_blank' class=\"gdkys\"  href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"gkdttime  fr\">[" + time + "]</a>\
@@ -217,7 +217,7 @@ function gettest_bucategory(category,controlid,iswhite) {
                                 <a target='_blank' class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap color07c277\">\
-                                <a target='_blank' class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a>\
+                                <a target='_blank' class=\"color07c277\" href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"color07c277  fr\">[" + time + "]</a>\
@@ -229,7 +229,7 @@ function gettest_bucategory(category,controlid,iswhite) {
                                 <a target='_blank' class=\"zxzt_btn_07c277 dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap color_ff\">\
-                                <a target='_blank' class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>  " + text + "</a>\
+                                <a target='_blank' class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].testname.replace(" ", "-") + "'>  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"fr color_ff\">[" + time + "]</a>\
@@ -241,7 +241,7 @@ function gettest_bucategory(category,controlid,iswhite) {
                                 <a target='_blank' class=\"zxzt_btn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap color_ff\">\
-                                <a target='_blank' class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'>  " + text + "</a>\
+                                <a target='_blank' class=\"color_ff\" href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].testname.replace(" ", "-") + "'>  " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"fr color_ff\">[" + time + "]</a>\
@@ -253,7 +253,7 @@ function gettest_bucategory(category,controlid,iswhite) {
                                 <a target='_blank' class=\"gkdtbtn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap gkdttime_8cc407\">\
-                                <a target='_blank' class=\"gkdttime_8cc407\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a>\
+                                <a target='_blank' class=\"gkdttime_8cc407\" href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"gkdttime_8cc407  fr\">[" + time + "]</a>\
@@ -296,7 +296,7 @@ function News(type, controlid) {
                                 <a target='_blank' class=\"zxzt_btn_07c7bc dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl gkdt_240 overf_com color07c7bc\">\
-                                <a target='_blank' class=\"color07c7bc line_hg_25\" href='../News_Detail?id="+temp[i-1].id+"' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
+                                <a target='_blank' class=\"color07c7bc line_hg_25\" href='../News_Detail?id=" + temp[i - 1].id + "&myTitle=" + text + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"color07c7bc  fr line_hg_25\">[" + time + "]</a>\
@@ -362,20 +362,20 @@ function GetSchool() {
                     if (i == 0) {
                         html2 += "<div class=\"hs1 fl\">\
                         <div class=\"hsimg1\">\
-                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\" />\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\"   onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "');\"/>\
                         </div>\
                         <div class=\"wzhs\">\
-                            <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
+                            <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "'>" + temp[i].name + "</a>\
                         </div>\
                     </div>";
 
                     } else {
                         html2 += "<div class=\"hs1 fl mxzykz6\">\
                         <div class=\"hsimg1\">\
-                            <img src=\""+ "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\" />\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\"   onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "');\"/>\
                         </div>\
                         <div class=\"wzhs\">\
-                            <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
+                            <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "'>" + temp[i].name + "</a>\
                         </div>\
                     </div>";
                     }

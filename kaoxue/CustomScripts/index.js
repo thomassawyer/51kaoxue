@@ -110,7 +110,7 @@ function Test() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a target='_blank' class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'> " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
+                            <a target='_blank' class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "'> " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
                                 <a target='_blank' class=\"ayblue\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
@@ -140,7 +140,7 @@ function School_Test() {
                 //html += "<li><a target='_blank' class=\"btn\">" + number + "</a>&nbsp;<a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"fff\"> " + text + "</a></li>";
                 html += "<li>\
                         <div class=\"jpstli zxzhutiys\">\
-                            <a target='_blank' class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a target='_blank' class=\"fff\" title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'\"> " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
+                            <a target='_blank' class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a target='_blank' class=\"fff\" title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "'\"> " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
                                 <a target='_blank' class=\"fff\" href=\"\">["+ time + "]</a>\
                             </div>\
                         </div>\
@@ -236,7 +236,7 @@ function Test_JuniorMiddleSchool() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"zxtlianjiediv fl\">\
-                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'\"> " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "'\"> " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
                                 <a target='_blank' href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
@@ -264,7 +264,7 @@ function Mid_examination() {
                 var number = number_str.length < 2 ? "0" + number_str : number_str;
                 html += "<li>\
                         <div class=\"zxtlianjiediv fl\">\
-                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "'\"> " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "'\"> " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
                                 <a target='_blank' href=\"\">[" + time + "]</a>\
                             </div>\
                         </div>\
@@ -294,7 +294,7 @@ function News(type, controlid) {
                     html += "<li>\
                             <div  class=\"fl gkdt_270\">\
                                 <a target='_blank' class=\"fl gkdtbtn size_com\">" + number + "</a>&nbsp;</div>\
-                            <div class=\"gdkys flow_nowrap fl\"><a target='_blank'  title='" + temp[i].title.replace(" ", "-") + "'  class=\"gdkys\" href='../News_Detail?id=" + temp[i].id + "'>[新闻] " + text + "</a>\
+                            <div class=\"gdkys flow_nowrap fl\"><a target='_blank'  title='" + temp[i].title.replace(" ", "-") + "'  class=\"gdkys\" href='../News_Detail?id=" + temp[i].id + "&myTitle=" + text + "'>[新闻] " + text + "</a>\
                     </div>\
                     <div class=\" fr\">\
                                 <a target='_blank'  class=\"gkdttime fr\">["+ time + "]</a>\
@@ -453,7 +453,7 @@ function GetSchool() {
                 for (var i = 0; i < 15; i++) {
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;
-                    html += "<li><a target='_blank' class=\"fl size_com mxhz6_btn\">" + number + "</a>&nbsp;<a target='_blank' title='" + temp[i].name.replace(" ", "-") + "' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a></li>";
+                    html += "<li><a target='_blank' class=\"fl size_com mxhz6_btn\">" + number + "</a>&nbsp;<a target='_blank' title='" + temp[i].name.replace(" ", "-") + "' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "'>" + temp[i].name + "</a></li>";
                     if ((i + 1) % 3 == 0 && i != 0 && (i + 1) < 15) {
                         if (i <= 15) {
                             html += "</ul>\
@@ -472,16 +472,16 @@ function GetSchool() {
                     if (i == 0) {
                         html2 += "<div  class=\"mxzy_8 fl\">\
                         <div>\
-                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\"  onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "');\"/>\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\"  onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "');\"/>\
                         </div>\
-                        <a target='_blank'   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
+                        <a target='_blank'   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "'>" + temp[i].name + "</a>\
                     </div>";
                     } else {
                         html2 += "<div  class=\"mxzy_8 fl mxzykz6\">\
                         <div>\
-                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\" onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "');\"/>\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"school_img\" onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "');\"/>\
                         </div>\
-                        <a target='_blank'   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>" + temp[i].name + "</a>\
+                        <a target='_blank'   href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "'>" + temp[i].name + "</a>\
                     </div>";
                     }
 
@@ -512,7 +512,7 @@ function GetTeachers() {
                         <div  class=\"lszp fl padding_top35\">\
                             <h3><b>" + temp[i].headname + "</b></h3>\
                             <p class=\"dkms\">" + temp[i].name + "</p>\
-                            <a target='_blank' class=\"mstjbtn mar_top30\"  href='../President_Special_Column?id=" + temp[i].headid + "'>详情</a>\
+                            <a target='_blank' class=\"mstjbtn mar_top30\"  href='../President_Special_Column?id=" + temp[i].headid + "&myTitle=" + temp[i].headname + "_" + temp[i].name + "校长" + "'>详情</a>\
                         </div>\
                     </div>";
                     } else {
@@ -521,7 +521,7 @@ function GetTeachers() {
                         <div  class=\"lszp fl padding_top35\">\
                             <h3><b>" + temp[i].headname + "</b></h3>\
                             <p class=\"dkms\">" + temp[i].name + "</p>\
-                            <a target='_blank' class=\"mstjbtn mar_top30\" href='../President_Special_Column?id=" + temp[i].headid + "'>详情</a>\
+                            <a target='_blank' class=\"mstjbtn mar_top30\" href='../President_Special_Column?id=" + temp[i].headid + "&myTitle=" + temp[i].headname + "_" + temp[i].name + "校长" + "'>详情</a>\
                         </div>\
                     </div>";
                     }

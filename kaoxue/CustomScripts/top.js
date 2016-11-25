@@ -88,31 +88,40 @@ function navSelect() {
     if (subjectname) {
         switch (subjectname) {
             case "语文":
-                img.eq(0).css({'display':'block','right':'23px'});
+                img.eq(0).css({ 'display': 'block', 'right': '23px' });
+                $("title").html("语文学科 - 51考学网");
                 break;
             case "数学":
                 img.eq(1).css({ 'display': 'block', 'right': '23px' });
+                $("title").html("数学学科 - 51考学网");
                 break;
             case "英语":
                 img.eq(2).css({ 'display': 'block', 'right': '23px' });
+                $("title").html("英语学科 - 51考学网");
                 break;
             case "物理":
                 img.eq(3).css({ 'display': 'block', 'right': '23px' });
+                $("title").html("物理学科 - 51考学网");
                 break;
             case "化学":
                 img.eq(4).css({ 'display': 'block', 'right': '23px' });
+                $("title").html("化学学科 - 51考学网");
                 break;
             case "生物":
                 img.eq(5).css({ 'display': 'block', 'right': '23px' });
+                $("title").html("生物学科 - 51考学网");
                 break;
             case "历史":
                 img.eq(6).css({ 'display': 'block', 'right': '23px' });
+                $("title").html("历史学科 - 51考学网");
                 break;
             case "政治":
                 img.eq(7).css({ 'display': 'block', 'right': '23px' });
+                $("title").html("政治学科 - 51考学网");
                 break;
             case "地理":
                 img.eq(8).css({ 'display': 'block', 'right': '23px' });
+                $("title").html("地理学科 - 51考学网");
                 break;
         }
     } else {
@@ -122,8 +131,10 @@ function navSelect() {
                 case "/Grade":
                     if (GetQueryString("level") == 2) {
                         img.eq(12).css({ 'display': 'block', 'right': '23px' });
+                        $("title").html("初中考学网 - 51考学网");
                     } else {
                         img.eq(11).css({ 'display': 'block', 'right': '23px' });
+                        $("title").html("高中考学网 - 51考学网");
                     }
                     break;
                 case "/Beike_Center":
@@ -146,6 +157,64 @@ function navSelect() {
                     img.eq(4).css({ 'display': 'block', 'right': '45px' });
                     $("#nav_rec_2").html("&nbsp;&gt;&nbsp;高考备考");
                     break;
+                case "/Province":
+                    var text = GetQueryString("text");
+                    if (text)
+                        $("title").html(text+"考学 - 51考学网");
+                    break;
+                case "/Special/Beike":
+                    var text = GetQueryString("name");
+                    if (text)
+                        $("title").html(text + "备课 - 51考学网");
+                    break;
+                case "/Special":
+                    var text = GetQueryString("name");
+                    if (text)
+                        $("title").html(text + " - 51考学网");
+                    break;
+                case "/Download":
+                    var text = GetQueryString("myTitle");
+                    if (text)
+                        $("title").html(text + "下载 - 51考学网");
+                    break;
+                case "/Ancient_List":
+                    var text = GetQueryString("title");
+                    if (text)
+                        $("title").html(text + " - 51考学网");
+                    break;
+                case "/Ancient_Article":
+                    var text = GetQueryString("myTitle");
+                    if (text)
+                        $("title").html(text + "阅读 - 51考学网");
+                    break;
+                case "/News":
+                    var text = GetQueryString("typename");
+                    if (text)
+                        $("title").html(text + " - 51考学网");
+                    else
+                        $("title").html("天天新闻 - 51考学网");
+                    break;
+                case "/News_Detail":
+                    var text = GetQueryString("myTitle");
+                    if (text)
+                        $("title").html(text + " - 51考学网");
+                    break;
+                case "/SchoolDetail":
+                    var text = GetQueryString("myTitle");
+                    if (text)
+                        $("title").html(text + " - 51考学网");
+                    break;
+                case "/President_Special_Column":
+                    var text = GetQueryString("myTitle");
+                    if (text)
+                        $("title").html(text + " - 51考学网");
+                    break;
+                case "/SpecialSubject":
+                    var text = GetQueryString("name");
+                    if (text)
+                        $("title").html(text + " - 51考学网");
+                    break;
+                    
             }
         }
     }

@@ -23,7 +23,7 @@ function GetTest_Hot_Download() {
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].title;
                 //html += "<li><a target='_blank' href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
-                html += "<li class=\"rmxzli overf_com\"><span class=\"rmxzsp_07c277\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa_07c277\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli overf_com\"><span class=\"rmxzsp_07c277\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "&myTitle=" + text + "' target='_blank' class=\"rmxzaa_07c277\">" + text + "</a></li>";
             }
             $("#hot_download").html(html);
         }
@@ -41,7 +41,7 @@ function GetTest_Recommend() {
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].title;
                 //html += "<li><a target='_blank' href='../News_Detail?id=" + temp[i].id + "'>" + text + "</a></li>";
-                html += "<li class=\"rmxzli overf_com\"><span class=\"rmxzsp\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
+                html += "<li class=\"rmxzli overf_com\"><span class=\"rmxzsp\">●</span>&nbsp;<a target='_blank'  title='" + temp[i].title + "' href='../News_Detail?id=" + temp[i].id + "&myTitle=" + text + "' target='_blank' class=\"rmxzaa\">" + text + "</a></li>";
             }
             $("#recommend").html(html);
         }
@@ -73,11 +73,20 @@ function GetList() {
                     
                     //var str_1 = str.replace(/<p>/g, "");
                     //var str_2 = str_1.replace(/<\/p>/g, "<br>");
-                    html += "<div class=\"xwliebiao\" onclick=\"javascript:window.open('../News_Detail?id=" + temp[i].id + "');\">\
-                            <div class=\"fl xwsc mar_lf_11\">\
-                                <img src=\"img/xwtpshucai.png\" />\
+                    html += "<div class=\"xwliebiao\" onclick=\"javascript:window.open('../News_Detail?id=" + temp[i].id + "&myTitle=" + text + "');\">\
+                            <div class=\"fl xwsc mar_lf_11\">";
+
+                    if (typename) {
+                        html += "<img src=\"img/xwtpshucai_1.png\" />\
                             </div>\
                         <div class=\"fl cswx\">";
+                    } else {
+                        html += "<img src=\"img/xwtpshucai.png\" />\
+                            </div>\
+                        <div class=\"fl cswx\">";
+                    }
+                        
+
                     html += "<b class=\"xwlbzt\">" + text + "</b>\
                     <div class=\"xwwby\">" + temp[i].content + "</div>";
                     html+="<img src=\"img/wenhao.png\" class=\"xwimg\" />\
@@ -357,5 +366,5 @@ $(document).ready(function () {
     GetTest_Hot_Download();
     GetTest_Recommend();
     GetDataCount();
-   GetList();
+    GetList();
 });

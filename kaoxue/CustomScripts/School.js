@@ -97,9 +97,9 @@ function eliteschool_recommend() {
                     var text = temp[i].name.length > 10 ? temp[i].name.substr(0, 10) + "..." : temp[i].name;
                     //html += "<a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'><div class=\"elite_school_recommends_container\"><div class=\"elite_school_recommends_container_top\"><span class=\"sign_red\">·</span><div class=\"school_name\">" + text + "</div></div><div class=\"elite_school_recommends_container_bottom\">共计" + temp[i].testnum + "套题</div></div></a>";
                     if (i == 0) {
-                        html += "<li style=\"padding-top:20px;\"><a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>●" + text + "<br /><span style=\"color:#bfbfbf;padding-left:10px;\">共计" + temp[i].testnum + "套题</span></a></li>";
+                        html += "<li style=\"padding-top:20px;\"><a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + text + "'>●" + text + "<br /><span style=\"color:#bfbfbf;padding-left:10px;\">共计" + temp[i].testnum + "套题</span></a></li>";
                     } else {
-                        html += "<li><a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'>●" + text + "<br /><span style=\"color:#bfbfbf;padding-left:10px;\">共计" + temp[i].testnum + "套题</span></a></li>";
+                        html += "<li><a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + text + "'>●" + text + "<br /><span style=\"color:#bfbfbf;padding-left:10px;\">共计" + temp[i].testnum + "套题</span></a></li>";
                     }
                    
                 }
@@ -128,7 +128,7 @@ function test_recommend() {
                     //                    <div class=\"school_name\"><a target='_blank' href=\"../Download?cid=1&id="+ temp[i].id + "\" target=\"_blank\">" + text + "</a></div>\
                     //                </div>";
                     //html += "<li><a target='_blank' href=\"../Download?cid=1&id=" + temp[i].id + "\" target=\"_blank\">●" + text + "</a></li>";
-		    html += "<li class=\"rmxzli overf_com\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a target='_blank' title='" + temp[i].testname + "'  href=\"../Download?cid=1&id=" + temp[i].id + "\" target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
+                    html += "<li class=\"rmxzli overf_com\"><span class=\"rmxzsp rmxz2hv\">●</span>&nbsp;<a target='_blank' title='" + temp[i].testname + "'  href=\"../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "\" target='_blank' class=\"rmxzaa rmxz2hv\">" + text + "</a></li>";
                 }
             }
             $("#test_recommend").html(html);
@@ -163,13 +163,14 @@ function GetList() {
                 var date;
                 $("#pages").removeClass("display_none");
                 for (var i = 0; i < temp.length; i++) {
+                    var text = temp[i].name;
                     date = new Date(temp[i].intime);
                     var time = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
                     html += "<div class=\"xz360\" style=\"width:100%;\">\
                 <div class=\"fl\">\
-                    <a target='_blank' class=\"img_a_p\" target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\"><img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></a></div>\
+                    <a target='_blank' class=\"img_a_p\" target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + text + "\"><img src=\"http://source.51kaoxue.com/" + temp[i].imgsrc + "\" class=\"lsimg\" style=\"width:270px;height:200px;\" /></a></div>\
                 <div class=\"fl neirong620\">\
-                    <a target='_blank' target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\" class=\"fz25\">" + temp[i].name + "</a>\
+                    <a target='_blank' target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + text + "\" class=\"fz25\">" + temp[i].name + "</a>\
                     <div id=\"\" class=\"lssp\">\
                        " + temp[i].content + "\
                     </div>\
@@ -177,10 +178,10 @@ function GetList() {
                     if (temp[i].headname == "") {
                         html += "<span  class=\"\" >暂无数据</span>";
                     } else {
-                        html += "<a target='_blank' class=\"p_more_hover\" target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid + "\">" + temp[i].headname + "</a>";
+                        html += "<a target='_blank' class=\"p_more_hover\" target ='_blank' href=\"../President_Special_Column?id=" + temp[i].headid + "&myTitle=" + temp[i].headname + "_" + temp[i].name + "校长" + "\">" + temp[i].headname + "</a>";
                     }
                     html += "   |   地区：" + temp[i].areaname + "</span>\
-                    <a target='_blank' target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
+                    <a target='_blank' target ='_blank' href=\"../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + text + "\" class=\"xzhsan\"><img src=\"img/xqhsan.png\" alt=\"\" /></a>\
                 </div>\
             </div>\
                     ";

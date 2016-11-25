@@ -45,7 +45,7 @@ function News(type, controlid) {
                                 <a target='_blank' class=\"btn dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl gkdt_240 overf_com color_ff\">\
-                                <a target='_blank' class=\"color_ff line_hg_25\" href='../News_Detail?id="+temp[i-1].id+"' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
+                                <a target='_blank' class=\"color_ff line_hg_25\" href='../News_Detail?id=" + temp[i - 1].id + "&myTitle=" + text + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"color_ff  fr line_hg_25\">[" + time + "]</a>\
@@ -256,7 +256,7 @@ function gaokao_beikao() {
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap gkdttime\">\
-                                <a target='_blank' class=\"gdkys\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'> " + text + "</a>\
+                                <a target='_blank' class=\"gdkys\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].name.replace(" ", "-") + "'> " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"gkdttime  fr\">[" + time + "]</a>\
@@ -300,7 +300,7 @@ function moni_zhongkao() {
                                 <a target='_blank' class=\"gkdtbtn dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap gkdttime\">\
-                                <a target='_blank' class=\"gdkys\"  href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'> " + text + "</a>\
+                                <a target='_blank' class=\"gdkys\"  href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].name.replace(" ", "-") + "'> " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"gkdttime  fr\">[" + time + "]</a>\
@@ -374,7 +374,7 @@ function Kejian_jingping() {
                     //    </li>";
                     html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a target='_blank' class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a target='_blank' href='../Download?cid=2&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'> " + text + "</a></div><div class=\"fr\" id=\"\">\
+                                <a target='_blank' class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a target='_blank' href='../Download?cid=2&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].name.replace(" ", "-") + "'> " + text + "</a></div><div class=\"fr\" id=\"\">\
                                     <a target='_blank' class=\"ayblue\" >["+ time + "]</a>\
                                 </div>\
                             </div>\
@@ -417,7 +417,7 @@ function jiaoan_jingpin() {
                                 <a target='_blank' class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap overf_com color07c277\">\
-                                <a target='_blank' class=\"color07c277\" href='../Download?cid=3&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                                <a target='_blank' class=\"color07c277\" href='../Download?cid=3&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"color07c277  fr\">[" + time + "]</a>\
@@ -456,7 +456,7 @@ function xuean_jingpin() {
                     //    </li>";
                     html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a target='_blank' class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a target='_blank' href='../Download?cid=4&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'> " + text + "</a></div><div class=\"fr\" id=\"\">\
+                                <a target='_blank' class=\"fl btnjps btnjspt dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a target='_blank' href='../Download?cid=4&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].name.replace(" ", "-") + "'> " + text + "</a></div><div class=\"fr\" id=\"\">\
                                     <a target='_blank' class=\"ayblue\" >["+ time + "]</a>\
                                 </div>\
                             </div>\
@@ -499,7 +499,7 @@ function lianxi_jingpin() {
                                 <a target='_blank' class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap overf_com color07c277\">\
-                                <a target='_blank' class=\"color07c277\" href='../Download?cid=6&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                                <a target='_blank' class=\"color07c277\" href='../Download?cid=6&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"color07c277  fr\">[" + time + "]</a>\
@@ -535,7 +535,7 @@ function sucai_jingpin() {
                                 <a target='_blank' class=\"zxzt_btn_fff dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap overf_com color07c277\">\
-                                <a target='_blank' class=\"color07c277\" href='../Download?cid=5&id=" + temp[i].id + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
+                                <a target='_blank' class=\"color07c277\" href='../Download?cid=5&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].name.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"color07c277  fr\">[" + time + "]</a>\
@@ -569,7 +569,7 @@ function gettestbycategory(category, controlid,flag) {
                         var text = temp[i].testname;
                         html += "<li>\
                             <div class=\"jpstli zxzhutiys\">\
-                                <a target='_blank' class=\"fl btnjps zxzt_btn_8cc407 dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a target='_blank' href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a></div><div class=\"fr\" id=\"\">\
+                                <a target='_blank' class=\"fl btnjps zxzt_btn_8cc407 dot_data_com\">" + number + "</a><div class=\"fl jpstys jpys overf_com gkdttime\"><a target='_blank' href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a></div><div class=\"fr\" id=\"\">\
                                     <a target='_blank' class=\"ayblue\" >["+ time + "]</a>\
                                 </div>\
                             </div>\
@@ -581,7 +581,7 @@ function gettestbycategory(category, controlid,flag) {
                                 <a target='_blank' class=\"gkdtbtn_8cc407 dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl flow_nowrap overf_com gkdttime_8cc407\">\
-                                <a target='_blank' class=\"gkdttime_8cc407\" href='../Download?cid=1&id=" + temp[i].id + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a>\
+                                <a target='_blank' class=\"gkdttime_8cc407\" href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "' title='" + temp[i].testname.replace(" ", "-") + "'> " + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"gkdttime_8cc407  fr\">[" + time + "]</a>\
@@ -693,19 +693,19 @@ function GetSchool() {
                     if (i == 0) {
                         html2 += "<div class=\"hs1 fl\">\
                         <div class=\"hsimg1_new\">\
-                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\"  onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'/>\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\"   onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "');\"/>\
                         </div>\
                         <div class=\"wzhs\">\
-                            <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' title='" + temp[i].name.replace(" ", "-") + "'>" + temp[i].name + "</a>\
+                            <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + temp[i].name + "</a>\
                         </div>\
                     </div>";
                     } else {
                         html2 += "<div class=\"hs1 fl mxzykz6\">\
                         <div class=\"hsimg1_new\">\
-                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\"  onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "'/>\
+                            <img src=\"" + "http://source.51kaoxue.com/" + temp[i].imgsrc + "\" alt=\"\" class=\"img190\"  onclick=\"javascript:window.open('../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "');\"/>\
                         </div>\
                         <div class=\"wzhs\">\
-                            <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "' title='" + temp[i].name.replace(" ", "-") + "'>" + temp[i].name + "</a>\
+                            <a target='_blank' href='../SchoolDetail?id=" + temp[i].id + "&areaid=" + temp[i].areaid + "&myTitle=" + temp[i].name + "' title='" + temp[i].name.replace(" ", "-") + "'>" + temp[i].name + "</a>\
                         </div>\
                     </div>";
                     }

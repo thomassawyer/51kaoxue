@@ -20,7 +20,7 @@ function GetList() {
                 for (var i = 0; i < temp.length; i++) {
                     var date = new Date(temp[i].uploadtime);
                     date = date.getFullYear() + "/" + Number(date.getMonth() + 1) + "/" + date.getDate();
-                    html += "<a target='_blank' href='../Download?id="+temp[i].id+"&cid=1'><div class=\"school_tests_container\">\
+                    html += "<a target='_blank' href='../Download?id=" + temp[i].id + "&myTitle=" + text + "&cid=1'><div class=\"school_tests_container\">\
                                     <div class=\"school_tests_container_left\">"+temp[i].testname+"</div>\
                                     <div class=\"school_tests_container_right\">"+date+"</div>\
                                 </div></a>";

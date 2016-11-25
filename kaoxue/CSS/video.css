@@ -59,7 +59,7 @@ body {
     margin-right:24px;
 }
 
-.c_nav li:hover,.c_nav_selected {
+.c_nav_selected {
     box-sizing:border-box;
     -webkit-box-sizing:border-box;
     cursor:pointer;
@@ -220,7 +220,7 @@ body {
 .t_img_title {
     background-image:url(../img/t_img_title.png);
 }
-.t_nav li:hover, .t_nav_selected {
+ .t_nav_selected {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     cursor: pointer;
@@ -264,12 +264,15 @@ body {
     background-image:url(../img/u_img_title.png);
 }
 
-.u_nav li:hover, .u_nav_selected {
+ .u_nav_selected {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     cursor: pointer;
     color: #ff6d00;
     border-bottom: 2px solid #ff6d00;
+}
+.u_nav li:hover,.t_nav li:hover,.c_nav li:hover {
+    cursor:pointer;
 }
 
 .u_item_s_title {

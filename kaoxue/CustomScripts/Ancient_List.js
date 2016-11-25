@@ -27,13 +27,13 @@ function Reading_Lists() {
             for (var i = 0; i < temp.length; i++) {
                 var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
                 if (i == 0) {
-                    html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a target='_blank' target='_blank' class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + "> " + text + "</a></li>";
+                    html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a target='_blank'  class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + "," + "\"" + temp[i].title + "\"" + ")' title=" + temp[i].title + "> " + text + "</a></li>";
                 } else if (i == 1) {
-                    html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' target='_blank' class=\"rm2\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
+                    html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' class=\"rm2\" onclick='update_viewcount(" + temp[i].id + "," + "\"" + temp[i].title + "\"" +")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else if (i == 2) {
-                    html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' target='_blank' class=\"rm3\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
+                    html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank'  class=\"rm3\" onclick='update_viewcount(" + temp[i].id + "," + "\"" + temp[i].title + "\"" +")' title=" + temp[i].title + ">" + text + "</a></li>";
                 } else {
-                    html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' target='_blank' onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title + ">" + text + "</a></li>";
+                    html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a  target='_blank' onclick='update_viewcount(" + temp[i].id + "," + "\"" + temp[i].title + "\"" +")' title=" + temp[i].title + ">" + text + "</a></li>";
                 }
 
             }
@@ -56,13 +56,13 @@ function Relative_Recommend() {
                 for (var i = 0; i < temp.length; i++) {
                     var text = temp[i].title.length > 10 ? temp[i].title.substr(0, 10) + "..." : temp[i].title;
                     if (i == 0) {
-                        html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a target='_blank' class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + "> " + text + "</a></li>";
+                        html += "<li><img src=\"img/1tubiao.png\" class=\"rmxzdk\"><a target='_blank' class=\"rm1\"  onclick='update_viewcount(" + temp[i].id + "," + "\"" + temp[i].title + "\"" +")' title=" + temp[i].title.replace(" ", "-") + "> " + text + "</a></li>";
                     } else if (i == 1) {
-                        html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' class=\"rm2\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
+                        html += "<li><img src=\"img/2tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' class=\"rm2\" onclick='update_viewcount(" + temp[i].id + "," + "\"" + temp[i].title + "\"" +")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
                     } else if (i == 2) {
-                        html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' class=\"rm3\" onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
+                        html += "<li><img src=\"img/3tubiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' class=\"rm3\" onclick='update_viewcount(" + temp[i].id + "," + "\"" + temp[i].title + "\"" +")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
                     } else {
-                        html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' onclick='update_viewcount(" + temp[i].id + ")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
+                        html += "<li><img src=\"img/" + (i + 1) + "tbbiao.png\" width=\"17px\" class=\"rmxzdk\"><a target='_blank' onclick='update_viewcount(" + temp[i].id + "," + "\"" + temp[i].title + "\"" +")' title=" + temp[i].title.replace(" ", "-") + ">" + text + "</a></li>";
                     }
 
                 }
@@ -75,10 +75,10 @@ function Relative_Recommend() {
 //
 //更新浏览次数
 //
-function update_viewcount(id) {
+function update_viewcount(id, title) {
     $.post("../Ancient_Article/Update_Viewcount", { id: id }, function (data) {
         if (data == "1") {
-            location.href = '../Ancient_Article?id=' + id;
+            location.href = '../Ancient_Article?id=' + id + '&myTitle=' + title;
         }
     });
 }
@@ -94,7 +94,7 @@ function GetList() {
             if (data != "]") {
                 var temp = eval(data);
                 for (var i = 0; i < temp.length; i++) {
-                    html += "<div class=\"fenlei11\" onclick='update_viewcount(" + temp[i].id + ")'>\
+                    html += "<div class=\"fenlei11\" onclick='update_viewcount(" + temp[i].id + "," + "\"" + temp[i].title + "\"" + ")'>\
                                 <img src=\"img/shushuxian.png\"  class=\"shushu\">\
                                 <a target='_blank'  target='_blank' class=\"fla\" >" + temp[i].title + "</a>\
                             </div>";
@@ -110,10 +110,10 @@ function GetList() {
 //
 //更新浏览次数
 //
-function update_viewcount(id) {
+function update_viewcount(id,title) {
     $.post("../Ancient_Article/Update_Viewcount", { id: id }, function (data) {
         if (data == "1") {
-            location.href = '../Ancient_Article?id='+id;
+            location.href = '../Ancient_Article?id=' + id + '&myTitle=' + title;
         }
     });
 }

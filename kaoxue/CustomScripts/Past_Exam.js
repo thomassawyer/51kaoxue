@@ -7,7 +7,7 @@ var pageindex = 1;  //当前页数
 var pagecount = 0; //总页数
 var year = ""; // 年级
 var daohangid = "";
-var year_text;
+var year_text = "";
 var year_para = GetQueryString("year");
 //
 //点击A标签时,改变A标签背景
@@ -195,7 +195,7 @@ function GetList() {
                                             if (list != "]") {
                                                 var flag2 = eval(list);
                                                 for (var k = 0; k < flag2.length; k++) {
-                                                    html += "<a target='_blank' class=\"sub_type_per\" onclick=\"javascript:window.open('../Download?cid=1&id=" + flag2[k].testid + "');\" target='_blank'>" + GetTypeName(flag2[k].type) + "</a>";
+                                                    html += "<a target='_blank' class=\"sub_type_per\" onclick=\"javascript:window.open('../Download?cid=1&id=" + flag2[k].testid + "&myTitle=" + year_text + "高考试题-" + flag[j].subject + GetTypeName(flag2[k].type) + "(" + text + ")" + "');\" target='_blank'>" + GetTypeName(flag2[k].type) + "</a>";
                                                 }
                                             }
                                         }
@@ -244,6 +244,7 @@ function GetQueryString(name) {
 }
 
 $(document).ready(function () {
+    StartReading('list');
     year_para = GetQueryString("year");
     GetYear();
 
