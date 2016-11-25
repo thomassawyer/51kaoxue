@@ -71,6 +71,7 @@
         <input type="text" class="tzsr" id="lll" value="">
         <span class="an87" id="data_go" onclick="go()">&nbsp;&nbsp;&nbsp;G O</span>
     </div> <!-- 跳转部分 -->
+    @Html.Partial("~/Common/bottom.ascx")
     <script>
         var shuzhi1 = $(".ysp1").html();
         var zs1 = Number(shuzhi1);
@@ -128,7 +129,7 @@
         //go改变页码
     </script>
 
-    <div class="youqinlianjie">
+    @*<div class="youqinlianjie">
         <div class="yqlj1189">
             <div class="yqljimg">
                 <div>
@@ -156,7 +157,7 @@
                 Copyright © 5ihzy.com All rights reserved 京ICP备15008398号
             </span>
         </div>
-    </div>
+    </div>*@
 
 </body>
 </html>

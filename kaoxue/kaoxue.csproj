@@ -575,6 +575,7 @@
     <Content Include="img\tc-104.png" />
     <Content Include="img\tc-93.png" />
     <Content Include="img\tcxx-105.png" />
+    <Content Include="img\tengxun.png" />
     <Content Include="img\title_middle_nav_span_normal_1.png" />
     <Content Include="img\title_middle_nav_span_normal_2.png" />
     <Content Include="img\tlbeijin.png" />
@@ -601,6 +602,7 @@
     <Content Include="img\waiting_bg.gif" />
     <Content Include="img\waiting_bg.jpg" />
     <Content Include="img\waiting_bg_1.jpg" />
+    <Content Include="img\wangyi.png" />
     <Content Include="img\wbg.png" />
     <Content Include="img\wd110.png" />
     <Content Include="img\weilan111.png" />
@@ -619,6 +621,7 @@
     <Content Include="img\xiazaibai.png" />
     <Content Include="img\xiazaitb.png" />
     <Content Include="img\xiazaitubiao.png" />
+    <Content Include="img\xinlang.png" />
     <Content Include="img\xintb.png" />
     <Content Include="img\xintbh.png" />
     <Content Include="img\xinxin.jpg" />

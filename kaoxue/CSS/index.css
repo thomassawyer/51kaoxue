@@ -1401,8 +1401,8 @@ a {
     }
 
 .dkyqlj {
-    line-height: 29px;
-    padding-left: 450px;
+    line-height: 35px;
+    padding-left: 350px;
 }
 
 .yqljkzpd {
@@ -2130,3 +2130,7 @@ bottom:10px;
     bottom:-20px;
 }
 ul {vertical-align:bottom;}
+
+.yqljkzpd:hover {
+    cursor:pointer;
+}

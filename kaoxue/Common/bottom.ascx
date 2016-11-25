@@ -7,9 +7,9 @@
                 <div>
                     <ul class="yqul">
                         <li class="fl"><span class="dkyqlj">友情链接:</span></li>
-                        <li class="fl"><img src="../../img/souhu.png" class="yqljkzpd" /></li>
-                        <li class="fl"><img src="../../img/souhu.png" class="yqljkzpd" /></li>
-                        <li class="fl"><img src="../../img/souhu.png" class="yqljkzpd" /></li>
+                        <li class="fl"><img src="../../img/tengxun.png" onclick="javascript:window.open('http://edu.qq.com/gaokao/');" class="yqljkzpd" /></li>
+                        <li class="fl"><img src="../../img/wangyi.png" onclick="javascript:window.open('http://edu.163.com/');" class="yqljkzpd" /></li>
+                        <li class="fl"><img src="../../img/xinlang.png" onclick="javascript:window.open('http://edu.sina.com.cn/');" class="yqljkzpd" /></li>
                         <div style="clear: both;">
 
                         </div>
