@@ -3,7 +3,7 @@
 //url参数集合
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    var r = decodeURI(window.location.search).substr(1).match(reg);
+    var r = decodeURIComponent(window.location.search).substr(1).match(reg);
     if (r != null) return unescape(r[2]); return null;
 }
 var id;

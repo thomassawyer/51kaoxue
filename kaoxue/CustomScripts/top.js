@@ -2,9 +2,10 @@
 
 //url参数集合
 function GetQueryString(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    var r = decodeURI(window.location.search).substr(1).match(reg);
-    if (r != null) return unescape(r[2]); return null;
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results == null ? "": decodeURIComponent(results[1]);
 }
 
 var subjectname = "";
@@ -173,9 +174,9 @@ function navSelect() {
                         $("title").html(text + " - 51考学网");
                     break;
                 case "/Download":
-                    var text = GetQueryString("myTitle");
-                    if (text)
-                        $("title").html(text + "下载 - 51考学网");
+                    //var text = GetQueryString("myTitle");
+                    //if (text)
+                    //    $("title").html(text + "下载 - 51考学网");
                     break;
                 case "/Ancient_List":
                     var text = GetQueryString("title");
@@ -183,9 +184,9 @@ function navSelect() {
                         $("title").html(text + " - 51考学网");
                     break;
                 case "/Ancient_Article":
-                    var text = GetQueryString("myTitle");
-                    if (text)
-                        $("title").html(text + "阅读 - 51考学网");
+                    //var text = GetQueryString("myTitle");
+                    //if (text)
+                    //    $("title").html(text + "阅读 - 51考学网");
                     break;
                 case "/News":
                     var text = GetQueryString("typename");
@@ -195,9 +196,9 @@ function navSelect() {
                         $("title").html("天天新闻 - 51考学网");
                     break;
                 case "/News_Detail":
-                    var text = GetQueryString("myTitle");
-                    if (text)
-                        $("title").html(text + " - 51考学网");
+                    //var text = GetQueryString("myTitle");
+                    //if (text)
+                    //    $("title").html(text + " - 51考学网");
                     break;
                 case "/SchoolDetail":
                     var text = GetQueryString("myTitle");

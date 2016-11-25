@@ -296,7 +296,7 @@ function News(type, controlid) {
                                 <a target='_blank' class=\"zxzt_btn_07c7bc dot_data_com fl\">" + number + "</a>&nbsp;\
                             </div>\
                             <div class=\"fl gkdt_240 overf_com color07c7bc\">\
-                                <a target='_blank' class=\"color07c7bc line_hg_25\" href='../News_Detail?id=" + temp[i - 1].id + "&myTitle=" + text + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
+                                <a target='_blank' class=\"color07c7bc line_hg_25\" href='../News_Detail?id=" + temp[i - 1].id + "&myTitle=" +  text + "' title='" + temp[i - 1].title.replace(" ", "-") + "'>" + text + "</a>\
                             </div>\
                             <div class=\" fr\">\
                                 <a target='_blank' class=\"color07c7bc  fr line_hg_25\">[" + time + "]</a>\

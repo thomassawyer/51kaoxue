@@ -13,6 +13,9 @@ namespace kaoxue.Controllers
 
         public ActionResult Index()
         {
+            string param = Request["myTitle"];
+            ViewBag.title = param;
+
             return View();
         }
 

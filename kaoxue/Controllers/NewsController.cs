@@ -15,6 +15,7 @@ namespace kaoxue.Controllers
 
         public ActionResult Index()
         {
+            
             return View();
         }
 
