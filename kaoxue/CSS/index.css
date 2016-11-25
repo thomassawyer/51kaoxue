@@ -1942,14 +1942,20 @@ bottom:10px;
 .zuixintaoti160 .fj_grade {
     padding-left: 30px;
     padding-top: 20px;
+        width: 62px;
+    height: 62px;
 }
 .zuixintaoti160 .xinxin_grade {
     padding-left: 45px;
     padding-top: 20px;
+        width: 62px;
+    height: 62px;
 }
 .zuixintaoti160 .ksquan_grade {
     padding-left:50px;
     padding-top: 20px;
+        width: 62px;
+    height: 62px;
 }
 .ab_ps_lf105 {
     position: absolute;
