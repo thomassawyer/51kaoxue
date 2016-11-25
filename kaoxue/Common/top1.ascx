@@ -61,19 +61,19 @@
     <div class="daohanglan">
         <div class="daohanglan_ul">
             <ul class="dhul">
-                <li class="fl bk fb1" id="pad"><a target='_blank'  href="../Subject?subjectname=语文">语文</a><img src="../../img/tc-93.png" class="maozi1" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=数学">数学</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=英语">英语</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=物理">物理</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=化学">化学</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=生物">生物</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=历史">历史</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=政治">政治</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=地理">地理</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk1" id="bk"><a target='_blank'  href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk1"><a target='_blank'  href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Grade?level=3">高中</a><img src="../../img/tc-93.png" alt="" /></li>
-                <li class="fl pad bk"><a target='_blank'  href="../Grade?level=2">初中</a><img src="../../img/tc-93.png" alt="" /></li>  
+                <li class="fl bk fb1" id="pad"><a target='_blank'  href="../Subject?subjectname=语文">语文</a><img src="../../img/tc-93.png" class="maozi1 maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=数学">数学</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=英语">英语</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=物理">物理</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=化学">化学</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=生物">生物</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=历史">历史</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=政治">政治</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Subject?subjectname=地理">地理</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk1" id="bk"><a target='_blank'  href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk1"><a target='_blank'  href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Grade?level=3">高中</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>
+                <li class="fl pad bk"><a target='_blank'  href="../Grade?level=2">初中</a><img src="../../img/tc-93.png" class="maozi1_hover" alt="" /></li>  
             </ul>
         </div>
     </div><!--导航栏-->

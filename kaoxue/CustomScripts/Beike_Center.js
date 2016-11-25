@@ -586,8 +586,8 @@ $(document).ready(function () {
     else {
         level_selected(3);
     }
-    $("#Beike_Center_img").css({ 'display': 'block', 'right': '42px' });
-    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;备课中心");
+    //$("#Beike_Center_img").css({ 'display': 'block', 'right': '42px' });
+    //$("#nav_rec_2").html("&nbsp;&gt;&nbsp;备课中心");
     
 });
 

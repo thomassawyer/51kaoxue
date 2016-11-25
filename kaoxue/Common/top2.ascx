@@ -62,11 +62,11 @@
     <div class="daohanglan_ul">
         <ul class="uuu">
             <li class="fl"><a target='_blank' href="../Home"><span>首页</span></a></li><li class="fl"><a target='_blank'><span></span><span id="nav_rec_2"></span></a></li>
-            <li class="fl bk1 mar_lf_65"><a target='_blank'  href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" class="bkimg2" id="Beike_Center_img"/></li>
-            <li class="fl pad bk1"><a target='_blank'  href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" class="bkimg3" id="Test_Center_img"/></li>
-            <li class="fl pad bk1"><a target='_blank'  href="../Past_Exam">高考真题</a><img src="../../img/tc-93.png" class="bkimg4" id="Past_Exam_img"/></li>
-            <li class="fl pad bk1"><a target='_blank'  href="../Elite_School">名校试题</a><img src="../../img/tc-93.png" class="bkimg5" id="Elite_School_img"/></li>
-            <li class="fl pad bk1"><a target='_blank'  href="../Gaokao_Beikao">高考备考</a><img src="../../img/tc-93.png" class="bkimg6" id="Gaokao_Beikao_img"/></li>
+            <li class="fl bk1 mar_lf_65"><a target='_blank'  href="../Beike_Center">备课中心</a><img src="../../img/tc-93.png" class="bkimg2 maozi1_hover" id="Beike_Center_img"/></li>
+            <li class="fl pad bk1"><a target='_blank'  href="../Test_Center">试题中心</a><img src="../../img/tc-93.png" class="bkimg3 maozi1_hover" id="Test_Center_img"/></li>
+            <li class="fl pad bk1"><a target='_blank'  href="../Past_Exam">高考真题</a><img src="../../img/tc-93.png" class="bkimg4 maozi1_hover" id="Past_Exam_img"/></li>
+            <li class="fl pad bk1"><a target='_blank'  href="../Elite_School">名校试题</a><img src="../../img/tc-93.png" class="bkimg5 maozi1_hover" id="Elite_School_img"/></li>
+            <li class="fl pad bk1"><a target='_blank'  href="../Gaokao_Beikao">高考备考</a><img src="../../img/tc-93.png" class="bkimg6 maozi1_hover" id="Gaokao_Beikao_img"/></li>
         </ul>
 
     </div>

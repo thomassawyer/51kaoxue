@@ -583,8 +583,8 @@ $(document).ready(function () {
     GetTest_Recommend();
     GetArea();
 
-    $("#Test_Center_img").css({ 'display': 'block', 'right': '42px' });
-    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;试题中心");
+    //$("#Test_Center_img").css({ 'display': 'block', 'right': '42px' });
+    //$("#nav_rec_2").html("&nbsp;&gt;&nbsp;试题中心");
 });
 
 //

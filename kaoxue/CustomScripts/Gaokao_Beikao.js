@@ -583,8 +583,8 @@ $(document).ready(function () {
     GetTest_Recommend();
     GetArea();
 
-    $("#Gaokao_Beikao_img").css({ 'display': 'block', 'right': '42px' });
-    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;高考备考");
+    //$("#Gaokao_Beikao_img").css({ 'display': 'block', 'right': '42px' });
+    //$("#nav_rec_2").html("&nbsp;&gt;&nbsp;高考备考");
 });
 
 //
