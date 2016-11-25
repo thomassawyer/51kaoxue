@@ -94,7 +94,7 @@ namespace kaoxue.Controllers
                                                 SELECT ROW_NUMBER() 
                                                 OVER (
                                                 order by T.intime desc)AS Row, T.*  from vw_school T  
-                                                WHERE  {0} 
+                                                WHERE  {0} and headid>0
                                                 ) 
                                                 TT WHERE TT.Row between {1} and {2}", condition, startindex, endindex);
             DataSet ds = DbHelperSQL.Query(sql);
