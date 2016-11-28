@@ -170,7 +170,7 @@
     background-image:url(../img/item_hover_a.png);
     z-index:1;
 }
-img{
+.content img{
     display:inherit;
     display:block;
 }

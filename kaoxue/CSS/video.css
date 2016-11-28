@@ -378,7 +378,7 @@ body {
     background-image:url(../img/e_more_btt.png);
     margin-top: 218px;
 }
-img{
+.content img{
     display:inherit;
     display:block;
 }
