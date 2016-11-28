@@ -26,14 +26,18 @@ function validate() {
     getpara();
     if (username == "" || username == undefined || username == null) {
         //alert("请输入用户名");
-        var tip = $("#username").easytip();
-        tip.show("用户名不能为空!");
+        //var tip = $("#username").easytip();
+        //tip.show("用户名不能为空!");
+        $(".errorinfo_fl_user").html("用户名不能为空！");
+        $(".errorinfo_fl_user").css({ 'display': 'block', 'top': '180px' });
         return false;
     }
     if (password == "" || password == undefined || password == null) {
         //alert("请输入密码");
-        var tip = $("#password").easytip();
-        tip.show("用户密码不能为空!");
+        //var tip = $("#password").easytip();
+        //tip.show("用户密码不能为空!");
+        $(".errorinfo_fl").html("用户密码不能为空！");
+        $(".errorinfo_fl").css({ 'display': 'block', 'top': '260px' });
         return false;
     }
     return true;
@@ -65,9 +69,12 @@ function Login() {
         username:username
     }, function (data) {
         if (data == "0") {
-            var tip = $("#username").easytip();
-            tip.show("用户名不存在!");
+            //var tip = $("#username").easytip();
+            //tip.show("用户名不存在!");
             //alert("用户名不存在");
+            $(".errorinfo_fl_user").html("用户名不存在！");
+            $(".errorinfo_fl_user").css({ 'display': 'block', 'top': '180px' });
+            
         } else if(data=="1") {
             $.post("../Login/ValidateUsernameAndPassword", {
                 username: username,
@@ -84,8 +91,10 @@ function Login() {
                     }
                 } else {
                     //alert("密码错误");
-                    var tip = $("#password").easytip();
-                    tip.show("密码错误!");
+                    //var tip = $("#password").easytip();
+                    //tip.show("密码错误!");
+                    $(".errorinfo_fl").html("用户密码错误！");
+                    $(".errorinfo_fl").css({ 'display': 'block', 'top': '260px' });
                 }
             });
         }
@@ -150,20 +159,35 @@ function loginEnterCheck() {
 
 
 $(document).ready(function () {
-    $("#reg-form").easyform();
+    //$("#reg-form").easyform();
 
     remove_div();
 
-    $("#password").blur(function () {
-        if ($("#password").val() == '') {
-            var tip = $("#password").easytip();
-            tip.show("用户密码不能为空!");
-        }
+    $("input").focus(function () {
+
+        $(".errorinfo_fl").css({ 'display': 'none' });
+        $(".errorinfo_fl_user").css({ 'display': 'none' });
+       
     });
-    $("#username").blur(function () {
-        if ($("#username").val() == '') {
-            var tip = $("#username").easytip();
-            tip.show("用户名不能为空!");
-        } 
-    });
+    //$("#password").blur(function () {
+    //    if ($("#password").val() == '') {
+    //        //var tip = $("#password").easytip();
+    //        //tip.show("用户密码不能为空!");
+    //        $(".errorinfo_fl").html("用户密码不能为空!");
+    //        $(".errorinfo_fl").css({ 'display': 'block', 'top': '200px' });
+    //    }
+    //});
+    //$("#username").focus(function () {
+
+   
+        
+    //});
+    //$("#username").blur(function () {
+    //    if ($("#username").val() == '') {
+    //        //var tip = $("#username").easytip();
+    //        //tip.show("用户名不能为空!");
+    //        $(".errorinfo_fl_user").html("用户名不能为空!");
+    //        $(".errorinfo_fl_user").css({ 'display': 'block', 'top': '200px' });
+    //    } 
+    //});
 });

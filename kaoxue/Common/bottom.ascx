@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
-
+    <script src="../engine1/respond.js"></script>
 <center>
 <div class="youqinlianjie" style="clear:both;">
         <div class="yqlj1189">

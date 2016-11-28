@@ -9,7 +9,9 @@
 }
 
 .ztccs {
-    width: 1189px;
+    /*width: 1189px;*/
+    width:auto;
+    float:left;
     height: 100%;
 }
 

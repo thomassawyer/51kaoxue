@@ -332,6 +332,7 @@
     <Content Include="img\book_lightgreen.jpg" />
     <Content Include="img\book_yellow.jpg" />
     <Content Include="img\boshimao.png" />
+    <Content Include="img\bunengweikong_05.png" />
     <Content Include="img\cekbei.png" />
     <Content Include="img\chuchi1.png" />
     <Content Include="img\chuchihui1.png" />
@@ -565,6 +566,7 @@
     <Content Include="img\shutubiao1.png" />
     <Content Include="img\sjtubiao.png" />
     <Content Include="img\slick.gif" />
+    <Content Include="img\sn-separator.png" />
     <Content Include="img\souhu.png" />
     <Content Include="img\sousuo.png" />
     <Content Include="img\srenwu.png" />
@@ -735,6 +737,7 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="engine1\respond.js" />
     <Content Include="Scripts\sea.js" />
     <Content Include="Scripts\slideshow.js" />
     <Content Include="Web.config" />
