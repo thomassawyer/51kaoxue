@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="css/test_questions.css" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
     <script src="~/Scripts/jquery.paging.min.js"></script>
+    <style>
+        img {
+            display: inherit;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     @Html.Partial("~/Common/top4.ascx")
@@ -108,7 +114,7 @@
     <div class="lianxi" style="overflow:hidden;">
         <div class="lianxice210 fl border_bott_e5" id="directory" style="height:auto;">
             <div class="lianxice33"><a target="_blank">章节单元</a></div>
-            <div class="lx136 zjie fl" style="height:auto;padding:0px 20px;">
+            <div class="lx136 zjie fl" style="height:auto;">
              <ul>
                 <li><a target="_blank" id="directory1" onclick="anchor(this),tree_title_selected('2001','第一单元')"><b class="ce33b">第一单元</b></a></li>
                 <li><a target="_blank" id="drectory11" onclick="anchor(this),tree_content_li_selected('2005','1 荷塘月色')">1 荷塘月色</a></li>
@@ -117,7 +123,7 @@
                 <li><a target="_blank" id="drectory14" onclick="anchor(this),tree_content_li_selected('2008','4 单元综合')">4 单元综合</a></li>
                 </ul>                                
             </div>
-            <div class="lx136 zjie fl" style="height:auto;padding:0px 20px;">
+            <div class="lx136 zjie fl" style="height:auto;">
                 <ul>
                 <li><a target="_blank" id="directory2" onclick="anchor(this),tree_title_selected('2002','第二单元')"><b class="ce33b">第二单元</b></a></li>
                 <li><a target="_blank" id="drectory21" onclick="anchor(this),tree_content_li_selected('2009','5 《诗经》两首')">5 《诗经》两首</a></li>
@@ -127,7 +133,7 @@
                 <li><a target="_blank" id="drectory25" onclick="anchor(this),tree_content_li_selected('2013','单元综合')">单元综合</a></li>
                 </ul>                                
             </div>
-            <div class="lx136 zjie fl" style="height:auto;padding:0px 20px;">
+            <div class="lx136 zjie fl" style="height:auto;">
                 <ul>
                 <li><a target="_blank" id="directory3" onclick="anchor(this),tree_title_selected('2003','第三单元')"><b class="ce33b">第三单元</b></a></li>
                 <li><a target="_blank" id="drectory31" onclick="anchor(this),tree_content_li_selected('2014','9 兰亭集序')">9 兰亭集序</a></li>
@@ -136,7 +142,7 @@
                 <li><a target="_blank" id="drectory34" onclick="anchor(this),tree_content_li_selected('2017','12 单元综合')">12 单元综合</a></li>
                 </ul>
             </div>
-            <div class="lx136 zjie fl" style="height:auto;padding:0px 20px;">
+            <div class="lx136 zjie fl" style="height:auto;">
             <ul style="border:none;">
                 <li><a target="_blank" id="directory4" onclick="anchor(this),tree_title_selected('2004','第四单元')"><b class="ce33b">第四单元</b></a></li>
                 <li><a target="_blank" id="drectory41" onclick="anchor(this),tree_content_li_selected('2018','13 就任北京大学校长之演说')">13 就任北京大学校长之演说</a></li>

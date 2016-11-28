@@ -153,6 +153,7 @@
     <Compile Include="Controllers\The_School_TestController.cs" />
     <Compile Include="Controllers\ThroughTrainController.cs" />
     <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Controllers\VideoPlayController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,6 +193,7 @@
     <Content Include="CSS\test_questions.css" />
     <Content Include="CSS\Through_train.css" />
     <Content Include="CSS\video.css" />
+    <Content Include="CSS\video_play.css" />
     <Content Include="CSS\xueke9da.css" />
     <Content Include="CSS\xueke9da1.css" />
     <Content Include="CustomScripts\Ancient.js" />
@@ -227,6 +229,7 @@
     <Content Include="CustomScripts\Test_Center.js" />
     <Content Include="CustomScripts\The_School_Test.js" />
     <Content Include="CustomScripts\top.js" />
+    <Content Include="CustomScripts\video.js" />
     <Content Include="data1\images\1.jpg" />
     <Content Include="data1\images\2.jpg" />
     <Content Include="data1\images\3.jpg" />
@@ -340,6 +343,7 @@
     <Content Include="img\czgzye1.png" />
     <Content Include="img\c_img_title.jpg" />
     <Content Include="img\c_img_title_hover.png" />
+    <Content Include="img\c_more_btt.png" />
     <Content Include="img\dandan.png" />
     <Content Include="img\danlan111.png" />
     <Content Include="img\danlan222.png" />
@@ -364,6 +368,7 @@
     <Content Include="img\e_img_title_hover.png" />
     <Content Include="img\e_item_hover.png" />
     <Content Include="img\e_item_title_img.png" />
+    <Content Include="img\e_more_btt.png" />
     <Content Include="img\fen_100_1.png" />
     <Content Include="img\find_logo.png" />
     <Content Include="img\find_year.png" />
@@ -425,9 +430,14 @@
     <Content Include="img\hyeu.jpg" />
     <Content Include="img\hyeu.png" />
     <Content Include="img\hyxdj.png" />
+    <Content Include="img\ic_video.png" />
+    <Content Include="img\ic_video_hover.png" />
+    <Content Include="img\ic_view_rec.png" />
     <Content Include="img\item_hover.png" />
     <Content Include="img\item_hover_1.png" />
+    <Content Include="img\item_hover_a.png" />
     <Content Include="img\item_title_img.jpg" />
+    <Content Include="img\i_video_f_bg.png" />
     <Content Include="img\jianzhubai.png" />
     <Content Include="img\jiaodian.png" />
     <Content Include="img\jiaoshi.png" />
@@ -517,17 +527,20 @@
     <Content Include="img\no_data_bg_22.png" />
     <Content Include="img\pclunbo.png" />
     <Content Include="img\pinxin.png" />
+    <Content Include="img\play_title.png" />
     <Content Include="img\prev.png" />
     <Content Include="img\p_1.png" />
     <Content Include="img\p_img_title.png" />
     <Content Include="img\p_img_title_hover.png" />
     <Content Include="img\p_item_hover.png" />
     <Content Include="img\p_item_title_img.png" />
+    <Content Include="img\p_more_btt.png" />
     <Content Include="img\qiuda1.png" />
     <Content Include="img\qq.png" />
     <Content Include="img\qzqm.png" />
     <Content Include="img\raw_d.png" />
     <Content Include="img\redkj.png" />
+    <Content Include="img\related_video_title.png" />
     <Content Include="img\renwu.png" />
     <Content Include="img\rg_arrow.png" />
     <Content Include="img\rg_arrow_hover.png" />
@@ -590,12 +603,18 @@
     <Content Include="img\t_img_title_hover.png" />
     <Content Include="img\t_item_hover.png" />
     <Content Include="img\t_item_title_img.png" />
+    <Content Include="img\t_more_btt.png" />
     <Content Include="img\university_entrance_bef_title.png" />
     <Content Include="img\u_img_title.png" />
     <Content Include="img\u_img_title_hover.png" />
     <Content Include="img\u_item_hover.png" />
     <Content Include="img\u_item_title_img.png" />
+    <Content Include="img\u_more_btt.png" />
+    <Content Include="img\video_intro_title.png" />
+    <Content Include="img\video_ranking_title.png" />
+    <Content Include="img\video_syno_title.png" />
     <Content Include="img\video_title_bg.jpg" />
+    <Content Include="img\video_view_rec_title.png" />
     <Content Include="img\vui-button-cur.png" />
     <Content Include="img\vui-button-cur_1.png" />
     <Content Include="img\vui-button.png" />
@@ -761,6 +780,7 @@
     <Content Include="Views\ThroughTrain\Index.cshtml" />
     <Content Include="Views\Classroom_Teaching\Index.cshtml" />
     <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\VideoPlay\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

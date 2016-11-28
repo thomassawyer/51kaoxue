@@ -20,6 +20,7 @@
     <link href="~/engine1/style.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-1.8.2.js"></script>
     <script src="~/Scripts/slideshow.js"></script>
+    <script src="~/CustomScripts/video.js"></script>
 </head>
 <body>
     @Html.Partial("~/Common/top4.ascx")
@@ -29,21 +30,22 @@
     <div class="content">
         <div class="classroom_teaching">
             <div class="c_img_title fl">
-                <div class="c_img_title_hover">
-                </div>
+                @*<div class="c_img_title_hover">
+                </div>*@
+                <div class="c_more_btt">查看更多相关视频</div>
             </div>
             <div class="c_content fr">
                 <div class="c_nav">
                     <ul>
-                        <li class="fl c_nav_selected">语文</li>
-                        <li class="fl">数学</li>
-                        <li class="fl">英语</li>
-                        <li class="fl">物理</li>
-                        <li class="fl">化学</li>
-                        <li class="fl">生物</li>
-                        <li class="fl">历史</li>
-                        <li class="fl">地理</li>
-                        <li class="fl">政治</li>
+                        <li class="fl c_nav_selected" onclick="change_css_span(this, 'c_nav_selected')">语文</li>
+                        <li class="fl" onclick="change_css_span(this, 'c_nav_selected')">数学</li>
+                        <li class="fl" onclick="change_css_span(this, 'c_nav_selected')">英语</li>
+                        <li class="fl" onclick="change_css_span(this, 'c_nav_selected')">物理</li>
+                        <li class="fl" onclick="change_css_span(this, 'c_nav_selected')">化学</li>
+                        <li class="fl" onclick="change_css_span(this, 'c_nav_selected')">生物</li>
+                        <li class="fl" onclick="change_css_span(this, 'c_nav_selected')">历史</li>
+                        <li class="fl" onclick="change_css_span(this, 'c_nav_selected')">地理</li>
+                        <li class="fl" onclick="change_css_span(this, 'c_nav_selected')">政治</li>
                     </ul>
                 </div>
                 <div class="c_video_all">
@@ -51,7 +53,7 @@
                         @*<div class="lf_arrow"></div>*@
                         <ul class="mar_lf_30 ma20 overf_hid">
                             <li class="fl mar_rg_17">
-                                <div class="item">
+                                <div class="item" onclick="javascript:window.open('../VideoPlay')">
                                     <div class="item_hover"></div>
                                     <div class="item_title">
                                         <img src="../img/item_title_img.jpg" class="item_title_img">
@@ -138,8 +140,9 @@
         </div>@*课堂讲学*@
         <div class="psycho_decompression mar_top30">
             <div class="p_img_title fl">
-                <div class="p_img_title_hover">
-                </div>
+                @*<div class="p_img_title_hover">
+                </div>*@
+                <div class="c_more_btt p_more_btt">查看更多相关视频</div>
             </div>
             <div class="p_content fr">
                 <div class="p_video_all">
@@ -220,21 +223,22 @@
         @*心里解压*@
         <div class="test_question_parsing mar_top30">
             <div class="t_img_title fl">
-                <div class="t_img_title_hover">
-                </div>
+                @*<div class="t_img_title_hover">
+                </div>*@
+                <div class="c_more_btt t_more_btt">查看更多相关视频</div>
             </div>
-            <div class="c_content fr">
+            <div class="c_content t_content fr">
                 <div class="c_nav t_nav">
                     <ul>
-                        <li class="fl t_nav_selected">语文</li>
-                        <li class="fl">数学</li>
-                        <li class="fl">英语</li>
-                        <li class="fl">物理</li>
-                        <li class="fl">化学</li>
-                        <li class="fl">生物</li>
-                        <li class="fl">历史</li>
-                        <li class="fl">地理</li>
-                        <li class="fl">政治</li>
+                        <li class="fl t_nav_selected" onclick="change_css_span(this, 't_nav_selected')">语文</li>
+                        <li class="fl" onclick="change_css_span(this, 't_nav_selected')">数学</li>
+                        <li class="fl" onclick="change_css_span(this, 't_nav_selected')">英语</li>
+                        <li class="fl" onclick="change_css_span(this, 't_nav_selected')">物理</li>
+                        <li class="fl" onclick="change_css_span(this, 't_nav_selected')">化学</li>
+                        <li class="fl" onclick="change_css_span(this, 't_nav_selected')">生物</li>
+                        <li class="fl" onclick="change_css_span(this, 't_nav_selected')">历史</li>
+                        <li class="fl" onclick="change_css_span(this, 't_nav_selected')">地理</li>
+                        <li class="fl" onclick="change_css_span(this, 't_nav_selected')">政治</li>
                     </ul>
                 </div>
                 <div class="c_video_all">
@@ -332,8 +336,9 @@
         </div>@*高考研讨会大标题*@
         <div class="classroom_teaching mar_top30">
             <div class="c_img_title  u_img_title fl">
-                <div class="u_img_title_hover">
-                </div>
+                @*<div class="u_img_title_hover">
+                </div>*@
+                <div class="c_more_btt u_more_btt">查看更多相关视频</div>
             </div>
             <div class="c_content fr">
                 <div class="c_nav u_nav">
@@ -441,8 +446,9 @@
 </div>@*高考研讨会*@
         <div class="psycho_decompression mar_top30 exam_prepare mar_bott_30">
             <div class="p_img_title e_img_title fl">
-                <div class="e_img_title_hover">
-                </div>
+                @*<div class="e_img_title_hover">
+                </div>*@
+                <div class="c_more_btt e_more_btt">查看更多相关视频</div>
             </div>
             <div class="p_content fr">
                 <div class="p_video_all">

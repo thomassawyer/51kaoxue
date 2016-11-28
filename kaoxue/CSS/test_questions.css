@@ -147,15 +147,15 @@ a {
 }
 
 .item {
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
+    /*box-sizing:border-box;
+    -webkit-box-sizing:border-box;*/
     height:100%;
-    width:305px;
+    width:303px;
     border:1px dashed #b5b5b5;
     position:relative;
 }
 .item_img {
-    height: 170px;
+    height: 175px;
     width: 100%;
 }
 .item_title {
