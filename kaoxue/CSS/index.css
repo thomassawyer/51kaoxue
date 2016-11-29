@@ -2156,3 +2156,13 @@ ul {vertical-align:bottom;}
 .mar_lf_12 {
     margin-left:12px;
 }
+button:focus,input:focus,select:focus { outline:none; }
+
+.common_go {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    display: block;
+    width: 100px;
+    height: 100px;
+}
