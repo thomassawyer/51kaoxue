@@ -589,7 +589,7 @@ function banner() {
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<a target='_blank' href='"+temp[i].link+"'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "'  style='width:715px; height:442px;'></a>";
+                html += "<a target='_blank' href='"+temp[i].link+"'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "'  style='width:715px; height:442px;'></a>";
             }
             $("#wowslider-container1_new_1").html(html);
             //$("#banner_buttons").html(html1);
@@ -623,10 +623,10 @@ function GetYearForHeightSchool() {
                         html += "<li class=\"lngkli1 lngk_title fl\"><img src=\"../../img/shijuantubiao.png\" class=\"sjtb9dk\"><a target='_blank' class=\"lngka\"><b class=\"linian font_size16\">历年高考试卷</b></a></li>";
                     } else {
                         if (i % 2 == 0) {
-                            html += "<li class=\"lngkli lhove1 fl \"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a target='_blank' class=\"nfa\" href=\"../Past_Exam?year=" + temp[i - 1].id + "&year_text=" + temp[i - 1].name + "\">" + temp[i - 1].name + "年</a></li>";
+                            html += "<li class=\"lngkli lhove1 fl \" onclick=\"javascript:window.open('../Past_Exam?year=" + temp[i - 1].id + "&year_text=" + temp[i - 1].name + "')\"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a target='_blank' class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
                         }
                         else {
-                            html += "<li class=\"lngkli lhove1 fl\"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a target='_blank' class=\"nfa\" href=\"../Past_Exam?year=" + temp[i - 1].id + "&year_text=" + temp[i - 1].name + "\">" + temp[i - 1].name + "年</a></li>";
+                            html += "<li class=\"lngkli lhove1 fl\" onclick=\"javascript:window.open('../Past_Exam?year=" + temp[i - 1].id + "&year_text=" + temp[i - 1].name + "')\"><img src=\"../../img/nianfen.png\" class=\"nftb\"><a target='_blank' class=\"nfa\">" + temp[i - 1].name + "年</a></li>";
 
                         }
                         

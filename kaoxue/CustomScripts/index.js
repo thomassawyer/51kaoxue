@@ -317,7 +317,7 @@ function Banner() {
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<a target='_blank' href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style=\"height: 489px; width: 717px; \"></a>";
+                html += "<a target='_blank' href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' style=\"height: 489px; width: 717px; \"></a>";
             }
             $("#wowslider-container1_new").html(html);
             //$("#banner_buttons").html(html1);
@@ -717,4 +717,19 @@ function change_css_li(obj) {
     });
     $(obj).removeClass("normal");
     $(obj).addClass("selected");
+}
+
+//点击a时，改变a样式
+function change_css_a(obj,css) {
+    $(obj).parent().children().each(function () {
+        $(this).removeClass(css);
+    });
+    $(obj).addClass(css);
+}
+//点击span时，改变span样式
+function change_css_span(obj, num) {
+    $(obj).parent().children().each(function () {
+        $(this).addClass("title_middle_nav_span_normal_" + num);
+    });
+    $(obj).removeClass("title_middle_nav_span_normal_" + num);
 }

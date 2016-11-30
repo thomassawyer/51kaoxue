@@ -605,7 +605,7 @@ function Banner() {
             var html = "";
             var html1 = "";
             for (var i = 0; i < temp.length; i++) {
-                html += "<a target='_blank'  href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' alt='" + (i + 1) + "' title='" + (i + 1) + "' id='wows1_" + (i + 1) + "' style='width:715px; height:442px;'></a>";
+                html += "<a target='_blank'  href='" + temp[i].link + "'><img src='" + "http://source.51kaoxue.com" + temp[i].pic + "' style='width:715px; height:442px;'></a>";
               
             }
             $("#wowslider-container1_new_1").html(html);

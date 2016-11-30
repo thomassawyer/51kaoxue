@@ -332,6 +332,11 @@
     <Content Include="img\book_lightgreen.jpg" />
     <Content Include="img\book_yellow.jpg" />
     <Content Include="img\boshimao.png" />
+    <Content Include="img\btn_08c79e_normal.png" />
+    <Content Include="img\btn_08c79e_selected.png" />
+    <Content Include="img\btn_808ffb_normal.png" />
+    <Content Include="img\btn_808ffb_selected.png" />
+    <Content Include="img\btn_selected.png" />
     <Content Include="img\bunengweikong_05.png" />
     <Content Include="img\cekbei.png" />
     <Content Include="img\chuchi1.png" />

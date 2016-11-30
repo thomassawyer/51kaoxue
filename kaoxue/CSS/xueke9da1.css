@@ -432,7 +432,7 @@
     vertical-align:middle;
     color: #fff;
     left: 47px;
-    line-height:18px;
+    line-height:17px;
 }
 
 .top1 {
@@ -611,10 +611,12 @@
 
 .lhove1:hover {
     background: #d1e79c;
+    border-color:#d1e79c;
 }
 
 .lhove2:hover {
     background: #ccd2fd;
+    border-color:#ccd2fd;
 }
 
 .daimg9 {
@@ -727,7 +729,7 @@
     background-image:url(../img/title_middle_nav_span_normal_1.png);
     color:#8cc407;
     /*border-radius:9px;*/
-    font-size:12px;
+    /*font-size:12px;*/
 }
 .title_middle_nav_span_normal_2 {
     /*border:1px solid #808ffb;*/
