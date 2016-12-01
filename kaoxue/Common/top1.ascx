@@ -11,7 +11,9 @@
     <div class="fixed_all">
         <div>
             <div class="fixed_login">
-                <div class="fixed_login_b" onclick="window.open('../Login')"></div>
+                <div class="fixed_login_b" onclick="window.open('../Login')">
+
+                </div>
             </div>
             <div class="fixed_weixin">
                 <div class="fixed_weixin_b"></div>

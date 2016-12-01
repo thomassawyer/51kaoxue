@@ -48,8 +48,11 @@ function GetUserInfo() {
         if (data != "0") {
             var temp = eval(data);
             for (var i = 0; i < temp.length; i++) {
-                $("#logininfo").html(temp[i].school + "&nbsp;&nbsp;" + getusertype(temp[i].level));
+                $("#logininfo").html(temp[i].school + "&nbsp;&nbsp;" + getusertype(temp[i].level) + "&nbsp;&nbsp;<a target=\"_blank\">[退出]</a>");
+                $(".fixed_login_b").html("已登录");
             }
+        } else {
+            $(".fixed_login_b").html("您好，请<span style=\"color:#2ea7f8;\">登录</span>");
         }
     })
 }

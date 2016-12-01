@@ -1,7 +1,7 @@
 .fixed_all {
     position:fixed;
     /* top: 300px; */
-    bottom: 10px;
+    bottom: 20px;
     right:10px;
     z-index:9999;
     /*display:none;*/
@@ -23,13 +23,17 @@
     display:block;
 }
 .fixed_login_b {
-    width:114px;
-    height:39px;
-    background-image:url(../img/fixed_login_b.png);
+    width:112px;
+    height:37px;
+    /*background-image:url(../img/fixed_login_b.png);*/
+    line-height:39px;
+    text-align:center;
     position:absolute; 
     top:0px;
     left:-114px;
     display:none;
+    border:1px solid #e5e5e5;
+    background-color:#fff;
 }
 .fixed_weixin {
     background-image:url(../img/fixed_weixin.png);
@@ -2220,6 +2224,7 @@ button:focus,input:focus,select:focus { outline:none; }
     text-align:center;
     line-height:17px;
     bottom:10px;
+    font-size:12px;
 }
 .btn_08c79e_normal{
     color:#08c79e;
@@ -2228,6 +2233,7 @@ button:focus,input:focus,select:focus { outline:none; }
 .btn_08c79e_selected {
     background-image:url(../img/btn_08c79e_selected.png);
     color:#fff;
+    font-size:14px;
 }
 
 .position_ab1 {
@@ -2245,6 +2251,7 @@ button:focus,input:focus,select:focus { outline:none; }
 .btn_08c79e1_selected {
     background-image:url(../img/btn_selected.png);
     color:#08c79e;
+    font-size:14px;
 }
 .top_10 {
     top:10px;
