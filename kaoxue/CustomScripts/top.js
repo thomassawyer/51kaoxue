@@ -222,6 +222,15 @@ function navSelect() {
         }
     }
 }
+//客服
+function fixed_kefu() {
+    qq_list = new Array('809869726', '809869726');
+    //随机
+    qq_i = Math.floor(Math.random() * qq_list.length);
+    src = "tencent://message/?uin=" + qq_list[qq_i] + "&Site=&menu=yes";
+    $('.qq_iframe').attr('src', src);
+}
+
 $(document).ready(function () {
     subjectname = GetQueryString("subjectname");
     navSelect();
