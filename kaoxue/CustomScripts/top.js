@@ -72,9 +72,9 @@ function getScroll() {
 
         var winPos = $(window).scrollTop();
         if (winPos > 500) {
-            $(".fixed_all").css({ 'display': 'block'});
+            $(".fixed_return").css({ 'display': 'block' });
         } else {
-            $(".fixed_all").css({ 'display': 'none' });
+            $(".fixed_return").css({ 'display': 'none' });
         }
     });
 

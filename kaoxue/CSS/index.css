@@ -1,22 +1,58 @@
 .fixed_all {
     position:fixed;
     /* top: 300px; */
-    bottom: 259px;
-    right:15%;
+    bottom: 10px;
+    right:10px;
     z-index:9999;
-    display:none;
+    /*display:none;*/
+    height:199px;
 }
 
-.fixed_weixin, .fixed_return {
+.fixed_weixin, .fixed_return,.fixed_login,.fixed_jianyi,.fixed_kefu {
     width:39px;
     height:39px;
+    position:relative;
+}
+.fixed_login {
+    background-image:url(../img/fixed_login.png);
+}
+.fixed_login:hover,.fixed_jianyi:hover,.fixed_kefu:hover{
+    cursor:pointer;
+}
+.fixed_login:hover .fixed_login_b{
+    display:block;
+}
+.fixed_login_b {
+    width:114px;
+    height:39px;
+    background-image:url(../img/fixed_login_b.png);
+    position:absolute; 
+    top:0px;
+    left:-114px;
+    display:none;
 }
 .fixed_weixin {
     background-image:url(../img/fixed_weixin.png);
+    margin-top: 1px;
+}
+.fixed_jianyi {
+    background-image:url(../img/fixed_jianyi.png);
+    margin-top: 1px;
+}
+.fixed_jianyi:hover {
+    background-image:url(../img/fixed_jianyi_hover.png);
+}
+.fixed_kefu {
+    background-image:url(../img/fixed_kefu.png);
+    margin-top: 1px;
+}
+.fixed_kefu:hover {
+    background-image:url(../img/fixed_kefu_hover.png);
 }
 .fixed_return {
     background-image:url(../img/fixed_return.png);
     margin-top: 1px;
+    display:none;
 }
 .fixed_weixin:hover {
     background-image:url(../img/fixed_weixin_hover.png);
@@ -31,7 +67,7 @@
     background-image:url(../img/fixed_weixin_b.png);
     position:absolute; 
     top:0px;
-    left:40px;
+    left:-160px;
     display:none;
 }
 .fixed_return:hover {
@@ -39,23 +75,23 @@
     cursor:pointer;
 }
 
-@media screen and (max-width: 1680px) {
+/*@media screen and (max-width: 1680px) {
     .fixed_all {
-        right:8%;
+        right:11%;
     }
     /*.fixed_weixin_b {
         left:-160px;
     }*/
-} 
+/*} 
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1600px) {
     .fixed_all {
         right:1%;
     }
     .fixed_weixin_b {
         left:-160px;
     }
-} 
+}*/
 .top_head {
     background: #f5f5f5;
     height: 36px;
@@ -746,12 +782,13 @@ a {
     /*border: 1px solid #fff;*/
 }
 .size_com {
-    display:block;
-    width:16px;
-    height:15px;
-    font-size:10px;
-    text-align:center;
-    margin-top:5px;
+    display: block;
+    width: 16px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 4px;
 }
 .ztk_ul_div_1 {
     width:320px;

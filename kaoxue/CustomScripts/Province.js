@@ -269,7 +269,7 @@ function gettest_bucategory(category,controlid,iswhite) {
 }
 
 function changeArea() {
-    $("#middle_content_top_left_top_smalllogo").html("当前省份:"+text);
+    $("#middle_content_top_left_top_smalllogo").html("当前省份："+text);
     $("#taoti_recommend_text").html("推荐套题（"+text+"）");
     $("#recommend_taoti_a").attr("href","../Elite_School?area="+area);  //本省名校试题-more
 }

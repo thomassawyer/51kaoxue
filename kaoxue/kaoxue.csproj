@@ -359,6 +359,7 @@
     <Content Include="img\danlv222.png" />
     <Content Include="img\danlv333.png" />
     <Content Include="img\danlv444.png" />
+    <Content Include="img\ddd_1.png" />
     <Content Include="img\denglu.png" />
     <Content Include="img\denglubg.png" />
     <Content Include="img\dlbjk.png" />
@@ -378,6 +379,12 @@
     <Content Include="img\fen_100_1.png" />
     <Content Include="img\find_logo.png" />
     <Content Include="img\find_year.png" />
+    <Content Include="img\fixed_jianyi.png" />
+    <Content Include="img\fixed_jianyi_hover.png" />
+    <Content Include="img\fixed_kefu.png" />
+    <Content Include="img\fixed_kefu_hover.png" />
+    <Content Include="img\fixed_login.png" />
+    <Content Include="img\fixed_login_b.png" />
     <Content Include="img\fixed_return.png" />
     <Content Include="img\fixed_return_hover.png" />
     <Content Include="img\fixed_weixin.png" />
