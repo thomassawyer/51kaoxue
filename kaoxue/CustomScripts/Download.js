@@ -172,16 +172,16 @@ function DownLoad() {
                 location.href = "http://source.51kaoxue.com" + filepath;
                 break;
             case "2":
-                message("与绑定IP不符, 不能下载");
+                alert("与绑定IP不符, 不能下载");
                 break;
             case "3":
-                message("该资源为精品资源,您的会员级别不够,不能下载");
+                alert("该资源为精品资源,您的会员级别不够,不能下载");
                 break;
             case "4":
-                message("您的账户余额不足,不能下载");
+                alert("您的账户余额不足,不能下载");
                 break;
             case "5":
-                message("您的会员已过期且账户余额不足,不能下载");
+                alert("您的会员已过期且账户余额不足,不能下载");
                 break;
             default:
                 break;
