@@ -84,7 +84,7 @@ function GetList() {
                                 <a target='_blank' class=\"wdk fl\" href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "&myTitle=" + text + "' target='_blank' ></a>\
                                 <div class=\"wenbenkui fl\">\
                                     <a target='_blank' class=\"b320 font_size16 overf_com font_wb\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "&myTitle=" + text + "' target='_blank'  title='" + text + "'>" + text + "</a><br>\
-                                    <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + temp[i].uploadtime + " 类型：" + Produce_TypeName(temp[i].category) + "</span>\
+                                    <span class=\"lxcsp320\">下载扣点：" + temp[i].neednum + "点 " + "&nbsp;&nbsp;时间：" + temp[i].uploadtime + "</span>\
                                 </div>\
                                 <div class=\"xiazai fr\" style='position:static;width:45px;height:45px;margin-right: 30px;'>\
                                     <a target='_blank' class=\"xztb2 fr\"  href='../Download?cid=" + temp[i].category + "&id=" + temp[i].id + "&myTitle=" + text + "' target='_blank' ></a>\

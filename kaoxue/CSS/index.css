@@ -384,6 +384,7 @@ a {
     width: 44px;
     height: 20px;
     text-align:center;
+    font-size:14px;
 }
 
 .cebianlan_ul1 > ul > li {
@@ -2182,7 +2183,7 @@ bottom:10px;
     display:block;
     bottom:-20px;
 }
-ul {vertical-align:bottom;}
+ul,li {vertical-align:bottom;}
 
 .yqljkzpd:hover {
     cursor:pointer;
@@ -2249,13 +2250,13 @@ button:focus,input:focus,select:focus { outline:none; }
     top:10px;
 }
 .position_ab1_1 {
-    right:210px;
+    right:180px;
 }
 .position_ab2_1 {
-    right:140px;
+    right:120px;
 }
 .position_ab3_1 {
-    right:70px;
+    right:60px;
 }
 .position_ab4_1 {
     right:0px;
@@ -2270,13 +2271,13 @@ button:focus,input:focus,select:focus { outline:none; }
     color:#fff;
 }
 .position_ab11_1 {
-    right:220px;
+    right:190px;
 }
 .position_ab21_1 {
-    right:150px;
+    right:130px;
 }
 .position_ab31_1 {
-    right:80px;
+    right:70px;
 }
 .position_ab41_1 {
     right:10px;
