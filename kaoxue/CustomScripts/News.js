@@ -77,7 +77,7 @@ function GetList() {
                             <div class=\"fl xwsc mar_lf_11\">";
 
                     if (typename) {
-                        html += "<img src=\"img/xwtpshucai_1.png\" />\
+                        html += "<img src=\"img/xwtpshucai.png\" />\
                             </div>\
                         <div class=\"fl cswx\">";
                     } else {
