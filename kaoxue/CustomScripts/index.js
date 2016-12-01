@@ -50,6 +50,46 @@ function New_Zhuanti() {
         });
 }
 
+function GetTaotiByleve(level) {
+    $.post("../Home/GetTaoTiByLevel", { level: level }, function (data) {
+        if (data) {
+            var temp = eval(data);
+            var html = "";
+            var date;
+
+            html += "<div id=\"\" class=\"ztklianjie fl\">\
+                    <ul class=\"ztk_ul\">";
+
+            for (var i = 1; i <= temp.length; i++) {
+                date = new Date(temp[i - 1].pubdate);
+                var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
+                var number_str = i + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                //html += "<li><a target='_blank' class=\"btn size_com fl\">" + number + "</a>&nbsp;<a target='_blank' title='" + temp[i - 1].name.replace(" ", "-") + "' class=\"fff\" href='../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "'> " + temp[i - 1].name + "</a></li>";
+                html += "<li>\
+                        <div class=\"jpstli zxzhutiys\">\
+                            <a target='_blank' class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a target='_blank' class=\"fff\" title='" + temp[i - 1].name.replace(" ", "-") + "' href=\"../Special?id=" + temp[i - 1].id + "&way=1&name=" + temp[i - 1].name + "\"> " + temp[i - 1].name + "</a></div><div class=\"fr\" id=\"\">\
+                                <a target='_blank' class=\"fff\" href=\"\">["+ time + "]</a>\
+                            </div>\
+                        </div>\
+                    </li>";
+                if (i % 6 == 0 && i != 0 && i < temp.length) {
+                    html += "</ul>\
+                                </div>\
+                                <div id=\"\" class=\"ztklianjie fl\">\
+                                    <ul class=\"ztk_ul\">";
+                }
+            }
+            html += " </ul>\
+                </div>\
+                <div class=\"fl mxttimg gedigaokao_img\" onclick=\"javascript:window.open('http://www.51kaoxue.com/Special?id=12799&way=1&name=%E6%B2%B3%E5%8D%97%E7%9C%81%E6%96%B0%E4%B9%A1%E5%B8%822015-2016%E5%AD%A6%E5%B9%B4%E9%AB%98%E4%BA%8C%E4%B8%8B%E5%AD%A6%E6%9C%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%BB%BC%E5%90%88%E8%AF%95%E9%A2%98%EF%BC%88%E6%89%AB%E6%8F%8F%E7%89%88%E5%85%A8%E7%A7%916%E4%BB%BD%EF%BC%89');\">\
+                </div>";
+            //<img src=\"../../img/gedigaokao.jpg\" />\
+            $("#taoti").html(html);
+        }
+    });
+}
+
 //
 //名校套题
 //
@@ -93,6 +133,32 @@ function Taoti() {
     });
 }
 
+function GetTestBylevel(level) {
+    $.post("../Home/GetTestByLevel", { level: level }, function (data) {
+        if (data) {
+            var temp = eval(data);
+            var html = "";
+            var date;
+            for (var i = 0; i < temp.length; i++) {
+                date = new Date(temp[i].uploadtime);
+                var text = temp[i].testname.length > 15 ? temp[i].testname.substr(0, 15) : temp[i].testname;
+                var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li>\
+                        <div class=\"jpstli zxzhutiys\">\
+                            <a target='_blank' class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "'> " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
+                                <a target='_blank' class=\"ayblue\" href=\"\">["+ time + "]</a>\
+                            </div>\
+                        </div>\
+                    </li>";
+            }
+            $("#test").html(html);
+        }
+    });
+}
+
+
 //
 //试题推荐
 //
@@ -120,6 +186,47 @@ function Test() {
         }
     });
 }
+
+function GetSchoolTest_Bylevel(level) {
+    $.post("../Home/GetSchoolTest_Bylevel", { level: level }, function (data) {
+        if (data) {
+            var temp = eval(data);
+            var html = "<div class=\"ztklianjie fl stkz\">\
+                        <ul class=\"ztk_ul\">";
+            var date;
+            for (var i = 0; i < temp.length; i++) {
+                date = new Date(temp[i].uploadtime);
+                var text = temp[i].testname.length > 22 ? temp[i].testname.substr(0, 22) : temp[i].testname;
+                var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                //html += "<li><a target='_blank' class=\"btn\">" + number + "</a>&nbsp;<a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "' class=\"fff\"> " + text + "</a></li>";
+                html += "<li>\
+                        <div class=\"jpstli zxzhutiys\">\
+                            <a target='_blank' class=\"btn size_com fl\">" + number + "</a><div class=\"ztk_ul_div_1 fl\"><a target='_blank' class=\"fff\" title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "'\"> " + temp[i].testname + "</a></div><div class=\"fr\" id=\"\">\
+                                <a target='_blank' class=\"fff\" href=\"\">["+ time + "]</a>\
+                            </div>\
+                        </div>\
+                    </li>";
+                if ((i + 1) % 6 == 0 && i != 0 && (i + 1) < temp.length) {
+                    html += "</ul>\
+                                </div>\
+                                <div id=\"\" class=\"ztklianjie fl stkz\">\
+                                    <ul class=\"ztk_ul\">";
+                }
+            }
+            html += "</ul>\
+                    </div>\
+                    <div class=\"fl mxttimg gedigaokao_img  gedigaokao_img_1\" onclick=\"javascript:window.open('http://www.51kaoxue.com/Download?cid=1&id=359019');\">\
+                    </div>\
+                </div>";
+            //<img src=\"../../img/gedigaokao.jpg\" />
+            $("#shiti_school").html(html);
+        }
+    });
+}
+
+
 
 //
 //名校试题
@@ -163,6 +270,33 @@ function School_Test() {
     });
 }
 
+function GetBeikeBylevel(level) {
+    $.post("../Home/GetBeikeBylevel", { level: level }, function (data) {
+        if (data) {
+            var temp = eval(data);
+            var html = "";
+            var date;
+            for (var i = 0; i < temp.length; i++) {
+                date = new Date(temp[i].pubdate);
+                var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
+                var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li>\
+                        <div class=\"jpstli zxzhutiys\">\
+                            <a target='_blank' class=\"fl btnjps btnjspt size_com\">" + number + "</a><div class=\"fl jpstys jpys\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special/Beike?id=" + temp[i].id + "&way=2&name=" + temp[i].name + "\"> " + temp[i].name + "</a></div><div class=\"fr\" id=\"\">\
+                                <a target='_blank' class=\"ayblue\" href=\"\">["+ time + "]</a>\
+                            </div>\
+                        </div>\
+                    </li>";
+            }
+            $("#beike").html(html);
+        }
+    });
+}
+
+
+
 //
 //金品备课
 //
@@ -190,6 +324,31 @@ function Beike() {
         }
     });
 }
+function Taoti_Bylevel(level) {
+    $.post("../Home/Taoti_Bylevel", { level: level }, function (data) {
+        if (data) {
+            var temp = eval(data);
+            var html = "";
+            var date;
+            for (var i = 0; i < temp.length; i++) {
+                date = new Date(temp[i].pubdate);
+                var text = temp[i].name.length > 15 ? temp[i].name.substr(0, 15) : temp[i].name;
+                var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li>\
+                        <div class=\"zxtlianjiediv fl\">\
+                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].name.replace(" ", "-") + "' href=\"../Special?id=" + temp[i].id + "&way=1&name=" + temp[i].name + "\"> " + temp[i].name + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                                <a target='_blank' href=\"\">[" + time + "]</a>\
+                            </div>\
+                        </div>\
+                    </li>";
+            }
+            $("#Taoti_JuniorMiddleSchool").html(html);
+        }
+    });
+}
+
 
 //
 //最新套题
@@ -219,6 +378,31 @@ function Taoti_JuniorMiddleSchool() {
     });
 }
 
+function GetTest_Bylevel(level) {
+    $.post("../Home/GetTest_Bylevel", { level: level }, function (data) {
+        if (data) {
+            var temp = eval(data);
+            var html = "";
+            var date;
+            for (var i = 0; i < temp.length; i++) {
+                date = new Date(temp[i].uploadtime);
+                var text = temp[i].testname.length > 15 ? temp[i].testname.substr(0, 15) : temp[i].testname;
+                var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li>\
+                        <div class=\"zxtlianjiediv fl\">\
+                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "'\"> " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                                <a target='_blank' href=\"\">[" + time + "]</a>\
+                            </div>\
+                        </div>\
+                    </li>";
+            }
+            $("#Test_JuniorMiddleSchool").html(html);
+        }
+    });
+}
+
 //
 //最新试题
 //
@@ -243,6 +427,31 @@ function Test_JuniorMiddleSchool() {
                     </li>";
             }
             $("#Test_JuniorMiddleSchool").html(html);
+        }
+    });
+}
+
+function GetMid_Bylevel(level) {
+    $.post("../Home/GetMid_Bylevel", { level: level }, function (data) {
+        if (data) {
+            var temp = eval(data);
+            var html = "";
+            var date;
+            for (var i = 0; i < temp.length; i++) {
+                date = new Date(temp[i].uploadtime);
+                var text = temp[i].testname.length > 15 ? temp[i].testname.substr(0, 15) : temp[i].testname;
+                var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
+                var number_str = (i + 1) + "";
+                var number = number_str.length < 2 ? "0" + number_str : number_str;
+                html += "<li>\
+                        <div class=\"zxtlianjiediv fl\">\
+                            <a target='_blank' class=\"zxzt_btn fl size_com\"><span>" + number + "</span></a><div class=\"fl zxzt_index\"><a target='_blank' title='" + temp[i].testname.replace(" ", "-") + "' href='../Download?cid=1&id=" + temp[i].id + "&myTitle=" + text + "'\"> " + temp[i].testname + "</a></div><div class=\"fr zuixinzt\" id=\"\">\
+                                <a target='_blank' href=\"\">[" + time + "]</a>\
+                            </div>\
+                        </div>\
+                    </li>";
+            }
+            $("#Mid_examination").html(html);
         }
     });
 }
@@ -363,7 +572,7 @@ function GetArea() {
                     } else {
                         html += "<li><a target='_blank' href=\"../Province?area=" + temp[i - 1].id + "&text=" + temp[i - 1].areaname + "\" class=\"hover1\"><img src=\"../../img/hover10_1.png\" alt=\"\" class=\"hover10 hover10_1\" />" + temp[i - 1].areaname + "</a></li>";
                     }
-                  
+
                     if (i % 8 == 0 && i != 0) {
                         html += "</ul>\
                                 </div>\
@@ -720,7 +929,7 @@ function change_css_li(obj) {
 }
 
 //点击a时，改变a样式
-function change_css_a(obj,css) {
+function change_css_a(obj, css) {
     $(obj).parent().children().each(function () {
         $(this).removeClass(css);
     });

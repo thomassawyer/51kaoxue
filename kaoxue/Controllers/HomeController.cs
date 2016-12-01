@@ -59,6 +59,28 @@ namespace kaoxue.Controllers
         }
 
         /// <summary>
+        /// 根据学段获取套题
+        /// </summary>
+        /// <returns></returns>
+        public string GetTaoTiByLevel(string level)
+        {
+            string condition = " ";
+            if (!string.IsNullOrEmpty(level))
+                condition += string.Format(" level {0}", level);
+            string json = string.Empty;
+            DataSet ds = taoti_bll.GetList(12, condition, " pubdate desc");
+            if (ds != null)
+            {
+                if (ds.Tables.Count > 0)
+                {
+                    json = JsonHelper.ToJson(ds.Tables[0]);
+                }
+            }
+            return json;
+        }
+
+
+        /// <summary>
         /// 获取名校套题
         /// </summary>
         /// <returns></returns>
@@ -67,6 +89,24 @@ namespace kaoxue.Controllers
             string condition = " ismingxiao=1";
             DataSet ds = taoti_bll.GetList(12, condition, "pubdate desc");
             string json = string.Empty;
+            if (ds != null)
+            {
+                if (ds.Tables.Count > 0)
+                {
+                    json = JsonHelper.ToJson(ds.Tables[0]);
+                }
+            }
+            return json;
+        }
+
+
+        public string GetTestByLevel(string level)
+        {
+            string condition = " istuijian=1";
+            if (!string.IsNullOrEmpty(level.Trim(' ')))
+                condition += string.Format(" and level {0}", level);
+            string json = string.Empty;
+            DataSet ds = test_bll.GetList(6, condition, " uploadtime desc");
             if (ds != null)
             {
                 if (ds.Tables.Count > 0)
@@ -96,13 +136,13 @@ namespace kaoxue.Controllers
             return json;
         }
 
-        /// <summary>
-        /// 获取名校试题
-        /// </summary>
-        /// <returns></returns>
-        public string GetSchool_Test()
+        public string GetSchoolTest_Bylevel(string level)
         {
-            string condition = " ismingxiao=1 and istuijian=1 and level between 10 and 12";
+            string condition = " ismingxiao=1 and istuijian=1 ";
+            if (!string.IsNullOrEmpty(level.Trim(' ')))
+            {
+                condition += "and level " + level;
+            }
             DataSet ds = test_bll.GetList(12, condition, "uploadtime desc");
             string json = string.Empty;
             if (ds != null)
@@ -115,13 +155,49 @@ namespace kaoxue.Controllers
             return json;
         }
 
+
+        /// <summary>
+        /// 获取名校试题
+        /// </summary>
+        /// <returns></returns>
+        public string GetSchool_Test()
+        {
+            string condition = " ismingxiao=1 and istuijian=1 ";
+            DataSet ds = test_bll.GetList(12, condition, "uploadtime desc");
+            string json = string.Empty;
+            if (ds != null)
+            {
+                if (ds.Tables.Count > 0)
+                {
+                    json = JsonHelper.ToJson(ds.Tables[0]);
+                }
+            }
+            return json;
+        }
+
+        public string GetBeikeBylevel(string level)
+        {
+            string condition = " isjing=1 ";
+            if (!string.IsNullOrEmpty(level.Trim(' ')))
+                condition += string.Format(" and level {0}", level);
+            DataSet ds = beike_bll.GetList(6, condition, "pubdate desc");
+            string json = string.Empty;
+            if (ds != null)
+            {
+                if (ds.Tables.Count > 0)
+                {
+                    json = JsonHelper.ToJson(ds.Tables[0]);
+                }
+            }
+            return json;
+        }
         /// <summary>
         /// 精品备课
         /// </summary>
         /// <returns></returns>
         public string GetBeiKe()
         {
-            string condition = " isjing=1 and level between 10 and 12";
+            string condition = " isjing=1";
             DataSet ds = beike_bll.GetList(6, condition, "pubdate desc");
             string json = string.Empty;
             if (ds != null)
@@ -134,14 +210,54 @@ namespace kaoxue.Controllers
             return json;
         }
 
+        public string Taoti_Bylevel(string level)
+        {
+            string condition = " ";
+            if (!string.IsNullOrEmpty(level.Trim(' ')))
+            {
+                condition = " level " + level;
+            }
+            DataSet ds = taoti_bll.GetList(6, condition, "pubdate desc");
+            string json = string.Empty;
+            if (ds != null)
+            {
+                if (ds.Tables.Count > 0)
+                {
+                    json = JsonHelper.ToJson(ds.Tables[0]);
+                }
+            }
+            return json;
+        }
+
+
+
         /// <summary>
         /// 最新套题-初中
         /// </summary>
         /// <returns></returns>
         public string GetTaoti_SeniorMiddleSchool()
         {
-            string condition = " level between 10 and 12";
+            string condition = " ";
             DataSet ds = taoti_bll.GetList(6, condition, "pubdate desc");
+            string json = string.Empty;
+            if (ds != null)
+            {
+                if (ds.Tables.Count > 0)
+                {
+                    json = JsonHelper.ToJson(ds.Tables[0]);
+                }
+            }
+            return json;
+        }
+
+        public string GetTest_Bylevel(string level)
+        {
+            string condition = " ";
+            if (!string.IsNullOrEmpty(level.Trim(' ')))
+            {
+                condition = " level " + level;
+            }
+            DataSet ds = test_bll.GetList(6, condition, "uploadtime desc");
             string json = string.Empty;
             if (ds != null)
             {
@@ -159,7 +275,27 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string GetTest_SeniorMiddleSchool()
         {
-            string condition = " level between 10 and 12";
+            string condition = " ";
+            DataSet ds = test_bll.GetList(6, condition, "uploadtime desc");
+            string json = string.Empty;
+            if (ds != null)
+            {
+                if (ds.Tables.Count > 0)
+                {
+                    json = JsonHelper.ToJson(ds.Tables[0]);
+                }
+            }
+            return json;
+        }
+
+
+        public string GetMid_Bylevel(string level)
+        {
+            string condition = " testcategory=23 or testcategory = 18";
+            if (!string.IsNullOrEmpty(level.Trim(' ')))
+            {
+                condition = "testcategory=" + level;
+            }
             DataSet ds = test_bll.GetList(6, condition, "uploadtime desc");
             string json = string.Empty;
             if (ds != null)
@@ -178,7 +314,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string GetMid_examination()
         {
-            string condition = " testcategory=24 and level between 7 and 9";
+            string condition = " testcategory=23 or testcategory = 18";
             DataSet ds = test_bll.GetList(6, condition, "uploadtime desc");
             string json = string.Empty;
             if (ds != null)
@@ -387,7 +523,7 @@ namespace kaoxue.Controllers
         /// GetMemberCount   For  GetSchoolCount
         /// </summary>
         /// <returns>SchoolCount</returns>
-        public int GetMemberCount() 
+        public int GetMemberCount()
         {
             string sql = string.Format("select COUNT(1) from tblschool");
             return Convert.ToInt32(DbHelperSQL.GetSingle(sql));
