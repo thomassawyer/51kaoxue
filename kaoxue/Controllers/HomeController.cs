@@ -64,7 +64,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string GetTaoTiByLevel(string level)
         {
-            string condition = " ";
+            string condition = "";
             if (!string.IsNullOrEmpty(level))
                 condition += string.Format(" level {0}", level);
             string json = string.Empty;
