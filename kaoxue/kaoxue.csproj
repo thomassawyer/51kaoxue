@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\About_usController.cs" />
+    <Compile Include="Controllers\AdviseController.cs" />
     <Compile Include="Controllers\AncientController.cs" />
     <Compile Include="Controllers\Ancient_ArticleController.cs" />
     <Compile Include="Controllers\Ancient_ListController.cs" />
@@ -168,6 +169,7 @@
     <Content Include="Common\top2.ascx" />
     <Content Include="Common\top3.ascx" />
     <Content Include="Common\top4.ascx" />
+    <Content Include="CSS\advise.css" />
     <Content Include="CSS\chushihua.css" />
     <Content Include="CSS\College_entrance_examination.css" />
     <Content Include="CSS\Contact_us.css" />
@@ -196,6 +198,7 @@
     <Content Include="CSS\video_play.css" />
     <Content Include="CSS\xueke9da.css" />
     <Content Include="CSS\xueke9da1.css" />
+    <Content Include="CustomScripts\advise.js" />
     <Content Include="CustomScripts\Ancient.js" />
     <Content Include="CustomScripts\Ancient_Article.js" />
     <Content Include="CustomScripts\Ancient_List.js" />
@@ -459,6 +462,7 @@
     <Content Include="img\kaobeizu8.png" />
     <Content Include="img\kaojuankb.png" />
     <Content Include="img\kaoshijuan.png" />
+    <Content Include="img\kaoshijuan_1.png" />
     <Content Include="img\kcbaise.png" />
     <Content Include="img\kemu.png" />
     <Content Include="img\ksall.png" />
@@ -796,6 +800,7 @@
     <Content Include="Views\Classroom_Teaching\Index.cshtml" />
     <Content Include="Views\Video\Index.cshtml" />
     <Content Include="Views\VideoPlay\Index.cshtml" />
+    <Content Include="Views\Advise\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
