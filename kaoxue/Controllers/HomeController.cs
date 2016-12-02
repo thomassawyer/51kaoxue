@@ -291,7 +291,7 @@ namespace kaoxue.Controllers
 
         public string GetMid_Bylevel(string level)
         {
-            string condition = " testcategory=23 or testcategory = 18";
+            string condition = " testcategory=24 or testcategory = 18";
             if (!string.IsNullOrEmpty(level.Trim(' ')))
             {
                 condition = "testcategory=" + level;
@@ -314,7 +314,7 @@ namespace kaoxue.Controllers
         /// <returns></returns>
         public string GetMid_examination()
         {
-            string condition = " testcategory=23 or testcategory = 18";
+            string condition = " testcategory=24 or testcategory = 18";
             DataSet ds = test_bll.GetList(6, condition, "uploadtime desc");
             string json = string.Empty;
             if (ds != null)
