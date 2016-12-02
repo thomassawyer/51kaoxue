@@ -1,13 +1,13 @@
 .remenxiazai1 > li {
-    width: 160px;
+    width: 170px;
     height: 25px;
-    margin-left: 25px;
+    margin-left: 15px;
     overflow: hidden;
 }
 
-    .remenxiazai1 > li > a:hover {
-        color: #ff4a52;
-    }
+.remenxiazai1 > li > a:hover {
+    color: #ff4a52;
+}
 
 .remenxiazai11 {
     width: 180px;
@@ -16,13 +16,13 @@
 .lxgao521 {
     height:auto;
 }
-    .remenxiazai11 > li {
-        margin-top: 25px;
-    }
+.remenxiazai11 > li {
+    margin-top: 25px;
+}
 
-        .remenxiazai11 > li:hover .lva {
-            color: #8fc652;
-        }
+.remenxiazai11 > li:hover .lva {
+    color: #8fc652;
+}
 
 .wenbentop {
     width: 100%;

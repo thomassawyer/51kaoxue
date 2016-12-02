@@ -2,6 +2,7 @@
     <script src="../engine1/respond.js"></script>
 <center>
 <div class="youqinlianjie" style="clear:both;">
+    <iframe style="display:none;" class="qq_iframe" src=""></iframe>
         <div class="yqlj1189">
             <div class="yqljimg">
                 <div>

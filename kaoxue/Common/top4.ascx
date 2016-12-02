@@ -17,7 +17,7 @@
             </div>
             <div class="fixed_jianyi">
             </div>
-            <div class="fixed_kefu">
+            <div class="fixed_kefu" onclick="fixed_kefu()">
             </div>
             <div class="fixed_return"></div>
         </div>

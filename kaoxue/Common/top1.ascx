@@ -8,6 +8,7 @@
     }
 </style>
 <script src="../CustomScripts/top.js"></script>
+
     <div class="fixed_all">
         <div>
             <div class="fixed_login">
@@ -20,7 +21,7 @@
             </div>
             <div class="fixed_jianyi">
             </div>
-            <div class="fixed_kefu">
+            <div class="fixed_kefu" onclick="fixed_kefu()">
             </div>
             <div class="fixed_return"></div>
         </div>
