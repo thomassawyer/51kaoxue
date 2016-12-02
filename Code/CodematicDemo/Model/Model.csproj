@@ -138,6 +138,9 @@
     <Compile Include="tblTongbu.cs" />
     <Compile Include="tbluplog.cs" />
     <Compile Include="tbluprecord.cs" />
+    <Compile Include="tblvideo.cs" />
+    <Compile Include="tblvideoInfo.cs" />
+    <Compile Include="tblvideoWatchRecord.cs" />
     <Compile Include="tblWebinfo.cs" />
     <Compile Include="tblXuean.cs" />
     <Compile Include="tblyear.cs" />
@@ -145,6 +148,7 @@
     <Compile Include="tblzhuanti.cs" />
     <Compile Include="tblztsubject.cs" />
     <Compile Include="tblzttype.cs" />
+    <Compile Include="videoChaper.cs" />
     <Compile Include="webusers.cs" />
     <Compile Include="ztpage_dict.cs" />
     <Compile Include="ztposition.cs" />

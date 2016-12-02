@@ -753,7 +753,10 @@ $(document).ready(function () {
     GetArea();
     GetAreaTop5();
     GetYearForHeightSchool();
-    GetYear()
+    GetYear();
+    $("#title1").html("2017年" + subjectname + "一轮复习要点");
+    $("#title2").html("2017年" + subjectname + "一轮复习要点");
+    $("#title3").html("2017年" + subjectname + "一轮复习要点");
 });
 
 //点击span时，改变span样式
