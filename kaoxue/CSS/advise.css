@@ -3,3 +3,114 @@
     height:416px;
     background:url(../img/kaoshijuan_1.png) no-repeat center;
 }
+.tiaocuo_btn {
+    width:178px;
+    height:49px;
+    background:url(../img/jianyi.png) no-repeat center;
+    margin:auto;
+}
+.tiaocuo_btn:hover {
+    cursor:pointer;
+}
+
+.lianxice33 {
+    background-color:#2ea7f8;
+}
+
+.bix {
+    font-weight:normal;
+}
+.doc_bag_p_ab {
+    top: 7px;
+}
+
+.advise_intro {
+    background-color:#f2f2f2;
+    padding:30px;
+}
+.chongnuo {
+    font-size:22px;
+    color:#2599e6;
+}
+
+.font_size22 {
+    font-size:22px;
+}
+
+.cishu {
+    color:#fff;
+    background-color:#ff4a52;
+    padding:0px 8px;
+    border-radius:5px;
+}
+.line_hei35 {
+    line-height: 35px;
+}
+.tonggao {
+    margin-top:20px;
+    font-size:24px;
+    border:1px solid #f7d11e;
+    background-image:url(../img/tonggao.png);
+    background-repeat:no-repeat;
+    background-position:14px 12px;
+    background-color:#fff;
+    padding-left:57px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:5px;
+}
+.red_tishi {
+    color:#ff4a52;
+}
+.font_size20 {
+    font-size:20px;
+}
+.mar_top_70 {
+    margin-top:70px;
+}
+.dl_qduiqi {
+    text-justify: inter-ideograph;
+    text-align: justify;
+}
+
+.buzhou_per {
+    display:inline-block;
+    width:162px;
+    height:59px;
+    line-height:59px;
+    text-align:center;
+    font-size:24px;
+    color:#fff;
+    background-color:#ffb726;
+}
+.ruhetiaocuo {
+    background-image:url(../img/ruhetiaocuo.png);
+    background-repeat:no-repeat;
+    background-position:0px;
+    padding-left:57px;
+    font-size:28px;
+    color:#ff4a52;
+    height:44px;
+    line-height: 44px;
+    position:relative;
+}
+
+.jiantou_red {
+    width:97px;
+    height:109px;
+    background-image:url(../img/jiantou_red.png);
+    position: absolute;
+    top: -80px;
+    left: 115px;
+}
+.bac_colorf5d0d2 {
+    background-color:#f5d0d2;
+}
+.bac_colorcbe3f3 {
+    background-color:#cbe3f3;
+}
+.common_bix {
+    font-weight:normal;
+    padding:0px 8px;
+    line-height: 35px;
+}
