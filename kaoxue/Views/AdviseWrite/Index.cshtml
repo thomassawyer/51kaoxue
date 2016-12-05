@@ -1,0 +1,135 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>建议反馈撰写 - 51考学网</title>
+    <link href="/img/html_logo_ico.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
+    <link rel="stylesheet" type="text/css" href="css/xueke9da.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/famousschool.css">
+    <link rel="stylesheet" type="text/css" href="css/Download_page.css" />
+    <link rel="stylesheet" type="text/css" href="css/advise.css" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="../engine1/kindeditor-min.js"></script>
+    <script src="../engine1/zh_CN.js"></script>
+    <script src="~/CustomScripts/advise.js"></script>
+</head>
+<body>
+    @Html.Partial("~/Common/top2.ascx")
+    <style>
+        form {
+            margin: 0;
+        }
+
+        textarea {
+            display: block;
+        }
+    </style>
+    <div class="advise_bg">
+        @*<div style="height: 325px;"></div>*@
+        @*<div class="tiaocuo_btn"></div>*@
+    </div>
+    <div class="lianxi" style="overflow:hidden;margin-bottom:30px;">
+        <div class="lxclan_zhuangxie" id="anchor_id">
+            <img src="img/shuoming.png" class="doc_bag_p_ab">
+            <b class="bix font_size18">撰写</b>
+            <span class="biaoti_top mar_lf_350"></span><span class="biaoti_top mar_lf_350">温馨提示：积分奖励将在归档后发放，请注意查收！</span>
+        </div>
+        <div class="advise_intro" style="padding-bottom:0px;">
+            <div class="buzhou" style="border-top: 1px solid #c9c9c9;">
+                <span class="cur_pointer buzhou_per width_208">攥 写</span>
+                <span class="cur_pointer buzhou_per mar_lf_18 width_208" style="background-color: #808ffb;">发 布</span>
+                <span class="cur_pointer buzhou_per mar_lf_18 width_208" style="background-color: #2ea7f8;">待 审</span>
+                <span class="cur_pointer buzhou_per mar_lf_18 width_208" style="background-color: #ff4a52;">退 回</span>
+                <span class="cur_pointer buzhou_per mar_lf_18 width_208" style="background-color: #07c277;">通 过</span>
+            </div>
+            <div class="zhuangxie_content">
+                <div style="position:relative;">
+                    <div class="fl mar_rg_12" style="width: 80px; text-align: right;">
+                        类别：
+                    </div>
+                    <div class="common_xuanxiang"><input type="radio" name="leibie" value="0" id="leibie_1" /> <label for="leibie_1">挑错</label></div>
+                    <div class="common_xuanxiang"><input type="radio" name="leibie" value="1" id="leibie_2" /> <label for="leibie_2">建议</label></div>
+                    <div class="common_xuanxiang"><input type="radio" name="leibie" value="2" id="leibie_3" /> <label for="leibie_3">投诉</label></div>
+                    <div class="common_xuanxiang"><input type="radio" name="leibie" value="3" id="leibie_4" /> <label for="leibie_4">留言</label></div>
+                    <div class="common_xuanxiang"><input type="radio" name="leibie" value="4" id="leibie_5" /> <label for="leibie_5">其他</label></div>
+                    <div class="fl font_size16" style="width: 300px; position: absolute; right: 0px; top: -12px;">如果资料报错请务必提供ID或资料链接，否则不予通过</div>
+                </div>
+                <div style="clear: both;"></div>
+                <div class="mar_top_15 overf_hid">
+                    <div class="fl mar_rg_12" style="width: 80px; text-align: right;">
+                        分类：
+                    </div>
+                    <div class="common_xuanxiang">
+                        <input type="radio" name="feilei" value="0" id="feilei_1" /> <label for="feilei_1">会员相关</label>
+                    </div>
+                    <div class="common_xuanxiang">
+                        <input type="radio" name="feilei" value="1" id="feilei_2" /> <label for="feilei_2">资料相关</label>
+                    </div>
+                    <div class="common_xuanxiang">
+                        <input type="radio" name="feilei" value="2" id="feilei_3" /> <label for="feilei_3">充值相关</label>
+                    </div>
+                    <div class="common_xuanxiang">
+                        <input type="radio" name="feilei" value="3" id="feilei_4" /> <label for="feilei_4">点数储值</label>
+                    </div>
+                    <div class="common_xuanxiang">
+                        <input type="radio" name="feilei" value="4" id="feilei_5" /> <label for="feilei_5">服务相关</label>
+                    </div>
+                    <div class="common_xuanxiang">
+                        <input type="radio" name="feilei" value="4" id="feilei_6" /> <label for="feilei_6">建议相关</label>
+                    </div>
+                    <div class="common_xuanxiang">
+                        <input type="radio" name="feilei" value="4" id="feilei_7" /> <label for="feilei_7">其他相关</label>
+                    </div>
+                </div>
+                <div class="mar_top_15 overf_hid">
+                    <div class="fl mar_rg_12" style="width: 80px; text-align: right;">
+                        标题：
+                    </div>
+                    <input type="text" class="biaoti_input">
+                    <div style="margin-left:91px;margin-top:20px;">感谢您的宝贵建议！请依次填写报错ID或网址、改进要求、问题描述</div>
+                </div>
+                <div class="mar_top_15 overf_hid">
+                    <div class="fl mar_rg_12" style="width: 80px; text-align: right;">
+                        描述：
+                    </div>
+                    <textarea name="content" style="width:938px;height:436px;visibility:hidden;"></textarea>
+                </div>
+                <div class="mar_top_15 overf_hid">
+                    <div class="fl mar_rg_12" style="width:80px;text-align:right;">
+                        验证码：
+                    </div>
+                    <input name="txtRanCode" type="text" id="txtRanCode" maxlength="4" style="width: 120px; height: 25px; text-align: center; border: solid 1px #e5e5e5;">
+                    <img src="">
+                </div>
+                <div class="mar_top_15 overf_hid">
+                    <span class="tijiao_yijian">提交</span><span class="tijiao_yijian">返回</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_ganxie">感谢您对51考学网的支持！您宝贵的建议将有机会获得0-50000的普通点奖励</div>
+        <div style="clear: both;"></div>
+    </div>
+    <script>
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('textarea[name="content"]', {
+                resizeType: 1,
+                allowPreviewEmoticons: false,
+                allowImageUpload: false,
+                items: [
+                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                    'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+            });
+        });
+    </script>
+    @Html.Partial("~/Common/bottom.ascx")
+</body>
+</html>

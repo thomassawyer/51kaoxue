@@ -1,20 +1,43 @@
-﻿/// <reference path="../Scripts/jquery-1.8.2.js" />
+﻿var bhide = true;
+function chakan_fun() {
+    if (bhide) {
+        $(".chakan_more_content").show();
+        $(".chakan_more_content").animate({ height: 1455 + "px" }, 500);
+        $(".chakan_more_btn").css({ 'background-image': 'url(../img/jiantou_up.png)' });
+        
+        bhide = false;
+    } else {
+        $(".chakan_more_content").animate({ height: 0 + "px" }, 500, function () { $(".chakan_more_content").hide(); });
 
-//url参数集合
-function GetQueryString(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    var r = decodeURI(window.location.search).substr(1).match(reg);
-    if (r != null) return unescape(r[2]); return null;
+        $(".chakan_more_btn").css({ 'background-image': 'url(../img/jiantou_down.png)' });
+        bhide = true;
+    }
 }
 
-//点击span时，改变span样式
-function change_css_span(obj,css_class) {
-    $(obj).parent().children().each(function () {
-        $(this).removeClass(css_class);
-    });
-    $(obj).addClass(css_class);
+//获取用户登录状态
+function GetUserZhuangtai() {
+    $.post("../Home/GetUserInfo", function (data) {
+        if (data != "0") {
+            var temp = eval(data);
+            for (var i = 0; i < temp.length; i++) {
+                //$("#logininfo").html(temp[i].school + "&nbsp;&nbsp;" + getusertype(temp[i].level) + "&nbsp;&nbsp;<a target=\"_blank\">[退出]</a>");
+                $(".username").html(temp[i].school + "&nbsp;&nbsp;" + getusertype(temp[i].level));
+                $(".weidenglu").hide();
+                $(".denglu").show();
+                $(".zhuangxie_btn").click(function () {
+                    window.open('../AdviseWrite');
+                });
+            }
+        } else {
+            $(".weidenglu").show();
+            $(".denglu").hide();
+            $(".zhuangxie_btn").click(function () {
+                window.open('../Login');
+            });
+        }
+    })
 }
 
 $(document).ready(function () {
-
+    GetUserZhuangtai();
 });
