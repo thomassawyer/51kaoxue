@@ -354,7 +354,9 @@
     <Content Include="img\book_lightgreen.jpg" />
     <Content Include="img\book_yellow.jpg" />
     <Content Include="img\boshimao.png" />
+    <Content Include="img\btn_08c79e1_selected_v.png" />
     <Content Include="img\btn_08c79e_normal.png" />
+    <Content Include="img\btn_08c79e_normal_v.png" />
     <Content Include="img\btn_08c79e_selected.png" />
     <Content Include="img\btn_808ffb_normal.png" />
     <Content Include="img\btn_808ffb_selected.png" />
@@ -569,6 +571,7 @@
     <Content Include="img\no_data_bg.jpg" />
     <Content Include="img\no_data_bg2.png" />
     <Content Include="img\no_data_bg_22.png" />
+    <Content Include="img\no_data_bg_xiao.png" />
     <Content Include="img\pclunbo.png" />
     <Content Include="img\pinxin.png" />
     <Content Include="img\play_title.png" />
@@ -578,7 +581,9 @@
     <Content Include="img\p_img_title_hover.png" />
     <Content Include="img\p_item_hover.png" />
     <Content Include="img\p_item_title_img.png" />
+    <Content Include="img\p_item_title_img_zhu.png" />
     <Content Include="img\p_more_btt.png" />
+    <Content Include="img\p_video_f_v.png" />
     <Content Include="img\qiuda1.png" />
     <Content Include="img\qq.png" />
     <Content Include="img\qzqm.png" />
@@ -611,6 +616,10 @@
     <Content Include="img\shutubiao1.png" />
     <Content Include="img\sjtubiao.png" />
     <Content Include="img\slick.gif" />
+    <Content Include="img\slides-next_zhu.png" />
+    <Content Include="img\slides-next_zhu_h.png" />
+    <Content Include="img\slides-prev_zhu.png" />
+    <Content Include="img\slides-prev_zhu_h.png" />
     <Content Include="img\sn-separator.png" />
     <Content Include="img\souhu.png" />
     <Content Include="img\sousuo.png" />
@@ -662,6 +671,8 @@
     <Content Include="img\u_item_hover.png" />
     <Content Include="img\u_item_title_img.png" />
     <Content Include="img\u_more_btt.png" />
+    <Content Include="img\video_dis_content_h.png" />
+    <Content Include="img\video_dis_title.png" />
     <Content Include="img\video_intro_title.png" />
     <Content Include="img\video_ranking_title.png" />
     <Content Include="img\video_syno_title.png" />

@@ -13,6 +13,7 @@
     <link href="~/engine1/style.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script src="~/Scripts/slideshow.js"></script>
 </head>
 <body>
     @Html.Partial("~/Common/top1.ascx")
@@ -233,6 +234,96 @@
             </div>
         </div>
     </div><!--精品试题分类-->
+
+    <div class="video_dis">
+        <div class="video_dis_title">
+            <a target='_blank' class="commom_btn btn_08c79e_normal  btn_08c79e_selected position_ab1" onclick="change_css_a(this, 'btn_08c79e_selected')">课堂讲学</a>
+            <a target='_blank' class="commom_btn btn_08c79e_normal  position_ab2" onclick="change_css_a(this, 'btn_08c79e_selected')">心里解压</a>
+            <a target='_blank' class="commom_btn btn_08c79e_normal  position_ab3" onclick="change_css_a(this, 'btn_08c79e_selected')">试题解析</a>
+            <a target='_blank' class="commom_btn btn_08c79e_normal  position_ab4" onclick="change_css_a(this, 'btn_08c79e_selected')">高考研讨会</a>
+            <a target='_blank' class="commom_btn btn_08c79e_normal  position_ab5" onclick="change_css_a(this, 'btn_08c79e_selected')">高考备战</a>
+        </div>
+        <div class="video_dis_content">
+            <div class="slideshow" id="p_slideshow" data-visible="3" data-pagination="false">
+                @*<div class="lf_arrow fl"></div>*@
+                <ul class="ma20 overf_hid fl carousel">
+                    <li class="fl mar_rg_17 slide">
+                        <div class="p_item">
+                            <div class="p_item_hover"></div>
+                            <div class="p_item_title">
+                                <img src="../img/p_item_title_img_zhu.png" class="p_item_title_img">
+                                <div class="p_video_f">已播放99次</div>
+                            </div>
+                            <div class="p_item_name">
+                                <p class="p_item_o_title">第1讲 心态就是赢了未来</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl mar_rg_17 slide">
+                        <div class="p_item">
+                            <div class="p_item_hover"></div>
+                            <div class="p_item_title">
+                                <img src="../img/p_item_title_img_zhu.png" class="p_item_title_img">
+                                <div class="p_video_f">已播放99次</div>
+                            </div>
+                            <div class="p_item_name">
+                                <p class="p_item_o_title">第1讲 心态就是赢了未来</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl mar_rg_17 slide">
+                        <div class="p_item">
+                            <div class="p_item_hover"></div>
+                            <div class="p_item_title">
+                                <img src="../img/p_item_title_img_zhu.png" class="p_item_title_img">
+                                <div class="p_video_f">已播放99次</div>
+                            </div>
+                            <div class="p_item_name">
+                                <p class="p_item_o_title">第1讲 心态就是赢了未来</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl mar_rg_17 slide">
+                        <div class="p_item">
+                            <div class="p_item_hover"></div>
+                            <div class="p_item_title">
+                                <img src="../img/p_item_title_img_zhu.png" class="p_item_title_img">
+                                <div class="p_video_f">已播放99次</div>
+                            </div>
+                            <div class="p_item_name">
+                                <p class="p_item_o_title">第1讲 心态就是赢了未来</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl mar_rg_17 slide">
+                        <div class="p_item">
+                            <div class="p_item_hover"></div>
+                            <div class="p_item_title">
+                                <img src="../img/p_item_title_img_zhu.png" class="p_item_title_img">
+                                <div class="p_video_f">已播放99次</div>
+                            </div>
+                            <div class="p_item_name">
+                                <p class="p_item_o_title">第1讲 心态就是赢了未来</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl slide">
+                        <div class="p_item">
+                            <div class="p_item_hover"></div>
+                            <div class="p_item_title">
+                                <img src="../img/p_item_title_img_zhu.png" class="p_item_title_img">
+                                <div class="p_video_f">已播放99次</div>
+                            </div>
+                            <div class="p_item_name">
+                                <p class="p_item_o_title">第1讲 心态就是赢了未来</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                @*<div class="rg_arrow fl"></div>*@
+            </div>
+        </div>
+    </div>
 
     <div class="zuixintaotiyellow ys1">
         <div class="zuixintaoti">
@@ -498,5 +589,24 @@
     </div><!--名师推荐-->
     @Html.Partial("~/Common/bottom.ascx")
     <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        $(function () {
+            // Create slideshow instances
+            var $s = $('#p_slideshow').slides({
+                auto: 2500,                 // Autoplay timeout in milliseconds. Set to false for no autoplay.
+                autostop: false,             // Stop autoplay when user manually changes slide.
+                hoverPause: true          // Pause autoplay on hover.
+            });
+
+            // Access an instance API
+            var api = $s.eq(0).data('slides');
+
+            // Transition select
+            $('select[name=transition]').on('change', function () {
+                api.redraw(this.value);
+            });
+        });
+    </script>
+
 </body>
 </html>
