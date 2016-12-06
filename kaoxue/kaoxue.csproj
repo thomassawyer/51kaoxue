@@ -200,6 +200,7 @@
     <Content Include="CustomScripts\Ancient_Article.js" />
     <Content Include="CustomScripts\Ancient_List.js" />
     <Content Include="CustomScripts\Beike_Center.js" />
+    <Content Include="CustomScripts\Classroom_Teaching.js" />
     <Content Include="CustomScripts\Common.js" />
     <Content Include="CustomScripts\Copyright_Statement.js" />
     <Content Include="CustomScripts\Download.js" />
@@ -230,6 +231,7 @@
     <Content Include="CustomScripts\The_School_Test.js" />
     <Content Include="CustomScripts\top.js" />
     <Content Include="CustomScripts\video.js" />
+    <Content Include="CustomScripts\VideoPlay.js" />
     <Content Include="data1\images\1.jpg" />
     <Content Include="data1\images\2.jpg" />
     <Content Include="data1\images\3.jpg" />
@@ -293,6 +295,7 @@
     <Content Include="img\1tubiao.png" />
     <Content Include="img\20tbbiao.png" />
     <Content Include="img\20tbtiao.png" />
+    <Content Include="img\210.png" />
     <Content Include="img\232-152.png" />
     <Content Include="img\232-177.png" />
     <Content Include="img\2tubiao.png" />
