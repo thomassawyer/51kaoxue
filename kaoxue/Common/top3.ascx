@@ -73,9 +73,9 @@
     <div class="daohanglan_ul">
         <ul class="uuu">
             <li class="fl"><a target='_blank' href="../Home"><span>首页</span></a></li><li class="fl"><a target='_blank'><span></span><span id="nav_rec_2"></span></a></li>
-            <li class="fl mar_lf_65 bk"><a target='_blank' href="../School">学校</a><img src="../../img/tc-93.png" class="bkimg2 maozi1_hover" id="School_img"/></li>
-            <li class="fl pad bk"><a target='_blank' href="../President">校长</a><img src="../../img/tc-93.png" class="bkimg3 maozi1_hover" id="President_img"/></li>
-            <li class="fl pad bk"><a target='_blank' href="../Elite_School">试题</a><img src="../../img/tc-93.png" class="bkimg4 maozi1_hover" id="Elite_School_img"/></li>
+            <li class="fl mar_lf_65 bk1"><a target='_blank' href="../School">百强名校</a><img src="../../img/tc-93.png" class="bkimg2 maozi1_hover" id="School_img"/></li>
+            <li class="fl pad bk1"><a target='_blank' href="../President">名师校长</a><img src="../../img/tc-93.png" class="bkimg3 maozi1_hover" id="President_img"/></li>
+            <li class="fl pad bk1"><a target='_blank' href="../Elite_School">名校试题</a><img src="../../img/tc-93.png" class="bkimg4 maozi1_hover" id="Elite_School_img"/></li>
         </ul>
 
     </div>

@@ -351,15 +351,15 @@ body {
     cursor:pointer;
 }
 .c_more_btt {
-    color:#fff;
+    /*color:#fff;
     font-size:18px;
-    font-weight:bold;
+    font-weight:bold;*/
     background-image:url(../img/c_more_btt.png);
     margin:auto;
-    width:224px;
+    width:221px;
     height:48px;
-    text-align:center;
-    line-height:48px;
+    /*text-align:center;
+    line-height:48px;*/
     margin-top: 550px;
 }
 .p_more_btt {
