@@ -12,14 +12,14 @@
     <div class="fixed_all">
         <div>
             <div class="fixed_login">
-                <div class="fixed_login_b" onclick="window.open('../Login')">
+                <div class="fixed_login_b">
 
                 </div>
             </div>
             <div class="fixed_weixin">
                 <div class="fixed_weixin_b"></div>
             </div>
-            <div class="fixed_jianyi">
+            <div class="fixed_jianyi" onclick="window.open('../Advise')">
             </div>
             <div class="fixed_kefu" onclick="fixed_kefu()">
             </div>

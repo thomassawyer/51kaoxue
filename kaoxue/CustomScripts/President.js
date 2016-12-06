@@ -565,8 +565,8 @@ $(document).ready(function () {
     eliteschool_recommend();
     test_recommend();
 
-    $("#President_img").css({ 'display': 'block', 'right': '21px' });
-    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;校长");
+    $("#President_img").css({ 'display': 'block', 'right': '45px' });
+    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;名师校长");
 });
 
 function message(text) {

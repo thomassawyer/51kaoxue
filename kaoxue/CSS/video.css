@@ -103,7 +103,7 @@ body {
     line-height:31px;
     text-align:center;
     width: 100%;
-    margin-top: -4px;
+    /*margin-top: -4px;*/
 }
 
 .item_o_title, .item_s_title {
@@ -230,8 +230,8 @@ body {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     cursor: pointer;
-    color: #86ca13;
-    border-bottom: 2px solid #86ca13;
+    color: #248701;
+    border-bottom: 2px solid #248701;
 }
 
 .t_video_f {
@@ -243,7 +243,7 @@ body {
     color:#fff;
 }
 .t_item_o_title {
-    color:#86ca13;
+    color:#248701;
 }
 .t_item_o_title, .t_item_s_title {
     text-align:center;
@@ -253,7 +253,7 @@ body {
     background-color:#f3f3f3;
     height: 51px;
     padding-top: 5px;
-    margin-top: -4px;
+    /*margin-top: -4px;*/
 }
 .mar_top_27 {
     margin-top:27px;
@@ -351,15 +351,15 @@ body {
     cursor:pointer;
 }
 .c_more_btt {
-    color:#fff;
+    /*color:#fff;
     font-size:18px;
-    font-weight:bold;
+    font-weight:bold;*/
     background-image:url(../img/c_more_btt.png);
     margin:auto;
-    width:224px;
+    width:221px;
     height:48px;
-    text-align:center;
-    line-height:48px;
+    /*text-align:center;
+    line-height:48px;*/
     margin-top: 550px;
 }
 .p_more_btt {

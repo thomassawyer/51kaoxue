@@ -413,6 +413,6 @@ $(document).ready(function () {
     eliteschool_recommend();
     test_recommend();
     GetList();
-    $("#School_img").css({ 'display': 'block', 'right': '21px' });
-    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;学校");
+    $("#School_img").css({ 'display': 'block', 'right': '45px' });
+    $("#nav_rec_2").html("&nbsp;&gt;&nbsp;百强名校");
 });

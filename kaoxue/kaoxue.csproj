@@ -121,6 +121,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\About_usController.cs" />
+    <Compile Include="Controllers\AdviseController.cs" />
+    <Compile Include="Controllers\AdviseWriteController.cs" />
     <Compile Include="Controllers\AncientController.cs" />
     <Compile Include="Controllers\Ancient_ArticleController.cs" />
     <Compile Include="Controllers\Ancient_ListController.cs" />
@@ -168,6 +170,7 @@
     <Content Include="Common\top2.ascx" />
     <Content Include="Common\top3.ascx" />
     <Content Include="Common\top4.ascx" />
+    <Content Include="CSS\advise.css" />
     <Content Include="CSS\chushihua.css" />
     <Content Include="CSS\College_entrance_examination.css" />
     <Content Include="CSS\Contact_us.css" />
@@ -196,6 +199,7 @@
     <Content Include="CSS\video_play.css" />
     <Content Include="CSS\xueke9da.css" />
     <Content Include="CSS\xueke9da1.css" />
+    <Content Include="CustomScripts\advise.js" />
     <Content Include="CustomScripts\Ancient.js" />
     <Content Include="CustomScripts\Ancient_Article.js" />
     <Content Include="CustomScripts\Ancient_List.js" />
@@ -241,10 +245,24 @@
     <Content Include="data1\tooltips\3.jpg" />
     <Content Include="data1\tooltips\4.jpg" />
     <Content Include="engine1\jquery.js" />
+    <Content Include="engine1\kindeditor-min.js" />
     <Content Include="engine1\script.js" />
     <Content Include="engine1\style.css" />
+    <Content Include="engine1\themes\common\anchor.gif" />
+    <Content Include="engine1\themes\common\blank.gif" />
+    <Content Include="engine1\themes\common\flash.gif" />
+    <Content Include="engine1\themes\common\loading.gif" />
+    <Content Include="engine1\themes\common\media.gif" />
+    <Content Include="engine1\themes\common\rm.gif" />
+    <Content Include="engine1\themes\default\background.png" />
+    <Content Include="engine1\themes\default\default.css" />
+    <Content Include="engine1\themes\default\default.png" />
+    <Content Include="engine1\themes\qq\editor.gif" />
+    <Content Include="engine1\themes\qq\qq.css" />
+    <Content Include="engine1\themes\simple\simple.css" />
     <Content Include="engine1\vmc.slider.full.js" />
     <Content Include="engine1\wowslider.js" />
+    <Content Include="engine1\zh_CN.js" />
     <Content Include="Global.asax" />
     <Content Include="img\00100.jpg" />
     <Content Include="img\0011.jpg" />
@@ -332,6 +350,7 @@
     <Content Include="img\bg %285%29.jpg" />
     <Content Include="img\bg %286%29.jpg" />
     <Content Include="img\bg_cyan.jpg" />
+    <Content Include="img\biaozhun.png" />
     <Content Include="img\book_bg.jpg" />
     <Content Include="img\book_blue.jpg" />
     <Content Include="img\book_green.jpg" />
@@ -446,6 +465,7 @@
     <Content Include="img\hshu.jpg" />
     <Content Include="img\hshu.png" />
     <Content Include="img\html_logo_ico.ico" />
+    <Content Include="img\huodong.png" />
     <Content Include="img\hyeu.jpg" />
     <Content Include="img\hyeu.png" />
     <Content Include="img\hyxdj.png" />
@@ -457,6 +477,11 @@
     <Content Include="img\item_hover_a.png" />
     <Content Include="img\item_title_img.jpg" />
     <Content Include="img\i_video_f_bg.png" />
+    <Content Include="img\jiangli.png" />
+    <Content Include="img\jiantou_down.png" />
+    <Content Include="img\jiantou_red.png" />
+    <Content Include="img\jiantou_up.png" />
+    <Content Include="img\jianyi.png" />
     <Content Include="img\jianzhubai.png" />
     <Content Include="img\jiaodian.png" />
     <Content Include="img\jiaoshi.png" />
@@ -465,7 +490,9 @@
     <Content Include="img\kaobeizu8.png" />
     <Content Include="img\kaojuankb.png" />
     <Content Include="img\kaoshijuan.png" />
+    <Content Include="img\kaoshijuan_1.png" />
     <Content Include="img\kcbaise.png" />
+    <Content Include="img\kefu_1.png" />
     <Content Include="img\kemu.png" />
     <Content Include="img\ksall.png" />
     <Content Include="img\kshg.png" />
@@ -564,6 +591,7 @@
     <Content Include="img\renwu.png" />
     <Content Include="img\rg_arrow.png" />
     <Content Include="img\rg_arrow_hover.png" />
+    <Content Include="img\ruhetiaocuo.png" />
     <Content Include="img\rwmctb.png" />
     <Content Include="img\scyuanxing.png" />
     <Content Include="img\sfbeike.png" />
@@ -579,6 +607,7 @@
     <Content Include="img\shouye_xiaotubiao %284%29.png" />
     <Content Include="img\shouye_xiaotubiao %285%29.png" />
     <Content Include="img\shouye_xiaotubiao %286%29.png" />
+    <Content Include="img\shuoming.png" />
     <Content Include="img\shushufan.png" />
     <Content Include="img\shushuxian.png" />
     <Content Include="img\shutubiao.png" />
@@ -610,9 +639,12 @@
     <Content Include="img\tc-93.png" />
     <Content Include="img\tcxx-105.png" />
     <Content Include="img\tengxun.png" />
+    <Content Include="img\tiaocuobtnbg.png" />
+    <Content Include="img\tijiao_yijian.png" />
     <Content Include="img\title_middle_nav_span_normal_1.png" />
     <Content Include="img\title_middle_nav_span_normal_2.png" />
     <Content Include="img\tlbeijin.png" />
+    <Content Include="img\tonggao.png" />
     <Content Include="img\tubiaostk.png" />
     <Content Include="img\tubiaozu1.png" />
     <Content Include="img\tuijianxg.png" />
@@ -626,6 +658,8 @@
     <Content Include="img\t_item_title_img.png" />
     <Content Include="img\t_more_btt.png" />
     <Content Include="img\university_entrance_bef_title.png" />
+    <Content Include="img\usertiaocuojianyi.png" />
+    <Content Include="img\usertouxiang.png" />
     <Content Include="img\u_img_title.png" />
     <Content Include="img\u_img_title_hover.png" />
     <Content Include="img\u_item_hover.png" />
@@ -702,6 +736,7 @@
     <Content Include="img\zbb22.png" />
     <Content Include="img\zhongkao.png" />
     <Content Include="img\zhuanyuan.png" />
+    <Content Include="img\zhuyi.png" />
     <Content Include="img\ziyuan.png" />
     <Content Include="img\zqshijiandj.png" />
     <Content Include="img\ztc.png" />
@@ -803,6 +838,8 @@
     <Content Include="Views\Classroom_Teaching\Index.cshtml" />
     <Content Include="Views\Video\Index.cshtml" />
     <Content Include="Views\VideoPlay\Index.cshtml" />
+    <Content Include="Views\Advise\Index.cshtml" />
+    <Content Include="Views\AdviseWrite\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

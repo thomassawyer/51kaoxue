@@ -50,9 +50,16 @@ function GetUserInfo() {
             for (var i = 0; i < temp.length; i++) {
                 $("#logininfo").html(temp[i].school + "&nbsp;&nbsp;" + getusertype(temp[i].level) + "&nbsp;&nbsp;<a target=\"_blank\">[退出]</a>");
                 $(".fixed_login_b").html("已登录");
+                $(".fixed_login_b").click(function () {
+                    return;
+                });
             }
         } else {
             $(".fixed_login_b").html("您好，请<span style=\"color:#2ea7f8;\">登录</span>");
+
+            $(".fixed_login_b").click(function () {
+                window.open('../Login');
+            });
         }
     })
 }
@@ -224,7 +231,7 @@ function navSelect() {
 }
 //客服
 function fixed_kefu() {
-    qq_list = new Array('809869726', '809869726');
+    qq_list = new Array('1925641278', '1925641278');
     //随机
     qq_i = Math.floor(Math.random() * qq_list.length);
     src = "tencent://message/?uin=" + qq_list[qq_i] + "&Site=&menu=yes";
