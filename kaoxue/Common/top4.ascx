@@ -73,11 +73,11 @@
     <div class="daohanglan_ul">
         <ul class="uuu">
             <li class="fl"><a target='_blank' href="../Home"><span>首页&nbsp;&nbsp;</span></a></li>
-            <li class="fl pad bk1"><a target='_blank' href="../Classroom_Teaching">课堂讲学</a><img src="../../img/tc-93.png" class="bkimg2" /></li>
-            <li class="fl pad bk1"><a target='_blank' href="../President">心理解压</a><img src="../../img/tc-93.png" class="bkimg3" /></li>
-            <li class="fl pad bk1"><a target='_blank' href="../Elite_School">试题解析</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
-            <li class="fl pad bk2"><a target='_blank' href="../Elite_School">高考研讨会</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
-            <li class="fl pad bk1"><a target='_blank' href="../Elite_School">高考备战</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
+            <li class="fl pad bk1"><a target='_blank' href="../Classroom_Teaching?category=1">课堂讲学</a><img src="../../img/tc-93.png" class="bkimg2" /></li>
+            <li class="fl pad bk1"><a target='_blank' href="../Classroom_Teaching?category=4">心理解压</a><img src="../../img/tc-93.png" class="bkimg3" /></li>
+            <li class="fl pad bk1"><a target='_blank' href="../Classroom_Teaching?category=2">试题解析</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
+            <li class="fl pad bk2"><a target='_blank' href="../Classroom_Teaching?category=5">高考研讨会</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
+            <li class="fl pad bk1"><a target='_blank' href="../Classroom_Teaching?category=3">高考备战</a><img src="../../img/tc-93.png" class="bkimg4" /></li>
         </ul>
 
     </div>
