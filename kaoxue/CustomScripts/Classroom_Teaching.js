@@ -235,7 +235,7 @@ function GetList() {
                     var url = temp[i].videoImageUrl == "" ? "../img/232-152.png" : temp[i].videoImageUrl;
                     date = new Date(temp[i].updateTime);
                     var time =  date.getYear().toString() + "-" + ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate());
-                    html += "<div class=\"item fl mar_rg_22\">\
+                    html += "<div class=\"item fl mar_rg_22\"  onclick=\"javascript:window.open('../VideoPlay?id=" + temp[i].id + "')\">\
                         <div class=\"item_hover\"></div>\
                         <img src=\"" + url + "\" class=\"item_img\">\
                         <div class=\"item_title\">\

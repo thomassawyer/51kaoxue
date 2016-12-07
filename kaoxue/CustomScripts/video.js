@@ -30,7 +30,7 @@ function Classroom_Teaching(subjectId) {
             for (var i = 0; i < temp.length; i++) {
                 var url = temp[i].videoImageUrl == "" ? "../img/232-152.png" : temp[i].videoImageUrl;
                 html += "<li class=\"fl mar_rg_17\">\
-                                <div class=\"item\" onclick=\"javascript:window.open('../VideoPlay')\">\
+                                <div class=\"item\" onclick=\"javascript:window.open('../VideoPlay?id="+temp[i].id+"')\">\
                                     <div class=\"item_hover\"></div>\
                                     <div class=\"item_title\">\
                                         <img src=\"" + url + "\" class=\"item_title_img\">\
@@ -70,7 +70,7 @@ function Psychological_decompression() {
             for (var i = 0; i < temp.length; i++) {
                 var url = temp[i].videoImageUrl == "" ? "../img/354-181.png" : temp[i].videoImageUrl;
                 html += "<li class=\"fl mar_rg_17 slide\">\
-                                <div class=\"p_item\">\
+                                <div class=\"p_item\"  onclick=\"javascript:window.open('../VideoPlay?id=" + temp[i].id + "')\">\
                                     <div class=\"p_item_hover\"></div>\
                                     <div class=\"p_item_name\">\
                                         <p class=\"p_item_o_title\">" + temp[i].ChapterName + "</p>\
@@ -105,7 +105,7 @@ function Test_Questions_Analysis(subjectId) {
             for (var i = 0; i < temp.length; i++) {
                 var url = temp[i].videoImageUrl == "" ? "../img/232-177.png" : temp[i].videoImageUrl;
                 html += "<li class=\"fl mar_rg_17\">\
-                                <div class=\"t_item\">\
+                                <div class=\"t_item\"  onclick=\"javascript:window.open('../VideoPlay?id=" + temp[i].id + "')\">\
                                     <div class=\"t_item_hover\"></div>\
                                     <div class=\"t_item_title\">\
                                         <div class=\"t_video_f\">已播放" + temp[i].viewingTimes + "次</div>\
@@ -145,7 +145,7 @@ function Seminar(subjectId) {
             for (var i = 0; i < temp.length; i++) {
                 var url = temp[i].videoImageUrl == "" ? "../img/232-152.png" : temp[i].videoImageUrl;
                 html += "<li class=\"fl mar_rg_17\">\
-                        <div class=\"item\">\
+                        <div class=\"item\" onclick=\"javascript:window.open('../VideoPlay?id=" + temp[i].id + "')\">\
                             <div class=\"item_hover u_item_hover\"></div>\
                             <div class=\"item_title\">\
                                 <img src=\"../img/u_item_title_img.png\" class=\"item_title_img\">\
@@ -185,7 +185,7 @@ function Exam_Prepare() {
             for (var i = 0; i < temp.length; i++) {
                 var url = temp[i].videoImageUrl == "" ? "../img/354-181.png" : temp[i].videoImageUrl;
                 html += "<li class=\"fl mar_rg_17 slide\">\
-                                <div class=\"p_item\">\
+                                <div class=\"p_item\" onclick=\"javascript:window.open('../VideoPlay?id=" + temp[i].id + "')\">\
                                     <div class=\"p_item_hover e_item_hover\"></div>\
                                     <div class=\"p_item_name\">\
                                         <p class=\"p_item_o_title e_item_o_title\">" + temp[i].ChapterName + "</p>\

@@ -66,14 +66,17 @@ namespace kaoxue.Controllers
         /// </summary>
         /// <param name="userid"></param>
         /// <returns></returns>
-        public string Watching_Record(int userid)
+        public string Watching_Record()
         {
+
+            if (Session["UserId"] == null)
+                return "0";
             string sql = string.Format(@"SELECT TOP 1000 [id]
                                                   ,[videoId]
                                                   ,[videoName]
                                                   ,[lookUserId]
                                               FROM [tblvideoWatchRecord]
-                                              where lookUserId={0}",userid);
+                                              where lookUserId={0}", Session["UserId"].ToString());
             DataSet ds = DbHelperSQL.Query(sql);
             string json = string.Empty;
             if (ds != null)
@@ -94,7 +97,7 @@ namespace kaoxue.Controllers
         {
             string sql = @"SELECT TOP 12 [id]
                                           ,[title]
-                                      FROM [tblvideoInfo]
+                                      FROM [vw_videoInfo]
                                       order by viewingTimes desc";
             DataSet ds = DbHelperSQL.Query(sql);
             string json = string.Empty;
@@ -149,6 +152,50 @@ namespace kaoxue.Controllers
                 }
             }
             return json;
+        }
+
+        /// <summary>
+        /// 增加观看次数
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int Add_ViewCounts(int id) 
+        {
+            if (Session["UserId"] == null)
+            {
+                return 0;
+            }
+            string sql = string.Format(@"UPDATE [tblvideoInfo]
+                                                       SET 
+                                                          [viewingTimes] = [viewingTimes]+1
+                                                     WHERE id={0}",id);
+            int temp = DbHelperSQL.ExecuteSql(sql);
+            return temp;
+        }
+
+        /// <summary>
+        /// 新增观看记录
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="videoname"></param>
+        /// <returns></returns>
+        public int Add_Record(int id,string videoname)
+        {
+            if (Session["UserId"] == null)
+            {
+                return 0;
+            }
+
+            string sql = string.Format(@"INSERT INTO [tblvideoWatchRecord]
+                                                               ([videoId]
+                                                               ,[videoName]
+                                                               ,[lookUserId])
+                                                         VALUES(
+                                                               {0},
+                                                               '{1}',
+                                                               {2})",id,videoname,Session["UserId"].ToString());
+            int temp = DbHelperSQL.ExecuteSql(sql);
+            return temp;
         }
     }
 }
