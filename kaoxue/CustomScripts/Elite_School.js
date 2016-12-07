@@ -58,7 +58,7 @@ function level_selected(num) {
     category = ""; //类型名称
     testcategory = ""; //试题类型
     grade = ""; // 年级
-    district = ""; //地区
+   // district = ""; //地区
     
     GetSubject();
     GetGrade();

@@ -99,9 +99,13 @@ function GetList() {
                                 <a target='_blank'  target='_blank' class=\"fla\" >" + temp[i].title + "</a>\
                             </div>";
                 }
+            } else {
+                html += "<div class=\"no_data_bg\"></div>";
             }
+
             $("#lists").html(html);
             $("#page_title").html(category_title);
+            
             //Produce_A_Signs();
         }
     });

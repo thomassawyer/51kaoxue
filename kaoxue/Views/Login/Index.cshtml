@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>登录 - 51考学网</title>
-    <link href="/img/html_logo_ico.ico" rel="shortcut icon" /> 
+    <link href="/img/html_logo_ico.ico" rel="shortcut icon" />
     <link rel="stylesheet" type="text/css" href="css/chushihua.css" />
     <link rel="stylesheet" type="text/css" href="css/login.css" />
 
@@ -22,55 +22,66 @@
 
 </head>
 <body>
-    <div class="bj" style="z-index:1;">
-        <div class="shouye">
-            <div class="syz">
-                <img src="img/dlylog.png" alt="" class="dlylog">
-                <div class="dlsp">
-                <a target='_blank' target='_blank' href="../Home">网站首页</a>
-                <span class="spr-line">|</span>
-                <a target='_blank' target='_blank' href="../ThroughTrain">网站直通<span id="car">车</span></a></div>
-            </div>
-        </div><!-- top -->
+    <table class="bj" style="z-index:1;">
+        <tr>
+            <td>
+                <div class="shouye">
+                    <div class="syz">
+                        <img src="img/dlylog.png" alt="" class="dlylog">
+                        <div class="dlsp">
+                            <a target='_blank' target='_blank' href="../Home">网站首页</a>
+                            <span class="spr-line">|</span>
+                            <a target='_blank' target='_blank' href="../ThroughTrain">网站直通<span id="car">车</span></a>
+                        </div>
+                    </div>
+                </div><!-- top -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="bj_1"></div>
 
-        <div class="zhmm">
-            <div class="dlyhhh">
-                <b class="shuidenglu">会员登录</b>
-                <form id="reg-form" action="" method="post">
-                    <div id="" class="zhmingzi">
-                        <img src="img/rwmctb.png" class="rwmctb" />
-                        <input type="text" name="username" id="username" value=""
-                               placeholder="用户名" class="yhminzi" onkeyup="keyPro(event)" />
+                <div class="zhmm">
+                    <div class="dlyhhh">
+                        <b class="shuidenglu">会员登录</b>
+                        <form id="reg-form" action="" method="post">
+                            <div id="" class="zhmingzi">
+                                <img src="img/rwmctb.png" class="rwmctb" />
+                                <input type="text" name="username" id="username" value=""
+                                       placeholder="用户名" class="yhminzi" onkeyup="keyPro(event)" />
+                            </div>
+                            <div id="" class="zhmingzi topzhi">
+                                <img src="img/mima.png" class="rwmctb" />
+                                <input type="password" name="password" id="password" value=""
+                                       placeholder="密码" class="yhminzi" onkeyup="keyPro_1(event)" />
+                            </div>
+                            <div class="sp11">
+                                @*<div class="errorinfo">用户名或密码错误，请重试！</div>*@
+                                <div class="errorinfo_fl"></div>
+                                <div class="errorinfo_fl_user"></div>
+                                @*<a target='_blank' class="denglulu" onclick="Login()">
+                                        登 录
+                                    </a>*@
+                                <input value="登 录" type="button" class="denglulu" onclick="Login()">
+                            </div>
+                        </form>
+                        @*<input type="radio" name="field＿name" value="记住用户名" class="gxk" />
+                            <span class="jzyhm">记住用户名</span>
+                            <img src="img/wjmima.png" class="wjmm" alt="" />
+                            <a target='_blank' href="" class="wjmima">忘记密码</a>*@
                     </div>
-                    <div id="" class="zhmingzi topzhi">
-                        <img src="img/mima.png" class="rwmctb" />
-                        <input type="password" name="password" id="password" value=""
-                               placeholder="密码" class="yhminzi" onkeyup="keyPro_1(event)" />
-                    </div>
-                    <div class="sp11">
-                        @*<div class="errorinfo">用户名或密码错误，请重试！</div>*@
-                        <div class="errorinfo_fl"></div>
-                        <div class="errorinfo_fl_user"></div>
-                        @*<a target='_blank' class="denglulu" onclick="Login()">
-                            登 录
-                        </a>*@
-                        <input value="登 录" type="button" class="denglulu" onclick="Login()">
-                    </div>
-                </form>
-                    @*<input type="radio" name="field＿name" value="记住用户名" class="gxk" />
-            <span class="jzyhm">记住用户名</span>
-            <img src="img/wjmima.png" class="wjmm" alt="" />
-            <a target='_blank' href="" class="wjmima">忘记密码</a>*@
-</div>
-        </div>
-        
-    </div>
-    <img src="img/denglubg.png" alt="" style="z-index:-1;" class="bj p_ab">
+                </div>
+            </td>
+        </tr>
+
+
+    </table>
+    @*<img src="img/denglubg.png" alt="" style="z-index:-1;" class="bj p_ab">*@
     <script>
         $(function () {
-            //$(".bj").height($(window).height());
-            $(".shouye").slideDown(2000);
-            $(".zhmm").animate({ left:  $("#car").offset().left-455 +"px" }, 2000);
+            $(".bj_1").height($(window).height()-140);
+            //$(".shouye").slideDown(2000);
+            $(".zhmm").animate({ left: $("#car").offset().left - 455 + "px" }, 2000);
 
         })
     </script>

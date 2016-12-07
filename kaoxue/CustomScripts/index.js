@@ -15,7 +15,7 @@ function New_Zhuanti() {
                 <ul>";
                 for (var i = 0; i < temp.length; i++) {
                     date = new Date(temp[i].updatetime);
-                    var text = temp[i].name.length > 20 ? temp[i].name.substr(0, 20) : temp[i].name;
+                    var text = temp[i].name;
                     var time = ((date.getMonth() + 1).toString().length == 1 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1) + "-" + (date.getDate().toString().length == 1 ? '0' + date.getDate() : date.getDate()); //构造特定的日期格式
                     var number_str = (i + 1) + "";
                     var number = number_str.length < 2 ? "0" + number_str : number_str;

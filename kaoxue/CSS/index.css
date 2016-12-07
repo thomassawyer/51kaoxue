@@ -2289,3 +2289,139 @@ button:focus,input:focus,select:focus { outline:none; }
 .position_ab41_1 {
     right:10px;
 }
+.no_data_bg_xiao {
+    width:210px;
+    height:300px;
+    background-image:url(../img/no_data_bg_xiao.png);
+}
+
+.video_dis {
+    width:1189px;
+    height:auto;
+    margin:0px auto;
+    margin-bottom:50px;
+}
+
+.video_dis_title {
+    width:100%;
+    height:38px;
+    background-image:url(../img/video_dis_title.png);
+    position:relative;
+    /*margin-bottom:50px;*/
+}
+
+.video_dis_title .commom_btn {
+    width:86px;
+}
+.video_dis_title .btn_08c79e_normal {
+    background-image:url(../img/btn_08c79e_normal_v.png);
+}
+.video_dis_title .btn_08c79e_selected {
+    background-image:url(../img/btn_08c79e1_selected_v.png);
+}
+
+.video_dis_title .position_ab1 {
+    right:384px;
+}
+.video_dis_title .position_ab2 {
+    right:288px;
+}
+.video_dis_title .position_ab3 {
+    right:192px;
+}
+.video_dis_title .position_ab4 {
+    right:96px;
+}
+.video_dis_title .position_ab5 {
+    right:0px;
+}
+
+.video_dis_content {
+    width:100%;
+    overflow:hidden;
+}
+
+.video_dis_content .p_item_title_img {
+    width:100%;
+    height:100%;
+}
+
+.video_dis_content .p_item_title {
+    width:348px;
+    height:195px;
+    position:relative;
+    border:1px solid #08c79e;
+}
+
+.video_dis_content .p_video_f {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    color:#fff;
+    background:url(../img/p_video_f_v.png);
+    font-size:16px;
+}
+
+.video_dis_content .p_item_o_title {
+    width:100%;
+    color:#08c79e;
+    font-size:16px;
+    text-align:center;
+    margin-top:15px;
+}
+.video_dis_content .p_item {
+    position:relative;
+}
+.video_dis_content .p_item:hover {
+    cursor:pointer;
+}
+.video_dis_content .slideshow {
+    width:1090px;
+    margin:auto;
+    position:relative;
+}
+
+.mar_rg_17 {
+    margin-right:17px;
+}
+
+.video_dis_content .slides-next, .video_dis_content .slides-prev {
+    display:block;
+    position:absolute;
+    width:26px;
+    height:100%;
+    top:0px;
+
+    text-indent:-9999em;
+}
+.video_dis_content .slides-next {
+    background:url(../img/slides-next_zhu.png) no-repeat center center;
+    right:-45px;
+}
+.video_dis_content .slides-next:hover {
+    background:url(../img/slides-next_zhu_h.png) no-repeat center center;
+}
+.video_dis_content .slides-prev {
+    background:url(../img/slides-prev_zhu.png) no-repeat center center;
+    left:-45px;
+}
+.video_dis_content .slides-prev:hover {
+    background:url(../img/slides-prev_zhu_h.png) no-repeat center center;
+}
+
+.video_dis_content .p_item_hover {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-image:url(../img/video_dis_content_h.png);
+    display:none;
+    z-index:2;
+}
+
+.video_dis_content .p_item:hover .p_item_hover{
+    display:block;
+}

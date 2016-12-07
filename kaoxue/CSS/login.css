@@ -1,14 +1,18 @@
 .bj {
     width: 100%;
     height: 100%;
+    overflow:hidden;
 }
-
+.bj_1 {
+    background:url(../img/denglubg.png) no-repeat center center;
+    width:100%;
+}
 .shouye {
     width: 100%;
     height: 140px;
     background: #fff;
-    position: absolute;
-    display: none;
+    /*position: absolute;*/
+    /*display: none;*/
 }
 .p_ab {
     position:absolute;

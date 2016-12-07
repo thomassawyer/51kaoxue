@@ -96,9 +96,9 @@ function GetVersion_First() {
             var html = "";
             for (var i = 0; i < temp.length; i++) {
                 if (i == 0) {
-                    html += "<div id=testcategory" + temp[i].id + " class=\"stzx115 fl stzx115_selected\" onclick='a_selected(this, \"stzx115_selected\"), version_first_selected(" + temp[i].id + ") '><a target='_blank'>" + temp[i].name + "</a></div>";
+                    html += "<div id=testcategory" + temp[i].id + " class=\"stzx115 fl stzx115_selected\" onclick='a_selected(this, \"stzx115_selected\"), version_first_selected(\"" + temp[i].id +  "\",\"" + temp[i].name + "\") '><a target='_blank'>" + temp[i].name + "</a></div>";
                 } else {
-                    html += "<div id=testcategory" + temp[i].id + " class=\"stzx115 fl\" onclick='a_selected(this, \"stzx115_selected\"), version_first_selected(" + temp[i].id + ") '><a target='_blank'>" + temp[i].name + "</a></div>";
+                    html += "<div id=testcategory" + temp[i].id + " class=\"stzx115 fl\" onclick='a_selected(this, \"stzx115_selected\"), version_first_selected(\"" + temp[i].id + "\",\"" + temp[i].name + "\") '><a target='_blank'>" + temp[i].name + "</a></div>";
                 }
 
             }
@@ -112,7 +112,8 @@ function GetVersion_First() {
 //
 //点击一级版本A标签,为一级版本变量赋值
 //
-function version_first_selected(versionid) {
+function version_first_selected(versionid, title) {
+    click_title = title;
     version_first = versionid;
     GetVersion_Second();
 }
@@ -146,7 +147,12 @@ function GetVersion_Second() {
                 html += "</div>";
             }
             $("#version_second").html(html);
-            version_second_selected(temp[0].id, temp[0].name);
+            if (temp) {
+                version_second_selected(temp[0].id, temp[0].name);
+            } else {
+                version_second_selected('', '');
+            }
+            
             //$("#version_second1").click();
         }
     });
@@ -156,7 +162,9 @@ function GetVersion_Second() {
 //点击二级版本A标签,为二级版本变量赋值
 //
 function version_second_selected(versionid, title) {
-    click_title = title;
+    if (title != '') {
+        click_title = title;
+    }
     pageindex = 1;
     version_second = versionid;
     version_third = "";
@@ -171,6 +179,11 @@ function version_second_selected(versionid, title) {
 //
 function GetVersion_ThirdAndFourth() {
     $("#directory").html("<div class=\"waiting_bg\"></div>");
+
+    if (version_second == '') {
+        $("#directory").html("<div class=\"no_data_bg_xiao\"></div>");
+        return;
+    }
     $.ajaxSetup({
         async: false
     });
@@ -285,6 +298,10 @@ function anchor(obj) {
 //获取备课数据
 //
 function GetList() {
+    //if (version_second == '') {
+       
+    //    return;
+    //}
     $.post("../Beike_Center/GetList", { subject: subject, level: level_num, version_first: version_first, version_second: version_second, version_third: version_third, version_fourth: version_fourth, pageindex: pageindex, category: category }, function (data) {
         if (data) {
             var html = "";
@@ -332,6 +349,10 @@ function GetDataCount() {
     $.ajaxSetup({
         async: false
     });
+    //if (version_second == '') {
+
+    //    return;
+    //}
     $.post("../Beike_Center/GetDataCount", { subject: subject, level: level_num, version_first: version_first, version_second: version_second, version_third: version_third, version_fourth: version_fourth, pageindex: pageindex, category: category }, function (data) {
         if (data) {
             $("#all_data_count").html(click_title + "（" + data + "份）");
@@ -355,6 +376,10 @@ function GetDataCount() {
 //获取某版本数据条数
 //
 function GetDataCount_Direction() {
+    //if (version_second == '') {
+
+    //    return;
+    //}
     $.post("../Beike_Center/GetDataCount_Direction", { subject: subject, level: level_num, version_first: version_first, version_second: version_second, version_third: version_third, version_fourth: version_fourth, pageindex: pageindex, category: category }, function (data) {
         if (data) {
             $("#all_data_count_directory").html("该科目（" + data + "份）");
