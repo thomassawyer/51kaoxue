@@ -64,23 +64,15 @@ function videotype_selected(num) {
 //获取所有年级
 //
 function GetGrade() {
-    $.post("../Classroom_Teaching/GetGrade", function (data) {
-        if (data) {
-            var html = "";
-            var temp;
-            if (data != "]") {
-                temp = eval(data);
-
-                for (var i = 0; i < temp.length; i++) {
-                    html += "<div class=\"xd5_hover xdh33 fl\" id='grade_button" + i + "' onclick=\"a_selected(this, 'xdh33_selected'), grade_selected(" + temp[i].id + ")\">\
-                                <a target=\"_blank\">" + temp[i].name + "</a>\
+    var html = "";
+    html += "<div class=\"xd5_hover xdh33 fl\" id='grade_button0' onclick=\"a_selected(this, 'xdh33_selected'), grade_selected(3)\">\
+                                <a target=\"_blank\">高中</a>\
                             </div>";
-                }
-            }
-            $("#GetGrade").html(html);
-            $('#grade_button0').trigger("click");
-        }
-    });
+    html += "<div class=\"xd5_hover xdh33 fl\" id='grade_button1' onclick=\"a_selected(this, 'xdh33_selected'), grade_selected(2)\">\
+                                <a target=\"_blank\">初中</a>\
+                            </div>";
+    $("#GetGrade").html(html);
+    $('#grade_button0').trigger("click");
 }
 
 //
@@ -94,13 +86,7 @@ function grade_selected(num) {
 var level;
 
 function produce_level() {
-    if (gradeid > 9) {
-        level = 3;
-    } else if (gradeid > 6) {
-        level = 2;
-    } else {
-        level = 1;
-    }
+        level = gradeid;
 }
 
 //
@@ -114,7 +100,7 @@ function GetSubject() {
             if (data != "]") {
                 temp = eval(data);
 
-                for (var i = 0; i < temp.length; i++) {
+                for (var i = 0; i < 9; i++) {
                     html += "<div class=\"stzx115 fl  stzx85\" id='subject_button" + i + "'  onclick=\"a_selected(this, 'stzx115_selected'), subject_selected(" + temp[i].id + ")\">\
                                 <a target=\"_blank\">"+ temp[i].name + "</a>\
                             </div>";

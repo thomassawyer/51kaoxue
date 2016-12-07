@@ -65,7 +65,7 @@ namespace Good_Resource.Controllers
         public string GetTest_Hot_Download()
         {
             ProduceParameters();
-            DataSet ds = test_bll.GetList(12, string.Empty, " neednum desc");
+            DataSet ds = test_bll.GetList(12, string.Empty, " uploadtime desc");
             string json = string.Empty;
             if (ds != null)
             {
